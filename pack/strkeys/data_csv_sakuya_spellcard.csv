@@ -1,0 +1,26 @@
+#spellcard number,spellcard name,type,consumption,description,appearance stage,rarity,,,,,,,,sort
+100,<key csv.sakuya.100.name>,1,2,<key csv.sakuya.100.description>,0,1,104,1,108,1,0,0,2,110
+101,<key csv.sakuya.101.name>,1,1,<key csv.sakuya.101.description>,0,1,105,1,109,1,0,0,2,120
+102,<key csv.sakuya.102.name>,1,0,<key csv.sakuya.102.description>,0,1,106,1,110,1,207,2,2,100
+103,<key csv.sakuya.103.name>,1,4,<key csv.sakuya.103.description>,0,1,107,1,111,1,0,0,2,140
+104,<key csv.sakuya.104.name>,1,2,<key csv.sakuya.104.description>,1,1,200,3,0,0,0,0,2,111
+105,<key csv.sakuya.105.name>,1,1,<key csv.sakuya.105.description>,1,1,208,2,0,0,0,0,2,121
+106,<key csv.sakuya.106.name>,1,0,<key csv.sakuya.106.description>,1,1,212,3,0,0,0,0,2,101
+107,<key csv.sakuya.107.name>,1,4,<key csv.sakuya.107.description>,1,1,201,3,0,0,0,0,2,141
+108,<key csv.sakuya.108.name>,1,2,<key csv.sakuya.108.description>,0,1,202,2,0,0,0,0,2,112
+109,<key csv.sakuya.109.name>,1,1,<key csv.sakuya.109.description>,0,1,206,3,0,0,0,0,2,122
+110,<key csv.sakuya.110.name>,1,0,<key csv.sakuya.110.description>,0,1,211,3,0,0,0,0,2,102
+111,<key csv.sakuya.111.name>,1,4,<key csv.sakuya.111.description>,0,1,0,0,0,0,0,0,2,142
+200,<key csv.sakuya.200.name>,2,2,<key csv.sakuya.200.description>,0,3,203,5,0,0,0,0,2,210
+201,<key csv.sakuya.201.name>,2,3,<key csv.sakuya.201.description>,0,3,204,5,0,0,0,0,2,220
+202,<key csv.sakuya.202.name>,2,3,<key csv.sakuya.202.description>,1,2,205,4,0,0,0,0,2,221
+203,<key csv.sakuya.203.name>,2,4,<key csv.sakuya.203.description>,0,5,0,0,0,0,0,0,2,230
+204,<key csv.sakuya.204.name>,2,5,<key csv.sakuya.204.description>,1,5,0,0,0,0,0,0,2,240
+205,<key csv.sakuya.205.name>,2,4,<key csv.sakuya.205.description>,1,4,0,0,0,0,0,0,2,231
+206,<key csv.sakuya.206.name>,2,2,<key csv.sakuya.206.description>,1,3,0,0,0,0,0,0,2,211
+207,<key csv.sakuya.207.name>,2,2,<key csv.sakuya.207.description>,1,2,0,0,0,0,0,0,2,212
+208,<key csv.sakuya.208.name>,2,3,<key csv.sakuya.208.description>,1,2,210,4,0,0,0,0,2,222
+209,<key csv.sakuya.209.name>,2,4,<key csv.sakuya.209.description>,1,4,0,0,0,0,0,0,2,232
+210,<key csv.sakuya.210.name>,2,4,<key csv.sakuya.210.description>,1,4,0,0,0,0,0,0,2,233
+211,<key csv.sakuya.211.name>,2,3,<key csv.sakuya.211.description>,1,3,0,0,0,0,0,0,2,223
+212,<key csv.sakuya.212.name>,2,3,<key csv.sakuya.212.description>,1,3,209,4,0,0,0,0,2,224

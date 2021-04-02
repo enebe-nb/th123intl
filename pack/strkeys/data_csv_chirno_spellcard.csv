@@ -1,0 +1,24 @@
+#spellcard number,spellcard name,type,consumption,description,appearance stage,rarity,,,,,,,,sort
+100,<key csv.chirno.100.name>,1,0,<key csv.chirno.100.description>,0,1,104,1,108,1,200,2,16,100
+101,<key csv.chirno.101.name>,1,1,<key csv.chirno.101.description>,0,1,105,1,109,1,0,0,16,120
+102,<key csv.chirno.102.name>,1,4,<key csv.chirno.102.description>,0,1,106,1,110,1,0,0,16,140
+103,<key csv.chirno.103.name>,1,2,<key csv.chirno.103.description>,0,1,107,1,111,1,205,2,16,110
+104,<key csv.chirno.104.name>,1,0,<key csv.chirno.104.description>,1,1,201,4,0,0,0,0,16,101
+105,<key csv.chirno.105.name>,1,1,<key csv.chirno.105.description>,1,1,207,3,0,0,0,0,16,121
+106,<key csv.chirno.106.name>,1,4,<key csv.chirno.106.description>,1,1,202,3,0,0,0,0,16,141
+107,<key csv.chirno.107.name>,1,2,<key csv.chirno.107.description>,1,1,0,0,0,0,0,0,16,111
+108,<key csv.chirno.108.name>,1,0,<key csv.chirno.108.description>,1,1,213,3,0,0,0,0,16,102
+109,<key csv.chirno.109.name>,1,1,<key csv.chirno.109.description>,1,1,203,2,0,0,0,0,16,122
+110,<key csv.chirno.110.name>,1,4,<key csv.chirno.110.description>,1,1,210,2,0,0,0,0,16,142
+111,<key csv.chirno.111.name>,1,2,<key csv.chirno.111.description>,1,1,207,3,0,0,0,0,16,112
+200,<key csv.chirno.200.name>,2,2,<key csv.chirno.200.description>,0,2,0,0,0,0,0,0,16,210
+201,<key csv.chirno.201.name>,2,4,<key csv.chirno.201.description>,0,4,0,0,0,0,0,0,16,230
+202,<key csv.chirno.202.name>,2,3,<key csv.chirno.202.description>,0,3,0,0,0,0,0,0,16,220
+203,<key csv.chirno.203.name>,2,3,<key csv.chirno.203.description>,1,2,0,0,0,0,0,0,16,221
+204,<key csv.chirno.204.name>,2,5,<key csv.chirno.204.description>,0,5,0,0,0,0,0,0,16,240
+205,<key csv.chirno.205.name>,2,2,<key csv.chirno.205.description>,2,2,206,4,0,0,0,0,16,211
+206,<key csv.chirno.206.name>,2,4,<key csv.chirno.206.description>,1,4,0,0,0,0,0,0,16,231
+207,<key csv.chirno.207.name>,2,3,<key csv.chirno.207.description>,1,3,208,4,0,0,0,0,16,222
+208,<key csv.chirno.208.name>,2,5,<key csv.chirno.208.description>,0,4,0,0,0,0,0,0,16,241
+210,<key csv.chirno.210.name>,2,3,<key csv.chirno.210.description>,0,2,204,5,0,0,0,0,16,223
+213,<key csv.chirno.213.name>,2,3,<key csv.chirno.213.description>,0,3,0,0,0,0,0,0,16,224

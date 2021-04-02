@@ -1,0 +1,22 @@
+#spellcard number,spellcard name,type,consumption,description,appearance stage,rarity,,,,,,,,sort
+0,<key csv.common.0.name>,0,1,<key csv.common.0.description>,0,5,0,0,0,0,0,0,0,1000
+1,<key csv.common.1.name>,0,1,<key csv.common.1.description>,0,5,0,0,0,0,0,0,1,1001
+2,<key csv.common.2.name>,0,1,<key csv.common.2.description>,1,5,0,0,0,0,0,0,2,1002
+3,<key csv.common.3.name>,0,1,<key csv.common.3.description>,1,5,0,0,0,0,0,0,5,1003
+4,<key csv.common.4.name>,0,1,<key csv.common.4.description>,1,5,0,0,0,0,0,0,3,1004
+5,<key csv.common.5.name>,0,1,<key csv.common.5.description>,1,5,0,0,0,0,0,0,4,1005
+6,<key csv.common.6.name>,0,1,<key csv.common.6.description>,0,5,0,0,0,0,0,0,6,1006
+7,<key csv.common.7.name>,0,1,<key csv.common.7.description>,1,5,0,0,0,0,0,0,7,1007
+8,<key csv.common.8.name>,0,1,<key csv.common.8.description>,1,5,0,0,0,0,0,0,8,1008
+9,<key csv.common.9.name>,0,1,<key csv.common.9.description>,1,5,0,0,0,0,0,0,9,1009
+10,<key csv.common.10.name>,0,1,<key csv.common.10.description>,1,5,0,0,0,0,0,0,11,1010
+11,<key csv.common.11.name>,0,1,<key csv.common.11.description>,0,5,0,0,0,0,0,0,10,1011
+12,<key csv.common.12.name>,0,0,<key csv.common.12.description>,1,5,0,0,0,0,0,0,12,1012
+13,<key csv.common.13.name>,0,1,<key csv.common.13.description>,1,5,0,0,0,0,0,0,13,1013
+14,<key csv.common.14.name>,0,1,<key csv.common.14.description>,1,5,0,0,0,0,0,0,14,1014
+15,<key csv.common.15.name>,0,1,<key csv.common.15.description>,1,5,0,0,0,0,0,0,15,1015
+16,<key csv.common.16.name>,0,1,<key csv.common.16.description>,0,5,0,0,0,0,0,0,16,1016
+17,<key csv.common.17.name>,0,1,<key csv.common.17.description>,1,5,0,0,0,0,0,0,17,1017
+18,<key csv.common.18.name>,0,1,<key csv.common.18.description>,1,5,0,0,0,0,0,0,18,1018
+19,<key csv.common.19.name>,0,1,<key csv.common.19.description>,1,5,0,0,0,0,0,0,19,1019
+20,<key csv.common.20.name>,0,1,<key csv.common.20.description>,1,0,0,0,0,0,0,0,21,1020

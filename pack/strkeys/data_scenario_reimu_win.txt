@@ -1,0 +1,341 @@
+## =======================================================================
+#èüóòë‰éå
+## =======================================================================
+#VSóÏñ≤
+# Time-stamp: <2009/08/12 16:11:48 zun>
+#
+## ë‰éåA==================
+#Label:ÉLÉÉÉâñº+êîéöÇÃå`Ç≈ìoò^Å@òAî‘Ç≈ë±Ç¢ÇƒÇ¢ÇÈå¿ÇËÇÃç≈å„Ç‹Ç≈Ç™ìoò^Ç≥ÇÍÅAÉâÉìÉ_ÉÄÇ≈ëIëÇ≥ÇÍÇ‹Ç∑
+#âÔòbèëéÆÇÕÉVÉiÉäÉIÇ≈åæÇ§ÉLÉÉÉâñºÇÃèÍèäÇ…win(èüóòÉLÉÉÉâ)lose(îsñkÉLÉÉÉâ)ÇÃî≠åæÇ…Ç»ÇËÇ‹Ç∑
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   ïpî…
+
+Label:reimuU0
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.reimuU0>\
+End:
+
+## =======================================================================
+#VSñÇóùçπ
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:marisaU0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.marisaU0>\
+End:
+
+Label:marisaU1
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.marisaU1>\
+End:
+
+Label:marisaR0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.marisaR0.0>\
+
+Face:win,òf
+<key win.reimu.marisaR0.1>\
+
+Face:win,ó]
+<key win.reimu.marisaR0.2>\
+End:
+
+## =======================================================================
+#VSçÁñÈ
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:sakuyaU0
+Face:lose,ïâ
+Face:win,ó]
+<key win.reimu.sakuyaU0>\
+End:
+
+Label:sakuyaU1
+Face:lose,ïâ
+Face:win,ä
+<key win.reimu.sakuyaU1>\
+End:
+
+## =======================================================================
+#VSódñ≤
+#ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX\
+Label:youmuU0
+Face:lose,ïâ
+Face:win,òf
+<key win.reimu.youmuU0>\
+End:
+
+Label:youmuU1
+Face:lose,ïâ
+Face:win,åà
+<key win.reimu.youmuU1>\
+End:
+
+Label:youmuU2
+Face:lose,ïâ
+Face:win,ó]
+<key win.reimu.youmuU2>\
+End:
+
+
+## =======================================================================
+#VSÉAÉäÉX
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:aliceU0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.aliceU0>\
+End:
+
+Label:aliceR0
+Face:lose,ïâ
+Face:win,ó]
+<key win.reimu.aliceR0.0>\
+
+Face:win,òf
+<key win.reimu.aliceR0.1>\
+End:
+
+## =======================================================================
+#VSÉpÉ`ÉÖÉäÅ[
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:patchouliU0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.patchouliU0>\
+End:
+
+## =======================================================================
+#VSÉåÉ~ÉäÉA
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:remiliaU0
+Face:lose,ïâ
+Face:win,ã¡
+<key win.reimu.remiliaU0>\
+End:
+
+
+## =======================================================================
+#VSóHÅXéq
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:yuyukoU0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.yuyukoU0>\
+End:
+
+## =======================================================================
+#VSéá
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:yukariU0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.yukariU0>\
+End:
+
+Label:yukariR0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.yukariR0.0>\
+
+Face:win,ïÅ
+<key win.reimu.yukariR0.1>\
+
+End:
+
+
+## =======================================================================
+#VS‰¬çÅ
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:suikaU0
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.suikaU0>\
+End:
+
+
+
+## =======================================================================
+#VSï∂
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:ayaU0
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.ayaU0>\
+End:
+
+Label:ayaR0
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.ayaR0.0>\
+
+Face:win,ã¡
+<key win.reimu.ayaR0.1>\
+
+Face:win,äæ
+<key win.reimu.ayaR0.2>\
+
+End:
+
+## =======================================================================
+#VSóÈêÂ
+#ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX\
+Label:udongeU0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.udongeU0>\
+End:
+
+Label:udongeU1
+Face:lose,ïâ
+Face:win,ó]
+<key win.reimu.udongeU1>\
+End:
+
+
+
+## =======================================================================
+#VSè¨í¨
+#ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX\
+Label:komachiU0
+Face:lose,ïâ
+Face:win,ó]
+<key win.reimu.komachiU0>\
+End:
+
+
+## =======================================================================
+#VSàﬂãË
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:ikuU0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.ikuU0>\
+End:
+
+
+## =======================================================================
+#VSìVéq
+#ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX\
+Label:tenshiU0
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.tenshiU0>\
+End:
+
+
+Label:tenshiR0
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.tenshiR0.0>\
+
+Face:win,ã¡
+<key win.reimu.tenshiR0.1>\
+
+Face:win,ó]
+<key win.reimu.tenshiR0.2>\
+
+End:
+
+
+
+
+## =======================================================================
+#VSëÅïc
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:sanaeU0
+Face:lose,ïâ
+Face:win,ä
+<key win.reimu.sanaeU0>\
+End:
+
+Label:sanaeR0
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.sanaeR0.0>\
+
+Face:win,ïÅ
+<key win.reimu.sanaeR0.1>\
+
+Face:win,ó]
+<key win.reimu.sanaeR0.2>\
+
+End:
+
+
+## =======================================================================
+#VSÉ`ÉãÉm
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:chirnoU0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.chirnoU0>\
+End:
+
+
+## =======================================================================
+#VSî¸óÈ
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:meirinU0
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.meirinU0>\
+End:
+
+
+
+## =======================================================================
+#VSãÛ
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:utsuhoU0
+Face:lose,ïâ
+Face:win,äæ
+<key win.reimu.utsuhoU0>\
+End:
+
+Label:utsuhoU1
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.utsuhoU1>\
+End:
+
+
+## =======================================================================
+#VSêzñKéq
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:suwakoU0
+Face:lose,ïâ
+Face:win,ïÅ
+<key win.reimu.suwakoU0>\
+End:
+
+
+
+
+
+## =======================================================================
+#VSã§í 
+#ÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇX\
+## ë‰éåA==================
+#0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
+Label:common0
+
+Face:win,ïÅ
+<key win.reimu.common0>\
+End:
+
+Label:common1
+
+Face:win,òf
+<key win.reimu.common1>\
+End:
+
+## =======================================================================
+

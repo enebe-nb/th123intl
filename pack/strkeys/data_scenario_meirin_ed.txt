@@ -1,0 +1,162 @@
+# ----------------------------------------------------
+# Ending
+# Stage:Ending
+#
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Character.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Action.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*Stage.*$"              (0 '((t (:foreground "sky blue"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Object.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Sleep.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"            (0 '((t (:foreground "medium spring green"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+
+Font:MonoSpatialModSWR,16,3,6
+WindowColor:0,0,0,0
+Color:FFFFFF
+Background:data/scenario/effect/EdBack000.bmp,999,0,0
+CG:data/scenario/meirin/effect/ED000.bmp,96,16,50
+WindowPos:8,372
+Label:Start
+
+
+Bgm:data/bgm/ta06.ogg
+
+# ˆê–‡–Ú
+CG:data/scenario/meirin/effect/ED000.bmp,96,16,50
+#0‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚O‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚O‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚O‚P‚Q‚R
+# }‘ŠÙ
+<key scenario.meirin.ed.0>\
+<key scenario.meirin.ed.1>@
+<key scenario.meirin.ed.2>\
+
+# “ñ–‡–Ú
+CG:data/scenario/meirin/effect/ED001.bmp,96,16,50
+# ------------------------------------------------
+# Q‚Ä‚¢‚é”ü—é‚Æ–À˜f‚»‚¤‚É‚µ‚Ä‚¢‚éƒpƒ`ƒ…ƒŠ[
+# Œã‚Íç–é‚ª˜e‚É—§‚Á‚Ä‚¢‚éB
+<key scenario.meirin.ed.3>@
+<key scenario.meirin.ed.4>\
+<key scenario.meirin.ed.5>\
+<key scenario.meirin.ed.6>@
+<key scenario.meirin.ed.7>\
+<key scenario.meirin.ed.8>@
+<key scenario.meirin.ed.9>\
+<key scenario.meirin.ed.10>@
+<key scenario.meirin.ed.11>\
+
+
+CG:data/scenario/meirin/effect/ED002.bmp,96,16,50
+#0‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚O‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚O‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚O‚P‚Q‚R
+# O–‡–Ú
+# ------------------------------------------------
+# ‚È‚ñ‚©Q‚È‚ª‚ç”ü—é‚ª·‚èã‚ª‚Á‚Ä‚¢‚é
+# ‚È‚É‚©‚ÆŠi“¬‚µ‚Ä‚¢‚é‚æ‚¤‚¾
+# ‚»‚ê‚ğŒ©‚Äƒpƒ`ƒ…ƒŠ[‚Í‚¤‚ñ‚´‚èBç–é‚Í‚¿‚å‚Á‚ÆÎ‚Á‚Ä‚¢‚é
+# 
+<key scenario.meirin.ed.12>@
+<key scenario.meirin.ed.13>\
+<key scenario.meirin.ed.14>\
+<key scenario.meirin.ed.15>@
+<key scenario.meirin.ed.16>\
+<key scenario.meirin.ed.17>@
+<key scenario.meirin.ed.18>\
+<key scenario.meirin.ed.19>@
+<key scenario.meirin.ed.20>\
+<key scenario.meirin.ed.21>
+<key scenario.meirin.ed.22>\
+
+#0‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚O‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚O‚P‚Q‚R‚S‚T‚U‚V‚W‚X‚O‚P‚Q‚R
+
+CG:data/scenario/meirin/effect/ED003.bmp,96,16,50
+# l–‡–Ú
+# ------------------------------------------------
+# ƒpƒ`ƒ…ƒŠ[‚Í‰½‚©‚Ì–{‚ğŒ©‚¹‚éB‚Ç‚¤‚â‚ç“V‹ç‚ª‘‚¢‚½–Ÿ‰æ‚Ì‚æ‚¤‚¾
+# 
+# 
+<key scenario.meirin.ed.23>@
+<key scenario.meirin.ed.24>@
+<key scenario.meirin.ed.25>\
+<key scenario.meirin.ed.26>\
+<key scenario.meirin.ed.27>
+<key scenario.meirin.ed.28>
+<key scenario.meirin.ed.29>\
+<key scenario.meirin.ed.30>\
+<key scenario.meirin.ed.31>
+<key scenario.meirin.ed.32>\
+<key scenario.meirin.ed.33>@
+<key scenario.meirin.ed.34>@
+<key scenario.meirin.ed.35>\
+<key scenario.meirin.ed.36>@
+<key scenario.meirin.ed.37>\
+<key scenario.meirin.ed.38>@
+<key scenario.meirin.ed.39>\
+<key scenario.meirin.ed.40>@
+<key scenario.meirin.ed.41>
+<key scenario.meirin.ed.42>\
+<key scenario.meirin.ed.43>\
+
+Background:BLACK,0,0
+CG:BLACK,0,0,50
+WindowPos:0,640
+
+Sleep:60
+
+#CG:data/scenario/meirin/effect/ec02_0.bmp,64,352,15
+CG:BLACK,0,0,15
+WindowPos:80,200
+Font:MonoSpatialModSWR,22,3,6
+
+<key scenario.meirin.ed.44>\
+<key scenario.meirin.ed.45>\
+<key scenario.meirin.ed.46>\
+<key scenario.meirin.ed.47>\
+<key scenario.meirin.ed.48>\
+
+<key scenario.meirin.ed.49>\
+<key scenario.meirin.ed.50>\
+<key scenario.meirin.ed.51>\
+<key scenario.meirin.ed.52>\
+<key scenario.meirin.ed.53>\
+
+#@”ü—é‚Í’@‚«‹N‚±‚³‚êA‘å•Ï’p‚¸‚©‚µ‚¢v‚¢‚ğ‚µ‚½B@
+#@\
+#CG:BLACK,0,0,15
+#Sleep:15
+
+#CG:data/scenario/meirin/effect/ec02_1.bmp,64,352,15
+#@‚»‚µ‚Ä‚¢‚Â‚à’Ê‚è—¯ç”Ô‚ğ”C‚³‚ê‚é‚Æ@
+#@‰É‚Â‚Ô‚µ‚ÉŠˆŒ€–Ÿ‰æ‚ğ“Ç‚Ş–‚É‚µ‚½B\
+#@\
+#CG:BLACK,0,0,15
+#Sleep:15
+
+#CG:data/scenario/meirin/effect/ec02_2.bmp,64,352,15
+#@Œ‹‹ÇA–²‚Ì’†‚Å‚Í‘¾Î¯ŒN‚ÉŸ‚Â‘O‚É‹N‚±‚³‚ê‚Ä‚µ‚Ü‚Á‚½‚ªA@
+#@\
+#CG:BLACK,0,0,15
+#Sleep:15
+
+#CG:data/scenario/meirin/effect/ec02_3.bmp,64,352,15
+#@”ü—é‚Ì’†‚Å­‚µ•sˆÀ‚Év‚¤–‚ª‚ ‚Á‚½B@
+#@\
+#CG:BLACK,0,0,15
+#Sleep:15
+
+#CG:data/scenario/meirin/effect/ec02_4.bmp,64,352,15
+#@‘¾Î¯ŒN‚ç‚µ‚«•¨‚ğŒ©‚½‚Ì‚ÍŠm‚©‚È‚Ì‚¾B‚»‚ê‚Í–²‚Å‚Í‚È‚¢B\
+#@\
+FadeBgm:20000,0
+CG:BLACK,0,0,15
+StaffRoll:
+
+#@–²‚Ì’†‚Å‚àŸ‚Ä‚È‚©‚Á‚½Å‹¥Åˆ«‚Ì—d‰öB@
+#@‹­§“I‚Éíü—£’E‚³‚¹‚ç‚ê‚½”ü—é‚ÍA‚»‚Ì–²‚Ì’†‚Å‚Ìp‚ª@
+#@v‚¢o‚¹‚È‚¢‚Å‚¢‚½B\
+
+#@‚¢‚Â‚©A‚»‚ñ‚È‹°•|‚Ì“G‚ªŒ»‚ê‚é‚Ì‚¾‚ë‚¤‚©B@
+#@Œ»‚ê‚½‚Æ‚«AŒ¶‘z‹½‚Ì—d‰ö‚ªˆê’c‚Æ‚È‚Á‚Äí‚¦‚é‚Ì‚¾‚ë‚¤‚©B@
+#@„‚Í‚İ‚ñ‚È‚Ìˆ×‚ÉÅ‘Oü‚Åí‚¦‚éA‚ÆA”ü—é‚Í‚»‚¤ÄŠm”F‚µ‚½B\
+
+End:

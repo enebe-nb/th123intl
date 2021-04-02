@@ -1,0 +1,23 @@
+#spellcard number,spellcard name,type,consumption,description,appearance stage,rarity,,,,,,,,sort
+100,<key csv.aya.100.name>,1,0,<key csv.aya.100.description>,0,1,104,1,108,1,0,0,11,100
+101,<key csv.aya.101.name>,1,1,<key csv.aya.101.description>,0,1,105,1,109,1,212,3,11,120
+102,<key csv.aya.102.name>,1,4,<key csv.aya.102.description>,0,1,106,1,110,1,0,0,11,140
+103,<key csv.aya.103.name>,1,3,<key csv.aya.103.description>,0,1,107,1,111,1,208,2,11,130
+104,<key csv.aya.104.name>,1,0,<key csv.aya.104.description>,1,1,205,2,0,0,0,0,11,101
+105,<key csv.aya.105.name>,1,1,<key csv.aya.105.description>,1,1,0,0,0,0,0,0,11,121
+106,<key csv.aya.106.name>,1,4,<key csv.aya.106.description>,1,1,203,3,0,0,0,0,11,141
+107,<key csv.aya.107.name>,1,3,<key csv.aya.107.description>,1,1,211,2,0,0,0,0,11,131
+108,<key csv.aya.108.name>,1,0,<key csv.aya.108.description>,0,1,200,3,0,0,0,0,11,102
+109,<key csv.aya.109.name>,1,1,<key csv.aya.109.description>,1,1,206,5,0,0,0,0,11,122
+110,<key csv.aya.110.name>,1,4,<key csv.aya.110.description>,1,1,207,3,0,0,0,0,11,142
+111,<key csv.aya.111.name>,1,3,<key csv.aya.111.description>,0,1,202,4,0,0,0,0,11,132
+200,<key csv.aya.200.name>,2,3,<key csv.aya.200.description>,0,3,201,4,0,0,0,0,11,220
+201,<key csv.aya.201.name>,2,5,<key csv.aya.201.description>,0,4,0,0,0,0,0,0,11,240
+202,<key csv.aya.202.name>,2,4,<key csv.aya.202.description>,1,4,0,0,0,0,0,0,11,230
+203,<key csv.aya.203.name>,2,3,<key csv.aya.203.description>,1,3,0,0,0,0,0,0,11,221
+205,<key csv.aya.205.name>,2,2,<key csv.aya.205.description>,0,2,0,0,0,0,0,0,11,210
+206,<key csv.aya.206.name>,2,5,<key csv.aya.206.description>,1,5,0,0,0,0,0,0,11,241
+207,<key csv.aya.207.name>,2,2,<key csv.aya.207.description>,1,3,0,0,0,0,0,0,11,211
+208,<key csv.aya.208.name>,2,4,<key csv.aya.208.description>,1,2,0,0,0,0,0,0,11,231
+211,<key csv.aya.211.name>,2,1,<key csv.aya.211.description>,1,2,0,0,0,0,0,0,11,200
+212,<key csv.aya.212.name>,2,3,<key csv.aya.212.description>,1,3,0,0,0,0,0,0,11,222
