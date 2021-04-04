@@ -1,38 +1,69 @@
 #include <windows.h>
 #include <fstream>
-#include <stack>
+#include <list>
 #include <unordered_map>
 
 #include <nlohmann/json.hpp>
 #include "main.hpp"
 
-// TODO use SAX for parsing and const char* for storing
 namespace {
-    std::unordered_map<std::string, std::string> keyMap;
-}
+    std::unordered_map<std::string, const char*> keyMap;
 
-typedef std::stack<std::pair<std::string, const nlohmann::json&>> parserStack_t;
-void LoadKeyMap(const std::filesystem::path& filename) {
-    std::ifstream data(filename);
-    nlohmann::json json;
-    data >> json;
-    parserStack_t stack;
-    stack.push(parserStack_t::value_type::pair("", json));
+    inline void keyMapInsert(const std::string& key, const std::string& val) {
+        char* value = new char[val.size() + 1];
+        val.copy(value, val.size());
+        value[val.size()] = '\0';
 
-    while(!stack.empty()) {
-        std::string parent = stack.top().first;
-        if (!parent.empty()) parent += ".";
-        auto& node = stack.top().second;
-        stack.pop();
-
-        for(auto& iter = node.begin(); iter != node.end(); ++iter) {
-            if (iter.value().is_object()) {
-                stack.push(parserStack_t::value_type::pair(parent + iter.key(), iter.value()));
-            } else if (iter.value().is_string()) {
-                keyMap[parent+iter.key()] = iter.value().get<std::string>();
-            }
+        auto iter = keyMap.find(key);
+        if (iter == keyMap.end()) {
+            keyMap[key] = value;
+        } else {
+            delete[] iter->second;
+            iter->second = value;
         }
     }
+
+    class : public nlohmann::json::json_sax_t {
+    public:
+        std::list<std::string> keyStack;
+        int arrayIndex = -1;
+
+        // TODO implement unused non-strings??
+        bool null() override { return true; }
+        bool binary(nlohmann::json::binary_t& val) override { return true; }
+        bool boolean(bool val) override { return true; }
+        bool number_integer(number_integer_t val) override { return true; }
+        bool number_unsigned(number_unsigned_t val) override { return true; }
+        bool number_float(number_float_t val, const string_t& s) override { return true; }
+
+        bool string(string_t& val) override {
+            if (arrayIndex >= 0) keyStack.back() = arrayIndex++;
+
+            std::string key;
+            for (auto& k : keyStack) {
+                if (!key.empty()) key += '.';
+                key += k;
+            }
+
+            keyMapInsert(key, val);
+            return true;
+        }
+
+        bool start_object(std::size_t elements) override { keyStack.emplace_back(); return true; }
+        bool key(string_t& val) override { keyStack.back() = val; return true; }
+        bool end_object() override { keyStack.pop_back(); return true; }
+        bool start_array(std::size_t elements) override { keyStack.emplace_back(); arrayIndex = 0; return true; }
+        bool end_array() override { keyStack.pop_back(); arrayIndex = -1; return true; }
+
+        bool parse_error(std::size_t position, const std::string& last_token, const nlohmann::json::exception& ex) override { return false; }
+    } saxParser;
+}
+
+void LoadKeyMap(const std::filesystem::path& filename) {
+    // TODO make it thread with lock
+    std::ifstream data(filename);
+    nlohmann::json json;
+    json.sax_parse(data, &saxParser);
 }
 
 template <std::size_t S>
@@ -97,7 +128,7 @@ void LoadLanguage() {
 
 extern "C" __declspec(dllexport) const char* GetTranslation(const char* key) {
     auto iter = keyMap.find(key);
-    if (iter != keyMap.end()) return iter->second.c_str();
+    if (iter != keyMap.end()) return iter->second;
     else return 0;
 }
 
