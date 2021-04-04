@@ -1,5 +1,7 @@
 {
     "system": {
+        "failInit": "Failed to initialize",
+
         "d3d": {
             "failCoopLevel": "Failed to set cooperation level",
             "failDisplay": "Failed to get display mode",
@@ -36,7 +38,7 @@
         "replay": {
             "delete": "Delete this replay?",
             "deleted": "Replay deleted.",
-            "failCreateFolder": "Failure to create replay folder.",
+            "failFolder": "Failure to create replay folder.",
             "failDelete": "Failed to delete replay.",
             "save": "Save replay?",
             "saved": "Replay saved.",

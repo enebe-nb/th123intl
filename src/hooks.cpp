@@ -29,44 +29,45 @@ namespace {
         const char *string;
     } text_table[] = {
         // DINPUT
-        { 0x40d66d, "<key system.dinput.failCreate0>" },
-        { 0x40d6a5, "<key system.dinput.failCreate1>" },
-        { 0x40d867, "<key system.dinput.failKeyboard>" },
-        { 0x40d898, "<key system.dinput.failDataFormat>" },
-        { 0x40d8ce, "<key system.dinput.failCoopLevel>" },
-        { 0x40d930, "<key system.dinput.failQueue>" },
-        { 0x40db1a, "<key system.dinput.failMouse>" },
-        { 0x40db4e, "<key system.dinput.failDataFormat>" },
-        { 0x40dbd8, "<key system.dinput.failProps>" },
+        { 0x40d66d, "\\system.dinput.failCreate0" },
+        { 0x40d6a5, "\\system.dinput.failCreate1" },
+        { 0x40d867, "\\system.dinput.failKeyboard" },
+        { 0x40d898, "\\system.dinput.failDataFormat" },
+        { 0x40d8ce, "\\system.d3d.failCoopLevel" },
+        { 0x40d930, "\\system.dinput.failQueue" },
+        { 0x40db1a, "\\system.dinput.failMouse" },
+        { 0x40db4e, "\\system.dinput.failDataFormat" },
+        { 0x40db87, "\\system.d3d.failCoopLevel" },
+        { 0x40dbd8, "\\system.dinput.failProps" },
 
-        // INTERNETS
-        { 0x41312c, "<key system.socket.failInit>" },
-        { 0x413331, "<key system.socket.failPort>" },
+        // SOCKET
+        { 0x41312c, "\\system.socket.failInit" },
+        { 0x413331, "\\system.socket.failPort" },
 
         // DIRECT3D
-        { 0x414f05, "<key system.d3d.failObject>" },
-        { 0x414f35, "<key system.d3d.failDisplay>" },
-        { 0x415079, "<key system.d3d.failDevice>" },
-        { 0x40db87, "<key system.d3d.failCoopLevel>" },
-        { 0x4188e1, "<key system.d3d.failCoopLevel>" },
+        { 0x414f05, "\\system.d3d.failObject" },
+        { 0x414f35, "\\system.d3d.failDisplay" },
+        { 0x415079, "\\system.d3d.failDevice" },
 
         // DSOUND
-        { 0x418392, "<key system.dsound.failBuffer>" },
-        { 0x4183d1, "<key system.dsound.failBuffer3D>" },
-        { 0x41851e, "<key system.dsound.failBuffer>" },
-        { 0x4185ca, "<key system.dsound.failBufferLock>" },
-        { 0x4186f2, "<key system.dsound.failBufferLock>" },
-        { 0x41884c, "<key system.dsound.failCreateObject>" },
-        { 0x41888b, "<key system.dsound.failInit>" },
-        { 0x4189ab, "<key system.dsound.failCreatePrimary>" },
-        { 0x4189f7, "<key system.dsound.failCreateListener>" },
-        { 0x418af1, "<key system.dsound.failCreateTemporary>" },
+        { 0x418392, "\\system.dsound.failBuffer" },
+        { 0x4183d1, "\\system.dsound.failBuffer3D" },
+        { 0x41851e, "\\system.dsound.failBuffer" },
+        { 0x4185ca, "\\system.dsound.failBufferLock" },
+        { 0x4186f2, "\\system.dsound.failBufferLock" },
+        { 0x41884c, "\\system.dsound.failCreateObject" },
+        { 0x41888b, "\\system.dsound.failInit" },
+        { 0x4188e1, "\\system.d3d.failCoopLevel" },
+        { 0x4189ab, "\\system.dsound.failCreatePrimary" },
+        { 0x4189f7, "\\system.dsound.failCreateListener" },
+        { 0x418af1, "\\system.dsound.failCreateTemporary" },
 
         // ERROR
-        { 0x7fb88d, "Failed to initialize" },
+        { 0x442e81, "\\system.profile.failFolder" },
+        { 0x442eac, "\\system.replay.failFolder" },
+        { 0x7fb88d, "\\system.failInit" },
 
         // Replay
-        { 0x442eac, "<key system.replay.failCreateFolder>" },
         { 0x444d50, "<key system.replay.returnSelect>" },
         { 0x444d6f, "<key system.replay.returnTitle>" },
         { 0x444e75, "<key system.replay.saved>" },
@@ -100,7 +101,6 @@ namespace {
         { 0x449319, "<key system.story.continueConfirm>%d<key system.story.continueLeft>" },
 
         // Profile stuff
-        { 0x442e81, "<key system.profile.failFolder>" },
         { 0x452613, "<key system.profile.failDelete>" },
         { 0x4525d4, "<key system.profile.deleted>" },
         { 0x450256, "<key system.profile.confirmSave>" },
@@ -269,6 +269,44 @@ static int __stdcall script_passthrough(char *ebp, char *edx) {
     return retval;
 }
 
+int __stdcall repl_MessageBoxUtf8(HWND window, const char* content, const char* title, unsigned int type) {
+    if (content && *content == '\\') {
+        const char * tn = GetTranslation(content+1);
+        if (tn) content = tn;
+    }
+
+    if (title && *title == '\\') {
+        const char * tn = GetTranslation(title+1);
+        if (tn) title = tn;
+    }
+
+    bool cantConvert = false;
+    int bufferSize;
+    std::wstring wcontent;
+    bufferSize = MultiByteToWideChar(CP_UTF8, 0, content, -1, 0, 0);
+    if (bufferSize == 0) cantConvert = true;
+    else {
+        wcontent.resize(bufferSize);
+        if (MultiByteToWideChar(CP_UTF8, 0, content, -1, wcontent.data(), wcontent.size()) == 0) cantConvert = true;
+    }
+    std::wstring wtitle;
+    if (title) {
+        bufferSize = MultiByteToWideChar(CP_UTF8, 0, title, -1, 0, 0);
+        if (bufferSize == 0) cantConvert = true;
+        else {
+            wtitle.resize(bufferSize);
+            if (MultiByteToWideChar(CP_UTF8, 0, title, -1, wtitle.data(), wtitle.size()) == 0) cantConvert = true;
+        }
+    }
+
+    if (cantConvert) return MessageBoxA(window, content, title, type);
+    else return MessageBoxW(window, wcontent.data(), title ? wtitle.data() : 0, type);
+}
+
+extern "C" __declspec(dllexport) int MessageBoxUtf8(HWND window, const char* content, const char* title, unsigned int type) {
+    return repl_MessageBoxUtf8(window, content, title, type);
+}
+
 void LoadHooks() {
     DWORD old;
     VirtualProtect((LPVOID)0x00401000, 0x00456000, PAGE_WRITECOPY, &old);
@@ -346,12 +384,16 @@ void LoadHooks() {
     *(uint32_t*)0x44e8e3 = 0x8c;    // not found card offset
     *(uint8_t*)0x4488a9  = 0x0a;    // ip numbers slice size
     *(uint32_t*)0x462966 = 1;       // story mode font spacing
+    *(uint8_t*)0x45277a = 32;       // profile.nameChanged str size
+    *(uint8_t*)0x4527df = 29;       // profile.failCopy str size
 
     VirtualProtect((LPVOID)0x00401000, 0x00456000, old, &old);
 
-    // Replace link to GetGlyphOutlineA with GetGlyphOutlineW
     VirtualProtect((LPVOID)0x857014, 4, PAGE_WRITECOPY, &old);
+    // Replace link to GetGlyphOutlineA with GetGlyphOutlineW
     *(uint32_t*)0x857014 = (uint32_t) GetProcAddress(GetModuleHandle(TEXT("gdi32.dll")), "GetGlyphOutlineW");
+    // Replace link to MessageBoxA with custom function
+    *(uint32_t*)0x857250 = (uint32_t) repl_MessageBoxUtf8;
     VirtualProtect((LPVOID)0x857014, 4, old, &old);
 
     FlushInstructionCache(GetCurrentProcess(), NULL, 0);
