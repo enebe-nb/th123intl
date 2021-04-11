@@ -101,19 +101,12 @@ namespace {
         { 0x449319, "<key system.story.continueConfirm>%d<key system.story.continueLeft>" },
 
         // Profile stuff
-        { 0x452613, "<key system.profile.failDelete>" },
-        { 0x4525d4, "<key system.profile.deleted>" },
         { 0x450256, "<key system.profile.confirmSave>" },
         { 0x4503c9, "<key system.profile.confirmSave>" },
         { 0x450188, "<key system.profile.fail20Cards>" },
         { 0x452090, "<key system.profile.failCreate>" },
         { 0x4520f8, "<key system.profile.failCreate>" },
         { 0x452009, "<key system.profile.created>" },
-        { 0x452469, "<key system.profile.copied>" },
-        { 0x4523d7, "<key system.profile.failCopy>" },
-        { 0x4527e1, "<key system.profile.failName>" },
-        { 0x452840, "<key system.profile.failName>" },
-        { 0x45277c, "<key system.profile.nameChanged>" },
         { 0x452972, "<key system.profile.confirmOverwrite>" },
         { 0x452f6c, "<key system.profile.confirmOverwrite>" },
         { 0x452ae1, "<key system.profile.confirmCopy>" },
@@ -124,10 +117,8 @@ namespace {
         //{ 0x437ff4, "<br><br>" },
 
         { 0x448872, "0 1 2 3 4 5 6 7 8 9<br>^<br>     .      .      .      : " },
-        { 0x44a12a, "<color 808080>? ? ? ? ? ? ? ? </color>" },
         { 0x44c90b, "%s - %s  %03d/%03d  Time %02d.%02d" },
         { 0x44c947, "<color 808080>? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? </color>" },
-        { 0x450bbd, "<color 808080>? ? ?</color>" },
         { 0x450b7d, "%d    <color FF8080>%d</color>    /%d<color FF8080>  /%d</color><br>" },
 
         { 0, 0 }
@@ -141,8 +132,14 @@ inline DWORD TamperNearJmpOpr(DWORD addr, DWORD target) {
 }
 
 template <std::size_t S>
-inline void TamperCode(void* address, const uint8_t (&code)[S]) {
-    memcpy(address, code, S);
+inline void TamperCode(uint32_t address, const uint8_t (&code)[S]) {
+    memcpy((void*)address, code, S);
+}
+
+template <std::size_t S>
+inline void TamperStringWithSize(uint32_t addrStr, uint32_t addrLen, const char (&code)[S]) {
+    *(uint8_t*)addrLen = S - 1;
+    *(const char**)addrStr = code;
 }
 
 static void repl_appendDataPackage(const char* filename) {
@@ -317,6 +314,16 @@ void LoadHooks() {
         *(const char**)text_table[i].addr = text_table[i].string;
     }
 
+    TamperStringWithSize(0x452613, 0x452611, "<key system.profile.failDelete>");
+    TamperStringWithSize(0x4525d4, 0x4525d2, "<key system.profile.deleted>");
+    TamperStringWithSize(0x452469, 0x452461, "<key system.profile.copied>");
+    TamperStringWithSize(0x4523d7, 0x4523cf, "<key system.profile.failCopy>");
+    TamperStringWithSize(0x4527e1, 0x4527df, "<key system.profile.failName>");
+    TamperStringWithSize(0x452840, 0x452838, "<key system.profile.failName>");
+    TamperStringWithSize(0x45277c, 0x45277a, "<key system.profile.nameChanged>");
+    TamperStringWithSize(0x44a12a, 0x44a128, "<color 808080>? ? ? ? ? ? ? ? </color>");
+    TamperStringWithSize(0x450bbd, 0x450bbb, "<color 808080>? ? ?</color>");
+
     // Replace Fonts
     AddFontResourceExW((modulePath / L"MonoSpatialModSWR.ttf").c_str(), FR_PRIVATE, 0);
     *(const char**)0x434cf6 = "MonoSpatialModSWR"; // profiles
@@ -336,7 +343,7 @@ void LoadHooks() {
         0x55,                   // PUSH esp
         0xe8, 0, 0, 0, 0,       // CALL xxxx
         0x8b, 0xe8,             // MOV ebp, eax
-    }; TamperCode((void*)0x40f5ff, callTextPassThrough);
+    }; TamperCode(0x40f5ff, callTextPassThrough);
     TamperNearJmpOpr(0x40f601, reinterpret_cast<DWORD>(text_passthrough));
 
     // escape codes on scripts
@@ -348,7 +355,7 @@ void LoadHooks() {
         0x90, 0x90, 0x90, 0x90, // NOPs
         0x90, 0x90, 0x90, 0x90, // NOPs
         0x84, 0xc0              // TEST al, al
-    }; TamperCode((void*)0x82112a, callScriptPassThrough);
+    }; TamperCode(0x82112a, callScriptPassThrough);
     TamperNearJmpOpr(0x82112c, reinterpret_cast<DWORD>(script_passthrough));
 
     // rewrite character loop to use uft8 [0x4129b3]:[0x412a1b]
@@ -375,7 +382,7 @@ void LoadHooks() {
         0x74, 0x42,             // JE +0x42         -- goto break
         0xeb, 0x48,             // JMP +0x48        -- goto continue
         0x90,                   // NOP              -- align
-    }; TamperCode((void*)0x004129b3, callPrintNextChar);
+    }; TamperCode(0x4129b3, callPrintNextChar);
     TamperNearJmpOpr(0x004129c2, reinterpret_cast<DWORD>(printNextChar));
     
     *(uint32_t*)0x450b3e = 0x00;    // deck numbers spacing
@@ -384,8 +391,6 @@ void LoadHooks() {
     *(uint32_t*)0x44e8e3 = 0x8c;    // not found card offset
     *(uint8_t*)0x4488a9  = 0x0a;    // ip numbers slice size
     *(uint32_t*)0x462966 = 1;       // story mode font spacing
-    *(uint8_t*)0x45277a = 32;       // profile.nameChanged str size
-    *(uint8_t*)0x4527df = 29;       // profile.failCopy str size
 
     VirtualProtect((LPVOID)0x00401000, 0x00456000, old, &old);
 
