@@ -148,6 +148,24 @@ static void repl_appendDataPackage(const char* filename) {
     if (!languagePack.empty()) orig_appendDataPackage(languagePack.string().c_str());
 }
 
+static bool applyWordBreak(void* handle, const char* word) {
+    wchar_t wstr[512];
+    size_t len = strcspn(&word[1], " <") + 1;
+    size_t wlen = MultiByteToWideChar(CP_UTF8, 0, word, len, wstr, 512);
+    if (wlen) {
+        SIZE textSize;
+        if (GetTextExtentPoint32W(*(HDC*)handle, wstr, wlen, &textSize)) {
+            int width = textSize.cx + *(int*)((int)handle + 0x134) + *(int*)((int)handle + 0x12c) * wlen;
+            if (width > *(int*)((int)handle + 0x14c)) {
+                *(int*)((int)handle + 0x134) = *(int*)((int)handle + 0x124) + *(char*)((int)handle + 0x11d);
+                *(int*)((int)handle + 0x138) += *(int*)((int)handle + 0x130) + *(int*)((int)handle + 0x114);
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 static int parseHtmlTag(void* handle, const char* text, int* out1, int* out2);
 static int printNextChar(void* handle, const char* buffer, int index, int len, int* out1, int* out2) {
 #ifdef _DEBUG
@@ -163,25 +181,8 @@ static int printNextChar(void* handle, const char* buffer, int index, int len, i
     uint32_t lc = (uint8_t)buffer[index];
     if (!lc) return 0;
     if (lc == '<') return 1 + parseHtmlTag(handle, &buffer[index+1], out1, out2);
-    if (lc == ' ' && *((char*)handle + 0x11e)) {
-        const char* end = strpbrk(&buffer[index+1], " <");
-        size_t s = MultiByteToWideChar(CP_UTF8, 0, &buffer[index], end ? end - &buffer[index] : -1, 0, 0);
-        if (s) {
-            wchar_t* tstr = new wchar_t[end ? s + 1 : s];
-            if (end) tstr[s] = '\0';
-            MultiByteToWideChar(CP_UTF8, 0, &buffer[index], end ? end - &buffer[index] : -1, tstr, s);
-            SIZE textSize;
-            if (GetTextExtentPoint32W(*(HDC*)handle, tstr, end ? s : s-1, &textSize)) {
-                int width = textSize.cx + *(int*)((int)handle + 0x134) + *(int*)((int)handle + 0x12c) * (end ? s : s-1);
-                if (width > *(int*)((int)handle + 0x14c)) {
-                    *(int*)((int)handle + 0x134) = *(int*)((int)handle + 0x124) + *(char*)((int)handle + 0x11d);
-                    *(int*)((int)handle + 0x138) += *(int*)((int)handle + 0x130) + *(int*)((int)handle + 0x114);
-                    return 1;
-                }
-            }
-            delete[] tstr;
-        }
-    }
+    if (lc == ' ' && *((char*)handle + 0x11e))
+        if(applyWordBreak(handle, &buffer[index])) return 1;
 
     if (lc < 0x80) { // 1byte
         __asm {
@@ -231,9 +232,11 @@ static int parseHtmlTag(void* handle, const char* text, int* out1, int* out2) {
     const char* end = strchr(text, '>');
     if (end && strncmp(text, "key ", 4) == 0) {
         const char* value = GetTranslation(std::string(text+4, end).c_str());
-        size_t len = strlen(value);
-        for (size_t i = 0, j = -1; i < len && j != 0; i += j) {
-            j = printNextChar(handle, value, i, len, out1, out2);
+        if (value) {
+            size_t len = strlen(value);
+            for (size_t i = 0, j = -1; i < len && j != 0; i += j) {
+                j = printNextChar(handle, value, i, len, out1, out2);
+            }
         }
         return end - text + 1;
     }
