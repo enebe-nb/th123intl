@@ -5,7 +5,7 @@
 #include <fstream>
 #endif
 
-#ifndef TH123INTL_DISABLE_UTFERROR
+#ifdef _DEBUG
     #define UTFERROR(handle, buffer) { \
         char errmsg[80]; \
         sprintf_s(errmsg, "Utf-8 error with handle %08X and data %08X.", (unsigned int)handle, (unsigned int)buffer); \
@@ -23,6 +23,20 @@ namespace {
     parseIChar_t orig_parseIChar = (parseIChar_t) 0x00411e20;
     typedef void (__fastcall *orig_text_func_t)(unsigned int ecx, void* edx, void *a, void *b, void *c, unsigned int d);
     orig_text_func_t orig_text_func = (orig_text_func_t) 0x40fc00;
+
+    typedef void (__fastcall *copyInFilelist_t)(void*, void*, unsigned int);
+    copyInFilelist_t orig_copyInFilelist = (copyInFilelist_t) 0x0043caa0;
+    typedef void (__fastcall *copyInProfile_t)(unsigned int, void*, unsigned int, unsigned int, int);
+    copyInProfile_t orig_copyInProfile = (copyInProfile_t) 0x004020d0;
+    typedef void (__fastcall *stringFromCstr_t)(void*, void*, const char*, unsigned int);
+    stringFromCstr_t orig_stringFromCstr = (stringFromCstr_t) 0x00402200;
+    typedef unsigned int (__fastcall *getintbl_t)(void*, void*, unsigned int);
+    getintbl_t orig_getintbl = (getintbl_t) 0x0043cbc0;
+    typedef int (__fastcall *createTextTexture_t)(void*, void*, void*, const char*, void*, int, int, int*, int*);
+    createTextTexture_t orig_createTextTexture = (createTextTexture_t) 0x004050a0;
+
+    typedef int (__fastcall *createTexture_t)(int*, const char*, int*, int*);
+    createTexture_t orig_createTexture = (createTexture_t) 0x00408cf0;
 
     static struct {
         uint32_t addr;
@@ -288,6 +302,77 @@ static int __stdcall script_passthrough(char *ebp, char *edx) {
     return retval;
 }
 
+template <std::size_t S>
+inline int ACP2Utf8(char (&dst)[S], const char* src, unsigned int len) {
+    wchar_t wstr[S];
+    int wlen = MultiByteToWideChar(GetACP(), 0, src, len, wstr, S);
+    if (wlen) {
+        int u8len = WideCharToMultiByte(CP_UTF8, 0, wstr, wlen, dst, S, 0, 0);
+        dst[u8len] = '\0';
+#ifdef _DEBUG
+        logging << "str convert: \"" << src << "\" -> \"" << dst << "\"" <<std::endl;
+#endif
+        return u8len;
+    }
+    return 0;
+}
+
+static void __fastcall repl_copyInFilelist(void* ecx, void* edx, unsigned int str) {
+    if (GetACP() == CP_UTF8) return orig_copyInFilelist(ecx, edx, str);
+    const char* cstr = *(int*)(str + 0x18) >= 0x10 ? *(const char**)(str + 0x4) : (const char*)(str + 0x4);
+    int len = *(int*)(str + 0x14);
+
+    char buffer[512];
+    len = ACP2Utf8(buffer, cstr, len);
+    if (len) orig_stringFromCstr((void*)str, edx, buffer, len);
+
+    return orig_copyInFilelist(ecx, edx, str);
+}
+
+static void __fastcall repl_copyInProfile(unsigned int dst, void* edx, unsigned int src, unsigned int offset, int len) {
+    if (GetACP() == CP_UTF8) return orig_copyInProfile(dst, edx, src, offset, len);
+    const char* cstr = *(int*)(src + 0x18) >= 0x10 ? *(const char**)(src + 0x4) : (const char*)(src + 0x4);
+    cstr += offset;
+    if (len == -1) len = *(int*)(src + 0x14) - offset;
+
+    char buffer[512];
+    len = ACP2Utf8(buffer, cstr, len);
+    if (len) orig_stringFromCstr((void*)dst, edx, buffer, len);
+    else orig_copyInProfile(dst, edx, src, offset, len);
+}
+
+static int __fastcall repl_createTextTexture(void* ecx, void* edx, void* dxHandle, const char* text, void* fontHandle, int texWidth, int texHeight, int* outWidth, int* outHeight) {
+    if (GetACP() == CP_UTF8) return orig_createTextTexture(ecx, edx, dxHandle, text, fontHandle, texWidth, texHeight, outWidth, outHeight);
+    char buffer[512];
+    int len = strlen(text);
+
+    len = ACP2Utf8(buffer, text, len);
+    if (len) text = buffer;
+    return orig_createTextTexture(ecx, edx, dxHandle, text, fontHandle, texWidth, texHeight, outWidth, outHeight);
+}
+
+typedef struct { int pitch; int32_t* data; } D3DLOCKED_RECT;
+typedef int (__stdcall *dxFn4c_t)(int* dxTex, int, D3DLOCKED_RECT*, int, int); // LockRect???
+typedef int (__stdcall *dxFn50_t)(int* dxTex, int); // UnlockRect???
+static int __fastcall repl_createTexture(int* out1, const char* name, int* out3, int* out2) {
+    int height;
+    int result = orig_createTexture(&height, name, out3, out2);
+    if (out1) *out1 = height;
+    int* dxTex = (int*)*out3;
+    dxFn4c_t dxFn4c = (dxFn4c_t) *(int*)(*dxTex + 0x4c);
+    dxFn50_t dxFn50 = (dxFn50_t) *(int*)(*dxTex + 0x50);
+#ifdef _DEBUG
+    logging << "createTexture: " << name <<" "<< out1 <<" "<< out2 <<" "<< dxFn4c <<" "<< dxFn50 << std::endl;
+#endif
+    D3DLOCKED_RECT rect;
+    dxFn4c(dxTex, 0, &rect, 0, 0);
+    for (int i = 0; i < rect.pitch/4 * height; ++i) {
+        rect.data[i] = -1;
+    }
+    dxFn50(dxTex, 0);
+    return result;
+}
+
 int __stdcall repl_MessageBoxUtf8(HWND window, const char* content, const char* title, unsigned int type) {
     if (content && *content == '\\') {
         const char * tn = GetTranslation(content+1);
@@ -335,7 +420,6 @@ void LoadHooks() {
     for (int i = 0; text_table[i].addr; ++i) {
         *(const char**)text_table[i].addr = text_table[i].string;
     }
-
     TamperStringWithSize(0x452613, 0x452611, "<key system.profile.failDelete>");
     TamperStringWithSize(0x4525d4, 0x4525d2, "<key system.profile.deleted>");
     TamperStringWithSize(0x452469, 0x452461, "<key system.profile.copied>");
@@ -380,14 +464,14 @@ void LoadHooks() {
     }; TamperCode(0x82112a, callScriptPassThrough);
     TamperNearJmpOpr(0x82112c, reinterpret_cast<DWORD>(script_passthrough));
 
-    // rewrite character loop to use uft8 [0x4129b3]:[0x412a1b]
+    // Change CreateTextTexture to accept utf8
     //[esp+0x10]: len;
     //edi: offset;
     //ebx: buffer;
     //[ebp+0x0c]: out1;
     //[ebp+0x10]: out2;
     //esi: handle;
-    const uint8_t callPrintNextChar[] = {
+     TamperCode(0x4129b3, {
         0x8b, 0x44, 0x24, 0x10, // MOV eax, [esp+0x10]
         0x53,                   // PUSH ebx
         0xff, 0x75, 0x10,       // PUSH [ebp+0x10]  -- out2
@@ -404,9 +488,26 @@ void LoadHooks() {
         0x74, 0x42,             // JE +0x42         -- goto break
         0xeb, 0x48,             // JMP +0x48        -- goto continue
         0x90,                   // NOP              -- align
-    }; TamperCode(0x4129b3, callPrintNextChar);
+    }); // rewrite character loop to use uft8 [0x4129b3]:[0x412a1b]
     TamperNearJmpOpr(0x004129c2, reinterpret_cast<DWORD>(printNextChar));
-    
+
+    // Use utf8 in profile names
+    orig_copyInFilelist = (copyInFilelist_t)
+        TamperNearJmpOpr(0x0043cd89, reinterpret_cast<DWORD>(repl_copyInFilelist));
+    orig_createTextTexture = (createTextTexture_t)
+        TamperNearJmpOpr(0x0044b143, reinterpret_cast<DWORD>(repl_createTextTexture));
+    TamperNearJmpOpr(0x0042c7a1, reinterpret_cast<DWORD>(repl_copyInProfile));
+    orig_copyInProfile = (copyInProfile_t)
+        TamperNearJmpOpr(0x00434ea9, reinterpret_cast<DWORD>(repl_copyInProfile));
+    TamperCode(0x434eae, {
+        0x8B, 0x45, 0x14,       // MOV eax, [ebp+0x14]
+        0x90, 0x90, 0x90,       // NOP NOP NOP
+    }); // use length of target instead of source
+
+    // Overwrite texture with text
+    //orig_createTexture = (createTexture_t)
+        //TamperNearJmpOpr(0x0040b4b2, reinterpret_cast<DWORD>(repl_createTexture));
+
     *(uint32_t*)0x450b3e = 0x00;    // deck numbers spacing
     *(uint8_t*)0x450bfd  = 0x0e;    // deck numbers slice size
     *(uint8_t*)0x450bff  = 0x12;    // deck numbers slice size
@@ -416,12 +517,12 @@ void LoadHooks() {
 
     VirtualProtect((LPVOID)0x00401000, 0x00456000, old, &old);
 
-    VirtualProtect((LPVOID)0x857014, 4, PAGE_WRITECOPY, &old);
+    VirtualProtect((LPVOID)0x857000, 0x02b000, PAGE_WRITECOPY, &old);
     // Replace link to GetGlyphOutlineA with GetGlyphOutlineW
     *(uint32_t*)0x857014 = (uint32_t) GetProcAddress(GetModuleHandle(TEXT("gdi32.dll")), "GetGlyphOutlineW");
     // Replace link to MessageBoxA with custom function
     *(uint32_t*)0x857250 = (uint32_t) repl_MessageBoxUtf8;
-    VirtualProtect((LPVOID)0x857014, 4, old, &old);
+    VirtualProtect((LPVOID)0x857000, 0x02b000, old, &old);
 
     FlushInstructionCache(GetCurrentProcess(), NULL, 0);
 }
