@@ -86,6 +86,192 @@
         }
     },
 
+    "gui": {
+        "yes": "Yes",
+        "no": "No",
+
+        "background": {
+            "0": "Hakurei Shrine",
+            "1": "Forest of Magic",
+            "2": "Creek of Genbu",
+            "3": "Youkai Mountain",
+            "4": "Mysterious Sea of Clouds",
+            "5": "Bhava-Agra",
+            "6": "Hakurei Shrine",
+            "7": "Kirisame Magic Shop",
+            "8": "Scarlet Devil Mansion<br>Clock Tower",
+            "9": "Forest of Dolls",
+            "10": "Scalet Devil Mansion<br>Library",
+            "11": "Netherworld",
+            "12": "Scarlet Devil Mansion<br>Foyer",
+            "13": "Hakugyokurou<br>Snowy Garden",
+            "14": "Bamboo Forest of the Lost",
+            "15": "Shore of Misty Lake",
+            "16": "Moriya Shrine",
+            "17": "Mouth of Geyser",
+            "18": "Catwalk in Geyser",
+            "19": "Fusion Reactor Core",
+            "20": "Random Select"
+        },
+
+        "character": {
+            "reimu": {"name": "Reimu Hakurei", "flavor": "Shrine Maiden of Paradise"},
+            "marisa": {"name": "Marisa Kirisame", "flavor": "Ordinary Magician"},
+            "sakuya": {"name": "Sakuya Izayoi", "flavor": "Perfect and Elegant Maid"},
+            "alice": {"name": "Alice Margatroid", "flavor": "Seven-Colored Puppeteer"},
+            "patchouli": {"name": "Patchouli Knowledge", "flavor": "The Great Unmoving Library"},
+            "youmu": {"name": "Youmu Konpaku", "flavor": "Half-Ghost Gardener"},
+            "remilia": {"name": "Remilia Scalet", "flavor": "Eternally Young Red Moon"},
+            "yuyuko": {"name": "Yuyuko Saigyouji", "flavor": "Innocent Ghost"},
+            "yukari": {"name": "Yukari Yakumo", "flavor": "Border of Phantasm"},
+            "suika": {"name": "Suika Ibuki", "flavor": "Little Pandemonium"},
+            "udonge": {"name": "Reisen Udongein Inaba", "flavor": "Red Eyes of Madness"},
+            "aya": {"name": "Aya Shameimaru", "flavor": "Traditional Reporter of Fantasy"},
+            "komachi": {"name": "Komachi Onozuka", "flavor": "Sanzu River Ferryman"},
+            "iku": {"name": "Iku Nagae", "flavor": "Beautiful Scarlet Cloth"},
+            "tenshi": {"name": "Tenshi Hinanawi", "flavor": "Daughter of Bhavāgra"},
+            "sanae": {"name": "Sanae Kochiya", "flavor": "Embodiment of the Divine Wind"},
+            "chirno": {"name": "Cirno", "flavor": "Ice Fairy"},
+            "meirin": {"name": "Hong Meiling", "flavor": "Chinese Girl"},
+            "utsuho": {"name": "Utsuho Reiuji", "flavor": "Searing Divine Flame"},
+            "suwako": {"name": "Suwako Moriya", "flavor": "Epitome of Native Gods"},
+            "random": {"name": "Random Select", "flavor": "Choice Overflowing with Romance"},
+            "namazu": {"name": "Catfish"}
+        },
+
+        "config" : {
+            "label": {
+                "0": "Difficulty",
+                "1": "BGM Volume",
+                "2": "SE Volume",
+                "3": "Display Mode",
+                "4": "Redraw Rate",
+                "5": "FPS Display",
+                "6": "Replay Save"
+            },
+            "option": {
+                "0": "Easy",
+                "1": "Normal",
+                "2": "Hard",
+                "3": "Lunatic",
+                "4": "Windowed",
+                "5": "Fullscreen",
+                "6": "Normal",
+                "7": "Half",
+                "8": "On",
+                "9": "Off",
+                "10": "Always",
+                "11": "As Player",
+                "12": "As Spectator",
+                "13": "Never",
+                "14": "Always Ask"
+            }
+        },
+
+        "netplay": {
+            "0": "Start Hosting",
+            "1": "Select IP/Port to Connect",
+            "2": "Connect from IP List",
+            "3": "Connect from IP History",
+            "4": "Connect from Clipboard",
+            "5": "Select Profile"
+        },
+
+        "pause": {
+            "0": "Return to Game",
+            "1": "1p Key Config",
+            "2": "2p Key Config",
+            "3": "Return to Character Screen",
+            "4": "Return to Title"
+        },
+
+        "practice": {
+            "label": {
+                "0": "Return to Game",
+                "1": "Weather",
+                "2": "Spirit Power",
+                "3": "State",
+                "4": "Position",
+                "5": "Guard",
+                "6": "Counter",
+                "7": "Tech Direction",
+                "8": "Return to Character Screen",
+                "9": "Return to Title"
+            },
+            "option": {
+                "0": "Normal",
+                "1": "Stand",
+                "2": "Crouch",
+                "3": "Jump",
+                "4": "2p Control",
+                "5": "On",
+                "6": "Off",
+                "7": "High",
+                "8": "Low",
+                "9": "After 1 Hit",
+                "10": "Front",
+                "11": "Back",
+                "12": "Random"
+            }
+        },
+
+        "profile": {
+            "0": "Edit Deck",
+            "1": "Key Config",
+            "2": "Create New",
+            "3": "Copy Profile",
+            "4": "Delete Profile",
+            "5": "Rename Profile",
+            "6": "Shot",
+            "7": "Name Entry"
+        },
+
+        "select": {
+            "0": "Select 1p Profile",
+            "1": "Select 2p Profile",
+            "2": "Edit 1p Deck",
+            "3": "Edit 2p Deck",
+            "4": "1p Key Config",
+            "5": "2p Key Config",
+            "6": "Return to Title"
+        },
+
+        "scenario": {
+            "0": "Difficulty",
+            "1": "Deck Select"
+        },
+
+        "replay": {
+            "0": "Start Replay",
+            "1": "Delete Replay"
+        },
+
+        "weather": {
+            "0": {"name": "Clear"},
+            "1": {"name": "Sunny", "flavor": "Fly through the sky"},
+            "2": {"name": "Drizzle", "flavor": "Spell cards are power!"},
+            "3": {"name": "Cloudy", "flavor": "Spell use becomes easier"},
+            "4": {"name": "Blue Sky", "flavor": "Combos become sharper"},
+            "5": {"name": "Hail", "flavor": "Spirit attacks become stronger"},
+            "6": {"name": "Spring Haze", "flavor": "Physical attacks are ineffective"},
+            "7": {"name": "Heavy Fog", "flavor": "Become like a vampire"},
+            "8": {"name": "Snow", "flavor": "Become like a ghost"},
+            "9": {"name": "Sunshower", "flavor": "Defense become strange"},
+            "10": {"name": "Sprinkle", "flavor": "Special moves go all out"},
+            "11": {"name": "Tempest", "flavor": "Aerial combat is more effective"},
+            "12": {"name": "Mtn. Vapor", "flavor": "Cards become invisible"},
+            "13": {"name": "River Mist", "flavor": "Distance becomes strange"},
+            "14": {"name": "Typhoon", "flavor": "Fights become wild"},
+            "15": {"name": "Calm", "flavor": "Heals your injuries"},
+            "16": {"name": "Diamond Dust", "flavor": "You snooze, you lose"},
+            "17": {"name": "Dust Storm", "flavor": "Counter hits"},
+            "18": {"name": "Scorching Sun", "flavor": "Incinerate everything"},
+            "19": {"name": "Monsoon", "flavor": "Bounce off the ground"},
+            "20": {"name": "Aurora", "flavor": "Anything can happen"},
+            "21": {"name": "Twilight"}
+        }
+    },
+
     "csv": {
         "common": {
             "0": {"name": "Spiritual Strike Talisman", "description": "Instantly encloses the surrounding space with a magic barrier. A defensive card that sends nearby enemies flying. Has a long invincibility period."},
@@ -715,6 +901,7 @@
             "st41": {"name": "Love-Colored Magic"},
             "st42": {"name": "the Grimoire of Alice"},
             "st43": {"name": "Voile, the Magic Library"},
+            "st99": {"name": "???"},
             "ta00": {"name": "Usual Days"},
             "ta01": {"name": "Argue For and Against"},
             "ta02": {"name": "Skies Beyond the Clouds"},

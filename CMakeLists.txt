@@ -16,6 +16,7 @@ add_library(th123intl MODULE
     src/main.cpp
     src/hooks.cpp
     src/language.cpp
+    src/redraw.cpp
 )
 target_link_libraries(th123intl -static)
 set_target_properties(th123intl PROPERTIES PREFIX "")

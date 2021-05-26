@@ -112,22 +112,28 @@ static const wchar_t* FindLanguage() {
 
 void LoadLanguage() {
     const wchar_t* language = FindLanguage();
-    languagePack = modulePath / L"locale" / language;
-    languagePack.replace_extension(L".dat");
-    if (!std::filesystem::exists(languagePack)) {
-        languagePack = modulePath / L"locale" / L"en.dat";
-        if (!std::filesystem::exists(languagePack)) languagePack.clear();
-    }
+    // languagePack = modulePath / L"locale" / language;
+    // languagePack.replace_extension(L".dat");
+    // if (!std::filesystem::exists(languagePack)) {
+    //     languagePack = modulePath / L"locale" / L"en.dat";
+    //     if (!std::filesystem::exists(languagePack)) languagePack.clear();
+    // }
 
     std::filesystem::path languageData = modulePath / L"locale" / language;
     languageData.replace_extension(L".json");
-    if (std::filesystem::exists(languagePack)) {
+    if (std::filesystem::exists(languageData)) {
         LoadKeyMap(languageData);
     }
 }
 
 extern "C" __declspec(dllexport) const char* GetTranslation(const char* key) {
     auto iter = keyMap.find(key);
+#ifdef _DEBUG
+    logging << "GetTranslation("<<keyMap.size()<<"): " << key;
+    if (iter != keyMap.end()) logging << iter->second <<std::endl;
+    else logging << "(not found)" << std::endl;
+    logging.flush();
+#endif
     if (iter != keyMap.end()) return iter->second;
     else return 0;
 }

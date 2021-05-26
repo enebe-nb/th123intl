@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout version="4">
+	<static id="21" xposition="160" yposition="192" mirror="0">
+		<image name="21_Base.bmp" xposition="0" yposition="0" width="322" height="66"/>
+	</static>
+	<static id="122" xposition="242" yposition="225" mirror="0">
+		<image name="22a_Yes.bmp" xposition="0" yposition="0" width="64" height="24"/>
+	</static>
+	<static id="222" xposition="242" yposition="225" mirror="0">
+		<image name="22b_Yes.bmp" xposition="0" yposition="0" width="64" height="24"/>
+	</static>
+	<static id="123" xposition="338" yposition="225" mirror="0">
+		<image name="23a_No.bmp" xposition="0" yposition="0" width="64" height="24"/>
+	</static>
+	<static id="223" xposition="338" yposition="225" mirror="0">
+		<image name="23b_No.bmp" xposition="0" yposition="0" width="64" height="24"/>
+	</static>
+</layout>

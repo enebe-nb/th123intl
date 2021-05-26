@@ -1,9 +1,6 @@
 #include <windows.h>
 
 #include "main.hpp"
-#ifdef _DEBUG
-#include <fstream>
-#endif
 
 #ifdef _DEBUG
     #define UTFERROR(handle, buffer) { \
@@ -35,8 +32,8 @@ namespace {
     typedef int (__fastcall *createTextTexture_t)(void*, void*, void*, const char*, void*, int, int, int*, int*);
     createTextTexture_t orig_createTextTexture = (createTextTexture_t) 0x004050a0;
 
-    typedef int (__fastcall *createTexture_t)(int*, const char*, int*, int*);
-    createTexture_t orig_createTexture = (createTexture_t) 0x00408cf0;
+    typedef int (__fastcall *loadImage_t)(int*, char*, void**, int*);
+    loadImage_t orig_loadImage = (loadImage_t) 0x00408cf0;
 
     static struct {
         uint32_t addr;
@@ -258,6 +255,60 @@ static int parseHtmlTag(void* handle, const char* text, int* out1, int* out2) {
     return orig_parseHtmlTag(out2, handle, text, out1);
 }
 
+inline unsigned int _div255(unsigned int v) { return (v+1+(v>>8))>>8; }
+static void __fastcall repl_alphaBlend(unsigned int color, unsigned int alpha, unsigned int* out) {
+    unsigned short a0 = ((alpha*0xffu) >> 4) & 0xff;
+    unsigned short a1 = *out >> 24;
+    unsigned short a2 = a0 + _div255(a1*(255-a0));
+
+    unsigned int result = (unsigned int)a2 << 24;
+    if (a2 != 0) for (int i = 0; i < 3; ++i) {
+        unsigned short c0 = (color >> i*8) & 0xff;
+        unsigned short c1 = (*out >> i*8) & 0xff;
+        unsigned short c2 = (c0*a0 + _div255(c1*a1)*(255-a0)) / a2;
+        result |= ((unsigned int)c2 & 0xff) << i*8;
+    }
+
+    *out = result;
+}
+
+static void __fastcall repl_textShadow(int height, int width, int line, unsigned int* input, unsigned int* output) {
+    width -= 1;
+    height -= 1;
+
+    for (int j = 1; j < height; ++j) {
+        for (int i = 1; i < width; ++i) {
+            unsigned int c0 = input[j*line+i];
+            if (c0>>24) {
+                unsigned alpha = c0>>27;
+                if (alpha > 16) alpha = 16;
+                unsigned int c1 = 0xff000000;
+                repl_alphaBlend(c0, alpha, &c1);
+                repl_alphaBlend(c1, 16, &output[j*line+i]);
+            } else {
+                unsigned char current = input[(j-1)*line+i] >> 24;
+                unsigned char next = input[(j+1)*line+i] >> 24;
+                if (current < next) current = next;
+                next = input[j*line+(i-1)] >> 24;
+                if (current < next) current = next;
+                next = input[j*line+(i+1)] >> 24;
+                if (current < next) current = next;
+                repl_alphaBlend(0, current >> 4, &output[j*line+i]);
+            }
+        }
+    }
+} __declspec(naked) static void _repl_textShadow() {
+    __asm {
+        mov ecx, [eax+0x148];
+        mov edx, [eax+0x14c];
+        mov eax, [eax+0x150];
+        pop ebx;
+        push eax;
+        push ebx;
+        jmp repl_textShadow;
+    }
+}
+
 // we do still need escape character for other mods
 static unsigned char* __stdcall text_passthrough(unsigned char *ebp, unsigned int esp, void *a, void *b, void *c, unsigned int d) {
     static bool kana = 0;
@@ -351,26 +402,12 @@ static int __fastcall repl_createTextTexture(void* ecx, void* edx, void* dxHandl
     return orig_createTextTexture(ecx, edx, dxHandle, text, fontHandle, texWidth, texHeight, outWidth, outHeight);
 }
 
-typedef struct { int pitch; int32_t* data; } D3DLOCKED_RECT;
-typedef int (__stdcall *dxFn4c_t)(int* dxTex, int, D3DLOCKED_RECT*, int, int); // LockRect???
-typedef int (__stdcall *dxFn50_t)(int* dxTex, int); // UnlockRect???
-static int __fastcall repl_createTexture(int* out1, const char* name, int* out3, int* out2) {
-    int height;
-    int result = orig_createTexture(&height, name, out3, out2);
-    if (out1) *out1 = height;
-    int* dxTex = (int*)*out3;
-    dxFn4c_t dxFn4c = (dxFn4c_t) *(int*)(*dxTex + 0x4c);
-    dxFn50_t dxFn50 = (dxFn50_t) *(int*)(*dxTex + 0x50);
-#ifdef _DEBUG
-    logging << "createTexture: " << name <<" "<< out1 <<" "<< out2 <<" "<< dxFn4c <<" "<< dxFn50 << std::endl;
-#endif
-    D3DLOCKED_RECT rect;
-    dxFn4c(dxTex, 0, &rect, 0, 0);
-    for (int i = 0; i < rect.pitch/4 * height; ++i) {
-        rect.data[i] = -1;
-    }
-    dxFn50(dxTex, 0);
-    return result;
+static int __fastcall repl_loadImage(int* out2, char* filename, void** texture, int* out1) {
+    int result = orig_loadImage(out2, filename, texture, out1);
+    if (result >= 0) {
+        auto iter = texRedraw.find(filename);
+        if (iter != texRedraw.end()) iter->second->execute(*texture);
+    } return result;
 }
 
 int __stdcall repl_MessageBoxUtf8(HWND window, const char* content, const char* title, unsigned int type) {
@@ -407,8 +444,8 @@ int __stdcall repl_MessageBoxUtf8(HWND window, const char* content, const char* 
     else return MessageBoxW(window, wcontent.data(), title ? wtitle.data() : 0, type);
 }
 
-extern "C" __declspec(dllexport) int MessageBoxUtf8(HWND window, const char* content, const char* title, unsigned int type) {
-    return repl_MessageBoxUtf8(window, content, title, type);
+extern "C" __declspec(dllexport) int MessageBoxUtf8(void* window, const char* content, const char* title, unsigned int type) {
+    return repl_MessageBoxUtf8((HWND)window, content, title, type);
 }
 
 void LoadHooks() {
@@ -504,9 +541,44 @@ void LoadHooks() {
         0x90, 0x90, 0x90,       // NOP NOP NOP
     }); // use length of target instead of source
 
-    // Overwrite texture with text
-    //orig_createTexture = (createTexture_t)
-        //TamperNearJmpOpr(0x0040b4b2, reinterpret_cast<DWORD>(repl_createTexture));
+    // Overwrite texture loader to add text
+    TamperNearJmpOpr(0x0040b4b2, reinterpret_cast<DWORD>(repl_loadImage));
+    orig_loadImage = (loadImage_t) TamperNearJmpOpr(0x0040505c, reinterpret_cast<DWORD>(repl_loadImage));
+
+    // Make the Text Renderer to do alpha blending
+    TamperCode(0x411f80, {
+        0x50,                           // PUSH eax
+        0x51,                           // PUSH ecx
+        0x52,                           // PUSH edx             -- save state
+        0x0f, 0xb6, 0x17,               // MOVZX edx, byte[edi] -- alpha
+        0x8b, 0x09,                     // MOV ecx, [ecx]       -- color
+        0x50,                           // PUSH eax             -- output
+        0xe8, 0, 0, 0, 0,               // CALL xxxx
+        0x5a,                           // POP edx
+        0x59,                           // POP ecx
+        0x58,                           // POP eax              -- restore state
+        0x83, 0xc7, 0x01,               // ADD edi, 1           -- advance loop
+        0x90, 0x90,                     // NOP                  -- align
+    });
+    TamperCode(0x411fd0, {
+        0x50,                           // PUSH eax
+        0x51,                           // PUSH ecx
+        0x52,                           // PUSH edx             -- save state
+        0x0f, 0xb6, 0x17,               // MOVZX edx, byte[edi] -- alpha
+        0x8b, 0x8e, 0x68, 0x01, 0, 0,   // MOV ecx, [esi+0x168] -- color
+        0x50,                           // PUSH eax             -- output
+        0xe8, 0, 0, 0, 0,               // CALL xxxx
+        0x5a,                           // POP edx
+        0x59,                           // POP ecx
+        0x58,                           // POP eax              -- restore state
+        0x83, 0xc7, 0x01,               // ADD edi, 1           -- advance loop
+        0x90, 0x90,                     // NOP                  -- align
+    });
+    TamperNearJmpOpr(0x411f89, reinterpret_cast<DWORD>(repl_alphaBlend));
+    TamperNearJmpOpr(0x411fdd, reinterpret_cast<DWORD>(repl_alphaBlend));
+
+    // Make the Text Shadow to do alpha blending
+    TamperNearJmpOpr(0x412a3f, reinterpret_cast<DWORD>(_repl_textShadow));
 
     *(uint32_t*)0x450b3e = 0x00;    // deck numbers spacing
     *(uint8_t*)0x450bfd  = 0x0e;    // deck numbers slice size

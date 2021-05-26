@@ -39,6 +39,7 @@ extern "C" __declspec(dllexport) bool Initialize(HMODULE hMyModule, HMODULE hPar
 
     LoadHooks();
     LoadLanguage();
+    LoadRedraw();
     return true;
 }
 
