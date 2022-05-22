@@ -1,69 +1,137 @@
-#include <windows.h>
 #include <fstream>
-#include <list>
-#include <unordered_map>
 
+#include <SokuLib.hpp>
 #include <nlohmann/json.hpp>
 #include "main.hpp"
 
-namespace {
-    std::unordered_map<std::string, const char*> keyMap;
-
-    inline void keyMapInsert(const std::string& key, const std::string& val) {
-        char* value = new char[val.size() + 1];
-        val.copy(value, val.size());
-        value[val.size()] = '\0';
-
-        auto iter = keyMap.find(key);
-        if (iter == keyMap.end()) {
-            keyMap[key] = value;
-        } else {
-            delete[] iter->second;
-            iter->second = value;
+struct LangConfig langConfig;
+LangConfig::~LangConfig() {
+    if (locale) _free_locale(locale);
+    for (auto& i : this->fontOverrides) {
+        for (auto& j : i.second) {
+            delete j.data;
         }
     }
-
-    class : public nlohmann::json::json_sax_t {
-    public:
-        std::list<std::string> keyStack;
-        int arrayIndex = -1;
-
-        // TODO implement unused non-strings??
-        bool null() override { return true; }
-        bool binary(nlohmann::json::binary_t& val) override { return true; }
-        bool boolean(bool val) override { return true; }
-        bool number_integer(number_integer_t val) override { return true; }
-        bool number_unsigned(number_unsigned_t val) override { return true; }
-        bool number_float(number_float_t val, const string_t& s) override { return true; }
-
-        bool string(string_t& val) override {
-            if (arrayIndex >= 0) keyStack.back() = arrayIndex++;
-
-            std::string key;
-            for (auto& k : keyStack) {
-                if (!key.empty()) key += '.';
-                key += k;
-            }
-
-            keyMapInsert(key, val);
-            return true;
-        }
-
-        bool start_object(std::size_t elements) override { keyStack.emplace_back(); return true; }
-        bool key(string_t& val) override { keyStack.back() = val; return true; }
-        bool end_object() override { keyStack.pop_back(); return true; }
-        bool start_array(std::size_t elements) override { keyStack.emplace_back(); arrayIndex = 0; return true; }
-        bool end_array() override { keyStack.pop_back(); arrayIndex = -1; return true; }
-
-        bool parse_error(std::size_t position, const std::string& last_token, const nlohmann::json::exception& ex) override { return false; }
-    } saxParser;
 }
 
-void LoadKeyMap(const std::filesystem::path& filename) {
-    // TODO make it thread with lock
+namespace {
+    std::unordered_map<std::string_view, unsigned int> fontMap = {
+        {"unknown01", 0x4126ad},
+        {"profile", 0x434de1},
+        {"deck", 0x438611},
+        {"gui", 0x43d883},
+        {"popup", 0x444142},
+        {"unknown02", 0x44ba52},
+        {"number", 0x450b52},
+        {"unknown03", 0x453cd1},
+        {"unknown04", 0x453dbd},
+        {"unknown05", 0x45c5ac},
+        {"unknown06", 0x45c6f6},
+        {"unknown07", 0x45f110},
+        {"unknown08", 0x46202a},
+        {"story", 0x462990},
+    };
+
+    std::unordered_map<std::string_view, unsigned int> tilesMap = {
+        {"deck", 0x450c0f},
+    };
+
+    LangConfig::FontOverride setString(nlohmann::json& value) {
+        std::string name; value.get_to(name);
+        char* buffer = new char[name.size()+1];
+        memcpy(buffer, name.data(), name.size());
+        buffer[name.size()] = '\0';
+        return {buffer, offsetof(SokuLib::FontDescription, faceName), name.size()+1};
+    }
+
+    template <typename T, size_t offset>
+    LangConfig::FontOverride setAny(nlohmann::json& value) {
+        T* buffer = new T;
+        value.get_to(*buffer);
+        return {buffer, offset, sizeof(T)};
+    }
+
+    using setter_t = LangConfig::FontOverride (*)(nlohmann::json&);
+    std::unordered_map<std::string_view, setter_t> fontAttr = {
+        {"name", setString},
+        {"r1", setAny<BYTE, offsetof(SokuLib::FontDescription, r1)>},
+        {"r2", setAny<BYTE, offsetof(SokuLib::FontDescription, r2)>},
+        {"g1", setAny<BYTE, offsetof(SokuLib::FontDescription, g1)>},
+        {"g2", setAny<BYTE, offsetof(SokuLib::FontDescription, g2)>},
+        {"b1", setAny<BYTE, offsetof(SokuLib::FontDescription, b1)>},
+        {"b2", setAny<BYTE, offsetof(SokuLib::FontDescription, b2)>},
+        {"height", setAny<LONG, offsetof(SokuLib::FontDescription, height)>},
+        {"weight", setAny<LONG, offsetof(SokuLib::FontDescription, weight)>},
+        {"italic", setAny<BYTE, offsetof(SokuLib::FontDescription, italic)>},
+        {"shadow", setAny<BYTE, offsetof(SokuLib::FontDescription, shadow)>},
+        {"wrap", setAny<BYTE, offsetof(SokuLib::FontDescription, useOffset)>},
+        {"paddingX", setAny<DWORD, offsetof(SokuLib::FontDescription, offsetX)>},
+        {"paddingY", setAny<DWORD, offsetof(SokuLib::FontDescription, offsetY)>},
+        {"spacingX", setAny<DWORD, offsetof(SokuLib::FontDescription, charSpaceX)>},
+        {"spacingY", setAny<DWORD, offsetof(SokuLib::FontDescription, charSpaceY)>},
+    };
+
+    std::unordered_map<std::string_view, unsigned int> tilesAttr = {
+        {"offsetX", 0},
+        {"offsetY", 1},
+        {"width", 2},
+        {"height", 3},
+    };
+}
+
+static inline void SetOverrides(std::vector<LangConfig::FontOverride>& out, nlohmann::json& node) {
+    for (auto iter = node.begin(); iter != node.end(); ++iter) {
+        if (!fontAttr.count(iter.key())) continue;
+        out.push_back(fontAttr.at(iter.key())(iter.value()));
+    }
+}
+#include <iostream>
+static void LoadConfig(const std::filesystem::path& filename) {
     std::ifstream data(filename);
-    nlohmann::json json;
-    json.sax_parse(data, &saxParser);
+    try {
+        nlohmann::json json = nlohmann::json::parse(data);
+        std::cout << json << std::endl;
+
+        langConfig.locale = _create_locale(LC_ALL, json.at("locale").get<std::string>().c_str());
+        if (!langConfig.locale) throw std::exception("invalid locale");
+
+        json.at("charset").get_to(langConfig.charset);
+
+        auto array = json["packs"];
+        if (array.is_array()) for (auto iter = array.begin(); iter != array.end(); ++ iter) {
+            langConfig.packFiles.push_back(modulePath / iter->get<std::string>());
+        }
+
+        array = json["font"]["files"];
+        if (array.is_array()) for (auto iter = array.begin(); iter != array.end(); ++ iter) {
+            AddFontResourceExW((modulePath / iter->get<std::string>()).c_str(), FR_PRIVATE, 0);
+        }
+
+        array = json["font"];
+        if (array.is_object()) for (auto iter = array.begin(); iter != array.end(); ++ iter) {
+            if (!iter->is_object()) continue;
+            auto font = fontMap.find(iter.key());
+            if (font == fontMap.end()) continue;
+            SetOverrides(langConfig.fontOverrides[font->second], *iter);
+        }
+
+        array = json["tiles"];
+        if (array.is_object()) for (auto iter = array.begin(); iter != array.end(); ++ iter) {
+            if (!iter->is_object()) continue;
+            auto tile = tilesMap.find(iter.key());
+            if (tile == tilesMap.end()) continue;
+            for (auto attr = iter->begin(); attr != iter->end(); ++attr) {
+                if (!tilesAttr.count(attr.key())) continue;
+                langConfig.tileOverrides[tile->second]
+                    .push_back({attr.value().get<unsigned int>(), tilesAttr.at(attr.key())});
+            }
+        }
+    } catch (const std::exception& e) {
+#ifdef _DEBUG
+        logging << "Failure loading json File" << std::endl;
+        logging << e.what() << std::endl;
+#endif
+    }
 }
 
 template <std::size_t S>
@@ -81,7 +149,7 @@ static const wchar_t* FindLanguage() {
     static wchar_t language[256];
     GetPrivateProfileStringW(L"Locale", L"Lang", L"auto", language, 256, (modulePath / L"th123intl.ini").c_str());
     if (wcscmp(language, L"auto") == 0) {
-        ULONG numLanguages; ULONG bufferSize;
+        ULONG numLanguages; ULONG bufferSize = 0;
         if (GetUserPreferredUILanguages(MUI_LANGUAGE_NAME, &numLanguages, 0, &bufferSize)) {
             wchar_t* buffer = new wchar_t[bufferSize];
             if (GetUserPreferredUILanguages(MUI_LANGUAGE_NAME, &numLanguages, buffer, &bufferSize)) {
@@ -112,32 +180,10 @@ static const wchar_t* FindLanguage() {
 
 void LoadLanguage() {
     const wchar_t* language = FindLanguage();
-    // languagePack = modulePath / L"locale" / language;
-    // languagePack.replace_extension(L".dat");
-    // if (!std::filesystem::exists(languagePack)) {
-    //     languagePack = modulePath / L"locale" / L"en.dat";
-    //     if (!std::filesystem::exists(languagePack)) languagePack.clear();
-    // }
 
     std::filesystem::path languageData = modulePath / L"locale" / language;
     languageData.replace_extension(L".json");
     if (std::filesystem::exists(languageData)) {
-        LoadKeyMap(languageData);
+        LoadConfig(languageData);
     }
-}
-
-extern "C" __declspec(dllexport) const char* GetTranslation(const char* key) {
-    auto iter = keyMap.find(key);
-#ifdef _DEBUG
-    logging << "GetTranslation("<<keyMap.size()<<"): " << key;
-    if (iter != keyMap.end()) logging << iter->second <<std::endl;
-    else logging << "(not found)" << std::endl;
-    logging.flush();
-#endif
-    if (iter != keyMap.end()) return iter->second;
-    else return 0;
-}
-
-extern "C" __declspec(dllexport) void SetTranslation(const char* key, const char* value) {
-    keyMap[key] = value;
 }

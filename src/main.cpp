@@ -1,8 +1,5 @@
 #include <windows.h>
-#include <fstream>
 #include "main.hpp"
-#include <unordered_map>
-#include <stack>
 
 #include <nlohmann/json.hpp>
 
@@ -37,9 +34,11 @@ extern "C" __declspec(dllexport) bool Initialize(HMODULE hMyModule, HMODULE hPar
     logging << "modulePath: " << modulePath << std::endl;
 #endif
 
-    LoadHooks();
     LoadLanguage();
-    LoadRedraw();
+    if (langConfig.locale) {
+        LoadHooks();
+        LoadParser();
+    }
     return true;
 }
 

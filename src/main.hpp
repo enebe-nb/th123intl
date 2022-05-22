@@ -1,25 +1,36 @@
 #pragma once
 #include <filesystem>
 #include <unordered_map>
+#include <vector>
 
 #ifdef _DEBUG
 #include <fstream>
 extern std::ofstream logging;
 #endif
 
-class Command {
-public:
-    inline virtual ~Command() {}
-    virtual void execute(void*) = 0;
-};
-
 extern std::filesystem::path modulePath;
 extern std::filesystem::path languagePack;
-extern std::unordered_map<std::string, Command*> texRedraw;
 void LoadHooks();
 void LoadLanguage();
-void LoadRedraw();
+void LoadParser();
 
-extern "C" __declspec(dllexport) const char* GetTranslation(const char* key);
-extern "C" __declspec(dllexport) void SetTranslation(const char* key, const char* value);
-extern "C" __declspec(dllexport) int MessageBoxUtf8(void* window, const char* content, const char* title, unsigned int type);
+struct LangConfig {
+	struct FontOverride {
+		void* data;
+		size_t offset;
+		size_t size;
+	};
+
+	struct TileOverride {
+		unsigned int data;
+		unsigned int param;
+	};
+
+	_locale_t locale = 0;
+	unsigned int charset = 128;
+	std::vector<std::filesystem::path> packFiles;
+	std::unordered_map<unsigned int, std::vector<FontOverride>> fontOverrides;
+	std::unordered_map<unsigned int, std::vector<TileOverride>> tileOverrides;
+
+	~LangConfig();
+}; extern struct LangConfig langConfig;
