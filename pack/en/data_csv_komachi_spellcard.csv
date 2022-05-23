@@ -1,6 +1,6 @@
 "#Spell Number","Spell Name","Type: 255 Enemies, 2 Spells, 1 Skills, 0 Systems","Consumption","Card Description",,,,,,,,,,sort
-101,"Bound Spirits of the Earth",1,2,"Excites underground spirits and forces them to burst forth from the earth. After the spirits calm\, they float around in a large-area attack. ",0,1,105,1,109,1,0,0,12,110
 100,"Spirits of the Firm",1,0,"Sends a spurt of grudging spirits from the ground with a scythe strike. They lay low and float upwards when they detect the enemy.",0,1,104,1,108,1,0,0,12,100
+101,"Bound Spirits of the Earth",1,2,"Excites underground spirits and forces them to burst forth from the earth. After the spirits calm\, they float around in a large-area attack. ",0,1,105,1,109,1,0,0,12,110
 102,"Ritual of Ecstacy",1,4,"Switches positions with the opponent. Not only a movement or illusion\, but can also create chances for attack. No effect during certain moves or in story mode.",0,1,106,1,110,1,0,0,12,140
 103,"Floating Spirits of the Indolent Dead",1,1,"Shoots grudge spirit bullets across the screen. Though slow\, they home in on the opponent with a unique path.",0,1,107,1,111,1,202,2,12,120
 104,"Scythe of the Reaper",1,0,"A slash of the scythe sends a crescent arc forward. Due to its peculiar range\, it requires some adjusting to.",1,1,206,4,0,0,0,0,12,101
@@ -18,5 +18,5 @@
 204,"Exchange \"Unpitiable\, Pitiable Life\"",2,5,"The unprecedented psyche-switching skill. It\'s possible to turn crisis into opportunity instantly\, but this skill doesn\'t hit easily\, is costly\, and has a long casting delay.",5,0,0,0,0,0,0,0,12,241
 205,"Malice Sign \"Irresolute Bound Spirit\"",2,3,"Summons powerful\, homing spirits. The spirits follow the opponent around but they do not attack. Use this with the explosion trigger technique.",0,2,0,0,0,0,0,0,12,221
 206,"Death Sign \"Scythe of Final Judgement\"",2,4,"Striking the scythe on the ground\, a shot will fall on opponents from the sky. Catches the opponent wherever she is but can be easily grazed.",1,4,0,0,0,0,0,0,12,230
-211,"Hell \"Narrow Confines of Avici\"<a> ",2,3,"Slashes at the enemy and prevents horizontal movements at the same time. She can completely control the initiative as long as the effect lasts.",1,3,0,0,0,0,0,0,12,222
 207,"Soul Sign \"Scythe of Wandering Spirits\"",2,4,"Unleashes a blade filled with spirits which steal life from the enemy. The spirits fly back to Komachi and allow her to regain health. According to her\, she doesn\'t use this skill too often.",1,3,204,5,0,0,0,0,12,231
+211,"Hell \"Narrow Confines of Avici\"<a> ",2,3,"Slashes at the enemy and prevents horizontal movements at the same time. She can completely control the initiative as long as the effect lasts.",1,3,0,0,0,0,0,0,12,222
