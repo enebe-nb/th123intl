@@ -11,12 +11,14 @@ namespace {
     std::unordered_map<int, const char*> tilesNames;
 
     typedef void (*appendDataPackage_t)(const char*);
-    appendDataPackage_t orig_appendDataPackage;
+    appendDataPackage_t orig_appendDataPackage = (appendDataPackage_t)0x40d1d0;
     typedef int (__fastcall *parseHtmlTag_t)(void*, void*, const char*, int*);
     parseHtmlTag_t orig_parseHtmlTag = (parseHtmlTag_t) 0x412240;
     typedef void (__stdcall *parseIChar_t)(unsigned int, int*, int*);
     parseIChar_t orig_parseIChar = (parseIChar_t) 0x00411e20;
 
+    typedef bool (__fastcall *csvParserInDeckInfo_t)(SokuLib::CSVParser&, void*, const char*);
+    csvParserInDeckInfo_t orig_csvParserInDeckInfo = (csvParserInDeckInfo_t) 0x0040f370;
     typedef void (__fastcall *copyInFilelist_t)(void*, void*, SokuLib::String&);
     copyInFilelist_t orig_copyInFilelist = (copyInFilelist_t) 0x0043caa0;
     typedef void (__fastcall *copyInProfile_t)(SokuLib::String&, void*, SokuLib::String&, unsigned int, int);
@@ -140,7 +142,10 @@ static inline void TamperCode(uint32_t address, const uint8_t (&code)[S]) {
     memcpy((void*)address, code, S);
 }
 
-static inline void LoadSystemStrings() {
+static inline void LoadCustomPacks() {
+    for (auto& pack : langConfig.packFiles) orig_appendDataPackage(pack.string().c_str());
+    *(bool*)0x8a0048 = true; // hack
+
     if (systemStrings == 0) systemStrings = new SokuLib::CSVParser("data/csv/system.cv1");
     DWORD old;
     VirtualProtect((LPVOID)0x00401000, 0x00456000, PAGE_WRITECOPY, &old);
@@ -166,11 +171,42 @@ static inline void LoadSystemStrings() {
 
 static void repl_appendDataPackage(const char* filename) {
     orig_appendDataPackage(filename);
-    if (filename == (const char*)0x861b18) {
-        for (auto& pack : langConfig.packFiles) orig_appendDataPackage(pack.string().c_str());
-        *(bool*)0x8a0048 = true; // hack
-        LoadSystemStrings();
+    if (filename == (const char*)0x861b18) LoadCustomPacks();
+}
+
+static int findLineById(SokuLib::CSVParser& parser, int id) {
+    for (int i = 0; i < parser.data.size(); ++i) {
+        int lineId;
+        auto& line = parser.data.at(i);
+        if (!line.size()) continue;
+        auto& idStr = line.at(0);
+        if (std::from_chars(idStr, (char*)idStr + idStr.size, lineId).ec != std::errc()) continue;
+        if (id == lineId) return i;
     }
+
+    return -1;
+}
+
+static bool __fastcall repl_csvParserInDeckInfo(SokuLib::CSVParser& ecx, void* unused, const char* filename) {
+    std::string_view name(filename);
+    if (!orig_csvParserInDeckInfo(ecx, unused, filename)) return false;
+    std::string intlfile("data/intl_"); intlfile += name.substr(9, name.size() - 9);
+    std::replace(intlfile.begin()+10, intlfile.end(), '/', '_');
+    SokuLib::CSVParser intlData(intlfile.c_str());
+    if (!intlData.data.size()) return true;
+
+#ifdef _DEBUG
+    logging << "Replacing csv text in: " << name << std::endl;
+#endif
+    do {
+        int i = intlData.getNextValue(); if(!i) continue;
+        i = findLineById(ecx, i);
+        if (i < 0) continue;
+        intlData.getNextCell(ecx.data.at(i).at(1));
+        intlData.getNextCell(ecx.data.at(i).at(4));
+    } while (intlData.goToNextLine());
+
+    return true;
 }
 
 static bool applyWordBreak(SokuLib::SWRFont* font, const char* word) {
@@ -181,10 +217,10 @@ static bool applyWordBreak(SokuLib::SWRFont* font, const char* word) {
     if (wlen) {
         SIZE textSize;
         if (GetTextExtentPoint32W(font->hdc, wstr, wlen, &textSize)) {
-            int width = textSize.cx + font->cursorX + font->description.charSpaceX * wlen;
+            int width = textSize.cx + font->cursor.x + font->description.charSpaceX * wlen;
             if (width > font->maxWidth) {
-                font->cursorX = font->description.offsetX + font->description.shadow;
-                font->cursorY += font->description.charSpaceY + font->description.height;
+                font->cursor.x = font->description.offsetX + font->description.shadow;
+                font->cursor.y += font->description.charSpaceY + font->description.height;
                 return true;
             }
         }
@@ -298,9 +334,12 @@ inline int ACP2Locale(char (&dst)[S], const char* src, unsigned int len) {
 
 static void __fastcall repl_copyInFilelist(void* ecx, void* edx, SokuLib::String& str) {
     const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
-    if (GetACP() == targetCP) return orig_copyInFilelist(ecx, edx, str);
+    if (GetACP() == targetCP || !str.size) return orig_copyInFilelist(ecx, edx, str);
     const char* cstr = str;
 
+#ifdef _DEBUG
+    logging << "[1]: ";
+#endif
     char buffer[512];
     int len = ACP2Locale(buffer, cstr, str.size);
     if (len) str.assign(buffer, len);
@@ -313,8 +352,11 @@ static void __fastcall repl_copyInProfile(SokuLib::String& dst, void* edx, SokuL
     if (GetACP() == targetCP) return orig_copyInProfile(dst, edx, src, offset, len);
     const char* cstr = src;
     cstr += offset;
-    if (len == -1) len = *(int*)(src + 0x14) - offset;
+    if (len == -1) len = src.size - offset;
 
+#ifdef _DEBUG
+    logging << "[2]: ";
+#endif
     char buffer[512];
     len = ACP2Locale(buffer, cstr, len);
     if (len) dst.assign(buffer, len);
@@ -379,7 +421,13 @@ template <int ADDR> static inline void addTiles(const char* name) {
 void LoadHooks() {
     DWORD old;
     VirtualProtect((LPVOID)0x00401000, 0x00456000, PAGE_WRITECOPY, &old);
-    orig_appendDataPackage = SokuLib::TamperNearJmpOpr(0x007FB85F, repl_appendDataPackage);
+
+    // if running nextsoku
+    if (*(short*)0x7fb84b == (short)0xd0ff) {
+        SokuLib::TamperNearCall(0x007FB84D, LoadCustomPacks);
+    } else {
+        orig_appendDataPackage = SokuLib::TamperNearJmpOpr(0x007FB85F, repl_appendDataPackage);
+    }
 
     // hook FontSetIndirect
     addFont<0x4126ad>("unknown01");
@@ -430,7 +478,7 @@ void LoadHooks() {
     SokuLib::TamperNearJmpOpr(0x004129c2, printNextChar);
 
     // Convert ACP to langConfig.locale in profile names
-    orig_copyInFilelist = SokuLib::TamperNearJmpOpr(0x0043cd89, repl_copyInFilelist);
+    //orig_copyInFilelist = SokuLib::TamperNearJmpOpr(0x0043cd89, repl_copyInFilelist);
     orig_createTextTexture = SokuLib::TamperNearJmpOpr(0x0044b143, repl_createTextTexture);
     SokuLib::TamperNearJmpOpr(0x0042c7a1, repl_copyInProfile);
     orig_copyInProfile = SokuLib::TamperNearJmpOpr(0x00434ea9, repl_copyInProfile);
@@ -439,11 +487,13 @@ void LoadHooks() {
         0x90, 0x90, 0x90,       // NOP NOP NOP
     }); // use length of target instead of source
 
-/*
-    // Overwrite texture loader to add text
-    TamperNearJmpOpr(0x0040b4b2, reinterpret_cast<DWORD>(repl_loadImage));
-    orig_loadImage = (loadImage_t) TamperNearJmpOpr(0x0040505c, reinterpret_cast<DWORD>(repl_loadImage));
+    // Convert string inside Csv Files without changing numbers
+    // 0x433029: story?
+    // 0x4374f9: ingame spellcard/storyspell
+    // 0x437de5: info spellcard/storyspell
+    orig_csvParserInDeckInfo = SokuLib::TamperNearJmpOpr(0x437de5, repl_csvParserInDeckInfo);
 
+/*
     // Make the Text Renderer to do alpha blending
     TamperCode(0x411f80, {
         0x50,                           // PUSH eax
@@ -493,6 +543,8 @@ void LoadHooks() {
     *(uint32_t*)0x857014 = (uint32_t) GetProcAddress(GetModuleHandle(TEXT("gdi32.dll")), "GetGlyphOutlineW");
     // Replace link to MessageBoxA with custom function TODO convert to WCHAR?
     //*(uint32_t*)0x857250 = (uint32_t) repl_MessageBoxUtf8;
+    // Increase max width for card name in deck edit
+    *(double*)0x859908 = 230.0;
     VirtualProtect((LPVOID)0x857000, 0x02b000, old, &old);
 
     FlushInstructionCache(GetCurrentProcess(), NULL, 0);

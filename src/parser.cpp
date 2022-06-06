@@ -163,6 +163,12 @@ void LoadParser() {
         0xE9, 0x4B, 0x00, 0x00, 0x00,   // continue;
     }); SokuLib::TamperNearJmpOpr(0x40f5b4, csvFixDefault);
 
+    // Remove patch from Soku2
+    TamperCode(0x40f5ff, {
+        0x8D, 0x4C, 0x24, 0x68,
+        0xE8, 0xF8, 0x05, 0x00, 0x00,
+    }); 
+
     // escape codes on scripts TODO currently hooks _strtok_s
     TamperCode(0x82112a, {
         0x52,                   // PUSH edx
