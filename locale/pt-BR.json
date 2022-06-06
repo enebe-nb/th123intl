@@ -1,7 +1,7 @@
 {
-    "locale": "en-US",
+    "locale": "pt-BR",
     "charset": 0,
-    "packs": ["locale/en.dat"],
+    "packs": ["locale/pt-BR.dat"],
     "font": {
         "files": ["MonoSpatialModSWR.ttf"],
         "profile":{
