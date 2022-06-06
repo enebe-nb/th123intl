@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout version="4">
+	<static id="100" xposition="61" yposition="124" mirror="0">
+		<image name="00a_Server.bmp" xposition="0" yposition="6" width="256" height="16"/>
+	</static>
+	<static id="101" xposition="61" yposition="156" mirror="0">
+		<image name="01a_IP.bmp" xposition="0" yposition="6" width="284" height="17"/>
+	</static>
+	<static id="102" xposition="61" yposition="188" mirror="0">
+		<image name="02a_List.bmp" xposition="0" yposition="6" width="256" height="17"/>
+	</static>
+	<static id="103" xposition="61" yposition="220" mirror="0">
+		<image name="03a_History.bmp" xposition="0" yposition="6" width="256" height="17"/>
+	</static>
+	<static id="104" xposition="61" yposition="252" mirror="0">
+		<image name="04a_Clipboard.bmp" xposition="0" yposition="6" width="256" height="17"/>
+	</static>
+	<static id="105" xposition="61" yposition="284" mirror="0">
+		<image name="05a_Profile.bmp" xposition="0" yposition="6" width="256" height="17"/>
+	</static>
+	<static id="106" xposition="61" yposition="359" mirror="0">
+		<image name="06a_Exit.bmp" xposition="2" yposition="6" width="28" height="15"/>
+	</static>
+	<static id="0" xposition="18" yposition="23" mirror="0">
+		<image name="Network.bmp" xposition="7" yposition="0" width="196" height="56"/>
+	</static>
+</layout>

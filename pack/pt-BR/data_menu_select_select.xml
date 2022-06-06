@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout version="4">
+	<static id="100" xposition="61" yposition="124" mirror="0">
+		<image name="000_1pProfile.bmp" xposition="3" yposition="6" width="157" height="17"/>
+	</static>
+	<static id="110" xposition="61" yposition="156" mirror="0">
+		<image name="010_2pProfile.bmp" xposition="3" yposition="6" width="157" height="17"/>
+	</static>
+	<static id="120" xposition="61" yposition="188" mirror="0">
+		<image name="020_1pDeck.bmp" xposition="3" yposition="5" width="157" height="18"/>
+	</static>
+	<static id="130" xposition="61" yposition="220" mirror="0">
+		<image name="030_2pDeck.bmp" xposition="3" yposition="5" width="157" height="18"/>
+	</static>
+	<static id="140" xposition="61" yposition="252" mirror="0">
+		<image name="040_1pKeyConfig.bmp" xposition="3" yposition="6" width="157" height="17"/>
+	</static>
+	<static id="150" xposition="61" yposition="284" mirror="0">
+		<image name="050_2pKeyConfig.bmp" xposition="3" yposition="6" width="157" height="17"/>
+	</static>
+	<static id="160" xposition="61" yposition="316" mirror="0">
+		<image name="060_Title.bmp" xposition="3" yposition="6" width="157" height="16"/>
+	</static>
+	<static id="170" xposition="61" yposition="360" mirror="0">
+		<image name="070_Exit.bmp" xposition="0" yposition="0" width="32" height="24"/>
+	</static>
+	<static id="0" xposition="0" yposition="0" mirror="0">
+		<image name="10_Profile.bmp" xposition="20" yposition="13" width="188" height="55"/>
+	</static>
+</layout>

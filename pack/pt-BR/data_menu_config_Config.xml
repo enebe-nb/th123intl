@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout version="4">
+	<static id="0" xposition="1" yposition="8" mirror="0">
+		<image name="Config.bmp" xposition="18" yposition="12" width="176" height="61"/>
+	</static>
+	<static id="300" xposition="239" yposition="156" mirror="0">
+		<image name="MaterBlack.bmp" xposition="2" yposition="3" width="277" height="19"/>
+	</static>
+	<static id="400" xposition="239" yposition="187" mirror="0">
+		<image name="MaterBlack.bmp" xposition="2" yposition="3" width="277" height="19"/>
+	</static>
+	<static id="100" xposition="61" yposition="124" mirror="0">
+		<image name="c1[01].bmp" xposition="0" yposition="6" width="124" height="18"/>
+	</static>
+	<static id="101" xposition="62" yposition="156" mirror="0">
+		<image name="c1[02].bmp" xposition="0" yposition="6" width="124" height="17"/>
+	</static>
+	<static id="102" xposition="62" yposition="188" mirror="0">
+		<image name="c1[03].bmp" xposition="0" yposition="6" width="124" height="17"/>
+	</static>
+	<static id="103" xposition="61" yposition="220" mirror="0">
+		<image name="c1[04].bmp" xposition="0" yposition="6" width="124" height="18"/>
+	</static>
+	<static id="104" xposition="61" yposition="252" mirror="0">
+		<image name="c1[05].bmp" xposition="0" yposition="5" width="124" height="18"/>
+	</static>
+	<static id="105" xposition="61" yposition="284" mirror="0">
+		<image name="c1[06].bmp" xposition="0" yposition="6" width="124" height="18"/>
+	</static>
+	<static id="106" xposition="61" yposition="316" mirror="0">
+		<image name="c1[07].bmp" xposition="0" yposition="6" width="124" height="17"/>
+	</static>
+	<static id="107" xposition="63" yposition="364" mirror="0">
+		<image name="Exit.bmp" xposition="2" yposition="6" width="30" height="15"/>
+	</static>
+	<static id="200" xposition="239" yposition="124" mirror="0">
+		<image name="c2[01].bmp" xposition="0" yposition="6" width="124" height="18"/>
+	</static>
+	<static id="201" xposition="295" yposition="124" mirror="0">
+		<image name="c2[02].bmp" xposition="0" yposition="6" width="124" height="14"/>
+	</static>
+	<static id="202" xposition="368" yposition="124" mirror="0">
+		<image name="c2[03].bmp" xposition="0" yposition="6" width="124" height="15"/>
+	</static>
+	<static id="203" xposition="436" yposition="124" mirror="0">
+		<image name="c2[04].bmp" xposition="0" yposition="6" width="124" height="15"/>
+	</static>
+	<static id="500" xposition="239" yposition="220" mirror="0">
+		<image name="c2[05].bmp" xposition="0" yposition="6" width="124" height="16"/>
+	</static>
+	<static id="501" xposition="324" yposition="220" mirror="0">
+		<image name="c2[06].bmp" xposition="0" yposition="6" width="124" height="16"/>
+	</static>
+	<static id="600" xposition="240" yposition="252" mirror="0">
+		<image name="c2[07].bmp" xposition="0" yposition="6" width="124" height="17"/>
+	</static>
+	<static id="601" xposition="326" yposition="252" mirror="0">
+		<image name="c2[08].bmp" xposition="0" yposition="6" width="124" height="15"/>
+	</static>
+	<static id="700" xposition="239" yposition="284" mirror="0">
+		<image name="c2[09].bmp" xposition="0" yposition="6" width="124" height="17"/>
+	</static>
+	<static id="701" xposition="324" yposition="284" mirror="0">
+		<image name="c2[10].bmp" xposition="0" yposition="6" width="124" height="16"/>
+	</static>
+	<static id="800" xposition="238" yposition="316" mirror="0">
+		<image name="c2[11].bmp" xposition="0" yposition="6" width="124" height="18"/>
+	</static>
+	<static id="801" xposition="325" yposition="316" mirror="0">
+		<image name="c2[12].bmp" xposition="0" yposition="6" width="124" height="18"/>
+	</static>
+	<static id="802" xposition="420" yposition="316" mirror="0">
+		<image name="c2[13].bmp" xposition="0" yposition="6" width="124" height="18"/>
+	</static>
+	<static id="803" xposition="279" yposition="344" mirror="0">
+		<image name="c2[14].bmp" xposition="0" yposition="6" width="124" height="16"/>
+	</static>
+	<static id="804" xposition="379" yposition="344" mirror="0">
+		<image name="c2[15].bmp" xposition="0" yposition="6" width="124" height="18"/>
+	</static>
+</layout>
