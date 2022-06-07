@@ -1,0 +1,26 @@
+"#Spell Number","Spell Name","Type: 255 Enemies, 2 Spells, 1 Skills, 0 Systems","Consumption","Card Description",,,,,,,,,,sort
+100,"Unimplemented",1,2,"Unimplemented",0,1,104,1,108,1,0,0,2,110
+101,"Unimplemented",1,1,"Unimplemented",0,1,105,1,109,1,0,0,2,120
+102,"Unimplemented",1,0,"Unimplemented",0,1,106,1,110,1,207,2,2,100
+103,"Unimplemented",1,4,"Unimplemented",0,1,107,1,111,1,0,0,2,140
+104,"Unimplemented",1,2,"Unimplemented",1,1,200,3,0,0,0,0,2,111
+105,"Unimplemented",1,1,"Unimplemented",1,1,208,2,0,0,0,0,2,121
+106,"Unimplemented",1,0,"Unimplemented",1,1,212,3,0,0,0,0,2,101
+107,"Unimplemented",1,4,"Unimplemented",1,1,201,3,0,0,0,0,2,141
+108,"Unimplemented",1,2,"Unimplemented",0,1,202,2,0,0,0,0,2,112
+109,"Unimplemented",1,1,"Unimplemented",0,1,206,3,0,0,0,0,2,122
+110,"Unimplemented",1,0,"Unimplemented",0,1,211,3,0,0,0,0,2,102
+111,"Unimplemented",1,4,"Unimplemented",0,1,0,0,0,0,0,0,2,142
+200,"Unimplemented",2,2,"Unimplemented",0,3,203,5,0,0,0,0,2,210
+201,"Unimplemented",2,3,"Unimplemented",0,3,204,5,0,0,0,0,2,220
+202,"Unimplemented",2,3,"Unimplemented",1,2,205,4,0,0,0,0,2,221
+203,"Unimplemented",2,4,"Unimplemented",0,5,0,0,0,0,0,0,2,230
+204,"Unimplemented",2,5,"Unimplemented",1,5,0,0,0,0,0,0,2,240
+205,"Unimplemented",2,4,"Unimplemented",1,4,0,0,0,0,0,0,2,231
+206,"Unimplemented",2,2,"Unimplemented",1,3,0,0,0,0,0,0,2,211
+207,"Unimplemented",2,2,"Unimplemented",1,2,0,0,0,0,0,0,2,212
+208,"Unimplemented",2,3,"Unimplemented",1,2,210,4,0,0,0,0,2,222
+209,"Unimplemented",2,4,"Unimplemented",1,4,0,0,0,0,0,0,2,232
+210,"Unimplemented",2,4,"Unimplemented",1,4,0,0,0,0,0,0,2,233
+211,"Unimplemented",2,3,"Unimplemented",1,3,0,0,0,0,0,0,2,223
+212,"Unimplemented",2,3,"Unimplemented",1,3,209,4,0,0,0,0,2,224

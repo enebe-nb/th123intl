@@ -11,19 +11,20 @@ string(REPLACE . , THI_VERSION_COMMA ${THI_VERSION})
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(BASE_INSTALL_PATH th123intl)
 
 macro(add_resourcepack target source)
     file(GLOB _PACK_SRC_${source} ${CMAKE_CURRENT_SOURCE_DIR}/pack/${source}/*)
-    add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/locale/${source}.dat"
+    add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/pack/${source}.dat"
         COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/bin/shady-cli.exe pack -m data
-            -o "${CMAKE_CURRENT_BINARY_DIR}/locale/${source}.dat"
+            -o "${CMAKE_CURRENT_BINARY_DIR}/pack/${source}.dat"
             "${CMAKE_CURRENT_SOURCE_DIR}/pack/${source}"
         DEPENDS ${_PACK_SRC_${source}}
         VERBATIM
     )
-    add_custom_target(${target}-${source} DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/locale/${source}.dat")
+    add_custom_target(${target}-${source} DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/pack/${source}.dat")
     add_dependencies(${target} ${target}-${source})
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/locale/${source}.dat DESTINATION ${BASE_INSTALL_PATH}/locale)
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/pack/${source}.dat DESTINATION ${BASE_INSTALL_PATH}/pack)
 endmacro()
 
 include_directories(${PROJECT_SOURCE_DIR}/thirdparty/json/include)
@@ -37,16 +38,15 @@ add_library(th123intl MODULE
 target_link_libraries(th123intl SokuLib)
 set_target_properties(th123intl PROPERTIES PREFIX "")
 add_custom_target(generate-pack)
+add_resourcepack(generate-pack empty-csv)
+add_resourcepack(generate-pack jp)
 add_resourcepack(generate-pack en)
 add_resourcepack(generate-pack pt-BR)
-add_resourcepack(generate-pack jp)
 add_dependencies(th123intl generate-pack)
 
-set(BASE_INSTALL_PATH SWRSToys/modules/th123intl)
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/locale)
 install(TARGETS th123intl LIBRARY DESTINATION ${BASE_INSTALL_PATH})
 install(FILES
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/th123intl.ini
     ${CMAKE_CURRENT_SOURCE_DIR}/pack/MonoSpatialModSWR.ttf
     DESTINATION ${BASE_INSTALL_PATH})
 install(FILES
