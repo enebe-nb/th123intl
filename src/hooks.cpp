@@ -3,6 +3,7 @@
 #include <mbstring.h>
 
 #include "main.hpp"
+#define SOKU_USE_UTF16
 
 namespace {
     SokuLib::CSVParser* systemStrings = 0;
@@ -239,8 +240,13 @@ static int printNextChar(SokuLib::SWRFont* font, const char* buffer, int index, 
     }
 #endif
 
+#ifdef SOKU_USE_UTF16
     wchar_t lc;
     const int len = _mbtowc_l(&lc, buffer+index, bufferSize-index, langConfig.locale);
+#else 
+    const int len = _mblen_l(buffer+index, bufferSize-index, langConfig.locale);
+    unsigned int lc = _mbsnextc_l((const uint8_t*)buffer+index, langConfig.locale);
+#endif
 #ifdef _DEBUG
     if (len == -1) logging << "invalid character in index: " << index << std::endl;
 #endif
@@ -539,8 +545,10 @@ void LoadHooks() {
     VirtualProtect((LPVOID)0x00401000, 0x00456000, old, &old);
 
     VirtualProtect((LPVOID)0x857000, 0x02b000, PAGE_WRITECOPY, &old);
+#ifdef SOKU_USE_UTF16
     // Replace link to GetGlyphOutlineA with GetGlyphOutlineW
     *(uint32_t*)0x857014 = (uint32_t) GetProcAddress(GetModuleHandle(TEXT("gdi32.dll")), "GetGlyphOutlineW");
+#endif
     // Replace link to MessageBoxA with custom function TODO convert to WCHAR?
     //*(uint32_t*)0x857250 = (uint32_t) repl_MessageBoxUtf8;
     // Increase max width for card name in deck edit
