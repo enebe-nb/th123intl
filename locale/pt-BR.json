@@ -1,7 +1,7 @@
 {
     "locale": "pt-BR",
     "charset": 0,
-    "packs": ["locale/pt-BR.dat"],
+    "packs": ["pack/pt-BR.dat"],
     "font": {
         "files": ["MonoSpatialModSWR.ttf"],
         "profile":{
@@ -15,7 +15,7 @@
         },
         "number":{
             "name": "MonoSpatialModSWR",
-            "offsetY": 0
+            "paddingY": 0
         },
         "story":{
             "name": "MonoSpatialModSWR",
