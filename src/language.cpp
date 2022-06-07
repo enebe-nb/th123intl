@@ -179,6 +179,8 @@ static const wchar_t* FindLanguage() {
 }
 
 void LoadLanguage() {
+    if (!std::filesystem::exists(modulePath / L"th123intl.ini"))
+        WritePrivateProfileStringW(L"Locale", L"Lang", L"auto", (modulePath / L"th123intl.ini").c_str());
     const wchar_t* language = FindLanguage();
 
     std::filesystem::path languageData = modulePath / L"locale" / language;

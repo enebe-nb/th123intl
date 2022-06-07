@@ -1,6 +1,7 @@
 #include <SokuLib.hpp>
 #include <mbstring.h>
 #include "main.hpp"
+#include <map>
 
 namespace {
     typedef std::pair<SokuLib::String*, char*> StringIterator;
@@ -9,6 +10,18 @@ namespace {
     appendChar_t orig_appendChar = (appendChar_t) 0x0040fc00;
     typedef void (__fastcall *orig_text_func_t)(unsigned int ecx, void* edx, void *a, void *b, void *c, unsigned int d);
     orig_text_func_t orig_text_func = (orig_text_func_t) 0x40fc00;
+
+    static const std::map<std::string, const char*> faceRemap = {
+        {"confident", "\x97\x5d"},
+        {"happy", "\x8A\xF0"},
+        {"angry", "\x93\x7B"},
+        {"confused", "\x98\x66"},
+        {"normal", "\x95\x81"},
+        {"sweatdrop", "\x8A\xBE"},
+        {"determined", "\x8C\x88"},
+        {"defeated", "\x95\x89"},
+        {"surprised", "\x8B\xC1"},
+    };
 }
 
 template <std::size_t S>
@@ -98,49 +111,58 @@ static void __declspec(naked) csvFixComma() {
     }
 }
 
-static char* __cdecl scriptFixTokenize(char* str, const char* delim, char** context) {
-    if (!context) { _set_errno(EINVAL); return nullptr; }
-    if (!delim) { _set_errno(EINVAL); return nullptr; }
-    if (!str) str = *context;
-    if (!str) { _set_errno(EINVAL); return nullptr; }
+static const unsigned char* repl_strchr(const unsigned char* str, unsigned int c) {
+    return _mbschr_l(str, c, langConfig.locale);
+}
 
-    str += _mbsspn_l((const uint8_t*)str, (const uint8_t*)delim, langConfig.locale);
-    size_t index = _mbscspn_l((const uint8_t*)str, (const uint8_t*)delim, langConfig.locale);
-    if (!index) return nullptr;
-    if (!str[index]) {
-        *context = &str[index];
-        return str;
-    } *context = (char*)_mbsinc_l((const uint8_t*)&str[index], langConfig.locale);
+template<class Command>
+static int* __fastcall _factoryCreate(int* f) {
+    static_assert(std::is_base_of<SokuLib::CommandParser::CommandBase, Command>::value);
+    int* c = (int*)new Command();
+    c[1] = f[1];
+    return c;
+}
 
-    unsigned char* prev = _mbsdec_l((const uint8_t*)str, (const uint8_t*)&str[index], langConfig.locale);
-    if (!prev) { _set_errno(EINVAL); return nullptr; }
-    if (*prev == '\\') {
-        scriptFixTokenize(0, delim, context);
-        return str;
+template<class Command>
+static inline void __fastcall registerCommand(SokuLib::CommandParser* parser, int unused, int id, const SokuLib::String name) {
+    static const int vtable_ref[] = {0x456300, (int)&_factoryCreate<Command>};
+
+    if ((name.*SokuLib::union_cast<bool(SokuLib::String::*)(int, int, int, int) const>(0x405c70))(0, name.size, 0x871030, 0)) {
+        int* c = (int*)SokuLib::NewFct(8);
+        c[0] = (int)vtable_ref;
+        c[1] = id;
+        parser->factoryMap[name] = c;
     } else {
-        str[index] = '\0';
-        return str;
+        if (parser->factoryEmpty) SokuLib::DeleteFct(parser->factoryEmpty);
+        int* c = (int*)SokuLib::NewFct(8);
+        c[0] = (int)vtable_ref;
+        c[1] = id;
+        parser->factoryEmpty = c;
     }
 }
 
-// we do still need escape character for other mods TODO any locale
-static int __stdcall script_passthrough(char *ebp, char *edx) {
-    char *orig_edx = edx;
-    int retval = 0;
-    ebp -= 0x24;
+namespace {
+    struct CommandDialogue : public SokuLib::CommandParser::CommandBase {
+        SokuLib::String str;
+        void parseArgs(char* args) override {
+            str.assign(args);
+        }
+    };
 
-    unsigned char ch = *edx;
-    if (ch == '\\' && *(edx+1) == ',' && (ebp[','>>3]&(1<<(','&7)))) {
-        do {
-            *edx = *(edx+1);
-            edx++;
-        } while (*edx != '\0' && *edx != '\n' && *edx != '\r');
-    } else {
-        retval = ebp[ch>>3]&(1<<(ch&7));
-    }
+    struct CommandFace : public SokuLib::CommandParser::CommandBase {
+        SokuLib::String type;
+        SokuLib::String face;
 
-    __asm mov edx, orig_edx;
-    return retval;
+        void parseArgs(char* args) override {
+            char* token = strtok_s(args, ",", &args);
+            type.assign(token ? token : "");
+            token = strtok_s(0, ",", &args);
+            if (token) {
+                auto iter = faceRemap.find(token);
+                face.assign(iter == faceRemap.end() ? token : iter->second);
+            } else face.assign("");
+        }
+    };
 }
 
 void LoadParser() {
@@ -169,17 +191,12 @@ void LoadParser() {
         0xE8, 0xF8, 0x05, 0x00, 0x00,
     }); 
 
-    // escape codes on scripts TODO currently hooks _strtok_s
-    TamperCode(0x82112a, {
-        0x52,                   // PUSH edx
-        0x55,                   // PUSH ebp
-        0xe8, 0, 0, 0, 0,       // CALL xxxx
-        0x90, 0x90, 0x90, 0x90, // NOPs
-        0x90, 0x90, 0x90, 0x90, // NOPs
-        0x90, 0x90, 0x90, 0x90, // NOPs
-        0x84, 0xc0              // TEST al, al
-    });
-    SokuLib::TamperNearJmpOpr(0x82112c, script_passthrough);
+    // Patch argument parser in scripts
+    SokuLib::TamperNearJmpOpr(0x4624ee, registerCommand<CommandDialogue>);
+    SokuLib::TamperNearJmpOpr(0x46256e, registerCommand<CommandFace>);
+
+    // Command separator using locale
+    SokuLib::TamperNearJmpOpr(0x40595e, repl_strchr);
 
     VirtualProtect((LPVOID)0x00401000, 0x00456000, old, &old);
 }
