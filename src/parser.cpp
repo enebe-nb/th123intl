@@ -142,14 +142,16 @@ static inline void __fastcall registerCommand(SokuLib::CommandParser* parser, in
 }
 
 namespace {
-    struct CommandDialogue : public SokuLib::CommandParser::CommandBase {
+    class CommandDialogue : public SokuLib::CommandParser::CommandBase {
+    public:
         SokuLib::String str;
         void parseArgs(char* args) override {
             str.assign(args);
         }
     };
 
-    struct CommandFace : public SokuLib::CommandParser::CommandBase {
+    class CommandFace : public SokuLib::CommandParser::CommandBase {
+    public:
         SokuLib::String type;
         SokuLib::String face;
 

@@ -83,7 +83,7 @@ namespace {
         // Netplay
         { "netplay.selectPort", (const char**)0x446842 },
         { "netplay.selectAddress", (const char**)0x4468e2 },
-        { "netplay.waithost", (const char**)0x446e3c },
+        { "netplay.waitHost", (const char**)0x446e3c },
         { "netplay.allowSpec", (const char**)0x446e8f },
         { "netplay.confirmMatch", (const char**)0x448ab0 },
         { "netplay.waitClient", (const char**)0x448afa },
