@@ -41,6 +41,7 @@ add_custom_target(generate-pack)
 add_resourcepack(generate-pack empty-csv)
 add_resourcepack(generate-pack jp)
 add_resourcepack(generate-pack en)
+add_resourcepack(generate-pack zh)
 add_resourcepack(generate-pack pt-BR)
 add_dependencies(th123intl generate-pack)
 
@@ -48,9 +49,11 @@ file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/locale)
 install(TARGETS th123intl LIBRARY DESTINATION ${BASE_INSTALL_PATH})
 install(FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/pack/MonoSpatialModSWR.ttf
+    ${CMAKE_CURRENT_SOURCE_DIR}/pack/simhei.ttf
     DESTINATION ${BASE_INSTALL_PATH})
 install(FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/locale/en.json
     ${CMAKE_CURRENT_SOURCE_DIR}/locale/pt-BR.json
     ${CMAKE_CURRENT_SOURCE_DIR}/locale/jp.json
+    ${CMAKE_CURRENT_SOURCE_DIR}/locale/zh.json
     DESTINATION ${BASE_INSTALL_PATH}/locale)
