@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout version="4">
+	<mutable id="100" xposition="61" yposition="156"/>
+	<mutable id="101" xposition="261" yposition="156"/>
+	<mutable id="102" xposition="461" yposition="156"/>
+	<mutable id="103" xposition="61" yposition="188"/>
+	<mutable id="104" xposition="261" yposition="188"/>
+	<mutable id="105" xposition="461" yposition="188"/>
+	<mutable id="106" xposition="61" yposition="220"/>
+	<mutable id="107" xposition="261" yposition="220"/>
+	<mutable id="108" xposition="461" yposition="220"/>
+	<mutable id="109" xposition="61" yposition="252"/>
+	<mutable id="110" xposition="261" yposition="252"/>
+	<mutable id="111" xposition="461" yposition="252"/>
+	<mutable id="112" xposition="61" yposition="284"/>
+	<mutable id="113" xposition="261" yposition="284"/>
+	<mutable id="114" xposition="461" yposition="284"/>
+	<mutable id="115" xposition="61" yposition="316"/>
+	<mutable id="116" xposition="261" yposition="316"/>
+	<mutable id="117" xposition="461" yposition="316"/>
+	<mutable id="118" xposition="61" yposition="348"/>
+	<mutable id="119" xposition="261" yposition="348"/>
+	<static id="120" xposition="61" yposition="380" mirror="0">
+		<image name="99_exit.bmp" xposition="2" yposition="7" width="28" height="14"/>
+	</static>
+	<static id="0" xposition="0" yposition="0" mirror="0">
+		<image name="98_title.bmp" xposition="22" yposition="13" width="309" height="55"/>
+	</static>
+</layout>

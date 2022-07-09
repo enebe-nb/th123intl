@@ -1,0 +1,223 @@
+## =======================================================================
+#Stage:4
+#Title:乽嬈壩埡啵乿
+#Place:娫寚愹抧壓僙儞僞乕捠楬
+
+Character:chirno,160,0,0,8888FF
+Character:utsuho,160,0,1,FF8888
+
+#攚宨丂妀梈崌楩怱晹
+Stage:34,0
+
+#帺暘弶婜攝抲
+Action:chirno,20丂#1P夋柺奜懸婡
+
+#揋弶婜攝抲
+Action:utsuho,100丂#夋柺奜偱懸婡
+
+#僇儊儔忋屌掕
+Action:utsuho,130
+
+#夋柺昞帵慜張棟廔椆============================
+
+Label:Start
+PlayBgm:data/bgm/room.ogg
+Sleep:60
+
+#夋柺崟偐傜僼僃乕僪僀儞
+Action:chirno,161
+#僇儊儔夋柺忋晹偐傜壓傊僷儞
+Action:utsuho,131
+
+Sleep:60
+#僗僥乕僕僞僀僩儖昞帵
+Object:data/scenario/chirno/effect/StageTitle004.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage4.bmp,1,256,352
+Sleep:30;
+
+#PlayBgm:data/bgm/ta03.ogg
+Sleep:300;
+
+
+
+# 晛丄婐丄梋丄娋丄嬃丄搟丄寛丄榝丄晧
+
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+
+Action:chirno,310# 僠儖僲丂棊偪偰偔傞
+Action:chirno,311
+Balloon:chirno,1,0,-200
+好热！这个样子我可受不了了！\
+
+Balloon:null,1,0,-200
+
+# 嬻偑慜曽偐傜旘傫偱擖偭偰偔傞
+Action:utsuho,400丂#嬻夋柺奜偐傜憗昪偺埵抲傔偑偗偰壩偺嬍傪敪幩偟偮偮棎擖
+Action:chirno,403丂#僠儖僲嬃偔
+Sleep:10
+Action:chirno,312丂#壩偺嬍傪旔偗傞
+Action:chirno,313丂#313廔椆専抦
+
+Action:utsuho,401丂#400廔椆僞僀儈儞僌専抦
+
+Sleep:30
+
+#Action:utsuho,409丂#僇儊儔嬻傊
+Balloon:utsuho,1,0,-200
+Sleep:10
+发现异常物体！
+融合炉温度下降进入危险值。立刻排除异常物体！\
+Balloon:null,1,0,-200
+Sleep:10
+
+Action:chirno,403 #僠儖僲丂嬃偔
+Balloon:chirno,1,0,-200
+哇哇哇哇哇！\
+
+Balloon:null,1,0,-200
+
+Action:utsuho,202 #嬻僯儏乕僩儔儖専抦
+# 懍峌偱愴摤偵擖傞
+
+
+#愴摤奐巒張棟
+
+PlayBgm:data/bgm/st33.ogg
+Action:chirno,203#丂僯儏乕僩儔儖忬懺傊
+Action:utsuho,203#丂僯儏乕僩儔儖忬懺傊
+Action:chirno,3
+
+End:
+
+# --------------------------------
+#拞娫僨儌
+Label:Intermission10
+
+Action:utsuho,154
+
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:utsuho,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:chirno,202
+
+# 僗儁儖僇乕僪堦枃栚廔椆帪偱愴摤拞斦偱偄偭偨傫巇愗傝捈偟
+Action:chirno,403丂#僠儖僲嬃偔
+# 嬻偑搢傟偰偄傞
+
+Balloon:chirno,1,0,-200
+这里太热了！
+再不跑的实在受不了了！\
+
+Action:utsuho,402丂#嬻婲偒忋偑傞
+Balloon:utsuho,1,0,-200
+在被排除前你还想逃跑么\
+
+Action:chirno,407丂# 僠儖僲丂峇偰偰
+Balloon:chirno,1,0,-200
+那么就在被排除前跑掉好了！\
+
+Balloon:null,1,0,-200
+Action:utsuho,405丂#埿奷億乕僘
+Action:utsuho,406丂#406廔椆
+
+Balloon:utsuho,1,0,-200
+到底是你从我手上逃掉
+还是我把你排除掉\
+
+来分个高下吧\
+
+Balloon:null,1,0,-200
+
+
+#愴摤奐巒張棟
+
+Action:chirno,203#丂僯儏乕僩儔儖忬懺傊
+Action:utsuho,203#丂僯儏乕僩儔儖忬懺傊
+
+愴摤嵞奐張棟
+Action:utsuho,210#丂巰朣僼儔僌椶弶婜壔
+
+End:
+# --------------------------------
+# 愴摤廔椆丂晧偗
+Label:Lose
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂僐儞僥僯儏乕張棟
+Label:Continue
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂彑偪
+Label:Win
+
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:utsuho,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:chirno,202
+
+#拞墰堏摦張棟----
+Action:chirno,164
+Sleep:15
+
+Action:chirno,204
+Action:utsuho,205
+
+#僇儊儔拞墰屌掕
+Action:chirno,2丂
+
+Sleep:30
+Action:chirno,165
+
+Sleep:30
+#---------
+
+# 僠儖僲丂寛傔億乕僘
+Balloon:chirno,1,0,-200
+Action:chirno,303
+好机会！
+趁现在快点离开这里吧！\
+
+Balloon:null,1,0,-200
+
+Action:chirno,304# 僠儖僲偼峇偰偰忋偵嫀偭偰偄偔
+
+Action:utsuho,402丂#嬻婲偒忋偑傞
+Action:utsuho,202  #僯儏乕僩儔儖専抦
+#嬻僯儏乕僩儔儖堏峴専抦
+Balloon:utsuho,1,0,-200
+好了、这次攻击你别想躲的开！\
+
+Action:utsuho,404丂#嬻丂嬃偒偺億乕僘
+啊？人呢？
+难道说？\
+
+Action:utsuho,403丂#嬻丂媈栤丂
+火力调整的太高直接被蒸发掉了么\
+
+Action:utsuho,206# 嬻丂晛捠
+好像有点过火了呢，嘛、就这样吧。
+好了、该回去工作了\
+
+Balloon:null,1,0,-200
+Action:utsuho,411# 嬻丂嫀偭偰偄偔
+
+Balloon:null,1,0,-200
+Sleep:60
+
+Result:
+FadeBgm:2000,0
+Action:chirno,160丂#夋柺崟偵僼僃乕僪傾僂僩
+
+#師僗僥乕僕弨旛張棟====================
+
+Sleep:120;
+
+End:
+
+## =======================================================================

@@ -1,0 +1,182 @@
+## =======================================================================
+#Stage:1
+#Title:乽偩偄偩傜傏偭偪乿
+#Place:柖偺屛偺曈
+
+Character:chirno,160,0,0,8888FF
+Character:sanae,160,0,1,FF8888
+
+#攚宨丂柖偺屛偺曈
+Stage:30,0
+
+#帺暘弶婜攝抲
+Action:sanae,100丂#夋柺奜懸婡
+
+#揋弶婜攝抲
+Action:chirno,300丂#僠儖僲嵍塃傊偆傠偆傠忬懺奐巒
+
+#僇儊儔拞墰屌掕
+Action:chirno,2丂
+
+#夋柺昞帵慜張棟廔椆============================
+
+Label:Start
+
+
+PlayBgm:data/bgm/ta01.ogg
+Sleep:60;
+
+#僗僥乕僕僞僀僩儖昞帵
+Object:data/scenario/chirno/effect/StageTitle001.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage1.bmp,1,256,352
+Sleep:216;
+
+Action:chirno,301丂#僠儖僲屻傠傪岦偄偰嬃偔
+Sleep:60;
+
+
+# 晛丄婐丄梋丄娋丄嬃丄搟丄寛丄榝丄晧
+
+Balloon:chirno,1,0,-200
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+刚才那个是……\
+
+Action:chirno,402丂#僠儖僲嬃偔
+那个不是传说中的大妖怪
+大太郎法师么！\
+
+Action:chirno,402丂#僠儖僲嬃偔
+(注：日本妖怪中的一种巨人)\
+
+Action:chirno,404丂#僠儖僲婌傃偺億乕僘
+能驯服这家伙的话
+就没什么让我害怕的东西了～\
+
+
+Balloon:null,0,0,-200
+Sleep:30
+
+#
+# 憗昪搊応
+Action:sanae,101
+Action:sanae,102 #搊応摦嶌廔椆専抦
+
+Sleep:30
+
+Balloon:sanae,1,0,-200
+应该是在这附近消失的\
+
+Action:chirno,302丂#僠儖僲偙偪傜傪岦偄偰嬃偔
+
+Balloon:chirno,1,0,-200
+噢？大个头消失了
+换了个小个出来么\
+
+Balloon:sanae,1,0,-200
+那边的妖精。有没有看到这附近的巨大机…
+呃 巨大的人影活动？\
+
+Action:chirno,406丂#僠儖僲偟傜偽偭偔傟傞
+
+Balloon:chirno,1,0,-200
+大太郎法师什么的我没看到哟～\
+
+Action:sanae,300丂#憗昪媈栤摦嶌
+
+Balloon:sanae,1,0,-200
+大太郎法师？？
+我有这么说过么？\
+
+Action:chirno,407丂#僠儖僲偛傑偐偟摦嶌崅懍壔
+
+Balloon:chirno,1,0,-200
+啊 呀～ 没什么 啊哈哈
+我什么也没看到那！\
+
+Action:sanae,301丂#憗昪椪愴懺惃億乕僘
+
+Balloon:sanae,1,0,-200
+难道说 你在这里有什么阴谋?
+雾这么浓，还装成了海市蜃楼的妖怪。\
+
+#愴摤奐巒張棟
+
+PlayBgm:data/bgm/st30.ogg
+#丂愴摤奐巒張棟
+
+Action:chirno,203
+Action:sanae,203
+Action:chirno,167#丂僼儔僢僔儏
+Action:chirno,3
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂晧偗
+Label:Lose
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂僐儞僥僯儏乕張棟
+Label:Continue
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂彑偪
+Label:Win
+
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:sanae,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:chirno,202
+
+Action:chirno,164
+Sleep:15
+
+Action:chirno,204
+Action:sanae,205
+
+#僇儊儔拞墰屌掕
+Action:chirno,2丂
+
+Sleep:30
+Action:chirno,165
+
+Sleep:30
+
+Balloon:chirno,1,0,-200
+Action:chirno,303# 僠儖僲丄寛傔億乕僘
+嗯嗯！
+今天状态非常好\
+
+Action:chirno,404# 僠儖僲丄榬慻
+好了
+快点找到大太郎法师要紧！\
+
+# 悂偒弌偟偼徚偊傞
+Balloon:null,0,0,-200
+
+Action:chirno,304# 僠儖僲偑旘傃偝偭偰偄偔
+Sleep:90
+
+# 憗昪丂搢傟偨傑傑
+Balloon:sanae,1,0,-200
+痛痛痛…
+还真不能因为只是个妖精而小看她呢\
+Balloon:null,0,0,-200
+
+Result:
+FadeBgm:2000,0
+Action:chirno,160丂#夋柺崟偵僼僃乕僪傾僂僩
+
+
+#師僗僥乕僕弨旛張棟====================
+
+Sleep:120;
+
+End:
+
+## =======================================================================

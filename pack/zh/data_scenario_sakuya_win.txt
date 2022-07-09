@@ -1,0 +1,352 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS嶇栭
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:reimuU0
+Face:lose,晧
+Face:win,晛
+神社就这样重建真的好么
+说不定是改造一下的机会呢\
+End:
+
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisaU0
+Face:lose,晧
+Face:win,梋
+那种看上去很奇怪的蘑菇其实很好吃呢
+看上去很好吃是味道的重要事项\
+End:
+
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuya0
+Face:lose,晧
+Face:win,婐
+我要是赢了的话今夜的晚饭就做日式料理哦\
+End:
+
+Label:sakuyaR0
+Face:lose,晧
+Face:win,娋
+我要是赢了的话……
+今夜的晚饭就是山珍盖饭\
+End:
+
+
+## =======================================================================
+#VS梔柌
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:youmuU0
+Face:lose,晧
+Face:win,晛
+要是用你那把刀做料理的话
+应该能成为吸引顾客不错的表演\
+End:
+
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aliceU0
+Face:lose,晧
+Face:win,娋
+往人偶里加火药？
+真极端\
+End:
+
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouliU0
+Face:lose,晧
+Face:win,晛
+今天的天气非常的舒服
+出门也好 不出门也不错\
+End:
+
+Label:patchouliR0
+Face:lose,晧
+Face:win,晛
+在集会里买的那个石头是什么？\
+
+Face:win,榝
+在我看来只是
+河边的普通石头就是了\
+
+End:
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,榝
+最近，有什么变化吗？\
+End:
+
+Label:remiliaR0
+Face:lose,晧
+Face:win,晛
+最近起床起的很早呢\
+
+Face:win,晛
+白天需要准备很多东西
+大小姐休息的话与我来说也比较方便\
+
+End:
+
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyukoU0
+Face:lose,晧
+Face:win,娋
+死了都要吃东西的话，
+完全违背了食物链呢\
+End:
+
+Label:yuyukoR0
+Face:lose,晧
+Face:win,榝
+死人要是没命地吃东西的话会怎么样？\
+
+Face:win,娋
+难道能活过来？\
+End:
+
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,晛
+最近有发生什么事情么
+时不时周围会吵闹一阵\
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suikaU0
+Face:lose,晧
+Face:win,婐
+哎呀你来得正好……
+能稍微分点酒给我吗？\
+End:
+
+Label:suikaR0
+Face:lose,晧
+Face:win,晛
+那个能无限倒出酒的葫芦\
+
+Face:win,婐
+我想除了拿来喝以外还有很高的利用价值\
+
+Face:win,晛
+当做酒精燃料来
+和那个核能对抗怎么样？\
+End:
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ayaU0
+Face:lose,晧
+Face:win,婐
+有报纸还真是方便呢
+能把窗户擦得干干净净……\
+End:
+
+Label:ayaU1
+Face:lose,晧
+Face:win,晛
+到底是在哪里进行活字印刷的呢？
+那座山可没有那么大的空间啊\
+End:
+
+## =======================================================================
+#VS楅愬
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:udongeU0
+Face:lose,晧
+Face:win,梋
+就像被兔毛扎到一样一点都不疼……话是这么说、
+不过真被兔毛扎到眼睛恐怕很疼呢\
+End:
+
+
+## =======================================================================
+#VS彫挰
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:komachiU0
+Face:lose,晧
+Face:win,梋
+把你的船改成天鹅一般的形状的话
+三途河不会看起来更优雅一些吗？\
+End:
+
+Label:komachiU1
+Face:lose,晧
+Face:win,梋
+三途河好像有没见过鱼在里面
+下次去钓鱼吧\
+End:
+
+## =======================================================================
+#VS堖嬭
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:ikuU0
+Face:lose,晧
+Face:win,晛
+今夜的晚饭就来做鳗鱼吧……
+哎，为什么会这么想呢\
+End:
+
+Label:ikuR0
+Face:lose,晧
+Face:win,娋
+听说见到龙宫使者的时候
+通常就快死了。\
+
+Face:win,晛
+我还以为其实是三途河的鱼呢\
+End:
+
+
+## =======================================================================
+#VS揤巕
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:tenshiU0
+Face:lose,晧
+Face:win,晛
+餐桌上桃子虽然只能当果盘……
+实际上跟火腿配起来也不错哦\
+End:
+
+Label:tenshiU1
+Face:lose,晧
+Face:win,梋
+天界的料理其实也不是那么难吃吧
+只不过大家的嘴吃刁了\
+End:
+
+
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,婐
+怎么样 幻想乡的生活
+一点也不觉得厌倦吧\
+End:
+
+Label:sanaeU1
+Face:lose,晧
+Face:win,娋
+还以为是比灵梦能正经点的巫女
+结果也不是呢\
+End:
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,搟
+把我们家的花园弄的一团糟的就是你吧\
+End:
+
+Label:chirnoR0
+Face:lose,晧
+Face:win,晛
+妖精不管怎么打倒几次都不会真的死掉\
+
+Face:win,梋
+所以喜欢这样鲁莽的冲过来\
+
+Face:win,寛
+看着你就能明白鲁莽和勇气的差别呢\
+End:
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,梋
+这么弱可当不成门卫\
+End:
+
+Label:meirinU1
+Face:lose,晧
+Face:win,梋
+好了好了 快点回去工作吧\
+End:
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,娋
+我说、那么高的能量只用来发射火球
+真是浪费\
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,寛
+青蛙……味道好像和鸡肉差不多
+这样的话，还是鸡肉比较容易弄到。
+End:
+
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+Face:win,晛
+最近看上去很和平的样子
+暗地里鬼鬼祟祟的行动的人好像还是很多\
+End:
+
+Label:common1
+Face:win,梋
+为了对付小偷每隔一段都种了曼陀罗花\
+End:
+
+## =======================================================================
+

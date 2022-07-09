@@ -1,0 +1,304 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS暥
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:reimuU0
+Face:lose,晧
+Face:win,婐
+难不成，对这个神社的领域就是发现新闻材料吗\
+End:
+
+Label:reimuU1
+Face:lose,晧
+Face:win,婐
+对一直提供新闻材料的神社
+没有点回礼似乎不行呢…\
+End:
+
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisaU0
+Face:lose,晧
+Face:win,寛
+好了好了，请别管我继续吧
+继续干你职业的偷盗\
+End:
+
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuyaU0
+Face:lose,晧
+Face:win,嬃
+太厉害了！以前都不知道你如此精通于飞刀魔术啊！\
+End:
+
+Label:sakuyaU1
+Face:lose,晧
+Face:win,晛
+魔术师么？
+我想看人体切断\
+End:
+
+
+## =======================================================================
+#VS梔柌
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:youmuU0
+Face:lose,晧
+Face:win,婐
+修剪枝叶都是靠那把刀的吧！
+回头一定要让我采访一下你工作的样子！\
+End:
+
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aliceU0
+Face:lose,晧
+Face:win,婐
+下次啊，一定要让我去你那采访一次
+非常想看看你是怎么往人偶里装火药的！\
+End:
+
+Label:aliceU1
+Face:lose,晧
+Face:win,婐
+说到人偶的话 见过非想天则了么
+那个也是能行动自如的人偶哦\
+End:
+
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouliU0
+Face:lose,晧
+Face:win,晛
+对了，回头要不要在报纸上刊登一下今天的
+幸运五行呢？　怎么吹都可以的哦\
+End:
+
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,婐
+我觉得，你表情再可怕一点的话作为报道内容
+来说会更有趣。　再努力一下看看？\
+End:
+
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyukoU0
+Face:lose,晧
+Face:win,晛
+用死去的人为死去的人写的报纸
+搞不好也可以当成区别于其他杂志不错的特色呢\
+End:
+
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,榝
+作为参考，我也想看看外面世界的报纸是什么样的呢
+果然嘲笑题材最受欢迎吗\
+End:
+
+Label:yukariU1
+Face:lose,晧
+Face:win,榝
+电视节目…？
+虽然搞不清那是什么，不过很有趣的样子!\
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suikaU0
+Face:lose,晧
+Face:win,晛
+地底也很有趣的说哟
+我们一起移居到地底说不定也很好\
+End:
+
+Label:suikaR0
+Face:lose,晧
+Face:win,榝
+你一旦活动起来，
+就总让人感觉要发生什么事件呢\
+Face:win,晛
+是不是，有瞒着什么？\
+End:
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aya0
+Face:lose,晧
+Face:win,晛
+报纸上可不能出现自己
+必须一直保持第三者的立场才行\
+End:
+
+## =======================================================================
+#VS楅愬
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:udongeU0
+Face:lose,晧
+Face:win,榝
+兔子什么的要出现在报纸上，
+总感觉报纸就会变得很低俗呢……\
+End:
+
+
+## =======================================================================
+#VS彫挰
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:komachiU0
+Face:lose,晧
+Face:win,榝
+对了，你要不要也来做个连载什么的？
+要是刊登上下个星期的死人预告一定会非常有人气的！\
+End:
+
+
+## =======================================================================
+#VS堖嬭
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ikuU0
+Face:lose,晧
+Face:win,晛
+说到底，地震到底能不能完全预测呢？
+对这一点我真的非常感兴趣\
+End:
+
+Label:ikuU1
+Face:lose,晧
+Face:win,婐
+龙宫使者的生态记录调查在学术圈
+大受好评。虽然是空想出来的\
+End:
+
+
+## =======================================================================
+#VS揤巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:tenshiU0
+Face:lose,晧
+Face:win,嬃
+天界所谓的贫乏的料理究竟贫乏到什么地步
+对这一点真的非常有兴趣啊\
+End:
+
+Label:tenshiU1
+Face:lose,晧
+Face:win,梋
+天人看报纸吗？
+要不要写写看天声人语什么的？\
+End:
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,晛
+啊 不提供新闻的巫女
+最近还在为了那个什么山四处奔走吗？\
+End:
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,婐
+其实、妖精干的事情是最有趣的
+所以，妖精最有趣\
+End:
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,梋
+一直以来多谢红魔馆的关照
+不仅提供新闻还大量的采购报纸\
+End:
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,婐
+山谷的温泉大受好评哟
+这下山门的经济也会很滋润吧。不愧是核融合！\
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,嬃
+非想天则的设计者就是你吧
+能向大家讲解一下制造过程么\
+End:
+
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+
+Face:win,晛
+我就是每次为大家作报道的，射命丸文。
+今天也为大家送报纸来了\
+
+End:
+
+Label:common1
+Face:win,寛
+号外～号外～
+没有什么大事件不过号外！\
+
+End:
+
+
+## =======================================================================
+

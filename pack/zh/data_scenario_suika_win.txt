@@ -1,0 +1,256 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS渎崄
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:reimuU0
+Face:lose,晧
+Face:win,嬃
+山麓那边有好多人啊
+有什么聚会么？\
+End:
+
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisaU0
+Face:lose,晧
+Face:win,梋
+在收集破烂吗？
+让我帮你吧？真正的破烂收集哟\
+End:
+
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuyaU0
+Face:lose,晧
+Face:win,梋
+刀子要插不动别人就没意义了
+你还是去给熟了的桃子剥剥皮吧！\
+End:
+
+
+## =======================================================================
+#VS梔柌
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:youmuU0
+Face:lose,晧
+Face:win,婐
+你那把剑能拿来宰马吗？
+哎呀—真期待啊。马肉配上酒真是太赞了\
+End:
+
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aliceU0
+Face:lose,晧
+Face:win,梋
+好像，你做了个超大的人偶？
+给我看看嘛\
+End:
+
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouliU0
+Face:lose,晧
+Face:win,婐
+起来起来，再睡在这的话
+我就帮你扔到鬼门去了哦？\
+End:
+
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,梋
+我说多余的动作也太多了点吧？
+感觉我睡着你都会自己撞上来嘛\
+End:
+
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyukoU0
+Face:lose,晧
+Face:win,梋
+反正都死了，没命地喝一次酒怎么样？\
+End:
+
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,梋
+今天也非常的无聊啊
+带点有趣的东西过来吧\
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suika0
+Face:lose,晧
+Face:win,晛
+别着急
+休息，休息一会儿\
+End:
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ayaU0
+Face:lose,晧
+Face:win,晛
+天狗内部的情况我也想知道呢
+下次搞个暗访去看看好了\
+End:
+
+## =======================================================================
+#VS楅愬
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:udongeU0
+Face:lose,晧
+Face:win,寛
+不管什么幻觉对喝醉了的我都是没用的哦
+醉意能引出最强的力量呢\
+End:
+
+
+## =======================================================================
+#VS彫挰
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:komachiU0
+Face:lose,晧
+Face:win,婐
+工作辛苦了啊
+这附近马上有什么人要死了吗\
+End:
+
+## =======================================================================
+#VS堖嬭
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ikuU0
+Face:lose,晧
+Face:win,梋
+不过龙宫到底在哪里呢？
+不要说是在海底啊？\
+End:
+
+## =======================================================================
+#VS揤巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:tenshiU0
+Face:lose,晧
+Face:win,梋
+无聊也不是一天两天了呢
+强者的生活向来都是无聊的\
+End:
+
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,娋
+还以为是个更正经点的巫女
+也不见得呢\
+End:
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,榝
+只有数量的家伙不足以当我的对手呢\
+End:
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,梋
+好弱啊！
+多锻炼锻炼身体吧！\
+End:
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,娋
+没想到古地明家居然还有这种家伙在
+真是让人吃惊\
+End:
+
+Label:utsuhoR0
+Face:lose,晧
+Face:win,婐
+难道说 把这家伙从地底的灼热地狱复活出来
+能有新的买卖出来么？\
+
+Face:win,婐
+看上去好像比天狗更加熟练啊
+对新地狱的评价看样子要放缓一下\
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,婐
+说起来 那么随便的就到地底世界去
+可不会就这样结束了哟\
+End:
+
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+
+Face:win,晛
+哎呀不好
+酒要醒了\
+End:
+
+
+
+## =======================================================================
+

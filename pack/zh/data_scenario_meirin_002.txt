@@ -1,0 +1,164 @@
+## =======================================================================
+#Stage:3
+#Title:乽恖偺娽傪偟偨杺暔乿
+#Place:柌偺拞偺帪寁戜俀
+
+Character:meirin,160,0,0,8888FF
+Character:marisa,160,0,1,FF8888
+
+#攚宨丂柌偺拞偺帪寁戜俀
+Stage:36,0
+
+#帺暘弶婜攝抲
+Action:meirin,20丂#1P掕埵抲懸婡
+Action:meirin,402丂#旤楅峫偊帠億乕僘
+
+#揋弶婜攝抲
+Action:marisa,100丂#夋柺奜偱懸婡
+
+#僇儊儔拞墰屌掕
+Action:meirin,2
+
+#夋柺昞帵慜張棟廔椆============================
+
+Label:Start
+
+#夋柺崟偐傜僼僃乕僪僀儞
+Action:meirin,161
+
+PlayBgm:data/bgm/ta05.ogg
+Sleep:60;
+
+
+#僗僥乕僕僞僀僩儖昞帵
+Object:data/scenario/meirin/effect/StageTitle003.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage3.bmp,1,256,352
+Sleep:300;
+
+# 晛丄婐丄梋丄娋丄嬃丄搟丄寛丄榝丄晧
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+
+# 旤楅偑懸偭偰偄傞
+
+Action:marisa,101# 杺棟嵐偑擖偭偰偔傞
+Action:marisa,102
+
+Balloon:marisa,1,0,-200
+那么、今天也去图书馆看下吧。
+当次文学少女—\
+
+# 旤楅
+Balloon:meirin,1,0,-200
+……\
+
+Action:marisa,401# 杺棟嵐丂嬃偒
+Balloon:marisa,1,0,-200
+喂！？不要停下来啊！
+挡路是很不礼貌的啊！\
+
+Action:meirin,405# 旤楅丂寛傔億乕僘
+Balloon:meirin,1,0,-200
+你也是个冒牌货！
+休想骗过我的火眼金睛！\
+
+Action:marisa,203# 杺棟嵐丂捠忢
+Balloon:marisa,1,0,-200
+你说我是冒牌货！？\
+
+# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+一直堂堂正正的从大门进来的你
+却从天上飞进来不觉得滑稽么！\
+
+# 杺棟嵐丂捠忢
+Balloon:marisa,1,0,-200
+哼哼哼。
+果然厉害。不愧是红魔馆的防浪堤啊 美铃！\
+
+# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+这种差劲的伪装、谁都能看穿！\
+
+Action:marisa,403# 杺棟嵐丂寛傔億乕僘
+Balloon:marisa,1,0,-200
+但是、就算你能看穿我的真面目
+也是无法打败我的！\
+#愴摤奐巒張棟
+
+PlayBgm:data/bgm/st41.ogg
+Action:meirin,203#丂僯儏乕僩儔儖忬懺傊
+Action:marisa,203#丂僯儏乕僩儔儖忬懺傊
+Action:meirin,167#丂僼儔僢僔儏
+Action:meirin,3
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂晧偗
+Label:Lose
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂僐儞僥僯儏乕張棟
+Label:Continue
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂彑偪
+Label:Win
+
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:marisa,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:meirin,202
+
+Action:meirin,164
+Sleep:15
+
+Action:meirin,204
+Action:marisa,205
+
+#僇儊儔拞墰屌掕
+Action:meirin,2丂
+
+Sleep:30
+Action:meirin,165
+
+Sleep:30
+
+# 杺棟嵐丄搢傟偨忬懺
+# 旤楅丂寛傔億乕僘
+Balloon:meirin,1,0,-200
+呼。战斗力和本体还是差了好多\
+
+# 杺棟嵐丂搢傟偨忬懺
+Balloon:marisa,1,0,-200
+……\
+
+# 旤楅丂嬃偒
+Balloon:meirin,1,0,-200
+太岁星君原来是那么凶恶的妖怪啊\
+
+# 旤楅丂寛傔億乕僘
+Balloon:meirin,1,0,-200
+要是没有我在的话
+这会红魔馆一定是被占领了…\
+
+
+Balloon:null,1,0,-200
+
+Result:
+FadeBgm:2000,0
+Action:meirin,160丂#夋柺崟偵僼僃乕僪傾僂僩
+
+#師僗僥乕僕弨旛張棟====================
+
+Sleep:120;
+
+End:
+
+## =======================================================================

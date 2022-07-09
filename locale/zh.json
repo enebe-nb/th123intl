@@ -1,0 +1,32 @@
+{
+    "locale": "zh-CN",
+    "charset": 134,
+    "packs": ["pack/zh.dat"],
+    "font": {
+        "files": ["simhei.ttf"],
+        "profile":{
+            "name": "simhei"
+        },
+        "deck":{
+            "name": "simhei"
+        },
+        "gui":{
+            "name": "simhei"
+        },
+        "number":{
+            "name": "simhei",
+            "paddingY": 0
+        },
+        "story":{
+            "name": "simhei",
+            "spacingX": 0
+        }
+    },
+    "tiles": {
+        "deck": {
+            "width": 21,
+            "offsetX": 0,
+            "offsetY": 0
+        }
+    }
+}

@@ -1,0 +1,335 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS杺棟嵐
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:reimuU0
+Face:lose,晧
+Face:win,晛
+和平傻了真可怕
+大家都没有目的就在乱打\
+End:
+
+Label:reimuR0
+Face:lose,晧
+Face:win,婐
+集市卖的发掘物我看到了哟！\
+
+Face:win,晛
+那个不知道是什么的种子\
+
+Face:win,婐
+在幻想乡里寻找一下的话说不定还会发现\
+End:
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisa0
+Face:lose,晧
+Face:win,寛
+脑中模拟战的话是一百战一百零一胜！\
+End:
+
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuyaU0
+Face:lose,晧
+Face:win,梋
+要去集会？已经太晚啦
+吸引人的东西基本都卖光了\
+End:
+
+
+## =======================================================================
+#VS梔柌
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:youmuU0
+Face:lose,晧
+Face:win,晛
+冥界有季节变化，彼岸却听说没有\
+End:
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aliceU0
+Face:lose,晧
+Face:win,榝
+今年 森林里还是充斥着阳光 好热啊\
+End:
+
+Label:aliceU1
+Face:lose,晧
+Face:win,娋
+这么热的天就这么放着的话
+不会自爆吧？人偶\
+End:
+
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouliU0
+Face:lose,晧
+Face:win,婐
+也有防水性能很好的书本啊
+那样的话在泡澡的时候也能读咯\
+End:
+
+Label:patchouliR0
+Face:lose,晧
+Face:win,晛
+说起来 我也写了书\
+
+Face:win,婐
+老是从图书馆借书真是抱歉
+这次把我的书放在图书馆里吧？\
+
+Face:win,寛
+放几本好呢？\
+End:
+
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,梋
+白天来打扰真是抱歉
+因为晚上要睡觉的嘛\
+End:
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyukoU0
+Face:lose,晧
+Face:win,梋
+墓地是夏天的麦加（伊斯兰教的圣地）啊！
+话说麦加到底是什么啊？\
+End:
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,婐
+三伏天的鳗鱼似乎好吃的样子啊
+来点八目鳗似乎是个不错的主意\
+End:
+
+Label:yukariR0
+Face:lose,晧
+Face:win,榝
+可是 三伏天到底指的什么时候啊？\
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suikaU0
+Face:lose,晧
+Face:win,榝
+云这东西，究竟是什么萃集而成的啊？
+为什么有人能乘上去有人就不行呢？\
+End:
+
+Label:suikaU1
+Face:lose,晧
+Face:win,婐
+今天晚上把空闲的家伙们聚集起来
+等太阳下山后凉快了举行宴会吧\
+End:
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ayaU0
+Face:lose,晧
+Face:win,婐
+想到一个好主意啊。在报纸上刊登天气预报吧。
+这样会不会销路好点？\
+End:
+
+Label:ayaR0
+Face:lose,晧
+Face:win,晛
+新闻的话 要不是亲自收集素材的话\
+
+Face:win,榝
+方便是方便了 可是大家的情报都一样
+好没劲啊\
+
+Face:win,婐
+这种时候能比别人先一步才能获胜
+你也以这个为目标的吧？\
+
+End:
+
+## =======================================================================
+#VS楅愬
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:udongeU0
+Face:lose,晧
+Face:win,榝
+竹笋采起来意外的麻烦啊
+一般来说 硬了就不能拿来吃了\
+End:
+
+Label:udongeR0
+Face:lose,晧
+Face:win,晛
+看到飞快生长的竹笋了呢\
+
+Face:win,晛
+跑过去差点就撞到了\
+
+Face:win,娋
+踩到这种陷阱
+比踩到猫更危险呢\
+End:
+
+
+## =======================================================================
+#VS彫挰
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:komachiU0
+Face:lose,晧
+Face:win,梋
+找河童帮你做个马达快艇如何啊？
+工作会轻松很多哦\
+End:
+
+
+Label:komachiR0
+Face:lose,晧
+Face:win,榝
+你的船看上去很容易沉没啊\
+
+Face:win,晛
+不、我听说
+幽灵乘坐的船经常沉没呢\
+
+Face:win,娋
+虽说也许不是每个幽灵 只是特定的那几个\
+
+End:
+
+## =======================================================================
+#VS堖嬭
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:ikuU0
+Face:lose,晧
+Face:win,晛
+你能在云中游泳吗？
+一定很舒服啊\
+End:
+
+
+## =======================================================================
+#VS揤巕
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:tenshiU0
+Face:lose,晧
+Face:win,晛
+天界的生活一定很优雅真好啊
+不过有恐高症的家伙就比较难过了呢\
+End:
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,晛
+妖怪退治这碗饭不是随随便便就能吃的\
+End:
+
+Label:sanaeU1
+Face:lose,晧
+Face:win,婐
+太过专注妖怪退治的话
+自己都会变得像妖怪一样\
+End:
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,婐
+啊啊真抱歉
+其实大太郎法师我没见到呢\
+End:
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,梋
+想打赢我？
+我可不打算进到你的距离里\
+End:
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,娋
+哎呀，真是那什么
+今天好热啊 热死人了！\
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,寛
+什么时候能分我一点呢？
+核能\
+End:
+
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+Face:win,榝
+什么大事都不发生，弄的大家也没变化
+好无聊啊\
+End:
+
+Label:common1
+Face:win,晛
+担心的也就是能不能在雷阵雨开下之前打赢了
+End:
+
+## =======================================================================
+

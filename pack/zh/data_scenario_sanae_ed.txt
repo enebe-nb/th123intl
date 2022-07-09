@@ -1,0 +1,212 @@
+# ----------------------------------------------------
+# Ending
+# Stage:Ending
+#
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Character.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Action.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*Stage.*$"              (0 '((t (:foreground "sky blue"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Object.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Sleep.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"            (0 '((t (:foreground "medium spring green"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+
+Font:俵俽僑僔僢僋,16,3,6
+WindowColor:0,0,0,0
+Color:FFFFFF
+Background:data/scenario/effect/EdBack000.bmp,999,0,0
+CG:data/scenario/sanae/effect/ED000.bmp,96,16,50
+WindowPos:8,372
+Label:Start
+
+
+Bgm:data/bgm/ta06.ogg
+
+# 堦枃栚
+# 攷楉恄幮丂拫
+# 
+# 丂堦枃栚偼応強傪帵偡娙扨側僀儔僗僩偑擖傞梊掕偱偡
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+——幻想乡境内的博丽神社。\
+夏日的酷热不停的提高着神社绿与黑的对比@
+回响的蝉鸣使人越来越失去现实感、无法再继续思考@
+什么也不去想、对无机物来说很简单、人类却是无法做到的\
+
+
+
+# 擇枃栚
+#
+# 嫬撪丄偍嫖慘敔偺慜
+# 楈柌偑怴暦傪撉傫偱偄傞
+# 杺棟嵐偑怴暦傪庤偵帩偭偰傗偭偰偔傞
+
+CG:data/scenario/sanae/effect/ED001.bmp,96,16,50
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+魔理沙「喂—、这条新闻看过了么？」@
+灵梦　「现在就在看啊。
+　　　　山空大将棋第四十七日战」\
+魔理沙「哦哦、还在坚持看这种分不出输赢的将棋么
+　　　　这几天一直在不停地下这几手重复的棋招 还不知道要下到什么时候的样子啊！@
+　　　　喂！ 不是那个啊！是这个！ 这个报道」\
+灵梦　「未来水妖集会、
+　　　　从河童的新发明到尻子玉、各种收藏品廉价大拍卖」@
+魔理沙「看上去很有趣的样子啊。 要不要去看看？
+　　　　说不定会有什么稀奇的出土文物啊」\
+灵梦　「会这样么。
+　　　　河童的发明会有腥味的样子」@
+魔理沙「才没这回事啊」\
+灵梦　「而且到底是想吸引什么？
+　　　　突然举办起拍卖会什么的」\
+魔理沙「资金不足么？@
+　　　　核融合炉的维持费用。」\
+灵梦　「如果是这样的话倒好了。@
+　　　　啊、这里有写那个巨大人偶的事。」\
+
+CG:data/scenario/sanae/effect/ED002.bmp,96,16,50
+# 嶰枃栚
+# 怴暦傪峀偘偰挱傔偰偄傞丄婰帠偑撉傒庢傟傞
+# 戝宆偺恖宆儘儃丠丂偑椉庤傪嫇偘偰椡帺枬傪偟偰偄傞
+# 愄偺僾儔儌僨儖昞巻揑側僨僓僀儞偱
+# 
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+
+魔理沙「哪里哪里？@
+　『终于登场！巨大妖怪型自动操作人偶 非想天则』
+　『虽然远距离就能看见、想要参观还是要到这里来！』」\
+#亀旕憐揤懃偼墦偔偐傜偱傕尒偊傞偺偱丄偦傟傪栚巜偟偰棃応偡傞偲椙偄偩傠偆亁乿\
+灵梦　「非卖品么？」@
+魔理沙「你打算买啊？@
+　　　　看报道的样子只是一个会场标志而已。」\
+灵梦　「试验的时候只看了一眼啊 那么真实的动作@
+　　　　到底是怎么动起来的呢？」\
+魔理沙「谁知道呢？
+　　　　用绳子操作么？那也太大了一点吧？」@
+灵梦　「感觉真不错啊…」\
+
+# 巐枃栚
+# 庣栴恄幮
+# 
+# 
+CG:data/scenario/sanae/effect/ED003.bmp,96,16,50
+Color:FFFFFF
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+――最近才建成的山上的神社。守矢神社。@
+山里在夏天也很凉爽，像是嘲笑着山下人们的苦恼。@
+在这里，住着分别代表乾坤和人的三位神明。\
+
+
+
+# 嘍枃栚
+# ------------------------------------------------
+# 恄撧巕偲恴朘巕丄憗昪偑暲傫偱墢懁偵嵗偭偰偄傞
+# 恄撧巕偼偟傔撽傪攚晧偭偰偄傞昁梫偼側偄偺偱攚晧傢側偄偱
+#
+
+CG:data/scenario/sanae/effect/ED004.bmp,96,16,50
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+诹访子「……非想天则啊，只不过是河童的招牌而已。@
+　　　　不过动作还是很自然的吧？」@
+早苗　「这真实感纯粹多余。
+　　　　我还真当是巨大机器人了」\
+神奈子「哼～居然做了这么一个东西@
+　　　　如果委托我的话明明能设计出更实用的东西。」\
+诹访子「我只是以“比起更加实用,如何能做出不用思考却又活动逼真的东西”
+　　　　为目的考虑后说的@
+　　　　河童的设计非常的成功哟 成功的空壳子」\
+早苗　「什么都不用思考
+　　　　这是什么意思？」@
+神奈子「原来如此
+　　　　要是擅自拥有意识的话就麻烦了」\
+诹访子「是啊 那么大一个家伙要是变成付丧神的话很麻烦吧？@
+　　　　反复操作有意义的动作的话会产生思考
+　　　　就这样放着不管迟早会变成付丧神的。@
+　　　　所以，制作什么都不会思考的人偶是有必要的」\
+早苗　「原来是这么一回事啊@
+　　　　但是要怎么才能重现那么真实的动作的呢？」\
+
+CG:data/scenario/sanae/effect/ED005.bmp,96,16,50
+
+# 嘐枃栚
+# 恴朘巕偑棫偪忋偑偭偰擇恖偺慜偱愢柧傪巒傔傞
+# 憗昪偲恄撧巕偑暦偄偰偄傞
+# 
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+
+诹访子「毫无疑问、需要核动力啊」@
+早苗　「核能到底是什么东西？@
+　　　　核能是什么都还不清楚呢」\
+神奈子「核能不过就是光而已
+　　　　只不过、这种光的能量太过巨大。@
+　　　　到最后，要让这个巨大人偶动起来总要转化成别的什么能量吧
+　　　　热能或者电能之类的……」\
+诹访子「那个啊。@
+　　　　只是利用了间歇泉的蒸气而工作而已哟。@
+　　　　通过蒸气的压力增加 手臂会抬起 压力下降 手臂会放下\
+早苗　「这么说只是……」@
+神奈子「气球一样的东西呢」@
+诹访子「非常奇妙的、空壳子一个哟？
+　　　　非想天则」\
+早苗　「我还以为一定会和巨大的机器人发生战斗呢」@
+诹访子「早苗的话，并不是想战斗而是想坐上去吧？」@
+早苗　「有，有什么不好嘛
+　　　　巨大人型机器人可是人类的梦想呢」\
+神奈子「用来吸引人的人偶
+　　　　幻想乡的妖怪们一定很在意吧。@
+　　　　河童真擅长做生意呢」@
+诹访子「是我指示的呢」\
+
+Background:BLACK,0,0
+CG:BLACK,0,0,50
+WindowPos:0,640
+
+Sleep:60
+
+CG:data/scenario/sanae/effect/ec00_0.bmp,64,352,15
+
+#丂偙偺壞丄嶳偺榌偱峴傢傟偨枹棃悈梔僶僓乕偼戝惉岟偟偨丅@
+丂\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/sanae/effect/ec00_1.bmp,64,352,15
+#丂壨摱偑嶌偭偨敪柧昳偺悢乆傗丄僺僇僺僇偵杹偐傟偨怟巕嬍偼丄
+丂\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/sanae/effect/ec00_2.bmp,64,352,15
+#丂嫽枴偺偁傞恖偺庤偵搉偭偰偄偭偨傛偆偱偁傞丅\
+丂\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/sanae/effect/ec00_3.bmp,64,352,15
+#丂偱傕傗偼傝丄堦斣偺栚嬍偼旕憐揤懃偱偁偭偨丅\
+丂\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/sanae/effect/ec00_4.bmp,64,352,15
+#丂偙偺摦偒偩偗偼儕傾儖側嫄戝恖宍傪堦栚尒傛偆偲丄悢懡偔偺恖娫丄梔夦偑朘傟偨丅\
+丂\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/sanae/effect/ec00_5.bmp,64,352,15
+#丂楈柌傕杺棟嵐傕丄偙偺嫄戝恖宍傪尒偰枮懌偟偨傛偆偱偁傞丅@
+丂\
+FadeBgm:20000,0
+CG:BLACK,0,0,15
+StaffRoll:
+
+#丂恖娫偼壗傕峫偊側偄帠偼擄偟偄丅偩偐傜偙偦丄屽傝傪奐偔偺偵柍憐偺嫬抧傪媮傔傞丅@
+#丂偟偐偟恖宍側傜丄嵟弶偐傜壗傕峫偊側偄摦偒偑弌棃傞偺偩丅@
+#丂恖宍偼屽偭偰偄傞偺偐丠丂柍憐偺嫬抧偼恖娫傪幪偰傞偙偲側偺偐丠\
+
+#丂偦偺摎偊偼丄旕憐揤懃傪尒偨幰偵偼慡偰敾偭偰偄偨丅
+#丂挿偔惗偒偨梔夦偵偲偭偰偦偙偐傜妛傇暔偼丄妋偐偵偁偭偨偺偩丅\
+
+End:

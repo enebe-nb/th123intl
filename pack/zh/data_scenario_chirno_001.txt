@@ -1,0 +1,190 @@
+## =======================================================================
+#Stage:2
+#Title:乽傂偲傝瀀桱乿
+#Place:帪寁戜
+
+Character:chirno,160,0,0,8888FF
+Character:meirin,160,0,1,FF8888
+
+#攚宨丂峠杺娰帪寁搩
+Stage:12,0
+
+#帺暘弶婜攝抲
+Action:chirno,1丂#夋柺奜懸婡
+
+#揋弶婜攝抲
+Action:meirin,400丂#2P掕埵抲偱懸婡
+Action:meirin,402丂#巚埬
+
+#僇儊儔拞墰屌掕
+Action:chirno,2丂
+
+#夋柺昞帵慜張棟廔椆============================
+
+Label:Start
+Sleep:60;
+
+#夋柺崟偐傜僼僃乕僪僀儞
+Action:chirno,161
+
+PlayBgm:data/bgm/ta04.ogg
+Sleep:60;
+
+#僗僥乕僕僞僀僩儖昞帵
+Object:data/scenario/chirno/effect/StageTitle002.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage2.bmp,1,256,352
+Sleep:270;
+
+# 晛丄婐丄梋丄娋丄嬃丄搟丄寛丄榝丄晧
+
+Balloon:meirin,1,0,-200
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+# 旤楅丂偦傢偦傢偟偰偄傞乮堦尵偢偮峴偭偨傝棃偨傝乯
+Action:meirin,408#嵍傊堏摦
+Action:meirin,409
+刚才那个是太岁星君？ 如此说来\
+
+Balloon:null,1,0,-200
+Action:meirin,410#塃傊堏摦
+Action:meirin,411
+
+Balloon:meirin,1,0,-200
+马上会有大灾难降临了！\
+Balloon:null,1,0,-200
+
+#僠儖僲偑偡偭偲擖偭偰偔傞丅旤楅偼嬃偔
+Action:chirno,50
+Action:chirno,51 #搊応摦嶌廔椆専抦
+
+Balloon:chirno,1,0,-200
+一个人在那里嘟嘟囔囔说什么呢？\
+
+#Action:meirin, 旤楅丂僠儖僲偺曽傪岦偄偰
+Action:meirin,403丂#旤楅嬃偄偰怳傝岦偔
+Action:meirin,404丂#廔椆専抦
+
+Balloon:meirin,1,0,-200
+什、什么？
+切 原来是妖精啊\
+
+Balloon:chirno,1,0,-200
+是妖精哟
+只是刚好路过这里罢了\
+
+Balloon:meirin,1,0,-200
+是么 我现在刚好有一件
+不得不去做的大事呢\
+
+所以、你快点走吧\
+
+Action:chirno,305 #僠儖僲丂婐偟偦偆
+Balloon:chirno,1,0,-200
+刚才 慌慌张张的想什么
+那样比较让我在意呢\
+
+Action:meirin,403 #旤楅丂嬃偄偰
+Balloon:meirin,1,0,-200
+！？ 这可没有妖精你的事！\
+
+Action:chirno,303 # 僠儖僲丂寛傔億乕僘
+Balloon:chirno,1,0,-200
+比起大太郎法师
+这里比较有趣的样子～\
+
+Action:meirin,405 #旤楅丂峔偊傞
+Balloon:meirin,1,0,-200
+是么、那么没办法了 麻烦的家伙快点被解决掉吧\
+
+Sleep:30
+
+#愴摤奐巒張棟
+
+PlayBgm:data/bgm/st32.ogg
+Action:chirno,203丂#僯儏乕僩儔儖忬懺傊
+Action:meirin,203丂#僯儏乕僩儔儖忬懺傊
+Action:chirno,167#丂僼儔僢僔儏
+Action:chirno,3
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂晧偗
+Label:Lose
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂僐儞僥僯儏乕張棟
+Label:Continue
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂彑偪
+Label:Win
+
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:meirin,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:chirno,202
+
+Action:chirno,164
+Sleep:15
+
+Action:chirno,204
+Action:meirin,205
+
+#僇儊儔拞墰屌掕
+Action:chirno,2丂
+
+Sleep:30
+Action:chirno,165
+
+Sleep:30
+
+# 旤楅丄搢傟偨忬懺
+Balloon:chirno,1,0,-200
+那个、我刚才要去干什么来着的？\
+
+# 旤楅丄搢傟偨忬懺
+Balloon:meirin,1,0,-200
+哈？\
+
+Balloon:chirno,1,0,-200
+嗯－ 嗯－
+大姐姐、知道我要干什么么？\
+
+# 旤楅丄搢傟偨忬懺
+Balloon:meirin,1,0,-200
+哎？ 啊－ 对了对了！
+好像说到大太郎法师什么的\
+
+Action:chirno,404 #僠儖僲丂婐偟偦偆
+Balloon:chirno,1,0,-200
+啊对！ 要去找大太郎法师！
+不快点不行了！\
+
+Action:chirno,304 #僠儖僲偑嫀偭偰偄偔
+
+# 旤楅丄搢傟偨忬懺
+Balloon:meirin,1,0,-200
+……\
+
+Balloon:null,1,0,-200
+Sleep:90
+
+Result:
+FadeBgm:2000,0
+Action:chirno,306丂#夋柺崟偵僼僃乕僪傾僂僩
+Action:chirno,307丂#僇儊儔忋曽岦偵僷儞奐巒
+Action:chirno,308丂#僇儊儔忋曽岦偵僷儞廔椆
+
+
+#師僗僥乕僕弨旛張棟====================
+
+Sleep:120;
+
+End:
+
+## =======================================================================

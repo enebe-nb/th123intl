@@ -1,0 +1,260 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS傾儕僗
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:reimuU0
+Face:lose,晧
+Face:win,梋
+你也再增加一点可以使唤的同伴
+不是更好吗？\
+End:
+
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisaU0
+Face:lose,晧
+Face:win,寛
+你去把自己的房间再稍微整理下如何？
+地震来了被埋起来我可不管哦？\\
+End:
+
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuyaU0
+Face:lose,晧
+Face:win,寛
+比起你的部下来我的部下更顺从和优秀哦\
+End:
+
+Label:sakuyaR0
+Face:lose,晧
+Face:win,寛
+怎么样？
+人偶们的刀法\
+Face:win,婐
+做料理也是易如反掌
+我现在什么事情都不需要做了\
+Face:win,晛
+这跟你那里那些派不上用场的女仆们完全不同哦\
+End
+
+
+## =======================================================================
+#VS梔柌
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:youmuU0
+Face:lose,晧
+Face:win,晛
+连接身体与幽灵的线和操纵人偶的线是一样的
+都是绝对斩不断的心之缰绳呢\
+End:
+
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:alice0
+Face:lose,晧
+Face:win,晛
+比起能自己思考的人偶、
+还是自己操纵比较方便呢\
+End:
+
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouliU0
+Face:lose,晧
+Face:win,梋
+移动起来的话一定很麻烦吧
+那么多的书\
+End:
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,婐
+做些什么给你吧？
+做功粗糙的人偶\
+End:
+
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyukoU0
+Face:lose,晧
+Face:win,晛
+经常在柳树下面呆呆的站着的亡灵是啥？
+街头小贩之类的吗？\
+End:
+
+
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,晛
+每当人偶被当祭品时候都会掉进幻想乡来呢\
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suikaU0
+Face:lose,晧
+Face:win,婐
+马上就会让你惊讶的
+巨大化可不是你的专利哟\
+End:
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ayaU0
+Face:lose,晧
+Face:win,榝
+那个鼻子会伸长的人偶的故事说的什么来着？
+和天狗没关系吗\
+End:
+
+## =======================================================================
+#VS楅愬
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:udongeU0
+Face:lose,晧
+Face:win,梋
+有看到过嘴上贴着十字胶布的兔子人偶～
+那个十字胶布是兔子闭嘴的意思吗？\
+End:
+
+
+
+## =======================================================================
+#VS彫挰
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:komachiU0
+Face:lose,晧
+Face:win,榝
+有一种替身人偶吧？
+人类的灵魂难道就是那么容易代替的东西吗？\
+End:
+
+## =======================================================================
+#VS堖嬭
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:ikuU0
+Face:lose,晧
+Face:win,晛
+地震确实让人担心……不过嘛，既然呆在这个国度
+对此就必须有所觉悟呢\
+End:
+
+## =======================================================================
+#VS揤巕
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:tenshiU0
+Face:lose,晧
+Face:win,榝
+虽然说有雏大人配桃子的诗句，不过按照现在的时令
+桃花根本还没开放呢\
+End:
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,婐
+和灵梦真是大不一样呢
+果然巫女和神明还要配成一套才行\
+End:
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,晛
+把你和人偶们混在一起的话
+谁都不会注意到的吧？\
+End:
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,嬃
+在你们国家的地下、埋着成千上万个士兵的人偶？
+真是厉害呀\
+End:
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,娋
+乌鸦，没有太阳的印象呢\
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,晛
+青蛙布偶在村子里人气是很高的
+但是蝌蚪的话就完全不行了呢\
+End:
+
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+
+Face:win,晛
+最近在专心研究新的战术
+大家都嗜血着呢\
+End:
+
+Label:common1
+
+Face:win,寛
+数量当然是越多越好
+正所谓多多益善！\
+End:
+
+## =======================================================================
+

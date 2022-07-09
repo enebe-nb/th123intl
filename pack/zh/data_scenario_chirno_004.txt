@@ -1,0 +1,232 @@
+## =======================================================================
+#Stage:5
+#Title:乽杮暔偺偩偄偩傜傏偭偪乿
+#Place:抧壓僙儞僞乕擖傝岥
+
+Character:chirno,160,0,0,8888FF
+Character:alice,160,0,1,FF8888
+Character:marisa,160,0,3,FF8888
+
+#攚宨丂僙儞僞乕擖傝岥
+Stage:32,0
+
+#帺暘弶婜攝抲
+Action:chirno,1丂#夋柺奜偱懸婡
+
+Action:marisa,30丂#夋柺掕埵抲偱懸婡
+Action:alice,100丂#夋柺奜偱懸婡
+
+#僇儊儔拞墰屌掕
+Action:chirno,2丂
+
+#夋柺昞帵慜張棟廔椆============================
+
+Label:Start
+
+#夋柺崟偐傜僼僃乕僪僀儞
+Action:chirno,161
+PlayBgm:data/bgm/ta05.ogg
+Sleep:120
+
+# 杺棟嵐偑棫偭偰偄傞
+
+# 僠儖僲偑搊応偡傞
+Action:chirno,50
+Action:chirno,51 #搊応摦嶌廔椆専抦
+
+Action:marisa,203丂#怳傝岦偔
+Balloon:marisa,1,0,-200
+哦哦、这么快就回来了啊\
+
+Action:chirno,407# 僠儖僲丂嬃偄偰
+Balloon:chirno,1,0,-200
+里面什么也有没有！
+大骗子！\
+
+Balloon:marisa,1,0,-200
+就是这样的啦。
+这里只是一个温泉锅炉而已嘛\
+
+Action:chirno,314# 僠儖僲丂棊偪崬傓
+Balloon:chirno,1,0,-200
+大太郎法师生活在这种环境里么
+看来只有放弃了啊……\
+
+Action:marisa,400# 杺棟嵐
+Balloon:marisa,1,0,-200
+等、等下。
+别那么垂头丧气嘛\
+
+Action:chirno,315# 僠儖僲丂媈栤偵巚偆
+Balloon:chirno,1,0,-200
+？\
+
+# 杺棟嵐
+Balloon:marisa,1,0,-200
+刚才、在森林那边看到个非常巨大的妖怪，
+不知道是啥时候跑过去的。\
+
+Action:chirno,303# 僠儖僲丂婌傇
+Balloon:chirno,1,0,-200
+真的！？\
+
+Action:marisa,203# 杺棟嵐
+Balloon:marisa,1,0,-200
+啊啊 这次可没有骗你
+喏、就在那边。看到没\
+
+Action:chirno,302# 僠儖僲丂嬃偔
+Balloon:chirno,1,0,-200
+真的。
+有个巨大的家伙在那里呢\
+
+Balloon:null,1,0,-200
+Sleep:30
+
+Action:chirno,304# 偦偟偰丄僠儖僲偼杺棟嵐傪抲偄偰峇偰偰旘傫偱偄偔
+Sleep:90
+Balloon:marisa,1,0,-200
+那个到底是什么呢？
+实在想不出来啊。\
+Balloon:null,1,0,-200
+
+FadeBgm:1000,0
+Action:chirno,160丂#夋柺崟偵僼僃乕僪傾僂僩
+
+
+# ---------------------------------------
+Sleep:120
+# 応柺偑曄傢傞
+
+Stage:13,0
+#応強丗傾儕僗偺壠偺慜
+Action:chirno,1丂#夋柺奜偱懸婡
+Action:alice,30丂#夋柺掕埵抲偱懸婡
+Action:marisa,100丂#夋柺奜偱懸婡
+
+Sleep:60
+#夋柺崟偐傜僼僃乕僪僀儞
+PlayBgm:data/bgm/ta22.ogg
+Action:chirno,161
+Sleep:30
+
+#僗僥乕僕僞僀僩儖昞帵
+Object:data/scenario/chirno/effect/StageTitle005.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/StageFinal.bmp,1,256,384
+Sleep:300;
+
+# 傾儕僗偑棫偭偰偄傞
+Balloon:alice,1,0,-200
+还要更多地研究一下呢\
+
+# 僠儖僲偑搊応偡傞
+Action:chirno,50
+Action:chirno,51 #搊応摦嶌廔椆専抦
+Balloon:chirno,1,0,-200
+在这附近么\
+
+Action:chirno,302# 僠儖僲丂嬃偄偰
+Balloon:chirno,1,0,-200
+唔哇！\
+
+Action:alice,203# 傾儕僗丂捠忢
+Balloon:alice,1,0,-200
+哦呀、真是少见。
+迷路了？\
+
+Action:chirno,203# 僠儖僲丂捠忢
+Balloon:chirno,1,0,-200
+我才不是迷路了呢。
+话说回来，这附近……\
+
+Action:alice,400# 傾儕僗丂媈栤
+Balloon:alice,1,0,-200
+这附近？\
+
+# 僠儖僲丂捠忢
+Balloon:chirno,1,0,-200
+有大太郎法师？\
+
+# 傾儕僗丂媈栤
+Balloon:alice,1,0,-200
+大太郎法师？\
+
+Action:chirno,309# 僠儖僲丂椉庤傪峀偘偰
+Balloon:chirno,1,0,-200
+非常巨大 非常巨大的妖怪哟！
+刚才就在这附近出没的样子！\
+
+Action:alice,401# 傾儕僗丂嬃偒
+Balloon:alice,1,0,-200
+巨大的妖怪么……
+哼哼～\
+
+Action:chirno,403# 僠儖僲丂嬃偄偰
+Balloon:chirno,1,0,-200
+你见到了？
+知道在那里么？\
+
+Action:alice,203# 傾儕僗丂晛捠
+Balloon:alice,1,0,-200
+知道是知道呢 。多半～
+你也想见识一下么？\
+
+Action:chirno,404# 僠儖僲丂婌傫偱
+Balloon:chirno,1,0,-200
+我要看 我要看！
+我今天一直在找这家伙！\
+
+# 傾儕僗丂晛捠
+Balloon:alice,1,0,-200
+虽然还在试验阶段，
+不过拿来试用一下也不错呢\
+
+Action:chirno,303# 僠儖僲丂婌傫偱
+Balloon:chirno,1,0,-200
+快点！ 快点！
+大太郎法师！\
+
+Action:alice,402# 傾儕僗丂寛傔億乕僘
+Balloon:alice,1,0,-200
+魔力再填充还缺少一点必要的东西。
+把你的那份活力来借给我用一下吧！\
+
+PlayBgm:data/bgm/st35.ogg
+Action:chirno,203#丂僯儏乕僩儔儖忬懺傊
+Action:alice,203#丂僯儏乕僩儔儖忬懺傊
+Action:chirno,167#丂僼儔僢僔儏
+Action:chirno,3
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂晧偗
+Label:Lose
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂僐儞僥僯儏乕張棟
+Label:Continue
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂彑偪
+Label:Win
+
+Action:chirno,168
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:alice,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:chirno,202
+
+Sleep:30
+Result:
+
+#僀儀儞僩丂彑棙墘弌僼僃乕僪
+
+End:
+
+## =======================================================================

@@ -1,0 +1,177 @@
+## =======================================================================
+#Stage:5
+#Title:「というお話ですか？」
+#Place:夢の中
+
+Character:meirin,160,0,0,8888FF
+Character:namazu,160,0,1,FF8888
+
+#背景　夢の中
+Stage:38,0
+
+#自分初期配置
+Action:meirin,20　#1P定位置で待機
+Action:meirin,401　#遠くを見る
+
+Action:namazu,100　#画面右で待機
+
+#カメラ中央固定
+Action:meirin,2　
+
+#画面表示前処理終了============================
+
+Label:Start
+
+#画面黒からフェードイン
+Action:meirin,161
+PlayBgm:data/bgm/ta21.ogg
+Sleep:60
+
+#ステージタイトル表示
+Object:data/scenario/meirin/effect/StageTitle005.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/StageFinal.bmp,1,256,384
+Sleep:300;
+
+# 美鈴が立っている
+Balloon:meirin,1,0,-200
+在那里！
+跑到那里去了！\
+
+妄图蹂躏幻想乡的太岁星君。
+还是快快在我面前现身的好！\
+
+Balloon:null,1,0,-200
+Sleep:90;
+
+Action:namazu,400# なまず君が落ちてくる
+Action:namazu,401# 落下検知
+Balloon:namazu,1,0,-200
+Sleep:30
+
+哈哈哈哈！
+老朽终于等到复活的这一刻了！\
+
+# なまず君
+看着你和那些刺客们的战斗
+实在是让老朽无比的高兴啊\
+
+Action:meirin,300# 美鈴　疑問
+Balloon:meirin,1,0,-200
+？\
+
+# なまず君
+Balloon:namazu,1,0,-200
+那些家伙可是为了夺取你的力量
+才被老朽派来的唷！\
+
+Action:meirin,307# 美鈴　驚き
+Balloon:meirin,1,0,-200
+！？\
+
+# なまず君
+Balloon:namazu,1,0,-200
+没错！为了让老朽复活的力量
+那令大地摇动的力量！\
+
+# 美鈴　驚き
+Balloon:meirin,1,0,-200
+你说什么？\
+
+# なまず君
+Balloon:namazu,1,0,-200
+没有察觉到这点的你
+真是帮了老朽太多忙哟\
+
+# なまず君
+怎么了？
+因为愤怒而无法思考了么？\
+
+# なまず君
+还是说，
+因为太过悲伤而言辞尽失了？\
+
+Action:meirin,203# 美鈴　通常
+Balloon:meirin,1,0,-200
+哼哼哼\
+
+# なまず君
+Balloon:namazu,1,0,-200
+你笑什么？\
+
+# 美鈴　通常
+Balloon:meirin,1,0,-200
+居然为了我做到这种地步\
+
+# なまず君
+Balloon:namazu,1,0,-200
+什么意思？\
+
+# 美鈴　通常
+Balloon:meirin,1,0,-200
+居然为了成就我的传说
+做到这种地步\
+
+# なまず君
+Balloon:namazu,1,0,-200
+嗯？\
+
+Action:meirin,305# 美鈴　決めポーズ
+Balloon:meirin,1,0,-200
+一个不能来到这个世界的怪物
+被幻想乡第一的看门人击退的传说！\
+
+Bgm:data/bgm/st35.ogg
+
+# なまず君
+Balloon:namazu,1,0,-200
+居然被小看了 真是让人困扰\
+
+# なまず君
+吾乃最凶最恶的妖怪
+太岁星君的分身之一！\
+
+# なまず君
+老朽可是传说中的大鲶！
+老朽的一举一动都能令大地摇动、令地面崩坏！\
+
+像这样轻蔑的侮辱老朽是要付出代价的！\
+
+#戦闘開始処理
+
+Action:meirin,203#　ニュートラル状態へ
+Action:namazu,203#　ニュートラル状態へ
+Action:meirin,167#　フラッシュ
+Action:meirin,3
+
+End:
+
+# --------------------------------
+# 戦闘終了　負け
+Label:Lose
+
+End:
+
+# --------------------------------
+# 戦闘終了　コンテニュー処理
+Label:Continue
+
+End:
+
+# --------------------------------
+# 戦闘終了　勝ち
+Label:Win
+
+#やられキャラ完全ダウン検知
+Action:namazu,200
+#攻撃側ニュートラル移行検知
+Action:meirin,202
+
+Sleep:30
+Result:
+
+#イベント　勝利演出フェード
+
+End:
+
+## =======================================================================

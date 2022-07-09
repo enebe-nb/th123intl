@@ -1,0 +1,170 @@
+# ----------------------------------------------------
+# Ending
+# Stage:Ending
+#
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Character.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Action.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*Stage.*$"              (0 '((t (:foreground "sky blue"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Object.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Sleep.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"            (0 '((t (:foreground "medium spring green"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+
+Font:俵俽僑僔僢僋,16,3,6
+WindowColor:0,0,0,0
+Color:FFFFFF
+Background:data/scenario/effect/EdBack000.bmp,999,0,0
+CG:data/scenario/chirno/effect/ED000.bmp,96,16,50
+WindowPos:8,372
+Label:Start
+
+
+Bgm:data/bgm/ta06.ogg
+
+# 堦枃栚
+# 攷楉恄幮丂拫
+# 
+# 丂堦枃栚偼応強傪帵偡娙扨側僀儔僗僩偑擖傞梊掕偱偡
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+——幻想乡东部地界。博丽神社。\
+一直回响着烦人的蝉鸣的神社里、来了一个比知了更吵闹的家伙@
+似乎还是话题的中心的样子\
+
+
+
+# 擇枃栚
+# ------------------------------------------------
+# 嫬撪丄僠儖僲偑壗偐傪愢柧偟傛偆偲偟偰偄傞丅
+# 楈柌偑嵗偭偰偦偺榖傪暦偄偰偄傞
+
+CG:data/scenario/chirno/effect/ED001.bmp,96,16,50
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+灵梦　「那么？大太郎法师又怎么了？」\
+琪露诺「大太郎法师是非常巨大的怪物哦！！」\
+灵梦　「啊 是这样呢」\
+琪露诺「那个 那个妖怪看来好像还是人偶来着……」\
+魔里沙「哦～」\
+琪露诺「总之、那么巨大还能自由活动的家伙@
+　　　　要是在乱跑起来可是幻想乡的大危机啊」\
+灵梦　「巨大的人偶……。@
+　　　　难道说是这个家伙么？」\
+
+
+
+# 嶰枃栚
+# ------------------------------------------------
+# 楈柌偑怴暦傪僠儖僲偵尒偣偰偄傞
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+CG:data/scenario/chirno/effect/ED002.bmp,96,16,50
+
+灵梦　「非想天则——巨大妖怪型自动行动人偶」\
+琪露诺「非想天则？」\
+灵梦　「河童制作的巨大人偶哦」\
+琪露诺「河童？」\
+灵梦　「如果是这个的话大家都见到了哟@
+　　　　现在去山脚下的话还能看到呢」\
+琪露诺「什么嘛—大家都看到了啊。
+　　　　好无聊」
+
+# ------------------------------------------------
+# 僠儖僲偼怴暦傪扗偭偰尒偰偄傞
+# 壗偐帺暘偑尒偨暔偲堎側偭偰丄媈栤偵巚偭偰偄傞
+
+琪露诺「非想天则……。@
+　　　　嗯？」\
+灵梦　「行动起来非常的逼真哟@
+　　　　好像是通过蒸气来工作的样子呢」\
+琪露诺「这家伙……是什么…」\
+灵梦　「你把这家伙错认成大太郎法师了是吧？」\
+琪露诺「嗯？ 是这样子么…」\
+灵梦　「不管怎么说 只是一个人偶而已 没啥好怕的呀」\
+琪露诺「嗯？@
+　　　　才不是这个样子的家伙！@
+　　　　绝对不一样的！」\
+灵梦　「唉？」\
+琪露诺「更加逼真的人偶样子，@
+　　　　更加具有攻击性的感觉。@
+　　　　总之、完全不一样。完全不一样啊！」\
+灵梦　「是么？@
+　　　　能不能说的更详细一点？\
+
+Background:BLACK,0,0
+CG:BLACK,0,0,50
+WindowPos:0,640
+
+Sleep:60
+
+CG:data/scenario/chirno/effect/ec01_0.bmp,64,352,15
+
+#  琪露诺拼命地回忆着@
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_1.bmp,64,352,15
+# 追逐大太郎法师进入间歇泉地下中心@
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_2.bmp,64,352,15
+#  又因为太热从那里逃开 @
+#  接着 见到了森林中的巨大怪物\
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_3.bmp,64,352,15
+#  可是 琪露诺的故事里缺少了一个重要的部分
+   \
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_4.bmp,64,352,15
+#  因为人和妖怪的样子,她都记不住 @
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_5.bmp,64,352,15
+#  就是说  一路上到底碰到的是谁，都被她忘掉了。\
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_6.bmp,64,352,15
+#  于是琪露诺的故事渐渐变成了都市传说一样的东西。@
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_7.bmp,64,352,15
+#  只有剧情而缺乏细节的故事@
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_8.bmp,64,352,15
+#  每次传述故事都会变化 终于变成了如假包换的怪谈@
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_9.bmp,64,352,15
+#  盛夏的巨大妖怪传说、人们这么称呼它\
+　\
+FadeBgm:20000,0
+CG:BLACK,0,0,15
+StaffRoll:
+
+#  当这故事传到爱丽丝耳里的时候 @
+#  爱丽丝已经无法将其和自己的「人形巨大化计划」联系起来了\
+
+#  爱丽丝确信了 @
+#  一定要快点把人形巨大化魔法掌握在手@
+#  为了和那未知的巨大妖怪战斗做准备@
+
+End:

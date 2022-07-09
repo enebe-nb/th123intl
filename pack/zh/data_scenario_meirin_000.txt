@@ -1,0 +1,176 @@
+## =======================================================================
+#Stage:1
+#Title:乽懢嵨惎孨偺嵭壭乿
+#Place:恾彂娰
+
+Character:meirin,160,0,0,8888FF
+Character:patchouli,160,0,1,FF8888
+
+#攚宨丂恾彂娰
+Stage:14,0
+
+#帺暘弶婜攝抲
+Action:meirin,1
+#夋柺奜懸婡
+
+#揋弶婜攝抲
+Action:patchouli,30
+#2P掕埵抲懸婡
+
+#僇儊儔拞墰屌掕
+Action:meirin,2丂
+
+#夋柺昞帵慜張棟廔椆============================
+
+Label:Start
+
+
+PlayBgm:data/bgm/ta20.ogg
+Sleep:60;
+
+#僗僥乕僕僞僀僩儖昞帵
+Object:data/scenario/meirin/effect/StageTitle001.bmp,0,256,-32
+Sleep:30
+Object:data/scenario/effect/Stage1.bmp,1,256,352
+Sleep:126
+
+Sleep:120;
+
+
+# 晛丄婐丄梋丄娋丄嬃丄搟丄寛丄榝丄晧
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+# 僷僠儏儕乕偑棫偭偰偄傞
+Action:meirin,50
+Action:meirin,51
+# 偦偙偵旤楅偑擖偭偰偔傞
+Balloon:meirin,1,0,-200
+帕秋莉大人！\
+
+#僷僠儏慺棫偪怳傝岦偒
+Action:patchouli,203
+Balloon:patchouli,1,0,-200
+干嘛？那么吵\
+
+Action:meirin,406
+# 旤楅丂寛傔億乕僘
+Balloon:meirin,1,0,-200
+不得了啊！
+刚才、不能被看到的东西出现了啊！\
+
+Action:patchouli,400
+# 僷僠儏儕乕丂媈栤
+Balloon:patchouli,1,0,-200
+不能被见到的东西？\
+
+Action:meirin,203
+# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+是太岁星君。
+这需要做好最坏的情况发生的准备！\
+
+# 僷僠儏儕乕丂捠忢
+Balloon:patchouli,1,0,-200
+……那么？\
+
+Action:meirin,405
+# 旤楅丂寛傔億乕僘
+Balloon:meirin,1,0,-200
+就是说、也许会发生地震什么的这类事情！\
+
+# 僷僠儏儕乕丂捠忢
+Balloon:patchouli,1,0,-200
+……
+地震啊、你过时了。\
+
+Action:meirin,300
+# 旤楅丂媈栤
+Balloon:meirin,1,0,-200
+哈？\
+
+Action:patchouli,401
+# 僷僠儏儕乕丂寛傔億乕僘
+Balloon:patchouli,1,0,-200
+好了好了、不要再来打扰我的研究了
+快点回你的工作岗位去！\
+
+#愴摤奐巒張棟
+
+PlayBgm:data/bgm/st43.ogg
+#丂愴摤奐巒張棟
+
+Action:meirin,203
+Action:patchouli,203
+Action:meirin,167
+#丂僼儔僢僔儏
+Action:meirin,3
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂晧偗
+Label:Lose
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂僐儞僥僯儏乕張棟
+Label:Continue
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂彑偪
+Label:Win
+
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:patchouli,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:meirin,202
+
+Action:meirin,164
+Sleep:15
+
+Action:meirin,204
+Action:patchouli,205
+
+#僇儊儔拞墰屌掕
+Action:meirin,2丂
+
+Sleep:30
+Action:meirin,165
+
+Sleep:30
+
+# 僷僠儏儕乕丂搢傟偨忬懺
+# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+是真的啦！\
+
+# 僷僠儏儕乕丂
+Balloon:patchouli,1,0,-200
+是真的也没什么的。
+反正、也不过是地震而已\
+
+Action:meirin,300
+# 旤楅丂媈栤
+Balloon:meirin,1,0,-200
+不过嘛…
+地震可是不能小看的呀\
+
+Balloon:null,0,0,-200
+
+Sleep:30
+
+Result:
+FadeBgm:2000,0
+Action:meirin,160丂#夋柺崟偵僼僃乕僪傾僂僩
+
+
+#師僗僥乕僕弨旛張棟====================
+
+Sleep:120;
+
+End:
+
+## =======================================================================

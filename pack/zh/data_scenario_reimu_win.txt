@@ -1,0 +1,368 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS楈柌
+# Time-stamp: <2009/08/12 16:11:48 zun>
+#
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+Label:reimuU0
+Face:lose,晧
+Face:win,娋
+你谁啊？\
+End:
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisaU0
+Face:lose,晧
+Face:win,晛
+热得人发慌啊
+过会一起去河童那里吧\
+End:
+
+Label:marisaU1
+Face:lose,晧
+Face:win,娋
+动也好 不动也好都觉的热
+这种时候到底怎么办才好啊\
+End:
+
+Label:marisaR0
+Face:lose,晧
+Face:win,晛
+说起来、那个不明的飞行妖怪\
+
+Face:win,榝
+最后好像入了佛门呢
+到寺庙过夜去了\
+
+Face:win,梋
+果然普通的妖怪
+还是讨厌地底的\
+End:
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuyaU0
+Face:lose,晧
+Face:win,梋
+红魔馆总是这么凉快
+有什么秘诀吗\
+End:
+
+Label:sakuyaU1
+Face:lose,晧
+Face:win,婐
+今晚就在红魔开夏夜茶会吧
+夏天不管有多少都不觉的多呢\
+End:
+
+## =======================================================================
+#VS梔柌
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:youmuU0
+Face:lose,晧
+Face:win,榝
+好热呢
+能不能借一两只幽灵来用用？\
+End:
+
+Label:youmuU1
+Face:lose,晧
+Face:win,寛
+不去把附近的草割一割吗？\
+End:
+
+Label:youmuU2
+Face:lose,晧
+Face:win,梋
+下次 我们的试胆大会你一定要来哦
+当被吓唬的那边\
+End:
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aliceU0
+Face:lose,晧
+Face:win,晛
+你有很好的供奉那些人偶吗？
+以人类的姿态存在的东西很容易被各种东西附上哦？\
+End:
+
+Label:aliceR0
+Face:lose,晧
+Face:win,梋
+经常会有头发能伸长的人偶呢\
+
+Face:win,榝
+那个也是用丝线操作的吗？
+一根一根的头发丝\
+End:
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouliU0
+Face:lose,晧
+Face:win,晛
+好热、实在不想多动啊\
+End:
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,嬃
+听说 蝙蝠不是鸟而是哺乳类\
+End:
+
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyukoU0
+Face:lose,晧
+Face:win,晛
+容易聚集幽灵的地方
+总觉的是又暗又潮湿的地方呢\
+End:
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,晛
+虽然觉的无聊……\
+End:
+
+Label:yukariR0
+Face:lose,晧
+Face:win,晛
+你不认为最近太和平了么？\
+
+Face:win,晛
+就像风暴到来前的感觉\
+
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suikaU0
+Face:lose,晧
+Face:win,娋
+喜欢住在地底的家伙里
+没一个是正经的啊\
+End:
+
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ayaU0
+Face:lose,晧
+Face:win,娋
+为什么、报纸的照片里
+还会把你自己拍进去？\
+End:
+
+Label:ayaR0
+Face:lose,晧
+Face:win,娋
+为什么、报纸的照片里
+还会把你自己拍进去？\
+
+Face:win,嬃
+难道说先按快门
+然后用超高速移动什么的？\
+
+Face:win,娋
+……这样就能拍到自己吗？\
+
+End:
+
+## =======================================================================
+#VS楅愬
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:udongeU0
+Face:lose,晧
+Face:win,晛
+今晚就吃兔肉火锅了\
+End:
+
+Label:udongeU1
+Face:lose,晧
+Face:win,梋
+山里好像有做眼药的木
+眼睛充血的那么厉害去找找怎么样？\
+End:
+
+
+
+## =======================================================================
+#VS彫挰
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:komachiU0
+Face:lose,晧
+Face:win,梋
+哦，偷懒大王
+跑这里来偷懒没问题吗？\
+End:
+
+
+## =======================================================================
+#VS堖嬭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ikuU0
+Face:lose,晧
+Face:win,晛
+最近雷阵雨真多
+不是说打雷是因为你们在上面闹腾吗？\
+End:
+
+
+## =======================================================================
+#VS揤巕
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:tenshiU0
+Face:lose,晧
+Face:win,娋
+天界一定很热吧？
+又没有可以遮挡阳光的东西\
+End:
+
+
+Label:tenshiR0
+Face:lose,晧
+Face:win,娋
+天界一定很热吧？
+又没有可以遮挡阳光的东西\
+
+Face:win,嬃
+啊 但是山越高的话温度也就越低\
+
+Face:win,梋
+比山还要高的天界到底会是热呢？
+还是说很冷？\
+
+End:
+
+
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,婐
+那么！谁的颜色才象巫女
+用衣服的颜色来一分高下！\
+End:
+
+Label:sanaeR0
+Face:lose,晧
+Face:win,娋
+感觉参拜分社的人好多\
+
+Face:win,晛
+大家都真是现实
+没有恩惠就不去信仰\
+
+Face:win,梋
+真希望有更多退治妖怪的事可以做啊
+这样我也有信徒了\
+
+End:
+
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,晛
+笨蛋
+你怎么可能打赢我啊\
+End:
+
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,娋
+太极拳？那不是锻炼身体用的嘛？\
+End:
+
+
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,娋
+现在还是不理解核融合到底怎么回事
+为什么 融合起来会变热呢？\
+End:
+
+Label:utsuhoU1
+Face:lose,晧
+Face:win,晛
+为什么太阳里住着乌鸦呢？\
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,晛
+青蛙冬眠好像也是玩命的\
+End:
+
+
+
+
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+
+Face:win,晛
+今年的夏天真和平
+无聊也不是什么坏事，大概\
+End:
+
+Label:common1
+
+Face:win,榝
+以前一到夏天就出状况呢。\
+End:
+
+## =======================================================================
+

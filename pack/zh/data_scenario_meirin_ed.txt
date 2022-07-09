@@ -1,0 +1,151 @@
+# ----------------------------------------------------
+# Ending
+# Stage:Ending
+#
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Character.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Action.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*Stage.*$"              (0 '((t (:foreground "sky blue"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Object.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Sleep.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"            (0 '((t (:foreground "medium spring green"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+
+Font:俵俽僑僔僢僋,16,3,6
+WindowColor:0,0,0,0
+Color:FFFFFF
+Background:data/scenario/effect/EdBack000.bmp,999,0,0
+CG:data/scenario/meirin/effect/ED000.bmp,96,16,50
+WindowPos:8,372
+Label:Start
+
+
+Bgm:data/bgm/ta06.ogg
+
+# 堦枃栚
+CG:data/scenario/meirin/effect/ED000.bmp,96,16,50
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+# 恾彂娰
+ ——红魔馆地下的图书馆@
+ 地下冬暖夏凉、非常舒适@
+ 又能阻挡阳光，是保存书籍的最佳地点。\
+
+# 擇枃栚
+CG:data/scenario/meirin/effect/ED001.bmp,96,16,50
+# ------------------------------------------------
+# 怮偰偄傞旤楅偲柪榝偦偆偵偟偰偄傞僷僠儏儕乕
+# 屻偼嶇栭偑榚偵棫偭偰偄傞丅
+美铃　「……地震什么的才不会让你发生。@
+　　　　这样就能守护好幻想乡了！」\
+帕琪　「那么？@
+　　　　打算睡到什么时候？这个笨蛋」\
+咲夜　「我发现的时候已经在外面睡着了呢、@
+　　　　说不定是受到敌人的某种攻击什么的」\
+帕琪　「哼—。@
+　　　　扔在外面太久导致中暑什么的么？」\
+咲夜　「那么要不要拿湿毛巾过来呢？」\
+帕琪　「没必要呢。毕竟这家伙也是妖怪」\
+
+
+CG:data/scenario/meirin/effect/ED002.bmp,96,16,50
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+# 嶰枃栚
+# ------------------------------------------------
+# 側傫偐怮側偑傜旤楅偑惙傝忋偑偭偰偄傞
+# 側偵偐偲奿摤偟偰偄傞傛偆偩
+# 偦傟傪尒偰僷僠儏儕乕偼偆傫偞傝丅嶇栭偼偪傚偭偲徫偭偰偄傞
+# 
+美铃　「……什么？@
+　　　　你就是真正的幕后黑手？太岁星君么！」\
+
+咲夜　「太岁星君是什么啊？
+
+帕琪　「太岁星君……？@
+　　　　嗯…。刚才好像也听谁说起过」\
+
+美铃　「好吧。尽管放马过来吧！@
+　　　　除我以外一个能打的都没有了」\
+
+帕琪　「啊…、说起来就是听这家伙说的@
+　　　　在外面看到了太岁星君什么的」\
+
+咲夜　「难道说、受到了太岁星君的攻击
+　　　　而昏迷了么……？」\
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+
+CG:data/scenario/meirin/effect/ED003.bmp,96,16,50
+# 巐枃栚
+# ------------------------------------------------
+# 僷僠儏儕乕偼壗偐偺杮傪尒偣傞丅偳偆傗傜揤嬬偑彂偄偨枱夋偺傛偆偩
+# 
+# 
+帕琪　「呼。谁知道呢。@
+　　　　说不定只是太过紧张导致疲劳过度睡着了？@
+　　　　而且、在工作的地方还掉了这种东西。」\
+咲夜　「哦、天狗的漫画书么？」\
+帕琪　「这种邪恶的妖怪变身成幻想乡身边的人@
+　　　　偷偷来袭击的幼稚的内容」\
+美铃　「可恶！@
+　　　　太强了－」\
+帕琪　「反正、怎么看都是在梦里和面前的敌人在大战吧」\
+咲夜　「哼～ 真是不错呢、做梦」@
+　　　　说起来、天狗的话……@
+　　　　新闻里说到的河童的拍卖会看到了么？」\
+帕琪　「看到了。@
+　　　　还有那个叫非想天则的巨大人偶的消息」\
+咲夜　「我打算和大小姐一起去参观下的@
+　　　　帕秋莉大人也打算去么？」\
+帕琪　「当然。这是一定要去的。@
+　　　　一定要在贵重商品落入别人之手前赶去」\
+咲夜　「那么看门的事情还是要……」\
+
+Background:BLACK,0,0
+CG:BLACK,0,0,50
+WindowPos:0,640
+
+Sleep:60
+
+CG:data/scenario/meirin/effect/ec02_0.bmp,64,352,15
+
+#丂旤楅偼扏偒婲偙偝傟丄戝曄抪偢偐偟偄巚偄傪偟偨丅@
+丂\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/meirin/effect/ec02_1.bmp,64,352,15
+#丂偦偟偰偄偮傕捠傝棷庣斣傪擟偝傟傞偲@
+#丂壣偮傇偟偵妶寑枱夋傪撉傓帠偵偟偨丅\
+丂\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/meirin/effect/ec02_2.bmp,64,352,15
+#丂寢嬊丄柌偺拞偱偼懢嵨惎孨偵彑偮慜偵婲偙偝傟偰偟傑偭偨偑丄@
+丂\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/meirin/effect/ec02_3.bmp,64,352,15
+#丂旤楅偺拞偱彮偟晄埨偵巚偆帠偑偁偭偨丅@
+丂\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/meirin/effect/ec02_4.bmp,64,352,15
+#丂懢嵨惎孨傜偟偒暔傪尒偨偺偼妋偐側偺偩丅偦傟偼柌偱偼側偄丅\
+丂\
+FadeBgm:20000,0
+CG:BLACK,0,0,15
+StaffRoll:
+
+#丂柌偺拞偱傕彑偰側偐偭偨嵟嫢嵟埆偺梔夦丅@
+#丂嫮惂揑偵愴慄棧扙偝偣傜傟偨旤楅偼丄偦偺柌偺拞偱偺巔偑@
+#丂巚偄弌偣側偄偱偄偨丅\
+
+#丂偄偮偐丄偦傫側嫲晐偺揋偑尰傟傞偺偩傠偆偐丅@
+#丂尰傟偨偲偒丄尪憐嫿偺梔夦偑堦抍偲側偭偰愴偊傞偺偩傠偆偐丅@
+#丂巹偼傒傫側偺堊偵嵟慜慄偱愴偊傞丄偲丄旤楅偼偦偆嵞妋擣偟偨丅\
+
+End:

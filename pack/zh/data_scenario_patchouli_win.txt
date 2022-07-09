@@ -1,0 +1,278 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS傁偪偉
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:reimuU0
+Face:lose,晧
+Face:win,晛
+神社是不适合使用魔法的场所
+因为缺乏灾祸的气息\
+End:
+
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisaU0
+Face:lose,晧
+Face:win,梋
+魔法的本质是追究万物的根源
+就这点来说魔法和科学没区别\
+End:
+
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuyaU0
+Face:lose,晧
+Face:win,榝
+最近 鼠灾又有扩大的迹象了\
+End:
+
+
+
+## =======================================================================
+#VS梔柌
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:youmuU0
+Face:lose,晧
+Face:win,晛
+用魔法原理来解释幽灵的存在
+作为魔法学习的入门刚刚好\
+End:
+
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aliceU0
+Face:lose,晧
+Face:win,嬃
+操作人偶大概用的是魔法丝线
+能够操纵这么多，还算是能干吧\
+End:
+
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouli0
+Face:lose,晧
+Face:win,晛
+真是 分身术还是累\
+End:
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,晛
+再去一次看看吧？河童的集会
+只不过离河边比较近呢\
+End:
+
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyukoU0
+Face:lose,晧
+Face:win,晛
+人死以后自然的就会使用魔法
+因为，二者都意味着不再为人\
+End:
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,晛
+外面世界的魔法好像先进一些
+幻想乡里的研究者太少了\
+End:
+
+Label:yukariR0
+Face:lose,晧
+Face:win,晛
+那以后 从地下世界里
+跑出来好多奇怪的东西\
+
+Face:win,榝
+早春也有什么东西跑出来了
+注意到了吗？\
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suikaU0
+Face:lose,晧
+Face:win,娋
+被冬青树叶刺到了眼睛？
+你到底有多漫不经心啊\
+End:
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ayaU0
+Face:lose,晧
+Face:win,寛
+天狗硬要说的话属于魔法师一类呢
+追求真理的姿态也是一样\
+End:
+
+## =======================================================================
+#VS楅愬
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:udongeU0
+Face:lose,晧
+Face:win,榝
+奇怪，是不是视力变差了\
+End:
+
+
+## =======================================================================
+#VS彫挰
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:komachiU0
+Face:lose,晧
+Face:win,嬃
+彼岸没有白天和黑夜 也没有夏天和寒冬
+到底意味着什么让人好奇。\
+End:
+
+## =======================================================================
+#VS堖嬭
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ikuU0
+Face:lose,晧
+Face:win,梋
+能在云里游泳真方便
+会不会遇到龙呢\
+End:
+
+
+## =======================================================================
+#VS揤巕
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:tenshiU0
+Face:lose,晧
+Face:win,晛
+天界没有天气变化么？
+如此说来 天气也是被造之物？\
+End:
+
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,晛
+咒术以模仿为基础\
+
+Face:win,晛
+和揭露本质的魔法出发点不同
+不过结果而言还是一样的\
+End:
+
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,梋
+妖精是自然现象的产物 用魔法
+操纵妖精这种事情也常常发生 也就是说奴隶\
+End:
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,晛
+那么
+有没有好好工作呢？\
+End:
+
+Label:meirinR0
+Face:lose,晧
+Face:win,榝
+光读漫画的话当然想睡觉了
+因为不用动脑子\
+
+Face:win,晛
+想睡觉的时候，是没有动脑的时候
+或者是没有动到那个程度的时候。\
+
+Face:win,寛
+将大脑完全开发的话，就再睡不着了\
+
+End:
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,晛
+核融合到底是什么原理？
+是什么类型的能量呢？\
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,寛
+神明所使用的力量，基本都是咒术呢\
+End:
+
+
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+
+Face:win,寛
+魔法的力量、其实就是科学
+也就是时代的先端\
+End:
+
+Label:common1
+
+Face:win,晛
+啊 今天也用魔法烧水\
+End:
+
+## =======================================================================
+

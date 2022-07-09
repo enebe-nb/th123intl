@@ -1,0 +1,279 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS桯乆巕
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:reimuU0
+Face:lose,晧
+Face:win,婐
+嗯？
+今天有什么事么？\
+End:
+
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisaU0
+Face:lose,晧
+Face:win,寛
+为什么说森林很容易让人迷路呢
+明明说容易迷路却又迷不了路\
+End:
+
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuyaU0
+Face:lose,晧
+Face:win,梋
+时间如世界，物极必反，盈满则亏
+刻意去停止它太浪费了\
+End:
+
+
+## =======================================================================
+#VS梔柌
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:youmuU0
+Face:lose,晧
+Face:win,梋
+剑的修炼？
+我才不进行这种单纯的修炼呢\
+End:
+
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aliceU0
+Face:lose,晧
+Face:win,梋
+人偶对你来说死多少都无所谓呢
+或者说，附上心灵之前就让其爆炸是聪明的做法\
+End:
+
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouliU0
+Face:lose,晧
+Face:win,婐
+热的时候就喝热茶
+呵呵，明明冷的时候也喝热茶的说\
+End:
+
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,婐
+太阳必然会升起
+你每天一次，总会遭遇自己的弱点\
+End:
+
+Label:remiliaR0
+Face:lose,晧
+Face:win,晛
+已经察觉到了么？\
+
+Face:win,婐
+地狱为了打败你、升起太阳来了哟\
+
+Face:win,寛
+好了 你打算怎么办呢？\
+
+End:
+
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyuko0
+Face:lose,晧
+Face:win,寛
+美妙忍法、分身之术～\
+End:
+
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,婐
+啊啊啊 好无聊
+不拐点什么人过来么\
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suikaU0
+Face:lose,晧
+Face:win,晛
+哎呀，今年的烟花真漂亮
+非常的应景啊\
+End:
+
+Label:suikaR0
+Face:lose,晧
+Face:win,榝
+说到夏日的风景线那就是……\
+Face:win,晛
+蒙上眼睛用棒子的那个活动呢\
+Face:win,晛
+打西瓜\
+End:
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aya0
+Face:lose,晧
+Face:win,晛
+为了幽灵而出版的报纸似乎满有趣的呢
+怎么样，试试吗？\
+End:
+
+## =======================================================================
+#VS楅愬
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:udonge0
+Face:lose,晧
+Face:win,榝
+据说有只吃细竹生活的生物……
+怎么可能呢\
+End:
+
+
+## =======================================================================
+#VS彫挰
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:komachiU0
+Face:lose,晧
+Face:win,婐
+哎呀，跑到这里来找乘客？
+真是热情工作啊\
+End:
+
+## =======================================================================
+#VS堖嬭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ikuU0
+Face:lose,晧
+Face:win,晛
+地震对于大地而言是矫正扭曲所必需的
+对吧？\
+ End:
+
+## =======================================================================
+#VS揤巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:tenshiU0
+Face:lose,晧
+Face:win,梋
+Nectar这种酒，还真想尝一尝呢～
+一定会非常甘甜美味吧\
+End:
+
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,梋
+你今年到处跑来跑去的
+发生了什么事吗？\
+End:
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,娋
+啊，今年的夏天都要给你带走了。
+夏天的冷气可是很宝贵的。\
+End:
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,梋
+太极拳和扇子很般配呢\
+End:
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,娋
+啊，太阳只要一个就足够了
+特别是这样的夏天\
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,婐
+哎呀，是神哎。
+最近搞的我都分不清你们巫女和神明到底哪个才是手下呢\
+End:
+
+Label:suwakoR0
+Face:lose,晧
+Face:win,嬃
+山上的神社，足足住着三个神明不嫌挤吗？\
+
+Face:win,婐
+白玉楼比那大好几倍了
+还是觉的非常的狭小啊\
+
+Face:win,梋
+啊，是因为没钱啊～
+确实神社就是给人穷酸的感觉呢\
+End:
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+
+Face:win,晛
+哎、这就结束了真狡猾\
+End:
+
+
+
+## =======================================================================
+

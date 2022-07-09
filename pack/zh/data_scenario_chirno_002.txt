@@ -1,0 +1,199 @@
+## =======================================================================
+#Stage:3
+#Title:乽搾忋偑傝偵堦攖乿
+#Place:娫寚愹抧壓僙儞僞乕擖傝岥
+
+Character:chirno,160,0,0,8888FF
+Character:marisa,160,0,1,FF8888
+
+#攚宨丂娫寚愹抧壓僙儞僞乕擖傝岥
+Stage:32,0
+
+#帺暘弶婜攝抲
+Action:chirno,1丂#1P夋柺奜懸婡
+
+#揋弶婜攝抲
+Action:marisa,30丂#夋柺掕埵抲偱懸婡
+
+#僇儊儔拞墰屌掕
+
+#夋柺昞帵慜張棟廔椆============================
+
+Label:Start
+PlayBgm:data/bgm/ta05.ogg
+Sleep:60;
+
+#夋柺崟偐傜僼僃乕僪僀儞
+Action:chirno,161
+Sleep:30
+
+Face:null,晛
+WindowColor:0,255,255,255
+WindowPos:8,192
+
+
+
+#僗僥乕僕僞僀僩儖昞帵
+Object:data/scenario/chirno/effect/StageTitle003.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage3.bmp,1,256,352
+Sleep:300;
+
+# 晛丄婐丄梋丄娋丄嬃丄搟丄寛丄榝丄晧
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+
+# 杺棟嵐偑娫寚愹僙儞僞乕偺慜偵嫃傞
+Balloon:marisa,1,0,-200
+这里的温泉实在是舒服啊～\
+
+Action:marisa,400 #庰偔傟億乕僘
+Balloon:marisa,1,0,-200
+要是再有冰凉的清酒那就最棒了～\
+
+Balloon:null,1,0,-200
+Action:marisa,206丂#杺棟嵐慺棫偪
+
+# 僠儖僲偑搊応偡傞
+Action:chirno,50
+Action:chirno,51 #搊応摦嶌廔椆専抦
+
+Balloon:chirno,1,0,-200
+好像是这附近呢\
+
+Action:marisa,401 # 杺棟嵐丂嬃偒
+Balloon:marisa,1,0,-200
+哟 冰妖精啊。
+居然在这里出没 真少见啊\
+
+# 僠儖僲
+Balloon:chirno,1,0,-200
+有没有在这里见到大太郎法师？\
+
+Action:marisa,402 # 杺棟嵐丂媈栤
+Balloon:marisa,1,0,-200
+大太郎法师？那是啥东西？\
+
+Action:chirno,309# 僠儖僲丂戝偘偝偵庤傪奐偄偰
+Balloon:chirno,1,0,-200
+非常大的 非常大的妖怪哟！
+刚才看到了！ 就在这附近\
+
+Action:marisa,203丂#杺棟嵐慺棫偪
+Balloon:marisa,1,0,-200
+呼呼。巨大妖怪么
+哼哼。我知道哟\
+
+Action:chirno,404# 僠儖僲丂婐偟偦偆
+Balloon:chirno,1,0,-200
+唉？真的？
+在哪？在哪？\
+
+Action:marisa,403# 杺棟嵐丂寛傔億乕僘
+Balloon:marisa,1,0,-200
+保密。
+我才没义务告诉妖精呢\
+
+Action:chirno,303# 僠儖僲丂寛傔億乕僘
+Balloon:chirno,1,0,-200
+让你吃点苦头看你说不说！\
+
+
+#愴摤奐巒張棟
+
+PlayBgm:data/bgm/st41.ogg
+Action:chirno,203#丂僯儏乕僩儔儖忬懺傊
+Action:marisa,203#丂僯儏乕僩儔儖忬懺傊
+Action:chirno,167#丂僼儔僢僔儏
+Action:chirno,3
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂晧偗
+Label:Lose
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂僐儞僥僯儏乕張棟
+Label:Continue
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂彑偪
+Label:Win
+
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:marisa,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:chirno,202
+
+Action:chirno,164
+Sleep:15
+
+Action:chirno,204
+Action:marisa,205
+
+#僇儊儔拞墰屌掕
+Action:chirno,2丂
+
+Sleep:30
+Action:chirno,165
+
+Sleep:30
+
+# 杺棟嵐丄搢傟偨忬懺
+Action:chirno,404# 僠儖僲丂寛傔億乕僘
+Balloon:chirno,1,0,-200
+好了！快点告诉我到底在哪里\
+
+# 杺棟嵐丂搢傟偨忬懺
+Balloon:marisa,1,0,-200
+痛痛痛
+我说我说 别急啊\
+
+那个家伙啊……
+跑到这间歇温泉的地下中心去了\
+
+
+Action:chirno,403# 僠儖僲丂嬃偒
+Balloon:chirno,1,0,-200
+真的！？
+那么 很快就能看到了！\
+
+Action:chirno,404
+第一个果然是我的\
+
+Balloon:null,1,0,-200
+Action:chirno,304
+# 僠儖僲偑旘傃嫀偭偰偄偔
+
+Sleep:120
+
+Action:marisa,404# 杺棟嵐偼婲偒忋偑偭偰
+Balloon:marisa,1,0,-200
+好了、完全被我骗到的了\
+
+# 杺棟嵐
+那里面对她来说会不会太热了
+好好享受吧 -w-\
+
+Action:marisa,402# 杺棟嵐丂媈栤偵巚偆
+但是 大太郎法师倒是啥玩意？
+哦呀、那是？森林那边……\
+
+Balloon:null,1,0,-200
+
+Result:
+FadeBgm:2000,0
+Action:chirno,160丂#夋柺崟偵僼僃乕僪傾僂僩
+
+#師僗僥乕僕弨旛張棟====================
+
+Sleep:120;
+
+End:
+
+## =======================================================================

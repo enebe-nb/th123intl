@@ -1,0 +1,300 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS梔柌
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:reimuU0
+Face:lose,晧
+Face:win,晛
+听说血液里面有很多铁的成分
+会让刀生锈。\
+End:
+
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisaU0
+Face:lose,晧
+Face:win,梋
+你的迷茫实在太多了
+这样下去会不得好死哦？\
+End:
+
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuyaU0
+Face:lose,晧
+Face:win,寛
+日本刀是为了斩击而特化的兵器
+比刺杀用的小刀要更加实用\
+End:
+
+Label:sakuyaU0
+Face:lose,晧
+Face:win,婐
+用刀斩落匕首也不是做不到
+再加把劲连弹幕也能切断呢。
+End:
+
+## =======================================================================
+#VS梔柌
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:youmu0
+Face:lose,晧
+Face:win,晛
+好了，今天的练习到此为止\
+End:
+
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aliceU0
+Face:lose,晧
+Face:win,榝
+所谓射人先射马
+怎么也斩不断你和人偶之间的线呢……\
+End:
+
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouliU0
+Face:lose,晧
+Face:win,晛
+精神集中的话就算是气流也能斩断
+你构筑再多的法阵也没有意义\
+End:
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,榝
+幽幽子大人说过对付动作迅速的敌人
+把眼睛闭上会比较好\
+
+Face:win,晛
+是因为闭上眼睛就不会看到残像吗？\
+End:
+
+
+Label:remiliaU1
+Face:lose,晧
+Face:win,婐
+像你这样笔直撞到刀上来的家伙
+很容易对付呢\
+End:
+
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyukoU0
+Face:lose,晧
+Face:win,婐
+幽幽子大人偶尔也练习一下剑术吧
+能让人放松哦\
+End:
+
+Label:yuyukoR0
+Face:lose,晧
+Face:win,晛
+说起来我们之前那个腌菜……\
+Face:win,榝
+很不可思议的不管腌上几天，
+甚至几年都没什么大变化呢\
+Face:win,晛
+明明神社里的腌菜一天就那么好吃了\
+End:
+
+Label:yuyukoR1
+Face:lose,晧
+Face:win,晛
+那个 早春在天空飞的东西
+结果是像宝船一样的啊\
+
+Face:win,娋
+向灵梦她们打听了
+也完全不得要领……\
+
+Face:win,婐
+总之不是什么灾害之船实在是太好了\
+End:
+
+
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,榝
+说起来，此世和彼岸的境界
+就这么暧昧下去没问题吗？\
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suikaU0
+Face:lose,晧
+Face:win,婐
+话说砍过鬼的刀都是
+那这把刀也是特别的呢\
+End:
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ayaU0
+Face:lose,晧
+Face:win,榝
+作为新闻记者，
+这样干涉被采访的对象没问题吗？\
+End:
+
+## =======================================================================
+#VS楅愬
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:udongeU0
+Face:lose,晧
+Face:win,梋
+红眼睛的兔子，
+是不是看到世界上的一切都是红的呢？\
+End:
+
+
+
+## =======================================================================
+#VS彫挰
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:komachiU0
+Face:lose,晧
+Face:win,榝
+三途河边的幽灵小孩不去救吗？
+每次到那里去都很在意\
+End:
+
+## =======================================================================
+#VS堖嬭
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:ikuU0
+Face:lose,晧
+Face:win,晛
+你是为了什么才在云中游泳的呢？
+难不成，减肥？\
+End:
+
+## =======================================================================
+#VS揤巕
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+Label:tenshiU0
+Face:lose,晧
+Face:win,娋
+天界根本就不是什么饱和状态嘛
+那样一比的话冥界这边要拥挤的多\
+End:
+
+Label:tenshiU1
+Face:lose,晧
+Face:win,晛
+早春的时候有飞过吗？
+看到那个巨大的飞行船一样的东西么？\
+End:
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,嬃
+哎，外面的世界还有神社啊？
+还以为是已经消失了的文化呢。\
+End:
+
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,榝
+冰要是胡乱使劲的话就会碎裂
+想干净的斩断很难呢\
+End:
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,梋
+不用青龙刀什么的吗？
+经常听到这样的传闻呢\
+End:
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,榝
+明明在爆发其实是融合……？？？
+这到底是怎么回事呢？\
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,寛
+你是山上的神明？
+看不出来呢\
+End:
+
+
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+
+Face:win,榝
+刀砍人太多的话
+会因为沾上太多血糊而报废呢\
+End:
+
+Label:common1
+
+Face:win,寛
+不知道该怎么办的时候就先斩了再说！\
+End:
+
+## =======================================================================
+

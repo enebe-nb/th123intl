@@ -1,0 +1,281 @@
+## =======================================================================
+#彑棙戜帉
+## =======================================================================
+#VS彫挰
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
+#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# reimuR0  rare
+# reimuU0  usual
+# reimu0   昿斏
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:reimuU0
+Face:lose,晧
+Face:win,晛
+说起来 神社是忌讳死亡的地方呢
+从来都不会举行葬礼\
+End:
+
+
+## =======================================================================
+#VS杺棟嵐
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:marisaU0
+Face:lose,晧
+Face:win,晛
+人从天命中逃脱
+那只不过是放弃做一个人而已啊\
+End:
+
+
+## =======================================================================
+#VS嶇栭
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sakuyaU0
+Face:lose,晧
+Face:win,梋
+从炊事到清洗，从打扫到战斗，工作还真努力呢\
+End:
+
+
+## =======================================================================
+#VS梔柌
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:youmuU0
+Face:lose,晧
+Face:win,榝
+啊 在冥界也能像人一样生活真好
+死了以后再冥界果然是最棒的\
+End:
+
+
+
+## =======================================================================
+#VS傾儕僗
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:aliceU0
+Face:lose,晧
+Face:win,榝
+吊死的话就会变成一个很小的幽灵
+因为头和身体之间会变细的缘故\
+End:
+
+
+## =======================================================================
+#VS僷僠儏儕乕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:patchouliU0
+Face:lose,晧
+Face:win,晛
+要是有写上名字就会死的书
+那该多方便\
+End:
+
+
+## =======================================================================
+#VS儗儈儕傾
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:remiliaU0
+Face:lose,晧
+Face:win,嬃
+都还没死就跑到棺材里去吗？
+不憋屈吗\
+End:
+
+
+## =======================================================================
+#VS桯乆巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yuyukoU0
+Face:lose,晧
+Face:win,婐
+冥界里有季节之分真有趣\
+End:
+
+Label:yuyukoR0
+Face:lose,晧
+Face:win,嬃
+说起来啊，老大上次说
+最近的转生有些太少了哦\ 
+Face:win,晛
+找什么时候有空了就好，
+能不能随便找一些幽灵送过来呢？\
+Face:win,梋
+没事，只要形式就好了
+毕竟人类再增加的话那边也只会更头痛而已\
+End:
+
+## =======================================================================
+#VS巼
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:yukariU0
+Face:lose,晧
+Face:win,榝
+什么时候才有机会把你渡过去呢\
+End:
+
+
+## =======================================================================
+#VS渎崄
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suikaU0
+Face:lose,晧
+Face:win,嬃
+噢，闻到酒香了
+没法再去工作了呢。嗯嗯\
+End:
+
+
+## =======================================================================
+#VS暥
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ayaU0
+Face:lose,晧
+Face:win,嬃
+咦，有报道三途河的河宽吗……
+真是有趣的新闻呢\
+End:
+
+Label:ayaR0
+Face:lose,晧
+Face:win,晛
+是非曲直厅其实和内部报纸也差不多\
+
+Face:win,榝
+天狗的活字印刷技术、地狱的鬼之技术
+简直一样嘛\
+
+Face:win,梋
+到底 是谁发明的这种技术啊？\
+End:
+
+## =======================================================================
+#VS楅愬
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:udongeU0
+Face:lose,晧
+Face:win,梋
+我的距离操纵，
+可不像幻觉那种骗小孩子的东西\
+End:
+
+
+## =======================================================================
+#VS彫挰
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:komachi0
+Face:lose,晧
+Face:win,梋
+偶尔寻找一下自我也是好的啦
+毕竟这是只有活着的时候才能做的事情呢\
+End:
+
+## =======================================================================
+#VS堖嬭
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:ikuU0
+Face:lose,晧
+Face:win,晛
+唉呀，龙宫使还真是少见
+河边虽然偶尔也能看见\
+End:
+
+## =======================================================================
+#VS揤巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:tenshiU0
+Face:lose,晧
+Face:win,梋
+来吧，快乐的天寿时间了！\
+End:
+
+
+## =======================================================================
+#VS憗昪
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:sanaeU0
+Face:lose,晧
+Face:win,嬃
+啊呀？
+听说是神明还以为和人类能有什么区别……\
+End:
+
+## =======================================================================
+#VS僠儖僲
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:chirnoU0
+Face:lose,晧
+Face:win,寛
+真是无聊啊……
+来个更好的对手陪我玩玩吧\
+End:
+
+## =======================================================================
+#VS旤楅
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:meirinU0
+Face:lose,晧
+Face:win,梋
+在这种恶魔之家生活很糟糕吧？
+来吧、稍微的来玩一下不会生气的\
+End:
+
+## =======================================================================
+#VS嬻
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:utsuhoU0
+Face:lose,晧
+Face:win,嬃
+哎哟,居然是旧地狱的乌鸦
+这么不太平的家伙为什么会在地上？\
+End:
+
+Label:utsuhoR0
+Face:lose,晧
+Face:win,晛
+新地狱里鬼的统治被推翻变成了正直的地方
+\
+
+Face:win,榝
+想起来旧地狱的时候鬼和罪人之间可是不太平呢
+连想跑出地狱的灵都不在少。\
+
+Face:win,梋
+你也不如忘掉那破地方，
+到新地狱找个活干怎么样？\
+
+End:
+
+
+## =======================================================================
+#VS恴朘巕
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:suwakoU0
+Face:lose,晧
+Face:win,榝
+在土中醒来的青蛙也好 不断脱皮的蛇也好
+乍一看都符合脱离了轮回转生的神明呢\
+End:
+
+## =======================================================================
+#VS嫟捠
+#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+## 戜帉A==================
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+Label:common0
+
+Face:win,榝
+寿命经常变化
+因此，完全靠不住的啦\
+End:
+
+
+## =======================================================================
+

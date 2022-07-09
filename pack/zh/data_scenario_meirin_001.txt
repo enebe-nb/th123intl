@@ -1,0 +1,169 @@
+## =======================================================================
+#Stage:2
+#Title:乽寎偊寕偰嫢惎偺塭乿
+#Place:柌偺拞偺帪寁戜侾
+
+Character:meirin,160,0,0,8888FF
+Character:alice,160,0,1,FF8888
+
+#攚宨丂峠杺娰帪寁搩
+Stage:12,0
+
+#帺暘弶婜攝抲
+Action:meirin,20丂#掕埵抲1P
+Action:meirin,402丂#巚埬
+
+#揋弶婜攝抲
+Action:alice,100丂#2P夋柺奜偱懸婡
+
+#僇儊儔拞墰屌掕
+Action:meirin,2丂
+
+#夋柺昞帵慜張棟廔椆============================
+
+Label:Start
+Sleep:60;
+
+#夋柺崟偐傜僼僃乕僪僀儞
+Action:meirin,161
+
+PlayBgm:data/bgm/ta01.ogg
+Sleep:60;
+
+#僗僥乕僕僞僀僩儖昞帵
+Object:data/scenario/meirin/effect/StageTitle002.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage2.bmp,1,256,352
+Sleep:300;
+
+# 晛丄婐丄梋丄娋丄嬃丄搟丄寛丄榝丄晧
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+# 旤楅丂偦傢偦傢偟偰偄傞乮堦尵偢偮峴偭偨傝棃偨傝乯
+Action:meirin,301#塃傊堏摦
+Action:meirin,302
+Balloon:meirin,1,0,-200
+这样的话只能靠我来对付了！\
+
+Balloon:null,1,0,-200
+Action:meirin,303#嵍傊堏摦
+Action:meirin,304
+
+Balloon:meirin,1,0,-200
+太岁星君一定会派出妖怪
+来祸害人间的！\
+
+Balloon:null,1,0,-200
+Action:alice,101# 傾儕僗偑擖偭偰偔傞
+Action:alice,102
+
+Balloon:alice,1,0,-200
+麻烦下能带我去图书馆吗？\
+
+Action:meirin,305# 旤楅丂寛傔億乕僘
+Balloon:meirin,1,0,-200
+嗯！
+这么快就出来了！\
+
+Action:alice,400# 傾儕僗丂媈栤
+Balloon:alice,1,0,-200
+什么啊？
+我只是要去图书馆而已\
+
+Action:meirin,203# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+哼哼哼。我全部都知道的！
+你是——\
+
+Action:meirin,405# 旤楅丂寛傔億乕僘
+你就是太岁星君派来的妖怪走狗吧！\
+
+Action:alice,403 傾儕僗丂婐偟偦偆
+Balloon:alice,1,0,-200
+啊哈哈哈！
+真不愧是红魔馆的看门人啊！\
+
+Action:alice,402# 傾儕僗丂寛傔億乕僘
+这糟糕的伪装、我一眼就看穿了！\
+
+
+#愴摤奐巒張棟
+
+PlayBgm:data/bgm/st42.ogg
+Action:meirin,203丂#僯儏乕僩儔儖忬懺傊
+Action:alice,203丂#僯儏乕僩儔儖忬懺傊
+Action:meirin,167#丂僼儔僢僔儏
+Action:meirin,3
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂晧偗
+Label:Lose
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂僐儞僥僯儏乕張棟
+Label:Continue
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂彑偪
+Label:Win
+
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:alice,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:meirin,202
+
+Action:meirin,164
+Sleep:15
+
+Action:meirin,204
+Action:alice,205
+
+#僇儊儔拞墰屌掕
+Action:meirin,2丂
+
+Sleep:30
+Action:meirin,165
+
+Sleep:30
+
+# 傾儕僗丄搢傟偨忬懺
+
+# 旤楅丂
+Balloon:meirin,1,0,-200
+好危险！
+这种样子的攻击还真是好吓人啊\
+
+# 傾儕僗
+Balloon:alice,1,0,-200
+……\
+
+# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+果然不说话了么……
+看起来已经不会动了\
+
+Action:meirin,306# 旤楅丂対傪埇傝
+只是这种程度的话不会结束的
+还需要继续迎击下去！\
+
+Balloon:null,1,0,-200
+Sleep:90
+
+Result:
+FadeBgm:2000,0
+#Action:meirin,159丂#僇儊儔忋曽岦偵僷儞奐巒
+Action:meirin,160丂#夋柺崟偵僼僃乕僪傾僂僩
+
+#師僗僥乕僕弨旛張棟====================
+
+Sleep:120;
+
+End:
+
+## =======================================================================

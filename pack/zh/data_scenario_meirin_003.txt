@@ -1,0 +1,188 @@
+## =======================================================================
+#Stage:4
+#Title:乽戅杺傕嫲傟偸楈柌乿
+#Place:柌偺拞偺帪寁戜俁
+
+Character:meirin,160,0,0,8888FF
+Character:reimu,160,0,1,FF8888
+
+#攚宨丂柌偺拞偺帪寁戜俁
+Stage:37,0
+
+#帺暘弶婜攝抲
+Action:meirin,20丂#1P掕埵抲懸婡
+Action:meirin,402丂#旤楅峫偊帠億乕僘
+
+#揋弶婜攝抲
+Action:reimu,100丂#夋柺奜偱懸婡
+
+#僇儊儔拞墰屌掕
+Action:meirin,2
+
+#夋柺昞帵慜張棟廔椆============================
+
+Label:Start
+
+#夋柺崟偐傜僼僃乕僪僀儞
+Action:meirin,161
+PlayBgm:data/bgm/ta00.ogg
+
+Sleep:60
+
+#僗僥乕僕僞僀僩儖昞帵
+Object:data/scenario/meirin/effect/StageTitle004.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage4.bmp,1,256,352
+Sleep:300;
+
+# 晛丄婐丄梋丄娋丄嬃丄搟丄寛丄榝丄晧
+
+#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+
+# 旤楅偑懸偭偰偄傞
+
+Action:reimu,101# 楈柌偑擖偭偰偔傞
+Action:reimu,102
+Balloon:reimu,1,0,-200
+今天也要好好的收服妖怪～
+红魔馆的恶魔们 大家来消消毒吧～\
+
+Action:meirin,203# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+哼！终于来了么！
+灾祸的怪物！\
+
+Action:reimu,404# 楈柌丂媈栤
+Balloon:reimu,1,0,-200
+居然叫我怪物？\
+
+Action:meirin,405# 旤楅丂寛傔億乕僘
+Balloon:meirin,1,0,-200
+再怎么伪装成人类也是没用的！
+休想逃过我的火眼金睛\
+
+# 楈柌丂捠忢
+Action:reimu,203# 楈柌丂捠忢
+Balloon:reimu,1,0,-200
+嚯嚯嚯。
+居然把身为巫女的我说成是怪物呀\
+
+Action:reimu,409# 楈柌丂徫偆
+真有趣呢。
+明明自己就是个妖怪\
+
+# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+呼。我确实是妖怪。
+但是\
+
+Action:reimu,203# 楈柌丂捠忢
+Balloon:reimu,1,0,-200
+但是？\
+
+Action:meirin,306# 旤楅丂寛傔億乕僘
+Balloon:meirin,1,0,-200
+我、可是深爱着幻想乡的妖怪！
+和你这种破坏者是不一样的！\
+
+Action:reimu,409# 楈柌丂徫偆
+Balloon:reimu,1,0,-200
+太伟大了！实在是太伟大了！
+美玲你真不愧是妖怪的榜样\
+
+Action:reimu,203# 楈柌丂捠忢
+不过、光说大话的话
+可是没法当和平使者的哟？\
+
+Action:reimu,405# 楈柌丂寛傔億乕僘
+我们可是为了给这个幻想乡
+带来灾祸而来的\
+
+# 楈柌丂寛傔億乕僘
+令大地摇动的灾难！\
+
+#愴摤奐巒張棟
+
+PlayBgm:data/bgm/st40.ogg
+Action:meirin,203#丂僯儏乕僩儔儖忬懺傊
+Action:reimu,203#丂僯儏乕僩儔儖忬懺傊
+Action:meirin,3
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂晧偗
+Label:Lose
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂僐儞僥僯儏乕張棟
+Label:Continue
+
+End:
+
+# --------------------------------
+# 愴摤廔椆丂彑偪
+Label:Win
+
+#傗傜傟僉儍儔姰慡僟僂儞専抦
+Action:reimu,200
+#峌寕懁僯儏乕僩儔儖堏峴専抦
+Action:meirin,202
+
+#拞墰堏摦張棟----
+Action:meirin,164
+Sleep:15
+
+Action:meirin,204
+Action:reimu,205
+
+#僇儊儔拞墰屌掕
+Action:meirin,2丂
+
+Sleep:30
+Action:meirin,165
+
+Sleep:30
+#---------
+
+# 楈柌丂搢傟偰偄傞
+Action:meirin,406# 旤楅丂寛傔億乕僘
+Balloon:meirin,1,0,-200
+虽然说有点力量 但还是无法和我相提并论！\
+
+Action:reimu,410# 楈柌偼婲偒忋偑偭偰層嵗偱嵗傞乮偟傖偑傒偱乯
+Balloon:reimu,1,0,-200
+唔唔唔……
+很了不起嘛 美玲\
+
+# 楈柌偼婲偒忋偑偭偰層嵗偱嵗傞乮偟傖偑傒偱乯
+可是呢、接连的战斗
+令你的战斗力下降了不少吧！\
+
+Action:meirin,203# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+！！\
+
+Action:reimu,411# 楈柌丂婲偒忋偑偭偰
+Balloon:reimu,1,0,-200
+那么、现在就让你看看我真正的姿态吧！\
+
+# 旤楅丂捠忢
+Balloon:meirin,1,0,-200
+终于要露出你的真面目了么！\
+
+Balloon:null,1,0,-200
+
+Result:
+FadeBgm:2000,0
+Action:meirin,160丂#夋柺崟偵僼僃乕僪傾僂僩
+
+#師僗僥乕僕弨旛張棟====================
+
+Sleep:120;
+
+End:
+
+## =======================================================================
