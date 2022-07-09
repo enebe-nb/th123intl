@@ -20,6 +20,11 @@
         "story":{
             "name": "MonoSpatialModSWR",
             "spacingX": 0
+        },
+        "unknown05":{
+            "name": "MonoSpatialModSWR",
+            "paddingY": 1,
+            "spacingY": 1
         }
     },
     "tiles": {
