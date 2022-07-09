@@ -38,7 +38,7 @@ Balloon:meirin,1,0,-200
 Where are you?!
 Where could you be I said?!\
 
-You who tramples Gensokyo\,
+You who tramples Gensokyo,
 Taisui Xingjun's servant.
 It'd be good if you showed up!\
 
@@ -51,12 +51,12 @@ Balloon:namazu,1,0,-200
 Sleep:30
 
 Ahahaha.
-Finally\, I've been revived.\
+Finally, I've been revived.\
 
 # なまず君
 The battles with the assassins
-I sent to handle you\,
-you enjoyed them\, didn't you?\
+I sent to handle you,
+you enjoyed them, didn't you?\
 
 Action:meirin,300# 美鈴　疑問
 Balloon:meirin,1,0,-200
@@ -73,7 +73,7 @@ Balloon:meirin,1,0,-200
 
 # なまず君
 Balloon:namazu,1,0,-200
-That's right\, the energy needed for my revival.
+That's right, the energy needed for my revival.
 For the sake of these powers that will
 cause the Earth itself to tremble!\
 
@@ -83,7 +83,7 @@ What did you say?!\
 
 # なまず君
 Balloon:namazu,1,0,-200
-Without you noticing\,
+Without you noticing,
 they all worked hard for my sake.\
 
 # なまず君
@@ -91,7 +91,7 @@ How does it feel?
 Are you so furious you can't even think?\
 
 # なまず君
-Or perhaps\,
+Or perhaps,
 Have you been struck speechless with grief?\
 
 Action:meirin,203# 美鈴　通常
@@ -134,11 +134,11 @@ It's strange that you're underestimating me.\
 # なまず君
 I am one who manifests the presence of the
 most unholy and cataclysmic
-of all youkai\, Taisui Xingjun.\
+of all youkai, Taisui Xingjun.\
 
 # なまず君
 I am the legendary Supreme Catfish.
-I need but move and the earth itself will tremble\,
+I need but move and the earth itself will tremble,
 the lands on the surface will disintegrate.\
 
 The likes of you cannot even

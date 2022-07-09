@@ -44,10 +44,10 @@ That thing just now...\
 
 Action:chirno,402　#チルノ驚く
 It had to be that
-legendary giant youkai\, Daidarabocchi!\
+legendary giant youkai, Daidarabocchi!\
 
 Action:chirno,404　#チルノ喜びのポーズ
-If I can tame it\, I'm not gonna be
+If I can tame it, I'm not gonna be
 scared of anything ever again!\
 
 Balloon:null,0,0,-200
@@ -67,11 +67,11 @@ before it disappeared.\
 Action:chirno,405　#チルノこちらを向いて驚く
 
 Balloon:chirno,1,0,-200
-Oh? As soon as the big thing disappears\,
+Oh? As soon as the big thing disappears,
 this small thing appears.\
 
 Balloon:sanae,1,0,-200
-Hey\, over there\, Miss Fairy.
+Hey, over there, Miss Fairy.
 Have you seen a giant ro...\
 
 I mean... I wonder if you've seen
@@ -86,12 +86,12 @@ Action:sanae,300　#早苗疑問動作
 
 Balloon:sanae,1,0,-200
 Daidarabocchi?
-I wonder\, did I really say anything like that...?\
+I wonder, did I really say anything like that...?\
 
 Action:chirno,407　#チルノごまかし動作高速化
 
 Balloon:chirno,1,0,-200
-Ah\, no\, never mind.
+Ah, no, never mind.
 I haven't seen anything at all!\
 
 Balloon:chirno,0,0,-200
@@ -156,11 +156,11 @@ Balloon:sanae,1,0,-200
 An illusion that looks like
 a giant stretched-out moving youkai.\
 
-Speaking of which\, you saw
-a huge human shape\, right?\
+Speaking of which, you saw
+a huge human shape, right?\
 
 Balloon:chirno,1,0,-200
-I saw it\, I saw it.
+I saw it, I saw it.
 I saw it over there.\
 
 Balloon:null,0,0,-200

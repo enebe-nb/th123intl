@@ -51,7 +51,7 @@ Except for the heat...\
 Action:sanae,323　#早苗上を向く
 
 We're really far underground.
-But even here\, you can see the sky.\
+But even here, you can see the sky.\
 
 The sky appears so tiny from here that
 you can barely sense its presence.\
@@ -61,7 +61,7 @@ Action:sanae,203　#早苗素立ち
 I wonder if it would have been better
 if the vampires lived here.\
 
-In any case\, the reactor core is blazing hot.
+In any case, the reactor core is blazing hot.
 It seems the rising vapors originated here.\
 
 #Action:sanae,323　#早苗上を向く
@@ -74,7 +74,7 @@ projecting someone's shape...?\
 
 Action:sanae,300　#早苗疑問動作
 
-No\, it couldn't be anything like that.
+No, it couldn't be anything like that.
 It looked so much more real...\
 
 FadeBgm:500,0
@@ -107,7 +107,7 @@ Sleep:90
 PlayBgm:data/bgm/ta21.ogg
 # 早苗　決めポーズ（各セリフ、攻撃ポーズの流用で良いんで違うポーズだといいな）
 Balloon:sanae,1,0,-200
-Yes\, this is surely that thing!\
+Yes, this is surely that thing!\
 Action:sanae,326
 That thing that was never implemented
 because of its impracticality!\
@@ -155,7 +155,7 @@ Balloon:null,1,0,-200
 Action:suwako,401#諏訪子一歩後退
 Action:suwako,202#ニュートラル検知
 Balloon:suwako,1,0,-200
-Oh my\, it's Sanae.
+Oh my, it's Sanae.
 What are you doing here?\
 
 
@@ -170,20 +170,20 @@ What are you doing here?!\
 
 Balloon:suwako,1,0,-200
 I had some small things to take care of.
-Anyway\, it's amazing that you're down here\, Sanae.\
+Anyway, it's amazing that you're down here, Sanae.\
 
 Action:sanae,203　#早苗素立ち
 Balloon:sanae,1,0,-200
-Oh\, yes! I've discovered something fantastic!\
+Oh, yes! I've discovered something fantastic!\
 
 Balloon:suwako,1,0,-200
-Ohhh? Tell me\, tell me!\
+Ohhh? Tell me, tell me!\
 
 Balloon:null,1,0,-200
 Action:sanae,301　#早苗臨戦態勢ポーズ
 Action:sanae,302　#301終了検知
 Balloon:sanae,1,0,-200
-I came here in pursuit of a giant shadow\, but...\
+I came here in pursuit of a giant shadow, but...\
 
 There was actually a giant robot!
 Right here in Gensokyo!\
@@ -194,13 +194,13 @@ Giant robot?\
 
 Action:sanae,203　#早苗素立ち
 Balloon:sanae,1,0,-200
-Yes\, well\, I don't have definite proof yet\,
+Yes, well, I don't have definite proof yet,
 but its existence is truly a wonder.\
 
 # 諏訪子　驚き
 Balloon:suwako,1,0,-200
-Well\, that's surprising!
-So\, where did you see it?\
+Well, that's surprising!
+So, where did you see it?\
 
 # 早苗　上を向いて
 Balloon:sanae,1,0,-200
@@ -214,8 +214,8 @@ Disappeared in a poof?\
 
 Action:sanae,203　#早苗素立ち
 Balloon:sanae,1,0,-200
-Speaking of which\, what were those small things
-you came to take care of\, Lady Suwako?\
+Speaking of which, what were those small things
+you came to take care of, Lady Suwako?\
 
 Balloon:suwako,1,0,-200
 Hisou Tensoku's being bad.
@@ -226,8 +226,8 @@ Hisou Tensoku...?
 What might that be?\
 
 Balloon:suwako,1,0,-200
-Hisou Tensoku is... wait\, what?
-Sanae\, you say you saw a giant robot?\
+Hisou Tensoku is... wait, what?
+Sanae, you say you saw a giant robot?\
 
 Balloon:sanae,1,0,-200
 Huh? Is there some connection
@@ -240,40 +240,40 @@ the robot Sanae caught a glimpse of...\
 
 Action:sanae,305　#早苗驚く
 Balloon:sanae,1,0,-200
-There's something you know\, isn't there?!\
+There's something you know, isn't there?!\
 
 Action:suwako,203#諏訪子素立ち
 Balloon:suwako,1,0,-200
-Hm\, maybe.
-If it's a "giant robot\," then
-it's probably Hisou Tensoku\, right?\
+Hm, maybe.
+If it's a "giant robot," then
+it's probably Hisou Tensoku, right?\
 
-Oh\, that cracks me up!
+Oh, that cracks me up!
 The phrase "giant robot" sure brings me back.\
 
 Action:sanae,203　#早苗素立ち
 Balloon:sanae,1,0,-200
-Well\, what's wrong with calling it that?
+Well, what's wrong with calling it that?
 And you say this giant robot
 is named Hisou Tensoku?\
 
 Balloon:suwako,1,0,-200
-I named it Tensoku 'cause by natural laws\,
+I named it Tensoku 'cause by natural laws,
 such a thing would be unimaginable.
-Or in other words\, it's a silly thing.\
+Or in other words, it's a silly thing.\
 
 Balloon:sanae,1,0,-200
 Huh?\
 
 Balloon:suwako,1,0,-200
-Sanae\, you were also silly for chasing after it.\
+Sanae, you were also silly for chasing after it.\
 
 Action:sanae,335# 早苗　怒り
 Balloon:sanae,1,0,-200
 What did you say?\
 
 Balloon:suwako,1,0,-200
-Well\, you're calling it a giant robot.
+Well, you're calling it a giant robot.
 Hisou Tensoku is just...\
 
 Balloon:null,1,0,-200
@@ -282,7 +282,7 @@ Action:suwako,405# 諏訪子が中央に移動する
 Action:suwako,202#ニュートラル検知
 
 Balloon:suwako,1,0,-200
-Well\, a dumb blockhead...\
+Well, a dumb blockhead...\
 
 # 早苗も諏訪子の前まで移動する
 Balloon:sanae,1,0,-200
@@ -293,12 +293,12 @@ you're calling Hisou Tensoku?\
 Action:suwako,410#諏訪子一歩後退
 Action:suwako,202#ニュートラル検知
 Balloon:suwako,1,0,-200
-She doesn't\, does she? Maaaybe?\
+She doesn't, does she? Maaaybe?\
 
 Action:sanae,336# 早苗　さらに諏訪子の前まで移動して
 Action:sanae,337#336終了検知
 Balloon:sanae,1,0,-200
-The point is\, hasn't there been
+The point is, hasn't there been
 a lot of this lately? Doing all kinds of
 weird things without telling anyone?\
 
@@ -306,7 +306,7 @@ weird things without telling anyone?\
 Action:suwako,410#諏訪子一歩後退
 Action:suwako,202#ニュートラル検知
 Balloon:suwako,1,0,-200
-Oh\, it's no big deal. It's not as if...\
+Oh, it's no big deal. It's not as if...\
 
 Action:sanae,336# 早苗　さらに諏訪子の前まで移動して
 Action:sanae,337# 336終了検知
@@ -319,40 +319,40 @@ just made everyone angry!\
 Action:suwako,410#諏訪子一歩後退
 Action:suwako,202#ニュートラル検知
 Balloon:suwako,1,0,-200
-Right\, Hisou Tensoku is...\
+Right, Hisou Tensoku is...\
 
 # 早苗　さらに諏訪子の前まで移動して決めポーズ
 Action:sanae,336# 早苗　さらに諏訪子の前まで移動して
 Action:sanae,337# 336終了検知
 Action:sanae,327#　早苗ポーズA
 Balloon:sanae,1,0,-200
-Today\, you won't be getting away!
-I may be only human\, but nevertheless\,
+Today, you won't be getting away!
+I may be only human, but nevertheless,
 I'll have you regard my convictions!\
 
 Balloon:suwako,1,0,-200
-But Sanaeee\, you're not a human\,
-you're a living god\, a miracle-worker...\
+But Sanaeee, you're not a human,
+you're a living god, a miracle-worker...\
 
 Action:sanae,338# 早苗　ジャンプして定位置に戻る
 Action:sanae,202#ニュートラル検知
 Balloon:sanae,1,0,-200
-All the better\, then.
+All the better, then.
 I can stand equally with you!\
 
 Action:sanae,301　#早苗臨戦態勢ポーズ
 Action:sanae,302　#301終了検知
-Lady Suwako\, you've simply
+Lady Suwako, you've simply
 gone too far with your selfish deeds!\
 
-Right here and now\, I'll have you
+Right here and now, I'll have you
 endure a bit of pain.\
 
 # 諏訪子　驚き
 Balloon:suwako,1,0,-200
 Action:suwako,406#諏訪子嬉しそうに驚く
 Uhyaa!
-Excellent\, it's a battle\, then!
+Excellent, it's a battle, then!
 This should be fun...\
 
 Balloon:sanae,1,0,-200
@@ -364,21 +364,21 @@ Bgm:data/bgm/st35.ogg
 
 Balloon:suwako,1,0,-200
 Since you dare to battle here in the underground
-where I hold a natural advantage\,
-you've grown up a little too\, haven't you\, Sanae?\
+where I hold a natural advantage,
+you've grown up a little too, haven't you, Sanae?\
 
 Balloon:null,1,0,-200
 Action:suwako,407#諏訪子2P定位置へ
 Action:suwako,202#ニュートラル検知
 Balloon:suwako,1,0,-200
 
-If you beat me here\, maybe we won't have to
+If you beat me here, maybe we won't have to
 worry about always helping you with your
 trouble-solving trips anymore!\
 
 Action:sanae,203　#早苗素立ち
 Balloon:sanae,1,0,-200
-Ah\, but I travelled alone today.\
+Ah, but I travelled alone today.\
 
 Balloon:suwako,1,0,-200
 I felt that Kanako was getting worried.
@@ -388,8 +388,8 @@ and such.\
 # 諏訪子　決めポーズ
 Action:suwako,408#諏訪子決め
 Balloon:suwako,1,0,-200
-Well\, then! Awe me\, creator of these lands\,
-with your marvelous\, god-like miracles!\
+Well, then! Awe me, creator of these lands,
+with your marvelous, god-like miracles!\
 
 Action:suwako,409#408終了検知
 

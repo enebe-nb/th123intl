@@ -36,7 +36,7 @@ Action:chirno,51 #登場動作終了検知
 
 Action:marisa,203　#振り向く
 Balloon:marisa,1,0,-200
-Oh\, you certainly came back quickly.\
+Oh, you certainly came back quickly.\
 
 Action:chirno,407# チルノ　驚いて
 Balloon:chirno,1,0,-200
@@ -53,7 +53,7 @@ then I can't do anything but give up....\
 
 Action:marisa,400# 魔理沙
 Balloon:marisa,1,0,-200
-Come on\, wait a second.
+Come on, wait a second.
 Don't get so depressed like that!\
 
 Action:chirno,315# チルノ　疑問に思う
@@ -72,7 +72,7 @@ Really!?\
 
 Action:marisa,203# 魔理沙
 Balloon:marisa,1,0,-200
-Yeah\, this time I'm not lying.
+Yeah, this time I'm not lying.
 It's over there. Look! See it?\
 
 Action:chirno,302# チルノ　驚く
@@ -87,7 +87,7 @@ Action:chirno,304# そして、チルノは魔理沙を置いて慌てて飛んでいく
 Sleep:90
 Balloon:marisa,1,0,-200
 That thing... I wonder what it could be.
-Somehow\, I can sort of imagine.\
+Somehow, I can sort of imagine.\
 Balloon:null,1,0,-200
 
 FadeBgm:1000,0
@@ -132,13 +132,13 @@ Whoa!\
 
 Action:alice,203# アリス　通常
 Balloon:alice,1,0,-200
-Oh\, an unusual face.
+Oh, an unusual face.
 A lost child?\
 
 Action:chirno,203# チルノ　通常
 Balloon:chirno,1,0,-200
-N-no\, I'm not lost.
-Anyways\, around here...\
+N-no, I'm not lost.
+Anyways, around here...\
 
 Action:alice,400# アリス　疑問
 Balloon:alice,1,0,-200
@@ -160,7 +160,7 @@ It was here just now!\
 Action:alice,401# アリス　驚き
 Balloon:alice,1,0,-200
 A big youkai....
-Ah\, I see.\
+Ah, I see.\
 
 Action:chirno,403# チルノ　驚いて
 Balloon:chirno,1,0,-200
@@ -174,7 +174,7 @@ You want to see it too?\
 
 Action:chirno,404# チルノ　喜んで
 Balloon:chirno,1,0,-200
-I wanna\, I wanna!
+I wanna, I wanna!
 I've been looking for it all day!\
 
 # アリス　普通
@@ -189,7 +189,7 @@ Hurry! Hurry! Daidarabocchi!\
 
 Action:alice,402# アリス　決めポーズ
 Balloon:alice,1,0,-200
-To replenish the magic\, a little energy
+To replenish the magic, a little energy
 is necessary. You have a lively personality.
 Let's take a bit of that!\
 

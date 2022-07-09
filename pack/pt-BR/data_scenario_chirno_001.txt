@@ -43,7 +43,7 @@ Balloon:meirin,1,0,-200
 # 美鈴　そわそわしている（一言ずつ行ったり来たり）
 Action:meirin,408#左へ移動
 Action:meirin,409
-If that was the Taisui Xingjun\,
+If that was the Taisui Xingjun,
 then this could be bad.\
 
 Balloon:null,1,0,-200
@@ -67,17 +67,17 @@ Action:meirin,404　#終了検知
 
 Balloon:meirin,1,0,-200
 Wh-what is it?
-Oh\, it's just a fairy.\
+Oh, it's just a fairy.\
 
 Balloon:chirno,1,0,-200
-Yep\, a fairy.
+Yep, a fairy.
 But I'm just passing by so...\
 
 Balloon:meirin,1,0,-200
 Okay. I have a very important task
 that I must take care of.\
 
-So\, just finish passing by and go away.\
+So, just finish passing by and go away.\
 
 Action:chirno,305 #チルノ　嬉しそう
 Balloon:chirno,1,0,-200
@@ -148,19 +148,19 @@ Sleep:30
 
 # 美鈴、倒れた状態
 Balloon:chirno,1,0,-200
-Ermmmmm\, what was I going to do?\
+Ermmmmm, what was I going to do?\
 
 # 美鈴、倒れた状態
 Balloon:meirin,1,0,-200
 Eh?\
 
 Balloon:chirno,1,0,-200
-Err\, umm.
-Hey\, lady\, do you know what I was going to do?\
+Err, umm.
+Hey, lady, do you know what I was going to do?\
 
 # 美鈴、倒れた状態
 Balloon:meirin,1,0,-200
-Eh? Ah\, I know!
+Eh? Ah, I know!
 You said Daidarabocchi or something!\
 
 Action:chirno,404 #チルノ　嬉しそう

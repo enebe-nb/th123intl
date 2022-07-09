@@ -20,7 +20,7 @@
 Label:reimuU0
 Face:lose,•‰
 Face:win,—]
-Man\, there've been more shrine maidens lately...
+Man, there've been more shrine maidens lately...
 but they're no different!\
 End:
 
@@ -62,7 +62,7 @@ End:
 Label:AliceU0
 Face:lose,•‰
 Face:win,˜f
-Uhhh\, have we met somewhere?
+Uhhh, have we met somewhere?
 Can't remember...\
 End:
 
@@ -109,9 +109,9 @@ End:
 Label:yukariU0
 Face:lose,•‰
 Face:win,—]
-That's it\, isn't it? You're just pretending
+That's it, isn't it? You're just pretending
 to understand those hard-to-understand
-things you say\, aren't you?\
+things you say, aren't you?\
 End:
 
 
@@ -144,7 +144,7 @@ Label:udongeU0
 Face:lose,•‰
 Face:win,˜f
 Huh? Shouldn't you be turning brown
-for the summer\, rabbit?\
+for the summer, rabbit?\
 End:
 
 
@@ -176,7 +176,7 @@ End:
 Label:tenshiU0
 Face:lose,•‰
 Face:win,Šð
-If you're going to pickle veggies\,
+If you're going to pickle veggies,
 do it before you eat them!
 But you don't need to pickle a rock.\
 End:
@@ -187,7 +187,7 @@ End:
 Label:sanaeU0
 Face:lose,•‰
 Face:win,Œˆ
-Man\, a shrine maiden again!
+Man, a shrine maiden again!
 All shrine maidens do is exterminate youkai!\
 End:
 
@@ -206,7 +206,7 @@ End:
 Label:meirinU0
 Face:lose,•‰
 Face:win,Šð
-In my hands\, even a lotus falls apart!\
+In my hands, even a lotus falls apart!\
 End:
 
 ## =======================================================================
@@ -228,7 +228,7 @@ Yes!
 There's no way I can lose!\
 
 Face:win,Œˆ
-I'm the strongest\, most invincible fairy of all!\
+I'm the strongest, most invincible fairy of all!\
 
 
 End:
@@ -241,7 +241,7 @@ Label:SuwakoU0
 Face:lose,•‰
 Face:win,Šð
 Go into hibernation! Sleep in the cold!
-Y'know? When you freeze a hibernating frog\,
+Y'know? When you freeze a hibernating frog,
 it doesn't wake up... ever!\
 End:
 
@@ -271,7 +271,7 @@ End:
 Label:common2
 
 Face:win,Œˆ
-Even if some things can't be frozen\,
+Even if some things can't be frozen,
 I've gotta keep my pride!\
 End:
 

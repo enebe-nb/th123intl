@@ -22,7 +22,7 @@
 Label:reimuU0
 Face:lose,ïâ
 Face:win,òf
-Hey\, it's a shrine maiden.
+Hey, it's a shrine maiden.
 I can't tell you shrine maidens
 apart from one another.\
 End:
@@ -103,7 +103,7 @@ End:
 Label:yuyukoU0
 Face:lose,ïâ
 Face:win,ä
-I'm someone who's become used to vengeful spirits\,
+I'm someone who's become used to vengeful spirits,
 so normal spirits are refreshing.\
 End:
 
@@ -113,13 +113,13 @@ Face:win,ïÅ
 Vengeful spirits...\
 
 Face:win,äæ
-They have good manners\,
+They have good manners,
 but their true nature makes
 them painful to deal with.\
 
 Face:win,ó]
-Well\, it's the fate of those who go to Hell:
-even after becoming vengeful spirits\,
+Well, it's the fate of those who go to Hell:
+even after becoming vengeful spirits,
 they still continue to be burned.\
 
 End:
@@ -143,8 +143,8 @@ End:
 Label:suika0
 Face:lose,ïâ
 Face:win,åà
-It's okay\, the Underground City can prosper.
-After all\, the only weakness the underground had
+It's okay, the Underground City can prosper.
+After all, the only weakness the underground had
 was that it didn't have a sun!\
 End:
 
@@ -155,7 +155,7 @@ End:
 Label:ayaU0
 Face:lose,ïâ
 Face:win,ïÅ
-I'm sorry\, I hardly ever read newspapers.\
+I'm sorry, I hardly ever read newspapers.\
 End:
 
 ## =======================================================================
@@ -186,7 +186,7 @@ End:
 Label:ikuU0
 Face:lose,ïâ
 Face:win,ã¡
-Wow\, there was a sea above the clouds too\,
+Wow, there was a sea above the clouds too,
 wasn't there!?\
 End:
 
@@ -207,7 +207,7 @@ End:
 Label:sanaeU0
 Face:lose,ïâ
 Face:win,òf
-Hey\, it's a shrine maiden.
+Hey, it's a shrine maiden.
 I can't tell you shrine maidens
 apart from one another.\
 End:
@@ -218,7 +218,7 @@ End:
 Label:chirnoU0
 Face:lose,ïâ
 Face:win,òf
-Wait\, what? You didn't get blasted to smithereens.
+Wait, what? You didn't get blasted to smithereens.
 Was the output too low...?\
 End:
 
@@ -248,7 +248,7 @@ End:
 Label:suwakoU0
 Face:lose,ïâ
 Face:win,åà
-Ah yes\, the energetic hydrogen atoms are
+Ah yes, the energetic hydrogen atoms are
 fusing magnificently today as well!\
 End:
 
@@ -277,7 +277,7 @@ End:
 Label:common2
 
 Face:win,ïÅ
-Compared to the Sun\, you are but a puny existence.
+Compared to the Sun, you are but a puny existence.
 But I won't show any sympathy!\
 End:
 

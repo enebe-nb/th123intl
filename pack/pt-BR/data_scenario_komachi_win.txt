@@ -19,7 +19,7 @@ Label:reimuU0
 Face:lose,ïâ
 Face:win,ïÅ
 Shinto shrines refrain from anything relating to
-death right? I mean\, you don't
+death right? I mean, you don't
 even hold funerals there...\
 End:
 
@@ -41,8 +41,8 @@ End:
 Label:sakuyaU0
 Face:lose,ïâ
 Face:win,ó]
-From cooking to washing\,
-cleaning to battling\,
+From cooking to washing,
+cleaning to battling,
 you're quite hard working.\
 End:
 
@@ -53,7 +53,7 @@ End:
 Label:youmuU0
 Face:lose,ïâ
 Face:win,òf
-Ahh\, living in the Netherworld is so much
+Ahh, living in the Netherworld is so much
 like living in the human world.
 Dying and ending up in the Netherworld is the best.\
 End:
@@ -66,7 +66,7 @@ End:
 Label:aliceU0
 Face:lose,ïâ
 Face:win,òf
-Hanged people become small ghosts\,
+Hanged people become small ghosts,
 'cause the part between
 their heads and bodies get thin.\
 End:
@@ -92,7 +92,7 @@ Face:lose,ïâ
 Face:win,ã¡
 You stuff yourself in coffins
 even though you're not dead?
-Wow\, that sounds tight.\
+Wow, that sounds tight.\
 End:
 
 
@@ -108,13 +108,13 @@ End:
 Label:yuyukoR0
 Face:lose,ïâ
 Face:win,ã¡
-Speaking of which\, my boss said
+Speaking of which, my boss said
 there have been too few reincarnations lately.\
 Face:win,ïÅ
-When you're not busy\, why don't you go look
+When you're not busy, why don't you go look
 and fix up some appropriate ghosts for me?\
 Face:win,ó]
-What? It's okay if they're only shells\,
+What? It's okay if they're only shells,
 since it's hard for me if there are
 more humans around here.\
 End:
@@ -125,7 +125,7 @@ End:
 Label:yukariU0
 Face:lose,ïâ
 Face:win,òf
-If I took you on my boat\,
+If I took you on my boat,
 I wonder how long I'd have to row?\
 End:
 
@@ -136,8 +136,8 @@ End:
 Label:suikaU0
 Face:lose,ïâ
 Face:win,ã¡
-Oh\, I smell sake.
-Can't work any more\, nope.\
+Oh, I smell sake.
+Can't work any more, nope.\
 End:
 
 
@@ -147,7 +147,7 @@ End:
 Label:ayaU0
 Face:lose,ïâ
 Face:win,ã¡
-Ooh\, the breadth of the Sanzu River...
+Ooh, the breadth of the Sanzu River...
 This is interesting news.\
 End:
 
@@ -159,11 +159,11 @@ also has something like an internal news memo.\
 
 Face:win,òf
 The printing technology of the tengu is certainly
-very similar to that of the oni in Hell\, isn't it?\
+very similar to that of the oni in Hell, isn't it?\
 
 Face:win,ó]
 Just who in the heck came up
-with such technology\, huh?\
+with such technology, huh?\
 End:
 
 ## =======================================================================
@@ -172,7 +172,7 @@ End:
 Label:udongeU0
 Face:lose,ïâ
 Face:win,ó]
-Even if there's an illusion\,
+Even if there's an illusion,
 it can't interfere with my distance.\
 End:
 
@@ -184,7 +184,7 @@ Label:komachi0
 Face:lose,ïâ
 Face:win,ó]
 It's a good idea to do some self-introspection
-every now and then\, 'cause I'm
+every now and then, 'cause I'm
 still alive enough to do it.\
 End:
 
@@ -195,7 +195,7 @@ End:
 Label:ikuU0
 Face:lose,ïâ
 Face:win,ïÅ
-Oh\, oarfish are rare.
+Oh, oarfish are rare.
 Don't see them much in my river.\
 End:
 
@@ -227,7 +227,7 @@ Label:chirnoU0
 Face:lose,ïâ
 Face:win,åà
 You look so bored.
-Alright then\, I'll be your playmate from now on!\
+Alright then, I'll be your playmate from now on!\
 End:
 
 ## =======================================================================
@@ -237,7 +237,7 @@ Label:meirinU0
 Face:lose,ïâ
 Face:win,ó]
 Living in the house of a devil like this
-is a pain\, right? What\, I'm just playing
+is a pain, right? What, I'm just playing
 around a little bit. Don't get so angry.\
 End:
 
@@ -247,7 +247,7 @@ End:
 Label:utsuhoU0
 Face:lose,ïâ
 Face:win,ã¡
-Oh my\, you say you are a hell raven of the Old Hell?
+Oh my, you say you are a hell raven of the Old Hell?
 Why would something that dangerous be aboveground?\
 End:
 
@@ -258,12 +258,12 @@ The present Hell became a place where oni are
 well disciplined and injustices only rarely happen.\
 
 Face:win,òf
-The oni of Old Hell were in cahoots with the sinners\,
+The oni of Old Hell were in cahoots with the sinners,
 such that there were even souls who didn't want to
 leave hell.\
 
 Face:win,ó]
-You guys should\, rather than a Hell like that\,
+You guys should, rather than a Hell like that,
 try to look for work at the new Hell.
 How's that sound?\
 
@@ -276,9 +276,9 @@ End:
 Label:suwakoU0
 Face:lose,ïâ
 Face:win,òf
-The frog who awoke from within the Earth\,
+The frog who awoke from within the Earth,
 the snake who undyingly sheds.\
-In the stages of life and rebirth\, both of you
+In the stages of life and rebirth, both of you
 can be seen as Gods who've completely transcended
 the cycle of suffering. Is that right? \
 End:

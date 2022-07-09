@@ -41,7 +41,7 @@ End:
 Label:sakuya0
 Face:lose,ïâ
 Face:win,ä
-Since I won\, tonight's dinner
+Since I won, tonight's dinner
 will be Japanese-style.\
 End:
 
@@ -59,7 +59,7 @@ End:
 Label:youmuU0
 Face:lose,ïâ
 Face:win,ïÅ
-If you used that sword for cooking\, I'm sure
+If you used that sword for cooking, I'm sure
 it would make for a performance that
 would attract many customers.\
 End:
@@ -83,7 +83,7 @@ End:
 Label:patchouliU0
 Face:lose,ïâ
 Face:win,ïÅ
-The weather's fine today\,
+The weather's fine today,
 it's great whether you go out or not.\
 End:
 
@@ -115,7 +115,7 @@ Face:win,ïÅ
 You're up early lately.\
 
 Face:win,ïÅ
-Much preparation needs to be done in the afternoon\,
+Much preparation needs to be done in the afternoon,
 so it's better if you'd graciously rest.\
 
 End:
@@ -127,7 +127,7 @@ End:
 Label:yuyukoU0
 Face:lose,ïâ
 Face:win,äæ
-You're eating even though you're dead\,
+You're eating even though you're dead,
 that must make the food chain go wild.\
 End:
 
@@ -139,7 +139,7 @@ they starve themselves in death?\
 
 Face:win,äæ
 I don't think they'd come back to life.
-Just become a hungry ghost\, perhaps.\
+Just become a hungry ghost, perhaps.\
 End:
 
 
@@ -161,7 +161,7 @@ End:
 Label:suikaU0
 Face:lose,ïâ
 Face:win,ä
-Ah\, perfect timing...
+Ah, perfect timing...
 Could I borrow some sake from you?\
 End:
 
@@ -203,7 +203,7 @@ Label:udongeU0
 Face:lose,ïâ
 Face:win,ó]
 Being stabbed just a hair deep
-wouldn't hurt... though\, being stabbed in the eye
+wouldn't hurt... though, being stabbed in the eye
 just a hair deep probably would hurt quite a bit.\
 End:
 
@@ -214,7 +214,7 @@ End:
 Label:komachiU0
 Face:lose,ïâ
 Face:win,ó]
-If your boat were in the form of a swan\,
+If your boat were in the form of a swan,
 don't you think the River would look so much nicer?\
 End:
 
@@ -223,7 +223,7 @@ Face:lose,ïâ
 Face:win,ó]
 There are fish I've never seen before
 living in the Sanzu River.
-That's right\, I should go fishing next time.\
+That's right, I should go fishing next time.\
 End:
 
 ## =======================================================================
@@ -278,7 +278,7 @@ Label:sanaeU0
 Face:lose,ïâ
 Face:win,ä
 How is it?
-Life in Gensokyo never gets tiring\, right?\
+Life in Gensokyo never gets tiring, right?\
 End:
 
 Label:sanaeU1
@@ -296,21 +296,21 @@ Label:chirnoU0
 Face:lose,ïâ
 Face:win,ì{
 You're the one who messed up
-our garden\, aren't you?\
+our garden, aren't you?\
 End:
 
 Label:chirnoR0
 Face:lose,ïâ
 Face:win,ïÅ
 No matter how many times a fairy
-is defeated\, it won't die.\
+is defeated, it won't die.\
 
 Face:win,ó]
 That's why they charge in so recklessly.\
 
 Face:win,åà
-I found their thoughtlessness and bravery strange\,
-but now that I've seen you fight\,
+I found their thoughtlessness and bravery strange,
+but now that I've seen you fight,
 I'm sure I understand.\
 End:
 
@@ -321,13 +321,13 @@ Label:meirinU0
 Face:lose,ïâ
 Face:win,ó]
 You can't be a gatekeeper if
-you're that weak\, you know?\
+you're that weak, you know?\
 End:
 
 Label:meirinU1
 Face:lose,ïâ
 Face:win,ó]
-Come now\, get back to work.\
+Come now, get back to work.\
 End:
 
 ## =======================================================================
@@ -359,14 +359,14 @@ End:
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
 Label:common0
 Face:win,ïÅ
-It seemed so peaceful lately\,
+It seemed so peaceful lately,
 but there are a lot of people
 acting behind-the-scenes.\
 End:
 
 Label:common1
 Face:win,ó]
-To deal with thieves\, we planted
+To deal with thieves, we planted
 mandrakes in the garden at regular intervals.\
 End:
 

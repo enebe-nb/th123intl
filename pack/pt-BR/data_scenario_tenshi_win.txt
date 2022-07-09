@@ -20,7 +20,7 @@ Face:lose,負
 Face:win,普
 You're too straight forward.
 Compromise makes completeness.\
-That is\, if you bend your ways
+That is, if you bend your ways
 you can make your life more complete.\
 End:
 
@@ -43,7 +43,7 @@ End:
 Label:sakuyaU0
 Face:lose,負
 Face:win,余
-No matter how hard you work\,
+No matter how hard you work,
 all that effort is going the wrong way
 if you're working under the devil.\
 End:
@@ -56,8 +56,8 @@ Label:youmuU0
 Face:lose,負
 Face:win,余
 A clean death is no better than a grim life.
-No matter how dismal your life is\, it is better
-than death. Don't make light of life\, ghost.\
+No matter how dismal your life is, it is better
+than death. Don't make light of life, ghost.\
 End:
 
 
@@ -68,7 +68,7 @@ End:
 Label:aliceU0
 Face:lose,負
 Face:win,決
-If you want your dolls to act in a group\, then study
+If you want your dolls to act in a group, then study
 the form of water for strategies and tactics.
 Adaptiveness is the key to victory.\
 End:
@@ -138,7 +138,7 @@ Label:ayaU0
 Face:lose,負
 Face:win,余
 Gossip is not wisdom.
-If they're only written out of curiosity\,
+If they're only written out of curiosity,
 newspapers make a negative effect on society.\
 End:
 
@@ -149,7 +149,7 @@ Label:udongeU0
 Face:lose,負
 Face:win,普
 Leisure and comfort are the ruin of reputation.
-By seeking peace of heart\,
+By seeking peace of heart,
 I see you are hindering your own growth.\
 End:
 
@@ -161,7 +161,7 @@ Label:komachiU0
 Face:lose,負
 Face:win,決
 Good!
-No matter how many times you come\, I won't lose!\
+No matter how many times you come, I won't lose!\
 End:
 
 Label:komachiR0
@@ -181,7 +181,7 @@ Face:lose,負
 Face:win,汗
 The geysers seem to be gushing up lately.
 They don't have anything to do with
-the keystone\, probably.\
+the keystone, probably.\
 End:
 
 ## =======================================================================
@@ -190,7 +190,7 @@ End:
 Label:tenshiU0
 Face:lose,負
 Face:win,惑
-Ah\, studying is such a chore...
+Ah, studying is such a chore...
 Even if I learn all these things
 from the ancient people...\
 End:
@@ -203,9 +203,9 @@ End:
 Label:sanaeU0
 Face:lose,負
 Face:win,決
-To boast of one's talents is to lose one's merits\,
+To boast of one's talents is to lose one's merits,
 don't you agree? You should be aware that before you
-were a god\, you were a mere human.\
+were a god, you were a mere human.\
 End:
 
 ## =======================================================================
@@ -214,7 +214,7 @@ End:
 Label:chirnoU0
 Face:lose,負
 Face:win,余
-With passion you forget to eat\, with joy
+With passion you forget to eat, with joy
 you forget your worries. Maybe the lifestyle
 that Confucius strived for was one like yours.\
 End:
@@ -235,8 +235,8 @@ End:
 Label:utsuhoU0
 Face:lose,負
 Face:win,汗
-Say\, you're not related to the earthquake
-on the surface\, right? Right?\
+Say, you're not related to the earthquake
+on the surface, right? Right?\
 End:
 
 Label:utsuhoR0
@@ -272,7 +272,7 @@ Label:common0
 
 Face:win,汗
 A celestial descends onto Earth to give advice.
-Buuuut\, for me it's all advice
+Buuuut, for me it's all advice
 that can't be put to action.\
 End:
 

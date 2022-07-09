@@ -27,11 +27,11 @@ End:
 Label:reimuR0
 Face:lose,ïâ
 Face:win,ïÅ
-Yes\, after that we pitched in
+Yes, after that we pitched in
 to help build the temple.\
 
 Face:win,ó]
-I say that\, but there really wasn't
+I say that, but there really wasn't
 much for us to do.\
 End:
 
@@ -44,7 +44,7 @@ Face:lose,ïâ
 Face:win,ïÅ
 Why is it that the Forest of Magic is
 called the Forest of Magic?
-Well\, old-growth forests are certainly rare but...\
+Well, old-growth forests are certainly rare but...\
 End:
 
 
@@ -55,7 +55,7 @@ Label:sakuyaU0
 Face:lose,ïâ
 Face:win,òf
 It doesn't seem like maids are really denizens
-of the fantasy world anymore\, don't you think?
+of the fantasy world anymore, don't you think?
 There are many in the streets.\
 End:
 
@@ -88,8 +88,8 @@ Face:win,ïÅ
 Can't you make a big doll or something?\
 
 Face:win,òf
-Well\, I only want to see one but...
-A life-sized giant robot\, that is.\
+Well, I only want to see one but...
+A life-sized giant robot, that is.\
 End:
 
 
@@ -99,14 +99,14 @@ End:
 Label:patchouliU0
 Face:lose,ïâ
 Face:win,ã¡
-Oh my heavens\, there's books I've seen before!
+Oh my heavens, there's books I've seen before!
 You have books from the outside world too.\
 End:
 
 Label:patchouliR0
 Face:lose,ïâ
 Face:win,äæ
-Ah\, this occult magazine...
+Ah, this occult magazine...
 I used to read it often when I was younger.\
 
 Face:win,ïÅ
@@ -155,7 +155,7 @@ End:
 Label:suika0
 Face:lose,ïâ
 Face:win,òf
-That sake\, what was it made from?
+That sake, what was it made from?
 It's incredibly potent...\
 End:
 
@@ -166,9 +166,9 @@ End:
 Label:ayaU0
 Face:lose,ïâ
 Face:win,ïÅ
-Recently\, fewer and fewer people are
+Recently, fewer and fewer people are
 reading newspapers. It almost feels as if
-it were a relic of a bygone age\, right?\
+it were a relic of a bygone age, right?\
 End:
 
 ## =======================================================================
@@ -177,7 +177,7 @@ End:
 Label:udongeU0
 Face:lose,ïâ
 Face:win,äæ
-It's okay\, humans who catch rabbits to eat them
+It's okay, humans who catch rabbits to eat them
 don't even exist any more.\
 End:
 
@@ -188,7 +188,7 @@ End:
 Label:komachiU0
 Face:lose,ïâ
 Face:win,ïÅ
-The Sanzu River or the Chikuma River\,
+The Sanzu River or the Chikuma River,
 which is longer?\
 End:
 
@@ -209,7 +209,7 @@ End:
 Label:tenshiU0
 Face:lose,ïâ
 Face:win,ä
-Ah\, thank you so much for the refreshing peaches.\
+Ah, thank you so much for the refreshing peaches.\
 End:
 
 ## =======================================================================
@@ -227,7 +227,7 @@ End:
 Label:chirnoU0
 Face:lose,ïâ
 Face:win,ä
-Oh my\, I heard fairies were just small fry but...\
+Oh my, I heard fairies were just small fry but...\
 End:
 
 ## =======================================================================
@@ -258,7 +258,7 @@ Label:suwakoU0
 Face:lose,ïâ
 Face:win,òf
 You're fond of taking action from
-behind the scenes\, right? But in that case\,
+behind the scenes, right? But in that case,
 I'll have to remain suspicious of you as well.\
 End:
 
@@ -287,7 +287,7 @@ End:
 Label:common1
 
 Face:win,äæ
-Truly\, anywhere I go\, there always seems to be
+Truly, anywhere I go, there always seems to be
 someone wanting to fight.
 Everyone in Gensokyo seems so rough.\
 End:

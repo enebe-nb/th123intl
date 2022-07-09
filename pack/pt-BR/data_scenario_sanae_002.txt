@@ -41,11 +41,11 @@ The reappearing human-like giant seems to be
 rampaging near the Geyser Underground Center
 at the base of the mountain.\
 
-Just as she thought that\, both it 
+Just as she thought that, both it 
 and the mist disappear again.\
 
 Sanae thought that the grounds under the geyser
-were strange\, so she descended underground
+were strange, so she descended underground
 to where the sun resides.\
 
 Face:null,無
@@ -75,7 +75,7 @@ Balloon:sanae,1,0,-200
 Color:8888FF
 The Geyser Underground Center.\
 
-This was created for the Goddess Kanako's plans\,
+This was created for the Goddess Kanako's plans,
 the site for the mountain's
 technological breakthrough.\
 
@@ -87,17 +87,17 @@ This must be the giant robot's docking bay!\
 Action:sanae,203　#ニュートラル状態へ
 
 #外の世界では巨大ロボはただのアニメでしかないけど、
-In the outside world\, giant robots
-don't exist outside of anime\,
-but since this is Gensokyo\, then maybe...!\
+In the outside world, giant robots
+don't exist outside of anime,
+but since this is Gensokyo, then maybe...!\
 Balloon:null,1,0,-200
 
 Action:sanae,301　#早苗臨戦態勢ポーズ
 Action:sanae,302　#301終了検知
 
 Balloon:sanae,1,0,-200
-In Gensokyo\, where the fairies dance
-and the tengu whirl about\, surely...!\
+In Gensokyo, where the fairies dance
+and the tengu whirl about, surely...!\
 
 Sleep:60
 Balloon:null,1,0,-200
@@ -132,8 +132,8 @@ Action:reimu,404　#霊夢困惑ポーズ
 
 Color:FF8888
 Balloon:reimu,1,0,-200
-I thought I'd go to the hot spring\,
-when all of a sudden\, the ground crumbled...\
+I thought I'd go to the hot spring,
+when all of a sudden, the ground crumbled...\
 
 Action:sanae,305　#早苗驚く
 
@@ -162,7 +162,7 @@ Action:reimu,406　#405終了
 Color:FF8888
 Balloon:reimu,1,0,-200
 You're planning something
-naughty again\, aren't you?!\
+naughty again, aren't you?!\
 
 Color:8888FF
 Balloon:sanae,1,0,-200
@@ -222,7 +222,7 @@ Sleep:30
 
 Balloon:sanae,1,0,-200
 I'm not the one responsible for
-these circumstances\, nor am I
+these circumstances, nor am I
 the one in control of them.\
 
 Balloon:null,1,0,-200
@@ -236,17 +236,17 @@ the pain from the fall.\
 Balloon:sanae,1,0,-200
 This is where the kappa come
 to research and build. I was...
-interested in something\, so I came here\, but...\
+interested in something, so I came here, but...\
 #私は……ちょっとした興味がありましてただ来ただけで\
 
 Action:reimu,402　#霊夢起き上がる
 Action:reimu,403　#402終了検知
 
 Balloon:reimu,1,0,-200
-Oh\, is that right?
-Well\, whatever.\
+Oh, is that right?
+Well, whatever.\
 
-If anything weird happens\,
+If anything weird happens,
 it'll just be your fault.\
 
 Balloon:null,1,0,-200

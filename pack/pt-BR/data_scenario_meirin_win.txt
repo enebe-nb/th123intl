@@ -21,7 +21,7 @@ Face:lose,ïâ
 Face:win,ïÅ
 You really haven't been doing a good job
 at solving these incidents recently.
-At least\, to me.\
+At least, to me.\
 End:
 
 
@@ -31,7 +31,7 @@ End:
 Label:marisaU0
 Face:lose,ïâ
 Face:win,åà
-Hey\, stop right there!
+Hey, stop right there!
 The library's closed for the day!\
 End:
 
@@ -42,7 +42,7 @@ End:
 Label:sakuyaU0
 Face:lose,ïâ
 Face:win,òf
-I'm always just going easy\, you see?
+I'm always just going easy, you see?
 I won't go easy on you in an official duel.\
 End:
 
@@ -53,7 +53,7 @@ End:
 Label:youmuU0
 Face:lose,ïâ
 Face:win,ïÅ
-Catching a white feather\, huh...?
+Catching a white feather, huh...?
 That looks kind of cool.
 Maybe I can practice with you?\
 End:
@@ -79,7 +79,7 @@ Face:lose,ïâ
 Face:win,òf
 That's why I said we need to
 prepare for earthquakes!
-The books will be damaged\, too...\
+The books will be damaged, too...\
 End:
 
 
@@ -90,7 +90,7 @@ End:
 Label:remiliaU0
 Face:lose,ïâ
 Face:win,ä
-My\, you don't look so well.
+My, you don't look so well.
 Is it because it's noon?\
 End:
 
@@ -98,14 +98,14 @@ End:
 Label:remiliaR0
 Face:lose,ïâ
 Face:win,ä
-Ah\, that manga was interesting.\
+Ah, that manga was interesting.\
 
 Face:win,ä
-So the tengu don't only make newspapers\,
+So the tengu don't only make newspapers,
 but those kind of books as well.\
 
 Face:win,äæ
-Well\, I got scolded a bit
+Well, I got scolded a bit
 after I borrowed that manga though.\
 
 End:
@@ -117,7 +117,7 @@ End:
 Label:yuyukoU0
 Face:lose,ïâ
 Face:win,äæ
-You're... different from a jiangshi\, right?\
+You're... different from a jiangshi, right?\
 End:
 
 
@@ -180,7 +180,7 @@ Label:ikuU0
 Face:lose,ïâ
 Face:win,ïÅ
 Are you responsible for the lightning as well?
-Oh\, you're not?\
+Oh, you're not?\
 End:
 
 ## =======================================================================
@@ -189,7 +189,7 @@ End:
 Label:tenshiU0
 Face:lose,ïâ
 Face:win,ä
-Oh\, so in Heaven they study
+Oh, so in Heaven they study
 the classics of my homeland!\
 End:
 
@@ -228,7 +228,7 @@ End:
 Label:utsuhoU0
 Face:lose,ïâ
 Face:win,ã¡
-Nuh-uh\, that kind of fireball is too dangerous.\
+Nuh-uh, that kind of fireball is too dangerous.\
 End:
 
 
@@ -254,8 +254,8 @@ End:
 Label:common0
 
 Face:win,ïÅ
-Ah\, that was easy enough.
-Without vigorous movement\, the body becomes weak.\
+Ah, that was easy enough.
+Without vigorous movement, the body becomes weak.\
 End:
 
 Label:common1

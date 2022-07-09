@@ -56,7 +56,7 @@ Action:meirin,406
 # 美鈴　決めポーズ
 Balloon:meirin,1,0,-200
 It's terrible!
-Just now\, I saw something that should not be seen!\
+Just now, I saw something that should not be seen!\
 
 Action:patchouli,400
 # パチュリー　疑問
@@ -76,7 +76,7 @@ Balloon:patchouli,1,0,-200
 Action:meirin,405
 # 美鈴　決めポーズ
 Balloon:meirin,1,0,-200
-Like\, an earthquake or something like that!\
+Like, an earthquake or something like that!\
 
 # パチュリー　通常
 Balloon:patchouli,1,0,-200
@@ -91,7 +91,7 @@ Huh?\
 Action:patchouli,401
 # パチュリー　決めポーズ
 Balloon:patchouli,1,0,-200
-Whatever you're doing\,
+Whatever you're doing,
 it's interrupting my research.
 Get back to your guard post!\
 
@@ -151,7 +151,7 @@ It's true!\
 # パチュリー　
 Balloon:patchouli,1,0,-200
 I don't care if it's true.
-It's just an earthquake\, right?\
+It's just an earthquake, right?\
 
 Action:meirin,300
 # 美鈴　疑問

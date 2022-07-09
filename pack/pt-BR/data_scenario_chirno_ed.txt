@@ -28,10 +28,10 @@ Bgm:data/bgm/ta06.ogg
 # 
 # Å@àÍñáñ⁄ÇÕèÍèäÇé¶Ç∑ä»íPÇ»ÉCÉâÉXÉgÇ™ì¸ÇÈó\íËÇ≈Ç∑
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
----Hakurei Shrine\, the eastern border of Gensokyo.@
+---Hakurei Shrine, the eastern border of Gensokyo.@
 There was something there more annoying
 than the incessant chatter of cicadas.@
-This annoyance\, however\, is integral to this story.\
+This annoyance, however, is integral to this story.\
 
 
 
@@ -46,11 +46,11 @@ CG:data/scenario/chirno/effect/ED001.bmp,96,16,50
 Reimu  "So? What about Daidarabocchi?"@
 Cirno  "Daidarabocchi's this giant youkai!"@
 Reimu  "I... I see..."\
-Cirno  "Um\, it looks like a giant doll..."@
+Cirno  "Um, it looks like a giant doll..."@
 Marisa "Huh..."\
-Cirno  "Anyways\, it's huge and it can move around on its own!@
-        If that thing goes out of control\, Gensokyo's in danger!"@
-Reimu  "A large doll... are you talking about this\, perhaps?"\
+Cirno  "Anyways, it's huge and it can move around on its own!@
+        If that thing goes out of control, Gensokyo's in danger!"@
+Reimu  "A large doll... are you talking about this, perhaps?"\
 
 
 
@@ -60,12 +60,12 @@ Reimu  "A large doll... are you talking about this\, perhaps?"\
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
 CG:data/scenario/chirno/effect/ED002.bmp,96,16,50
 
-Reimu  "Hisou Tensoku\, a giant automated youkai-type doll."@
+Reimu  "Hisou Tensoku, a giant automated youkai-type doll."@
 Cirno  "Hisou Tensoku?"\
 Reimu  "It's a large doll designed by the Kappa."@
 Cirno  "Kappa?"\
 Reimu  "Everyone's seen this.@
-        If you go to the foothills right now\, you can see it."@
+        If you go to the foothills right now, you can see it."@
 Cirno  "What? Everyone's seen this? Boring."\
 
 # ------------------------------------------------
@@ -77,15 +77,15 @@ Cirno  "Hisou Tensoku...@
 Reimu  "Its movements are really realistic.@
         I heard it's operated by steam power."\
 Cirno  "What... is this?"\
-Reimu  "You mistook this for Daidarabocchi\, didn't you?"\
+Reimu  "You mistook this for Daidarabocchi, didn't you?"\
 Cirno  "Huh? Is that what happened?"\
-Reimu  "Well in any case\, it's just a giant doll.@
+Reimu  "Well in any case, it's just a giant doll.@
         No need to be afraid."\
-Cirno  "Huh? No\, this isn't what I saw!@
+Cirno  "Huh? No, this isn't what I saw!@
         This is totally different!\
 Reimu  "Eh?"\
-Cirno  "It was more realistic\, and it looked more threatening!@
-        Anyways\, this is wrong! Totally different!"\
+Cirno  "It was more realistic, and it looked more threatening!@
+        Anyways, this is wrong! Totally different!"\
 Reimu  "I see...@
         Walk me through your story."\
 

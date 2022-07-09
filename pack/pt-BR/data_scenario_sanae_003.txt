@@ -64,7 +64,7 @@ Sleep:30
 Balloon:utsuho,1,0,-200
 Foreign substance sighted!\
 
-Upon contamination of the nuclear reactor core\,
+Upon contamination of the nuclear reactor core,
 reactor operations are to be halted
 and the foreign substance eradicated immediately!\
 
@@ -96,7 +96,7 @@ Action:sanae,202
 Action:sanae,305　#早苗驚く
 
 Balloon:sanae,1,0,-200
-Wait\, wait!\
+Wait, wait!\
 
 Action:utsuho,402　#空起き上がる
 
@@ -112,22 +112,22 @@ Action:sanae,203　#早苗素立ちポーズ
 
 Balloon:sanae,1,0,-200
 Crows are really birdbrained after all.
-Simply put\, I serve a higher power than yourself.\
+Simply put, I serve a higher power than yourself.\
 
 Balloon:utsuho,1,0,-200
 A servant of a higher power?\
 
-A servant can't be that great\, can it?
+A servant can't be that great, can it?
 Then a human that's not great is...\
 
 Action:utsuho,404　#空　驚きのポーズ
 
-Ah\, which reminds me\, I came because of
+Ah, which reminds me, I came because of
 the notification that a foreign substance
 had contaminated the reactor core!\
 
 Balloon:sanae,1,0,-200
-No\, I mean...\
+No, I mean...\
 
 Balloon:null,1,0,-200
 Action:utsuho,405　#威嚇ポーズ
@@ -145,7 +145,7 @@ Action:sanae,302　#301終了検知
 
 Balloon:sanae,1,0,-200
 Unless I can completely exhaust that
-lively energy of yours\, it looks like
+lively energy of yours, it looks like
 we won't be able to talk any further.\
 
 #戦闘開始処理
@@ -205,7 +205,7 @@ Action:utsuho,202
 Action:utsuho,403　#空　疑問　というか何かを思い出そうとしているポーズ
 
 Balloon:utsuho,1,0,-200
-Wait\, what were we doing again?\
+Wait, what were we doing again?\
 
 Action:sanae,317
 # 早苗　一息ついて
@@ -215,12 +215,12 @@ helping me with my investigation of this reactor.\
 
 Action:utsuho,203#　ニュートラル状態へ
 Balloon:utsuho,1,0,-200
-Ah\, is that right??\
+Ah, is that right??\
 
 Action:sanae,318
 # 早苗　通常（苦笑いが出来れば苦笑いの表情）
 Balloon:sanae,1,0,-200
-Yes\, that's right.
+Yes, that's right.
 Please proceed as planned.\
 
 Balloon:utsuho,1,0,-200
@@ -250,9 +250,9 @@ reactor's diameter from end to end?\
 Balloon:utsuho,1,0,-200
 Action:utsuho,404　#空　驚きのポーズ
 A human that big?!
-There's no way such a thing exists\, right?\
+There's no way such a thing exists, right?\
 
-If there were something like that\,
+If there were something like that,
 there's no way I wouldn't have noticed.\
 
 Action:sanae,203　#早苗素立ちポーズ

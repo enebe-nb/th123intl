@@ -18,7 +18,7 @@
 Label:reimuU0
 Face:lose,ïâ
 Face:win,ä
-Hm\, perhaps this shrine's blessing
+Hm, perhaps this shrine's blessing
 is the discovery of new news material?\
 End:
 
@@ -36,7 +36,7 @@ End:
 Label:marisaU0
 Face:lose,ïâ
 Face:win,åà
-Now\, now\, don't mind me\,
+Now, now, don't mind me,
 just keep going about your thief business.\
 End:
 
@@ -54,7 +54,7 @@ Label:sakuyaU1
 Face:lose,ïâ
 Face:win,ïÅ
 Are you a stage magician?
-Next time\, I want to see you cut a body in half.\
+Next time, I want to see you cut a body in half.\
 End:
 
 
@@ -64,7 +64,7 @@ End:
 Label:youmuU0
 Face:lose,ïâ
 Face:win,ä
-Oh\, you can even use that sword for pruning?
+Oh, you can even use that sword for pruning?
 I'd love to dedicate an article to describing it!\
 End:
 
@@ -76,7 +76,7 @@ End:
 Label:aliceU0
 Face:lose,ïâ
 Face:win,ä
-Next time\, please let me interview you!
+Next time, please let me interview you!
 I want to see where you put the
 gunpowder in the dolls!\
 End:
@@ -84,7 +84,7 @@ End:
 Label:aliceU1
 Face:lose,ïâ
 Face:win,ä
-Speaking of dolls\, have you seen the Hisou Tensoku?
+Speaking of dolls, have you seen the Hisou Tensoku?
 That seems to move very much like a doll as well.\
 End:
 
@@ -95,7 +95,7 @@ End:
 Label:patchouliU0
 Face:lose,ïâ
 Face:win,ïÅ
-Ah\, yes\, why don't I start a "Lucky Five Elements"
+Ah, yes, why don't I start a "Lucky Five Elements"
 column in my newspaper?
 Anything's fine.\
 End:
@@ -156,7 +156,7 @@ End:
 Label:suikaR0
 Face:lose,ïâ
 Face:win,òf
-Even though you're active\,
+Even though you're active,
 I can't imagine you starting up incidents.\
 Face:win,ïÅ
 Are you hiding something?\
@@ -203,8 +203,8 @@ End:
 Label:ikuU0
 Face:lose,ïâ
 Face:win,ïÅ
-Just as I thought\, it's possible to
-predict earthquakes\, isn't it?
+Just as I thought, it's possible to
+predict earthquakes, isn't it?
 I'm very interested in that.\
 End:
 
@@ -253,7 +253,7 @@ End:
 Label:chirnoU0
 Face:lose,ïâ
 Face:win,ä
-Actually\, I think fairies are the most interesting.
+Actually, I think fairies are the most interesting.
 And the one over there is the most interesting of
 the fairies.\
 End:
@@ -265,7 +265,7 @@ Label:meirinU0
 Face:lose,ïâ
 Face:win,ó]
 I have a lot to thank the Scarlet Devil Mansion for.
-Providing scoops\, and mass subscriptions\, too.\
+Providing scoops, and mass subscriptions, too.\
 End:
 
 ## =======================================================================
@@ -275,7 +275,7 @@ Label:utsuhoU0
 Face:lose,ïâ
 Face:win,ä
 The hot spring beneath the mountain was a success.
-With it\, you improved the mountain's economy.
+With it, you improved the mountain's economy.
 Just as expected from nuclear fusion!\
 End:
 
@@ -301,13 +301,13 @@ Label:common0
 
 Face:win,ïÅ
 Extra~ Extra~
-Nothing big happened\, but it's still an extra!\
+Nothing big happened, but it's still an extra!\
 
 End:
 
 Label:common1
 Face:win,åà
-Hello\, I'm the well known Miss Shameimaru.
+Hello, I'm the well known Miss Shameimaru.
 I've come to bring you today's newspaper.\
 
 End:

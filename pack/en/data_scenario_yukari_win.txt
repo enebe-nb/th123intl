@@ -18,8 +18,8 @@
 Label:reimuU0
 Face:lose,負
 Face:win,余
-When you drink sake\, do you swallow the cup?
-Or\, do you swallow the liquid inside it?\
+When you drink sake, do you swallow the cup?
+Or, do you swallow the liquid inside it?\
 End:
 
 
@@ -41,7 +41,7 @@ End:
 Label:sakuyaU0
 Face:lose,負
 Face:win,余
-Even if you stop time\,
+Even if you stop time,
 spilt milk can't be recovered.
 Should you fill your cup with milk?\
 End:
@@ -55,7 +55,7 @@ Face:lose,負
 Face:win,普
 Every tree and blade of grass is
 as precious as the Buddha.
-Unfortunately\, this doesn't include humans.\
+Unfortunately, this doesn't include humans.\
 End:
 
 
@@ -67,7 +67,7 @@ Label:aliceU0
 Face:lose,負
 Face:win,余
 A heart dwelling within a human-shaped object.
-How is that different from a youkai\, I wonder?\
+How is that different from a youkai, I wonder?\
 End:
 
 
@@ -78,7 +78,7 @@ Label:patchouli0
 Face:lose,負
 Face:win,余
 The magic of the outside world is not so primitive.
-Now\, there are even things like giant robots.\
+Now, there are even things like giant robots.\
 End:
 
 ## =======================================================================
@@ -87,7 +87,7 @@ End:
 Label:remiliaU0
 Face:lose,負
 Face:win,余
-That bat you saw\, was it white?
+That bat you saw, was it white?
 Or was it black?\
 End:
 
@@ -108,7 +108,7 @@ End:
 Label:yukariU0
 Face:lose,負
 Face:win,普
-Oh\, the mirror world.\
+Oh, the mirror world.\
 End:
 
 Label:yukari0
@@ -128,7 +128,7 @@ End:
 Label:suikaU0
 Face:lose,負
 Face:win,驚
-Oni are quite impressive\, and quite popular.
+Oni are quite impressive, and quite popular.
 Have you perhaps gathered more faith
 than the clumsy gods?\
 End:
@@ -184,7 +184,7 @@ Label:tenshiU0
 Face:lose,負
 Face:win,嬉
 The monkey who arose to the heavens rebelled
-from his post in rage. In the end\,
+from his post in rage. In the end,
 he was imprisoned upon the mountain.\
 End:
 
@@ -215,8 +215,8 @@ End:
 Label:meirinU0
 Face:lose,負
 Face:win,驚
-You living in a red building\,
-that's some kind of joke\, right?\
+You living in a red building,
+that's some kind of joke, right?\
 End:
 
 ## =======================================================================
@@ -226,7 +226,7 @@ Label:utsuhoU0
 Face:lose,負
 Face:win,余
 Solar power is already not kind to the youkai.
-However\, your power goes too far\,
+However, your power goes too far,
 to the extent of evil.\
 End:
 
@@ -250,8 +250,8 @@ End:
 Label:common0
 
 Face:win,惑
-Ah\, the dull...
-The dull go through so much trouble\, don't they?\
+Ah, the dull...
+The dull go through so much trouble, don't they?\
 End:
 
 

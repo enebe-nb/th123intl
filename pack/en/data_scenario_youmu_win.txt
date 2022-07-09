@@ -31,7 +31,7 @@ Face:lose,ïâ
 Face:win,ó]
 Your mind is too clouded.
 You know you won't die
-a good death like this\, right?\
+a good death like this, right?\
 End:
 
 
@@ -50,7 +50,7 @@ Label:sakuyaU0
 Face:lose,ïâ
 Face:win,ä
 It is possible to hit the knife with the sword.
-If you persevere\, you can even cut a barrage of them.\
+If you persevere, you can even cut a barrage of them.\
 End:
 
 ## =======================================================================
@@ -59,7 +59,7 @@ End:
 Label:youmu0
 Face:lose,ïâ
 Face:win,ïÅ
-Now then\, today's training is done.\
+Now then, today's training is done.\
 End:
 
 
@@ -70,8 +70,8 @@ End:
 Label:aliceU0
 Face:lose,ïâ
 Face:win,òf
-To shoot a general\, aim for his mount.
-Even if I slash between you and the dolls\,
+To shoot a general, aim for his mount.
+Even if I slash between you and the dolls,
 the strings won't break...\
 End:
 
@@ -94,7 +94,7 @@ Label:remiliaU0
 Face:lose,ïâ
 Face:win,òf
 Lady Yuyuko said
-"Against agile opponents\,
+"Against agile opponents,
 you should shut your eyes."\
 
 Face:win,ïÅ
@@ -117,18 +117,18 @@ End:
 Label:yuyukoU0
 Face:lose,ïâ
 Face:win,ä
-Lady Yuyuko\, why don't you train sword techniques
+Lady Yuyuko, why don't you train sword techniques
 with me sometimes?
-It'll settle your spirits\, you know?\
+It'll settle your spirits, you know?\
 End:
 
 Label:yuyukoR0
 Face:lose,ïâ
 Face:win,ïÅ
-Oh right\, about the things
+Oh right, about the things
 I had pickled before...\
 Face:win,òf
-Strangely\, I leave them out for days or years
+Strangely, I leave them out for days or years
 but they don't ever change much.\
 Face:win,ïÅ
 And to think the food at the shrine
@@ -143,7 +143,7 @@ early spring was a treasure ship in the end.\
 
 Face:win,äæ
 I didn't really understand after hearing
-from Reimu and the others\, but ...\
+from Reimu and the others, but ...\
 
 Face:win,ä
 I'm glad it wasn't a boat that could cause us harm.\
@@ -157,7 +157,7 @@ End:
 Label:yukariU0
 Face:lose,ïâ
 Face:win,òf
-Anyways\, is it okay to keep the boundary between
+Anyways, is it okay to keep the boundary between
 this world and the next ambiguous like this?\
 End:
 
@@ -169,7 +169,7 @@ Label:suikaU0
 Face:lose,ïâ
 Face:win,ä
 Seems like blades that cut oni are special.
-Well\, my blade is special too.\
+Well, my blade is special too.\
 End:
 
 
@@ -240,7 +240,7 @@ End:
 Label:sanaeU0
 Face:lose,ïâ
 Face:win,ã¡
-Ohhh\, so there are shrines in the outside world too?
+Ohhh, so there are shrines in the outside world too?
 I thought they were already a lost culture.\
 End:
 
@@ -271,7 +271,7 @@ End:
 Label:utsuhoU0
 Face:lose,ïâ
 Face:win,òf
-It explodes\, but it's fusing together... ???
+It explodes, but it's fusing together... ???
 How can that be?\
 End:
 
@@ -297,13 +297,13 @@ Label:common0
 
 Face:win,òf
 If a sword's been used to cut so much that
-it became tainted with clotted blood\, it's useless.\
+it became tainted with clotted blood, it's useless.\
 End:
 
 Label:common1
 
 Face:win,åà
-If there is something I can't make clear\,
+If there is something I can't make clear,
 I try cutting it!\
 End:
 

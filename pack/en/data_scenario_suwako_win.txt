@@ -18,7 +18,7 @@
 Label:reimuU0
 Face:lose,負
 Face:win,普
-Ahh\, I wish you could share some of your
+Ahh, I wish you could share some of your
 recklessness with our Sanae.\
 End:
 
@@ -40,7 +40,7 @@ Label:sakuyaU0
 Face:lose,負
 Face:win,余
 Have you offered your thanks to the god of food?
-You'll get cursed\, you know?\
+You'll get cursed, you know?\
 End:
 
 
@@ -72,7 +72,7 @@ Label:patchouliU0
 Face:lose,負
 Face:win,決
 If gods lose their power then
-magic can't be used\, you know?\
+magic can't be used, you know?\
 End:
 
 
@@ -85,7 +85,7 @@ Face:lose,負
 Face:win,余
 There also exist people who believe in bats
 as good omens. However even with such trivial
-amounts of faith\, one could become a god\, right?\
+amounts of faith, one could become a god, right?\
 End:
 
 
@@ -107,7 +107,7 @@ End:
 Label:yukariU0
 Face:lose,負
 Face:win,余
-Oh my\, our shrine really doesn't have
+Oh my, our shrine really doesn't have
 any cracks you can slip through.\
 End:
 
@@ -119,7 +119,7 @@ Label:suika0
 Face:lose,負
 Face:win,余
 Were you a resident of the underworld?
-It's flourishing now\, thanks to nuclear energy.\
+It's flourishing now, thanks to nuclear energy.\
 End:
 
 
@@ -172,8 +172,8 @@ Label:tenshiU0
 Face:lose,負
 Face:win,決
 Celestials don't count on anything and have
-no expectations in life. So then\, they are always
-ready to worship properly\, right?\
+no expectations in life. So then, they are always
+ready to worship properly, right?\
 End:
 
 ## =======================================================================
@@ -215,8 +215,8 @@ End:
 Label:utsuhoU0
 Face:lose,負
 Face:win,余
-Looking good! Looking good! Today\, as well\, thanks
-to the straight-forward and honest youkai\, nuclear
+Looking good! Looking good! Today, as well, thanks
+to the straight-forward and honest youkai, nuclear
 energy is being used for peaceful purposes only.\
 End:
 
@@ -234,7 +234,7 @@ End:
 Label:suwakoR0
 Face:lose,負
 Face:win,惑
-Ahh\, it's a good time to trick those who
+Ahh, it's a good time to trick those who
 live aboveground into confronting
 their deepest fears isn't it?\
 End:
@@ -258,7 +258,7 @@ End:
 Label:common1
 
 Face:win,決
-Now now\, there's still more time!
+Now now, there's still more time!
 Rematch! Rematch!\
 End:
 
@@ -266,7 +266,7 @@ Label:common2
 
 Face:win,普
 Pay more respect to the earth!
-Otherwise\, who knows?
+Otherwise, who knows?
 You might even get cursed. Heh heh. \
 End:
 

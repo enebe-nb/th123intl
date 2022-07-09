@@ -46,7 +46,7 @@ Action:marisa,101# 魔理沙が入ってくる
 Action:marisa,102
 
 Balloon:marisa,1,0,-200
-Now then\, today I'll be
+Now then, today I'll be
 going to the library again!
 I'm a young lady of literature.\
 
@@ -57,11 +57,11 @@ Balloon:meirin,1,0,-200
 Action:marisa,401# 魔理沙　驚き
 Balloon:marisa,1,0,-200
 Oh?! For some reason I'm not being stopped.
-I'm seriously going in? I'm really going in\, okay?\
+I'm seriously going in? I'm really going in, okay?\
 
 Action:meirin,405# 美鈴　決めポーズ
 Balloon:meirin,1,0,-200
-You\, too\, are a fake!
+You, too, are a fake!
 I can see through everything!\
 
 Action:marisa,203# 魔理沙　通常
@@ -70,15 +70,15 @@ A fake?\
 
 # 美鈴　通常
 Balloon:meirin,1,0,-200
-For you\, who always comes through
-the main gate proudly and boldly\,
+For you, who always comes through
+the main gate proudly and boldly,
 Coming in from the sky is ridiculous!\
 
 # 魔理沙　通常
 Balloon:marisa,1,0,-200
 Heh heh. Very impressive.
 As expected of the Great Wall
-of the Scarlet Devil Mansion\, Meiling.\
+of the Scarlet Devil Mansion, Meiling.\
 
 # 美鈴　通常
 Balloon:meirin,1,0,-200
@@ -87,7 +87,7 @@ see through that disguise!\
 
 Action:marisa,403# 魔理沙　決めポーズ
 Balloon:marisa,1,0,-200
-However\, simply seeing through to my true form
+However, simply seeing through to my true form
 won't be enough to win against me!\
 #戦闘開始処理
 
@@ -146,12 +146,12 @@ Balloon:marisa,1,0,-200
 
 # 美鈴　驚き
 Balloon:meirin,1,0,-200
-What a fiendishly evil youkai\,
+What a fiendishly evil youkai,
 the Taisui Xingjun.\
 
 # 美鈴　決めポーズ
 Balloon:meirin,1,0,-200
-If it wasn't for me\,
+If it wasn't for me,
 the Scarlet Devil Mansion would've surely
 been taken over right about now...\
 

@@ -44,7 +44,7 @@ Sleep:300;
 Action:reimu,101# 霊夢が入ってくる
 Action:reimu,102
 Balloon:reimu,1,0,-200
-Well then\, today's another good day for
+Well then, today's another good day for
 exterminating some youkai. I'll disinfect all
 the devils at the Scarlet Devil Mansion!\
 
@@ -60,14 +60,14 @@ Did you say monster?\
 Action:meirin,405# 美鈴　決めポーズ
 Balloon:meirin,1,0,-200
 No matter how skillfully you disguise yourself
-as a human\, it's futile!
+as a human, it's futile!
 My eyes won't be deceived.\
 
 # 霊夢　通常
 Action:reimu,203# 霊夢　通常
 Balloon:reimu,1,0,-200
 Hoho. When I've taken this form
-of a shrine maiden\, you would
+of a shrine maiden, you would
 call me a monster?\
 
 Action:reimu,409# 霊夢　笑う
@@ -95,7 +95,7 @@ Splendid! Simply splendid!
 You're an example youkai.\
 
 Action:reimu,203# 霊夢　通常
-However\, do you think that pretty words alone
+However, do you think that pretty words alone
 can protect peace and harmony?\
 
 Action:reimu,405# 霊夢　決めポーズ
@@ -156,13 +156,13 @@ Sleep:30
 Action:meirin,406# 美鈴　決めポーズ
 Balloon:meirin,1,0,-200
 I didn't even approach the limits
-of my true powers\, but I guess
+of my true powers, but I guess
 such powers aren't even necessary!\
 
 Action:reimu,410# 霊夢は起き上がって胡座で座る（しゃがみで）
 Balloon:reimu,1,0,-200
 Mmph.
-As expected from you\, eh?\
+As expected from you, eh?\
 
 # 霊夢は起き上がって胡座で座る（しゃがみで）
 But it appears as if you've spent all your energy
@@ -174,12 +174,12 @@ Tch!\
 
 Action:reimu,411# 霊夢　起き上がって
 Balloon:reimu,1,0,-200
-Now then\, the time has come hasn't it\,
+Now then, the time has come hasn't it,
 to show you my true form!\
 
 # 美鈴　通常
 Balloon:meirin,1,0,-200
-Finally\, it seems to be
+Finally, it seems to be
 revealing its true form...!\
 
 Balloon:null,1,0,-200

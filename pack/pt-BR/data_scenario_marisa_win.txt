@@ -25,7 +25,7 @@ End:
 Label:reimuR0
 Face:lose,ïâ
 Face:win,ä
-Oh yeah\, I dug up something at the bazaar.\
+Oh yeah, I dug up something at the bazaar.\
 
 Face:win,ïÅ
 The Seed of Unknown Form.\
@@ -51,7 +51,7 @@ End:
 Label:sakuyaU0
 Face:lose,ïâ
 Face:win,ó]
-You're going to the bazaar? You're too late\,
+You're going to the bazaar? You're too late,
 almost all the good stuff's gone.\
 End:
 
@@ -62,8 +62,8 @@ End:
 Label:youmuU0
 Face:lose,ïâ
 Face:win,ïÅ
-Though there are seasons in the Netherworld\,
-there aren't any in Higan\, huh.\
+Though there are seasons in the Netherworld,
+there aren't any in Higan, huh.\
 End:
 
 
@@ -81,7 +81,7 @@ Label:aliceU1
 Face:lose,ïâ
 Face:win,äæ
 Won't they explode if you leave them out for
-too long in this heat? Those dolls\, that is.\
+too long in this heat? Those dolls, that is.\
 End:
 
 
@@ -98,10 +98,10 @@ End:
 Label:patchouliR0
 Face:lose,ïâ
 Face:win,ïÅ
-Speaking of which\, I wrote a book too!\
+Speaking of which, I wrote a book too!\
 
 Face:win,ä
-It's bad of me to keep borrowing books\,
+It's bad of me to keep borrowing books,
 so I'll put my book here at the library this time!\
 
 Face:win,åà
@@ -115,7 +115,7 @@ End:
 Label:remiliaU0
 Face:lose,ïâ
 Face:win,ó]
-Sorry I always come during the day\,
+Sorry I always come during the day,
 I'm asleep at night.\
 End:
 
@@ -125,7 +125,7 @@ End:
 Label:yuyukoU0
 Face:lose,ïâ
 Face:win,ó]
-Graveyards were the meccas of summer\, yeah.
+Graveyards were the meccas of summer, yeah.
 But... what's a mecca?\
 End:
 
@@ -136,13 +136,13 @@ Label:yukariU0
 Face:lose,ïâ
 Face:win,ä
 How many eels should you eat in the midsummer day?
-If it's a lamprey eel\, one should be enough\, I bet.\
+If it's a lamprey eel, one should be enough, I bet.\
 End:
 
 Label:yukariR0
 Face:lose,ïâ
 Face:win,òf
-However\, who decides when midsummer is anyway?\
+However, who decides when midsummer is anyway?\
 End:
 
 
@@ -152,7 +152,7 @@ End:
 Label:suikaU0
 Face:lose,ïâ
 Face:win,òf
-A cloud is a gathering of things\, isn't it?
+A cloud is a gathering of things, isn't it?
 Can't you ride one?\
 End:
 
@@ -160,7 +160,7 @@ Label:suikaU1
 Face:lose,ïâ
 Face:win,ä
 Gather the ones who have free time for me tonight.
-When it gets cool after sundown\, we'll have a party!\
+When it gets cool after sundown, we'll have a party!\
 End:
 
 
@@ -178,17 +178,17 @@ End:
 Label:ayaR0
 Face:lose,ïâ
 Face:win,ïÅ
-With newspapers\, you collect the stories yourself
+With newspapers, you collect the stories yourself
 so no one else has to go anywhere.\
 
 Face:win,òf
-That's convenient\, but everyone 
+That's convenient, but everyone 
 reading the same thing is boring.\
 
 Face:win,ä
 I could beat you at your own game by just
 walking around myself. Maybe you should try to
-write a paper like that too\, you know?\
+write a paper like that too, you know?\
 
 End:
 
@@ -209,7 +209,7 @@ Face:win,ïÅ
 I saw that fast-growin' bamboo.\
 
 Face:win,ïÅ
-When you run\, it's easy to run into them.\
+When you run, it's easy to run into them.\
 
 Face:win,äæ
 Your traps are more dangerous than a cat's.\
@@ -233,11 +233,11 @@ Face:win,òf
 Does your boat sink easily?\
 
 Face:win,ïÅ
-No\, it's just that I heard that the boats
+No, it's just that I heard that the boats
 that spirits ride on sink easily.\
 
 Face:win,äæ
-Maybe it's not for all spirits\, just a certain one?\
+Maybe it's not for all spirits, just a certain one?\
 
 End:
 
@@ -258,7 +258,7 @@ End:
 Label:tenshiU0
 Face:lose,ïâ
 Face:win,ïÅ
-Living an elegant life in Heaven would be great\,
+Living an elegant life in Heaven would be great,
 unless you're afraid of heights.\
 End:
 
@@ -270,13 +270,13 @@ Label:sanaeU0
 Face:lose,ïâ
 Face:win,ïÅ
 So you're really starting to get the hang
-of youkai extermination\, huh?\
+of youkai extermination, huh?\
 End:
 
 Label:sanaeU1
 Face:lose,ïâ
 Face:win,ä
-If you do nothing but youkai hunting\,
+If you do nothing but youkai hunting,
 you might become close to one yourself.\
 End:
 
@@ -286,7 +286,7 @@ End:
 Label:chirnoU0
 Face:lose,ïâ
 Face:win,ä
-Ah\, my bad.
+Ah, my bad.
 I actually haven't seen a Daidarabocchi.\
 End:
 
@@ -306,8 +306,8 @@ End:
 Label:utsuhoU0
 Face:lose,ïâ
 Face:win,äæ
-No\, it's just that\, it's so hot today.
-So hot\, I could die.\
+No, it's just that, it's so hot today.
+So hot, I could die.\
 End:
 
 
@@ -329,7 +329,7 @@ End:
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
 Label:common0
 Face:win,òf
-When nothing happens\, everyone stays the same.
+When nothing happens, everyone stays the same.
 It's such a boring situation.\
 End:
 

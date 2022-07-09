@@ -28,12 +28,12 @@ Bgm:data/bgm/ta06.ogg
 # 
 # Å@àÍñáñ⁄ÇÕèÍèäÇé¶Ç∑ä»íPÇ»ÉCÉâÉXÉgÇ™ì¸ÇÈó\íËÇ≈Ç∑
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
----Hakurei Shrine\, the border of Gensokyo.@
+---Hakurei Shrine, the border of Gensokyo.@
 The heat of summer heightened the contrast
 between the blacks and greens of the shrine.\
-Were the cicadas to stop chirping\,
+Were the cicadas to stop chirping,
 one would perhaps stop thinking and lose sight of reality.@
-To be\, and not think--- a simple task for an object\,
+To be, and not think--- a simple task for an object,
 but a difficult one for humans.\
 
 
@@ -47,25 +47,25 @@ but a difficult one for humans.\
 CG:data/scenario/sanae/effect/ED001.bmp,96,16,50
 
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
-Marisa "Hey\, seen this news article?"@
+Marisa "Hey, seen this news article?"@
 Reimu  "Looking at that now.@
-        The 47th day of the Sankuu Shogi Contest\, right?"\
-Marisa "Ah\, guess you can't help but look at a game like that
+        The 47th day of the Sankuu Shogi Contest, right?"\
+Marisa "Ah, guess you can't help but look at a game like that
         with no winners or losers. Went into the thousands one time
         and no one ever noticed. Kept on repeating over and over.@
-        No\, I'm not talking about that. Look at this!"\
+        No, I'm not talking about that. Look at this!"\
 Reimu  "Futuristic Water Youkai Bazaar...@
-        massive sale of all sorts of rare items\,
+        massive sale of all sorts of rare items,
         from inventions by the Kappa to Shirikodama..."\
 Marisa "Looks interesting. Wanna go?@
         We might find something nice."@
 Reimu  "I dunno... the Kappa's inventions are kinda shady."@
 Marisa "No way."\
-Reimu  "Besides\, who is she trying to appeal to\,
+Reimu  "Besides, who is she trying to appeal to,
         starting a shop out of the blue?"\
 Marisa "Isn't it because she doesn't have enough money
         to maintain her fusion reactor?"\
-Reimu  "That'd be reasonable. Oh\, it talks about giant dolls here."\
+Reimu  "That'd be reasonable. Oh, it talks about giant dolls here."\
 
 CG:data/scenario/sanae/effect/ED002.bmp,96,16,50
 # éOñáñ⁄
@@ -77,11 +77,11 @@ CG:data/scenario/sanae/effect/ED002.bmp,96,16,50
 
 Marisa "Lemme see.@
         "Giant Youkai Automated Doll Hisou Tensoku Unveiled to Public."@
-        "You can see it from far away\, so come and take a look.""\
+        "You can see it from far away, so come and take a look.""\
 #ÅwîÒëzìVë•ÇÕâìÇ≠Ç©ÇÁÇ≈Ç‡å©Ç¶ÇÈÇÃÇ≈ÅAÇªÇÍÇñ⁄éwÇµÇƒóàèÍÇ∑ÇÈÇ∆ó«Ç¢ÇæÇÎÇ§ÅxÅv\
 Reimu  "It's not being sold?"@
-Marisa "I don't know\, are they trying to?@
-        I feel like it's just something to see\,
+Marisa "I don't know, are they trying to?@
+        I feel like it's just something to see,
         judging from what this article says."\
 Reimu  "I saw it when it was still being tested.@
         It moves pretty realistically.@
@@ -96,9 +96,9 @@ Reimu  "How nice..."\
 CG:data/scenario/sanae/effect/ED003.bmp,96,16,50
 Color:FFFFFF
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
----A newcomer to the Mountain\, Moriya Shrine.@
-The alpine summer was cool\, mocking the sweltering heat of the foothills.@
-Here lived two gods... no\, three.\
+---A newcomer to the Mountain, Moriya Shrine.@
+The alpine summer was cool, mocking the sweltering heat of the foothills.@
+Here lived two gods... no, three.\
 
 
 
@@ -112,10 +112,10 @@ CG:data/scenario/sanae/effect/ED004.bmp,96,16,50
 
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
 Suwako "Hisou Tensoku's just an ad for the Kappa.
-        It moves pretty realistically though\, doesn't it?"
+        It moves pretty realistically though, doesn't it?"
 Sanae  "It's uselessly realistic. I wanted a huge robot."\
 Kanako "Huh. She made something like that?
-        If I had designed it\, it would have been more practical."\
+        If I had designed it, it would have been more practical."\
 Suwako "Forget practicality. I think it moves more realistically
         if it doesn't think about anything.@
         The Kappa's design is wonderful.@
@@ -124,9 +124,9 @@ Sanae  "Doesn't think? What do you mean...?"@
 Kanako "I see. We'd have problems if it suddenly developed cognition."\
 Suwako "Precisely. We can't have something that large becoming sentient.@
         If this doll acts in a meaningful manner and
-        repeats those actions\, it will eventually develop sentience.@
+        repeats those actions, it will eventually develop sentience.@
         That's why she needed to create a doll that can't think."\
-Sanae  "I see. But how does she recreate those realistic movements\, then?"\
+Sanae  "I see. But how does she recreate those realistic movements, then?"\
 
 CG:data/scenario/sanae/effect/ED005.bmp,96,16,50
 
@@ -136,21 +136,21 @@ CG:data/scenario/sanae/effect/ED005.bmp,96,16,50
 # 
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
 
-Suwako "Nuclear power\, naturally."@
+Suwako "Nuclear power, naturally."@
 Sanae  "Can nuclear power do everything?@
         I have no idea what it is."\
-Kanako "It's just light\, infinitely expanded.@
+Kanako "It's just light, infinitely expanded.@
         They need to convert it into something else
         for that huge doll to move.@
-        You know\, like heat or light..."\
-Suwako "Ah\, that.@
+        You know, like heat or light..."\
+Suwako "Ah, that.@
         She's just using the water vapor from the underground geysers.@
-        Increase the vapor\, and the doll's arm raises\, and vice versa."\
+        Increase the vapor, and the doll's arm raises, and vice versa."\
 Sanae  "So that's just..."@
-Kanako "Like a giant balloon\, right?"@
-Suwako "Hisou Tensoku really is remarkably empty\, isn't it?"\
+Kanako "Like a giant balloon, right?"@
+Suwako "Hisou Tensoku really is remarkably empty, isn't it?"\
 Sanae  "I really wanted to have a giant robot battle or something."@
-Suwako "You don't want to battle\, you just want to ride it\, don't you?"@
+Suwako "You don't want to battle, you just want to ride it, don't you?"@
 Sanae  "What... what's wrong with that?@
         It's always been humanity's dream to make a giant robot."\
 Kanako "A doll that gathers humans together.@

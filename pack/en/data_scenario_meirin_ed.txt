@@ -28,9 +28,9 @@ CG:data/scenario/meirin/effect/ED000.bmp,96,16,50
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
 # ê}èëäŸ
 ---The underground library of the Scarlet Devil Mansion.\
-The place was cool in the summer and warm in the winters\,
+The place was cool in the summer and warm in the winters,
 so it was always comfortable.@
-In addition\, since there was no light\,
+In addition, since there was no light,
 it was the prime location for preserving books.\
 
 # ìÒñáñ⁄
@@ -43,10 +43,10 @@ Meiling "...I won't let earthquakes happen.@
 Patchy "So? How long is this idiot going to snooze?"\
 Sakuya "She was asleep outside when I found her.@
         I thought we were being attacked."\
-Patchy "Huh. If you leave her outside like that\,
+Patchy "Huh. If you leave her outside like that,
         she's going to get heatstroke."\
 Sakuya "So should I bring her some cold wet towels?"@
-Patchy "She doesn't need that. She's a youkai\, after all."\
+Patchy "She doesn't need that. She's a youkai, after all."\
 
 
 CG:data/scenario/meirin/effect/ED002.bmp,96,16,50
@@ -61,10 +61,10 @@ Meiling "...what?@
          You're the last boss? Taisui Xingjun?!"\
 Sakuya  "...what the hell is that?"\
 Patchy  "Taisui Xingjun? Hmm...@
-         I think I've heard that from someone else\, too."\
-Meiling "Alright\, I accept your challenge!@
+         I think I've heard that from someone else, too."\
+Meiling "Alright, I accept your challenge!@
          There's no one left to fight me anyways!"\
-Patchy  "Oh\, that's right\, I heard that name from her.@
+Patchy  "Oh, that's right, I heard that name from her.@
          She told me she saw Taisui Xingjun outside or something."\
 Sakuya  "Maybe she got attacked by him...
          which is why she won't wake up?"\
@@ -79,25 +79,25 @@ CG:data/scenario/meirin/effect/ED003.bmp,96,16,50
 # 
 Patchy "Huh. Who knows.@
         I think she's just tired because she exerted herself too much.@
-        Besides\, she dropped this while she was working."\
-Sakuya "Ah\, is this the Tengu's action manga?"\
+        Besides, she dropped this while she was working."\
+Sakuya "Ah, is this the Tengu's action manga?"\
 Patchy "It's some dumb story about how evil youkai
         possessed the friends and families of everyone in Gensokyo
         and started attacking."\
 Meiling "Shit! You're too strong!"\
 Patchy "I'm sure she read this and she's having a blast
         fighting all the youkai in her dreams."\
-Sakuya "Hmm. Lucky her\, she can still dream.@
-        Oh\, speaking of tengu...@
+Sakuya "Hmm. Lucky her, she can still dream.@
+        Oh, speaking of tengu...@
         did you read about the Kappa's Bazaar in the paper?"\
-Patchy "Oh yeah\, I saw that.@
+Patchy "Oh yeah, I saw that.@
         Giant doll named Hisou Tensoku or something."\
 Sakuya "I believe the Lady wants to go see this doll.@
-        What about you\, Lady Patchouli?"\
+        What about you, Lady Patchouli?"\
 Patchy "Naturally I plan to go as well.@
         I must go before important items
         fall into other people's hands..."\
-Sakuya "Well then\, we'll need a gatekeeper..."\
+Sakuya "Well then, we'll need a gatekeeper..."\
 
 Background:BLACK,0,0
 CG:BLACK,0,0,50

@@ -65,7 +65,7 @@ Was it over here?\
 
 Action:marisa,401 # 魔理沙　驚き
 Balloon:marisa,1,0,-200
-Oh\, a well-chilled fairy.
+Oh, a well-chilled fairy.
 Seeing one in a place like this is rare.\
 
 # チルノ
@@ -83,13 +83,13 @@ I saw it around here somewhere just now!\
 
 Action:marisa,203　#魔理沙素立ち
 Balloon:marisa,1,0,-200
-Ho ho! A big youkai\, is it?
-Hm\, I can't say I don't know.\
+Ho ho! A big youkai, is it?
+Hm, I can't say I don't know.\
 
 Action:chirno,404# チルノ　嬉しそう
 Balloon:chirno,1,0,-200
 Eh? Really?
-Where\, where?\
+Where, where?\
 
 Action:marisa,403# 魔理沙　決めポーズ
 Balloon:marisa,1,0,-200
@@ -155,7 +155,7 @@ C'mon! Where is it!\
 # 魔理沙　倒れた状態
 Balloon:marisa,1,0,-200
 Owww.
-I'll talk already\, so just hold up a sec.\
+I'll talk already, so just hold up a sec.\
 
 That thing...
 went into this here Geyser Underground Center.\
@@ -177,7 +177,7 @@ Sleep:120
 
 Action:marisa,404# 魔理沙は起き上がって
 Balloon:marisa,1,0,-200
-Well then\, that was a total lie.\
+Well then, that was a total lie.\
 
 # 魔理沙
 It's gonna be too hot for her in there.
@@ -185,7 +185,7 @@ Serves her right.\
 
 Action:marisa,402# 魔理沙　疑問に思う
 But what was that about a Daidarabocchi...?
-Hey\, what's that? In the forest...\
+Hey, what's that? In the forest...\
 
 Balloon:null,1,0,-200
 

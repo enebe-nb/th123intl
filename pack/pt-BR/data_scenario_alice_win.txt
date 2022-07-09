@@ -29,8 +29,8 @@ End:
 Label:marisaU0
 Face:lose,ïâ
 Face:win,åà
-Soon\, the ultimate doll should be complete.
-With this\, the forest will be mine.\
+Soon, the ultimate doll should be complete.
+With this, the forest will be mine.\
 End:
 
 
@@ -98,7 +98,7 @@ Label:remiliaU0
 Face:lose,ïâ
 Face:win,ä
 You want me to make you something?
-A tough\, square doll?\
+A tough, square doll?\
 End:
 
 
@@ -120,8 +120,8 @@ End:
 Label:yukariU0
 Face:lose,ïâ
 Face:win,ïÅ
-Every time a service is held for a doll\,
-it gets dropped into Gensokyo\, I see.\
+Every time a service is held for a doll,
+it gets dropped into Gensokyo, I see.\
 End:
 
 
@@ -131,7 +131,7 @@ End:
 Label:suikaU0
 Face:lose,ïâ
 Face:win,ä
-Pretty soon\, I'll cut you down to size.
+Pretty soon, I'll cut you down to size.
 You have no exclusive patent on enlargement!\
 End:
 
@@ -174,8 +174,8 @@ End:
 Label:ikuU0
 Face:lose,ïâ
 Face:win,ïÅ
-Worrying about earthquakes\, huh.
-Well\, if you live in Gensokyo
+Worrying about earthquakes, huh.
+Well, if you live in Gensokyo
 you should be mentally prepared for it anyway.\
 End:
 
@@ -186,7 +186,7 @@ Label:tenshiU0
 Face:lose,ïâ
 Face:win,òf
 They say the hina dolls' festival is in the 
-peach season\, but by today's calendar\, the
+peach season, but by today's calendar, the
 peach blossoms aren't out yet...\
 End:
 
@@ -198,7 +198,7 @@ Label:sanaeU0
 Face:lose,ïâ
 Face:win,ä
 You're very different from Reimu.
-Yes\, shrine maidens and gods are meant to be a pair.\
+Yes, shrine maidens and gods are meant to be a pair.\
 End:
 
 ## =======================================================================
@@ -207,7 +207,7 @@ End:
 Label:chirnoU0
 Face:lose,ïâ
 Face:win,ïÅ
-Even if you were stuffed inside a doll\,
+Even if you were stuffed inside a doll,
 I don't think anyone would notice...\
 End:
 
@@ -251,7 +251,7 @@ End:
 Label:common0
 
 Face:win,ïÅ
-Everyone's so starved for battle\, thinking
+Everyone's so starved for battle, thinking
 of nothing but researching new fighting techniques.\
 
 End:

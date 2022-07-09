@@ -19,7 +19,7 @@ Label:reimuU0
 Face:lose,ïâ
 Face:win,ïÅ
 Humans and youkai gather at this shrine. Even though
-you don't say it's because of your appeal\,
+you don't say it's because of your appeal,
 they still gather here nevertheless.\
 End:
 
@@ -46,7 +46,7 @@ The reason nobody feels awkward around
 a time-stopper like you is because
 you're so good at cooking.\
 I wish you'd invite me
-to dinner too\, once in a while.\
+to dinner too, once in a while.\
 End:
 
 
@@ -68,7 +68,7 @@ End:
 Label:aliceU0
 Face:lose,ïâ
 Face:win,òf
-I know you're a doll maker\, but it's a bit creepy
+I know you're a doll maker, but it's a bit creepy
 to always make them human shaped.
 Why not try making rabbits or fish sometime?\
 End:
@@ -91,7 +91,7 @@ End:
 Label:remiliaU0
 Face:lose,ïâ
 Face:win,ó]
-If you're too self-centered\,
+If you're too self-centered,
 you might wear out your welcome someday.\
 End:
 
@@ -102,9 +102,9 @@ End:
 Label:yuyukoU0
 Face:lose,ïâ
 Face:win,ó]
-If others can't understand you\,
+If others can't understand you,
 10 times out of 10 it's your personality's fault.
-That's not a good thing\, you know?\
+That's not a good thing, you know?\
 End:
 
 
@@ -114,7 +114,7 @@ End:
 Label:yukariU0
 Face:lose,ïâ
 Face:win,ó]
-To threaten as you become weaker\,
+To threaten as you become weaker,
 such is the folly of a haughty youkai.\
 End:
 
@@ -127,7 +127,7 @@ Face:lose,ïâ
 Face:win,ïÅ
 Not everybody can enjoy drinking like you do.
 It's important to take others' tastes
-into account too\, you know.\
+into account too, you know.\
 End:
 
 
@@ -159,7 +159,7 @@ Label:komachiU0
 Face:lose,ïâ
 Face:win,ó]
 An overly familiar attitude can be grating at times.
-On the other hand\, it seems to be your strong point.\
+On the other hand, it seems to be your strong point.\
 End:
 
 ## =======================================================================
@@ -169,8 +169,8 @@ End:
 Label:iku0
 Face:lose,ïâ
 Face:win,ïÅ
-It seems the danger of earthquakes has faded\, but...
-It's probably best to be prepared\, all the same.\
+It seems the danger of earthquakes has faded, but...
+It's probably best to be prepared, all the same.\
 End:
 
 ## =======================================================================
@@ -179,7 +179,7 @@ End:
 Label:tenshiU0
 Face:lose,ïâ
 Face:win,òf
-I don't know if it's because of the earthquake\,
+I don't know if it's because of the earthquake,
 but there's been rabble emerging from underground.\
 End:
 
@@ -221,7 +221,7 @@ End:
 Label:utsuhoU0
 Face:lose,ïâ
 Face:win,òf
-You're a raven sealed in the old hell\, I see.
+You're a raven sealed in the old hell, I see.
 However there are lots of other things
 coming from the underground....\
 End:
@@ -247,7 +247,7 @@ Label:common0
 
 Face:win,ïÅ
 Harmony is to be valued.
-However\, manners are necessary to maintain harmony.\
+However, manners are necessary to maintain harmony.\
 End:
 
 

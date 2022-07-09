@@ -47,7 +47,7 @@ It had to be that
 legendary giant youkai Daidarabocchi!\
 
 Action:chirno,404　#チルノ喜びのポーズ
-If I can tame it\,
+If I can tame it,
 I'm not gonna be scared of anything ever again!\
 
 Balloon:null,0,0,-200
@@ -67,11 +67,11 @@ when it disappeared.\
 Action:chirno,302　#チルノこちらを向いて驚く
 
 Balloon:chirno,1,0,-200
-Oh? As soon as the big thing disappears\,
+Oh? As soon as the big thing disappears,
 this small thing appears.\
 
 Balloon:sanae,1,0,-200
-Hey\, over there\, Miss Fairy.
+Hey, over there, Miss Fairy.
 Have you seen a giant ro...\
 
 I mean... I wonder if you've seen
@@ -86,12 +86,12 @@ Action:sanae,300　#早苗疑問動作
 
 Balloon:sanae,1,0,-200
 Daidarabocchi?
-I wonder\, did I really say anything like that...?\
+I wonder, did I really say anything like that...?\
 
 Action:chirno,407　#チルノごまかし動作高速化
 
 Balloon:chirno,1,0,-200
-Ah\, no\, never mind.
+Ah, no, never mind.
 I haven't seen anything at all!\
 
 Action:sanae,301　#早苗臨戦態勢ポーズ
@@ -153,7 +153,7 @@ Hmm.
 I'm feeling great today!\
 
 Action:chirno,404# チルノ、腕組
-Now then\, how about I go
+Now then, how about I go
 search for the Dardarabocchi?\
 
 # 吹き出しは消える

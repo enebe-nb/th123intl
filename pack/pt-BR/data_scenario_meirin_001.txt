@@ -43,7 +43,7 @@ Sleep:300;
 Action:meirin,301#右へ移動
 Action:meirin,302
 Balloon:meirin,1,0,-200
-Now that it's come to this\,
+Now that it's come to this,
 I have no choice but to ambush it!\
 
 Balloon:null,1,0,-200
@@ -59,7 +59,7 @@ Action:alice,101# アリスが入ってくる
 Action:alice,102
 
 Balloon:alice,1,0,-200
-I'd like to go to the library\,
+I'd like to go to the library,
 could you lead me there?\
 
 Action:meirin,305# 美鈴　決めポーズ
@@ -87,7 +87,7 @@ Ahaha! As expected of the
 Scarlet Devil Mansion's gatekeeper!\
 
 Action:alice,402# アリス　決めポーズ
-This temporary appearance\,
+This temporary appearance,
 you saw through it immediately!\
 
 
@@ -153,7 +153,7 @@ Of course you'd stay silent.
 It looks like you can't even move anymore.\
 
 Action:meirin,306# 美鈴　拳を握り
-But\, I don't think it'll end with this.
+But, I don't think it'll end with this.
 I have to keep up the attack!\
 
 Balloon:null,1,0,-200

@@ -39,7 +39,7 @@ End:
 Label:marisaU0
 Face:lose,ïâ
 Face:win,ó]
-Ah\, man. In the summer\, a huge hat like that
+Ah, man. In the summer, a huge hat like that
 must be good for blocking sunlight.\
 End:
 
@@ -57,7 +57,7 @@ End:
 Label:sakuyaR0
 Face:lose,ïâ
 Face:win,òf
-I want to go to the bazaar\,
+I want to go to the bazaar,
 but it's on the river plain...\
 
 Face:win,ó]
@@ -84,7 +84,7 @@ End:
 Label:aliceU0
 Face:lose,ïâ
 Face:win,ä
-Oh\, I saw a golem doll.
+Oh, I saw a golem doll.
 It looked really weak.\
 
 End:
@@ -96,7 +96,7 @@ End:
 Label:patchouliU0
 Face:lose,ïâ
 Face:win,ó]
-What\, you don't have any manga?
+What, you don't have any manga?
 These are the only books you have.\
 End:
 
@@ -118,7 +118,7 @@ End:
 Label:yuyukoU0
 Face:lose,ïâ
 Face:win,òf
-Until now\, I thought of ghosts as just zombies\,
+Until now, I thought of ghosts as just zombies,
 but you seem different.
 I wonder where the male mummies are?\
 
@@ -141,7 +141,7 @@ End:
 Label:suikaU0
 Face:lose,ïâ
 Face:win,òf
-You know\, watermelons look more like
+You know, watermelons look more like
 slices of meat than grapes.\
 End:
 
@@ -162,7 +162,7 @@ End:
 Label:udongeU0
 Face:lose,ïâ
 Face:win,ó]
-Ah\, the dumpling maker.
+Ah, the dumpling maker.
 I'll take some holy water dumplings.\
 End:
 
@@ -173,8 +173,8 @@ End:
 Label:komachiU0
 Face:lose,ïâ
 Face:win,ó]
-Unfortunately\, I can't cross the river.
-Too bad\, huh?\
+Unfortunately, I can't cross the river.
+Too bad, huh?\
 End:
 
 ## =======================================================================
@@ -207,7 +207,7 @@ End:
 Label:tenshiU0
 Face:lose,ïâ
 Face:win,ã¡
-Ehh\, so other than peaches\, you also eat pills?
+Ehh, so other than peaches, you also eat pills?
 Do you eagerly chew on Jintan and the such?\
 End:
 
@@ -218,7 +218,7 @@ End:
 Label:sanaeU0
 Face:lose,ïâ
 Face:win,ïÅ
-Heh\, so just causing wind to blow makes you a god?\
+Heh, so just causing wind to blow makes you a god?\
 End:
 
 ## =======================================================================
@@ -257,7 +257,7 @@ Label:suwakoU0
 Face:lose,ïâ
 Face:win,ïÅ
 You seem to be in constant motion.
-I thought fighting you would be interesting\, but...\
+I thought fighting you would be interesting, but...\
 End:
 
 
@@ -268,7 +268,7 @@ End:
 #0ÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇRÇSÇTÇUÇVÇWÇXÇOÇPÇQÇR
 Label:common0
 Face:win,òf
-Hmm\, I can't see anyone to kill time on...\
+Hmm, I can't see anyone to kill time on...\
 End:
 
 

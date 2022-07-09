@@ -195,11 +195,11 @@ Action:utsuho,402　#空起き上がる
 Action:utsuho,202  #ニュートラル検知
 #空ニュートラル移行検知
 Balloon:utsuho,1,0,-200
-Now then\, you can't possibly escape
+Now then, you can't possibly escape
 from my next attack!\
 
 Action:utsuho,404　#空　驚きのポーズ
-Eh\, what?
+Eh, what?
 Could it be...\
 
 Action:utsuho,403　#空　疑問　
@@ -208,7 +208,7 @@ she got vaporized without a trace?\
 
 Action:utsuho,206# 空　普通
 
-I overdid it a bit. Well\, whatever.
+I overdid it a bit. Well, whatever.
 Let's get back to work.\
 
 Balloon:null,1,0,-200

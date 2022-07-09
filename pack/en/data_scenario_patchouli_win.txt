@@ -41,7 +41,7 @@ End:
 Label:sakuyaU0
 Face:lose,ïâ
 Face:win,òf
-Recently\, that rat has been doing more damage again.\
+Recently, that rat has been doing more damage again.\
 End:
 
 
@@ -52,7 +52,7 @@ End:
 Label:youmuU0
 Face:lose,ïâ
 Face:win,ïÅ
-Explaining the existence of ghosts with magic\,
+Explaining the existence of ghosts with magic,
 that's a good first step in studying magic.\
 End:
 
@@ -65,7 +65,7 @@ Label:aliceU0
 Face:lose,ïâ
 Face:win,ã¡
 Though you're using magical strings to control
-the dolls\, controlling so many is quite a feat.\
+the dolls, controlling so many is quite a feat.\
 End:
 
 
@@ -75,7 +75,7 @@ End:
 Label:patchouli0
 Face:lose,ïâ
 Face:win,ïÅ
-However\, image-splitting is tiring...\
+However, image-splitting is tiring...\
 End:
 
 ## =======================================================================
@@ -112,8 +112,8 @@ End:
 Label:yukariR0
 Face:lose,ïâ
 Face:win,ïÅ
-After that\, there's been various things
-spurting from the underworld\, it seems.\
+After that, there's been various things
+spurting from the underworld, it seems.\
 
 Face:win,òf
 There was something that came out in early spring.
@@ -138,7 +138,7 @@ End:
 Label:ayaU0
 Face:lose,ïâ
 Face:win,åà
-If you want to sort them\,
+If you want to sort them,
 tengu are the magician types.
 They're the same in seeking the truth.\
 End:
@@ -159,7 +159,7 @@ End:
 Label:komachiU0
 Face:lose,ïâ
 Face:win,ã¡
-The Higan has no day or night\, no winter or summer.
+The Higan has no day or night, no winter or summer.
 I wonder what that means.\
 End:
 
@@ -182,7 +182,7 @@ Label:tenshiU0
 Face:lose,ïâ
 Face:win,ïÅ
 Heaven has no weather?
-So you mean\, weather is something that was conjured?\
+So you mean, weather is something that was conjured?\
 End:
 
 
@@ -196,7 +196,7 @@ Face:win,ïÅ
 Curses base themselves on imitating form.\
 
 Face:win,ïÅ
-From the start\, they're different from
+From the start, they're different from
 magic which exposes the truth.
 But I guess in the end they're the same thing.\
 End:
@@ -230,12 +230,12 @@ Reading manga all the time makes you sleepy.
 That's because you don't use your head.\
 
 Face:win,ïÅ
-When you're sleepy\, is it because you're
-not thinking\, or is it that it doesn't
+When you're sleepy, is it because you're
+not thinking, or is it that it doesn't
 require thinking at all?\
 
 Face:win,åà
-If you use your head\, then you won't become sleepy.\
+If you use your head, then you won't become sleepy.\
 
 End:
 
@@ -245,7 +245,7 @@ End:
 Label:utsuhoU0
 Face:lose,ïâ
 Face:win,ïÅ
-So\, how does nuclear fusion work?
+So, how does nuclear fusion work?
 I wonder how it creates energy.\
 End:
 
@@ -256,7 +256,7 @@ End:
 Label:suwakoU0
 Face:lose,ïâ
 Face:win,åà
-The powers that gods use are basically curses\, huh?\
+The powers that gods use are basically curses, huh?\
 End:
 
 
@@ -270,13 +270,13 @@ Label:common0
 
 Face:win,åà
 The power of magic is like that of science.
-Meaning\, it's at the forefront of the times!\
+Meaning, it's at the forefront of the times!\
 End:
 
 Label:common1
 
 Face:win,ïÅ
-Ahhh\, boiling water with magic today as well.\
+Ahhh, boiling water with magic today as well.\
 End:
 
 ## =======================================================================

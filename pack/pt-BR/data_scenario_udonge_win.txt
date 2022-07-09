@@ -30,7 +30,7 @@ Label:marisaU0
 Face:lose,ïâ
 Face:win,äæ
 Even with all your firepower
-you can't match me\, can you?\
+you can't match me, can you?\
 End:
 
 
@@ -40,15 +40,15 @@ End:
 Label:sakuyaU0
 Face:lose,ïâ
 Face:win,ó]
-Even if you stop time\, you can't escape
-from illusions\, you know?\
+Even if you stop time, you can't escape
+from illusions, you know?\
 End:
 
 Label:sakuyaU1
 Face:lose,ïâ
 Face:win,åà
 Illusions take place within the brain.
-In other words\, an illusion will
+In other words, an illusion will
 beat the speed of light!\
 End:
 
@@ -59,7 +59,7 @@ End:
 Label:youmuU0
 Face:lose,ïâ
 Face:win,ïÅ
-When it comes to illusions\, humans get scared by
+When it comes to illusions, humans get scared by
 seeing even a third of a ghost. Most of them
 are 90% sure it was only a hallucination though.\
 End:
@@ -84,7 +84,7 @@ Label:patchouliU0
 Face:lose,ïâ
 Face:win,òf
 You say you have bad eyes?
-Nah\, people with bad eyes can
+Nah, people with bad eyes can
 see many different things.\
 End:
 
@@ -95,7 +95,7 @@ End:
 Label:remiliaU0
 Face:lose,ïâ
 Face:win,ã¡
-However fast you may go\, there's no way
+However fast you may go, there's no way
 you can escape from my illusions.\
 End:
 
@@ -127,7 +127,7 @@ Label:yukariR1
 Face:lose,ïâ
 Face:win,ïÅ
 They can see many kinds of small things in the
-outside world using things like microscopes\, right?\
+outside world using things like microscopes, right?\
 
 Face:win,òf
 It really seems that the act of looking itself
@@ -142,7 +142,7 @@ Label:suikaU0
 Face:lose,ïâ
 Face:win,ã¡
 Oni...... ehhhh.
-Well\, I don't see them very often.\
+Well, I don't see them very often.\
 End:
 
 
@@ -163,7 +163,7 @@ End:
 Label:udonge0
 Face:lose,ïâ
 Face:win,òf
-Ah\, red eyes again...
+Ah, red eyes again...
 Maybe I haven't had enough sleep.\
 End:
 
@@ -186,7 +186,7 @@ End:
 Label:ikuU0
 Face:lose,ïâ
 Face:win,ïÅ
-You can swim through the air like an angel\,
+You can swim through the air like an angel,
 but your robe looks a bit torn up...\
 End:
 
@@ -197,14 +197,14 @@ End:
 Label:tenshiU0
 Face:lose,ïâ
 Face:win,ã¡
-Peaches? Wow\, how nostalgic.\
+Peaches? Wow, how nostalgic.\
 End:
 
 Label:tenshiU1
 Face:lose,ïâ
 Face:win,ó]
 Even Heaven is not at the top of everything.
-From the moon\, it's still on the ground.\
+From the moon, it's still on the ground.\
 End:
 
 
@@ -225,7 +225,7 @@ End:
 Label:chirnoU0
 Face:lose,ïâ
 Face:win,ïÅ
-When you cool things down\, you take heat
+When you cool things down, you take heat
 from the surroundings. You probably
 warm up inside as a result.\
 End:
@@ -237,7 +237,7 @@ Label:meirinU0
 Face:lose,ïâ
 Face:win,ó]
 An exercise that's good for your health?
-Well\, I think medicines are better.\
+Well, I think medicines are better.\
 End:
 
 ## =======================================================================
@@ -247,7 +247,7 @@ Label:utsuhoU0
 Face:lose,ïâ
 Face:win,ã¡
 Nuclear energy....
-Such a fearsome power\,
+Such a fearsome power,
 I'm glad that the user is a moron.\
 End:
 
@@ -257,7 +257,7 @@ End:
 Label:suwakoU0
 Face:lose,ïâ
 Face:win,äæ
-As a native god\, you shouldn't let your power
+As a native god, you shouldn't let your power
 go to waste. That's what my master said.\
 End:
 
@@ -271,12 +271,12 @@ Label:common0
 
 Face:win,ïÅ
 You intended to move straight ahead
-but from the start\, you were dizzy.\
+but from the start, you were dizzy.\
 End:
 
 Label:common0
 Face:win,ó]
-Well\, you're an earth creature.
+Well, you're an earth creature.
 That's why you lost. \
 
 End:

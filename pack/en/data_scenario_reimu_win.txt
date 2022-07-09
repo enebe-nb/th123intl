@@ -41,7 +41,7 @@ End:
 Label:marisaR0
 Face:lose,負
 Face:win,普
-Speaking of which\, that unidentified flying youkai\
+Speaking of which, that unidentified flying youkai\
 ...
 
 Face:win,惑
@@ -89,7 +89,7 @@ End:
 Label:youmuU2
 Face:lose,負
 Face:win,余
-Next time\, you should come have
+Next time, you should come have
 a test of courage at my place.
 You'll be frightened by the monsters there.\
 End:
@@ -103,7 +103,7 @@ Face:lose,負
 Face:win,普
 Are you holding proper funerals for your dolls?
 Lots of things can possess something
-that looks like a human\, you know?\
+that looks like a human, you know?\
 End:
 
 Label:aliceR0
@@ -122,7 +122,7 @@ End:
 Label:patchouliU0
 Face:lose,負
 Face:win,普
-It's so hot\, I've thought about not moving at all...\
+It's so hot, I've thought about not moving at all...\
 End:
 
 ## =======================================================================
@@ -152,7 +152,7 @@ End:
 Label:yukariU0
 Face:lose,負
 Face:win,普
-I'm feeling a bit bored\, but...\
+I'm feeling a bit bored, but...\
 End:
 
 Label:yukariR0
@@ -214,7 +214,7 @@ Label:udongeU1
 Face:lose,負
 Face:win,余
 There seem to be trees called eye drop trees up on
-the mountain. If your eyes get so horribly red\,
+the mountain. If your eyes get so horribly red,
 why don't you try finding them?\
 End:
 
@@ -226,7 +226,7 @@ End:
 Label:komachiU0
 Face:lose,負
 Face:win,余
-Hello slacker\, is it alright
+Hello slacker, is it alright
 for you to loiter around here?\
 End:
 
@@ -261,7 +261,7 @@ Heaven seems hot.
 There's no shade to hide from the sun.\
 
 Face:win,驚
-Ah\, but the higher you climb the colder it gets.\
+Ah, but the higher you climb the colder it gets.\
 
 Face:win,余
 Would Heaven above the mountain be hot?
@@ -287,11 +287,11 @@ Label:sanaeR0
 Face:lose,負
 Face:win,汗
 Even if you get enough people
-to open a branch shrine\,\
+to open a branch shrine,\
 
 Face:win,普
 everyone needs to donate.
-Profit is an indication of faith\,\
+Profit is an indication of faith,\
 
 Face:win,余
 so you want more situations where
@@ -362,13 +362,13 @@ Label:common0
 
 Face:win,普
 This year's summer sure is peaceful.
-It's good to be bored\, probably.\
+It's good to be bored, probably.\
 End:
 
 Label:common1
 
 Face:win,惑
-Something usually happens during the summer\, though.\
+Something usually happens during the summer, though.\
 End:
 
 ## =======================================================================
