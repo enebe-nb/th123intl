@@ -3,7 +3,7 @@
     "charset": 134,
     "packs": ["pack/zh.dat"],
     "font": {
-        "files": ["simhei.ttf"],
+        "files": ["font/simhei.ttf"],
         "profile":{
             "name": "simhei"
         },

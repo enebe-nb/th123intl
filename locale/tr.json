@@ -1,28 +1,28 @@
 {
-    "locale": "pt-BR",
-    "charset": 0,
-    "packs": ["pack/pt-BR.dat"],
+    "locale": "tr-TR",
+    "charset": 162,
+    "packs": ["pack/empty-csv.dat", "pack/tr.dat"],
     "font": {
-        "files": ["font/MonoSpatialModSWR.ttf"],
+        "files": ["font/Roboto-Medium.ttf"],
         "profile":{
-            "name": "MonoSpatialModSWR"
+            "name": "Roboto Medium"
         },
         "deck":{
-            "name": "MonoSpatialModSWR"
+            "name": "Roboto Medium"
         },
         "gui":{
-            "name": "MonoSpatialModSWR"
+            "name": "Roboto Medium"
         },
         "number":{
-            "name": "MonoSpatialModSWR",
+            "name": "Roboto Medium",
             "paddingY": 0
         },
         "story":{
-            "name": "MonoSpatialModSWR",
+            "name": "Roboto Medium",
             "spacingX": 0
         },
         "unknown05":{
-            "name": "MonoSpatialModSWR",
+            "name": "Roboto Medium",
             "paddingY": 1,
             "spacingY": 1
         }

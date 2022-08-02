@@ -43,17 +43,14 @@ add_resourcepack(generate-pack jp)
 add_resourcepack(generate-pack en)
 add_resourcepack(generate-pack zh)
 add_resourcepack(generate-pack pt-BR)
+add_resourcepack(generate-pack tr)
 add_dependencies(th123intl generate-pack)
 
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/locale)
 install(TARGETS th123intl LIBRARY DESTINATION ${BASE_INSTALL_PATH})
-install(FILES
-    ${CMAKE_CURRENT_SOURCE_DIR}/pack/MonoSpatialModSWR.ttf
-    ${CMAKE_CURRENT_SOURCE_DIR}/pack/simhei.ttf
-    DESTINATION ${BASE_INSTALL_PATH})
-install(FILES
-    ${CMAKE_CURRENT_SOURCE_DIR}/locale/en.json
-    ${CMAKE_CURRENT_SOURCE_DIR}/locale/pt-BR.json
-    ${CMAKE_CURRENT_SOURCE_DIR}/locale/jp.json
-    ${CMAKE_CURRENT_SOURCE_DIR}/locale/zh.json
-    DESTINATION ${BASE_INSTALL_PATH}/locale)
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/font
+    DESTINATION ${BASE_INSTALL_PATH}
+    FILES_MATCHING PATTERN "*.ttf")
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/locale
+    DESTINATION ${BASE_INSTALL_PATH}
+    FILES_MATCHING PATTERN "*.json")

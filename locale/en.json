@@ -3,7 +3,7 @@
     "charset": 0,
     "packs": ["pack/en.dat"],
     "font": {
-        "files": ["MonoSpatialModSWR.ttf"],
+        "files": ["font/MonoSpatialModSWR.ttf"],
         "profile":{
             "name": "MonoSpatialModSWR"
         },
