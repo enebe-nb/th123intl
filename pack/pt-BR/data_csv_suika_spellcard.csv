@@ -1,23 +1,23 @@
 "#Spell Number","Spell Name","Type: 255 Enemies, 2 Spells, 1 Skills, 0 Systems","Consumption","Card Description",,,,,,,,,,sort
-100,"Spectre -Dense-",1,0,"Gathers surrounding heat and releases it in a burst along with a punch. Along with physical damage\, the flames act as a projectile.",0,1,104,1,108,1,212,5,9,100
-101,"Gnome -Dense-",1,2,"Manipulates subterranean features to change the landscape. Boulders become lances shooting from the earth\, and the rocks are also like punches when they fall back down.",0,1,105,1,109,1,0,0,9,110
-102,"Spectre -Thin-",1,1,"Uses her hair to make copies of herself. Individually\, they\'re weak\, but there\'s lots of them. The attack button determines their movement.",0,1,106,1,110,1,0,0,9,120
-103,"Gathering Oni",1,4,"A black hole that sucks in the opponent. Sits at a fixed distance from the point of firing and obstructs the opponent\'s movement.",0,1,107,1,111,1,200,2,9,140
-104,"Oni Spirit Bomb",1,0,"Gathers surrounding heat to make a fireball and throws it straight ahead. Charging makes the fireball bigger; you can create quite a powerful attack.",1,1,0,0,0,0,0,0,9,101
-105,"Gnome -Thin-",1,2,"Pounds the earth to awaken earth spirits. The spirits float in the air and damage the opponent on contact.",1,1,201,2,0,0,0,0,9,111
-106,"Unpleasant Mist",1,1,"A mist surrounds Suika and allows her to move freely. Hold down the button\, and she can remain in mist form longer\, but will leave her immobile for a longer time upon materializing again.",1,1,206,2,0,0,0,0,9,121
-107,"Thin Oni",1,4,"Fires a white hole that releases bullets. The temporary barrage can give you the upper hand.",1,1,0,0,0,0,0,0,9,141
-108,"Foot Bellows",1,0,"Stomps the ground\, and sends shockwaves around. She jumps in this attack\, so it\'s very decieving\, but it\'s not very strong.",0,1,202,3,0,0,0,0,9,102
-109,"Fire Oni",1,2,"Hits the ground and makes magma balls erupt. Leveling up this attack makes the magma pebbles more damaging\, and the range of this attack greater.",1,1,207,3,0,0,0,0,9,112
-110,"Ignis Fatuus",1,1,"An all-around great skill\, fires a fast blue-white ball of flame that tracks the enemy.",1,1,207,3,0,0,0,0,9,122
-111,"Kidnapping Oni",1,4,"Using gravity\, draws the enemy towards her\, and unconciously uses gravitational forces to throw the enemy far. You can control where she throws the enemy.",0,1,208,5,0,0,0,0,9,142
-200,"Gather Sign \"Throwing Mt. Togakushi\"",2,2,"Gathers all the stones and pebbles around to form a huge rock which she hurls at her opponent. It\'s slow\, but on the other hand\, it can\'t be grazed.",0,2,203,4,0,0,0,0,9,210
-201,"Drunk Sign \"Art of Oni Binding\"<a> ",2,2,"Binds the enemy with a chain and damages their spirit power. It doesn\'t do much damage\, but it can pull enemies closer.",0,2,204,4,0,0,0,0,9,211
-202,"Oni Sign \"Missing Power\"",2,2,"Suika becomes huge and scatters everything around her. It wears off right away\, but it\'s enough to scare off approaching enemies.",0,3,205,4,0,0,0,0,9,212
-203,"Gathering Oni \"Throwing Atlas\"",2,5,"Makes a grab at the enemy and throws them tied to a boulder. It can be blocked like regular damage\, but you\'re invincible while you do it.",1,4,0,0,0,0,0,0,9,240
-204,"Drunken Dream \"Art of Gaki Binding\"",2,4,"A special technique that binds an enemy and causes them to lose spirit over time. Since your opponent can\'t fire at will\, you can really influence the game flow.",1,4,0,0,0,0,0,0,9,230
-205,"Great Oni \"Missing Purple Power\"",2,4,"Suika becomes huge and runs amok. You can\'t block enemy attacks\, but you won\'t flinch\, so it\'s easy to have your way with them.",1,4,0,0,0,0,0,0,9,231
-206,"Mist Sign \"Gathering and Dissipating\"",2,1,"Creates a defensive shield of oni mist that blocks enemy projectiles and follows the opponent around.",1,2,0,0,0,0,0,0,9,200
-207,"Will-o-wisp \"Superdense Conflagration\"",2,4,"Pounds the ground\, causing lava to blow upwards. The lava bounces several times\, so this has extensive range.",1,3,0,0,0,0,0,0,9,232
-208,"Oni Sign \"Massacre on Mt.Ooe\"<a> ",2,5,"Grabs the opponent and slams them into the ground over and over\, culminating in an explosion. It\'s unblockable\, but its range requires you to be extremely close.",1,5,0,0,0,0,0,0,9,241
-212,"Secret of Kings \"3-Step Destruction\"",2,3,"Suika becomes huge and throws consecutive punches at the enemy. This move is full of defensive holes so be prepared before you take this gamble.",0,5,0,0,0,0,0,0,9,220
+100,Espectro -Denso-,1,0,"Acumula calor dos arredores e o libera em um estouro com um soco. Junto com o dano físico\, as chamas agem como um projétil.",0,1,104,1,108,1,212,5,9,100
+101,Gnomo -Denso-,1,2,"Manipula características subterrâneas para moldar o terreno. Pedregulhos se tornam lanças saindo da terra\, e as rochas também são como socos quando caem de volta.",0,1,105,1,109,1,0,0,9,110
+102,Epectro -Fino-,1,1,"Utiliza seu cabelo para fazer cópias de si. Individualmente\, são fracas\, mas há muitos dela. O botão de ataque determina suas movimentações.",0,1,106,1,110,1,0,0,9,120
+103,Reunião Oni,1,4,Um buraco negro que suga o oponente. Permanece em uma distância fixa do ponto de disparo e obstrui o movimento do oponente.,0,1,107,1,111,1,200,2,9,140
+104,Bomba Espiritual de Oni,1,0,Acumula o calor dos arredores para fazer uma bola de fogo e a arremessa à sua frente. Carregar torna a bola de fogo maior; você pode criar um ataque bastante poderoso.,1,1,0,0,0,0,0,0,9,101
+105,Gnomo -Fino-,1,2,Pisoteia o chão para acordar espíritos da terra. Os espíritos flutuam no ar e causam dano ao oponente no contato.,1,1,201,2,0,0,0,0,9,111
+106,Névoa Desagradável,1,1,"Uma névoa rodeia Suika e permite que ela se mova livremente. Ao segurar o botão\, ela pode permanecer na forma de névoa por mais tempo\, mas a deixará imóvel por mais tempo ao se materializar novamente.",1,1,206,2,0,0,0,0,9,121
+107,Oni Magro,1,4,Dispara um buraco branco que solta projéteis. A supressão temporária pode lhe deixar em vantagem.,1,1,0,0,0,0,0,0,9,141
+108,Fole de Pé,1,0,"Pisoteia o chão\, e envia ondas de choque. Ela pula neste ataque\, então é bastante enganador\, mas não muito forte.",0,1,202,3,0,0,0,0,9,102
+109,Oni de Fogo,1,2,"Bate no chão e causa a erupção de bolas de magma. Subir o nível deste ataque torna as pedras de magma mais fortes\, e o alcance deste ataque maior.",1,1,207,3,0,0,0,0,9,112
+110,Ignis Fatuus,1,1,"Uma ótima habilidade de uso geral\, dispara uma rápida bola de fogo azul e branca que persegue o inimigo.",1,1,207,3,0,0,0,0,9,122
+111,Oni Sequestrador,1,4,"Utilizando gravidade\, puxa o inimigo para si\, e inconscientemente usa forças gravitacionais para arremessar o inimigo longe. Você pode escolher onde ela arremessa o inimigo.",0,1,208,5,0,0,0,0,9,142
+200,"Sinal de Reunião \"Arremessando a Mt. Togakushi\"",2,2,"Junta todas a rochas e pedras para formar um enorme pedregulho que ela arremessa no oponente. É lento\, mas por outro lado\, não pode ser esquivado.",0,2,203,4,0,0,0,0,9,210
+201,"Sinal do Bêbado \"Arte de Amarrar Oni\"",2,2,"Amarra o inimigo com uma corrente e causa dano ao seu poder espiritual. Não causa muito dano\, mas pode puxar inimigos para perto.",0,2,204,4,0,0,0,0,9,211
+202,"Sinal Oni \"Poder Ausente\"",2,2,"Suika se torna enorme e derruba tudo ao seu redor. O efeito passa em um instante\, mas é o suficiente para assustar inimigos se aproximando.",0,3,205,4,0,0,0,0,9,212
+203,"Reunião Oni \"Arremesso de Atlas\"",2,5,"Agarra o inimigo e o arremessa amarrado a um pedregulho. Pode ser bloqueado como dano regular\, mas você é invencível enquanto o executa.",1,4,0,0,0,0,0,0,9,240
+204,"Sonho Bêbado \"Arte de Amarrar Gaki\"",2,4,"Uma técnica especial que amarra um inimigo e faz com que ele perca poder espiritual com o tempo. Como seu oponente não pode disparar à vontade\, você pode realmente influenciar o fluxo do jogo.",1,4,0,0,0,0,0,0,9,230
+205,"Grande Oni \"Power Roxo Ausente\"",2,4,"Suika se torna gigante e enlouquece. Você não pode bloquear ataques inimigos\, mas você não será parada\, então se torna fácil de fazer o que quiser com eles.",1,4,0,0,0,0,0,0,9,231
+206,"Sinal de Névoa \"Juntando e Dissipando\"",2,1,Cria um escudo defensivo de névoa oni que bloqueia projéteis inimigos e persegue o oponente.,1,2,0,0,0,0,0,0,9,200
+207,"Fogo-fátuo \"Conflagração Superdensa\"",2,4,"Pisoteia o chão\, causando um estouro de lava para cima. A lava quica várias vezes\, então isso possui um alcance extensivo.",1,3,0,0,0,0,0,0,9,232
+208,"Sinal Oni \"Massacre na Mt.Ooe\"",2,5,"Agarra o oponente e bate ele no chão várias vezes\, culminando em uma explosão. Não é bloqueável\, mas seu alcance requer que você esteja extremamente próximo.",1,5,0,0,0,0,0,0,9,241
+212,"Segredo dos Reis \"Destruição de 3 Passos\"",2,3,Suika se torna gigante e dá socos consecutivos no inimigo. Este golpe possui várias brechas defensivas então esteja preparada antes de fazer essa aposta.,0,5,0,0,0,0,0,0,9,220

@@ -455,6 +455,9 @@ void LoadHooks() {
 
     // Patch font charset
     *(uint32_t*)0x411c64 = langConfig.charset;
+    // Patch Spellcard text width
+    // *(uint32_t*)0x4379e3 = 640;
+    // *(uint32_t*)0x4381be = 640;
 
     // Change CreateTextTexture to accept langConfig.locale
     //[esp+0x10]: len;
