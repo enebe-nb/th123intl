@@ -146,7 +146,8 @@ static inline void TamperCode(uint32_t address, const uint8_t (&code)[S]) {
 
 static inline void LoadCustomPacks() {
     for (auto& pack : langConfig.packFiles) {
-        std::string systemPath; th123intl::ConvertCodePage(pack.wstring(), CP_ACP, systemPath);
+        // making it relative is the best solution, the game won't support path with nonASCII glyphs
+        std::string systemPath; th123intl::ConvertCodePage(std::filesystem::relative(pack).wstring(), CP_ACP, systemPath);
         orig_appendDataPackage(systemPath.c_str());
     }
     *(bool*)0x8a0048 = true; // hack

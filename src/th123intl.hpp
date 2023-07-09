@@ -41,7 +41,6 @@ namespace th123intl {
             to.resize(size);
             if (!WideCharToMultiByte(toCP, outFlags, buffer.data(), -1, to.data(), to.size(), NULL, NULL))
                 { to.resize(0); return; }
-            to.resize(size-1);
         }
     }
 
@@ -51,7 +50,6 @@ namespace th123intl {
         to.resize(size);
         if (!WideCharToMultiByte(toCP, flags, from.data(), from.size(), to.data(), to.size(), NULL, NULL))
             { to.resize(0); return; }
-        to.resize(size-1);
     }
 
     template<int flags = MB_USEGLYPHCHARS>
@@ -60,7 +58,6 @@ namespace th123intl {
         to.resize(size);
         if (!MultiByteToWideChar(fromCP, flags, from.data(), from.size(), to.data(), to.size()))
             { to.resize(0); return; }
-        to.resize(size-1);
     }
 }
 
