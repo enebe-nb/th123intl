@@ -99,12 +99,12 @@ static void LoadConfig(const std::filesystem::path& filename) {
 
         auto array = json["packs"];
         if (array.is_array()) for (auto iter = array.begin(); iter != array.end(); ++ iter) {
-            langConfig.packFiles.push_back(modulePath / iter->get<std::string>());
+            langConfig.packFiles.push_back(modulePath / iter->get<std::wstring>());
         }
 
         array = json["font"]["files"];
         if (array.is_array()) for (auto iter = array.begin(); iter != array.end(); ++ iter) {
-            AddFontResourceExW((modulePath / iter->get<std::string>()).c_str(), FR_PRIVATE, 0);
+            AddFontResourceExW((modulePath / iter->get<std::wstring>()).c_str(), FR_PRIVATE, 0);
         }
 
         array = json["font"];

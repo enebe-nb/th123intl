@@ -3,6 +3,7 @@
 #include <mbstring.h>
 
 #include "main.hpp"
+#include "th123intl.hpp"
 #define SOKU_USE_UTF16
 
 namespace {
@@ -144,7 +145,10 @@ static inline void TamperCode(uint32_t address, const uint8_t (&code)[S]) {
 }
 
 static inline void LoadCustomPacks() {
-    for (auto& pack : langConfig.packFiles) orig_appendDataPackage(pack.string().c_str());
+    for (auto& pack : langConfig.packFiles) {
+        std::string systemPath; th123intl::ConvertCodePage(pack.wstring(), CP_ACP, systemPath);
+        orig_appendDataPackage(systemPath.c_str());
+    }
     *(bool*)0x8a0048 = true; // hack
 
     if (systemStrings == 0) systemStrings = new SokuLib::CSVParser("data/csv/system.cv1");

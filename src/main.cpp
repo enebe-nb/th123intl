@@ -1,5 +1,6 @@
 #include <windows.h>
 #include "main.hpp"
+#include "th123intl.hpp"
 
 #include <nlohmann/json.hpp>
 
@@ -31,7 +32,8 @@ extern "C" __declspec(dllexport) bool CheckVersion(const BYTE hash[16]) {
 extern "C" __declspec(dllexport) bool Initialize(HMODULE hMyModule, HMODULE hParentModule) {
     GetModulePath(hMyModule, modulePath);
 #ifdef _DEBUG
-    logging << "modulePath: " << modulePath << std::endl;
+    std::string pathText; th123intl::ConvertCodePage(modulePath.wstring(), CP_ACP, pathText);
+    logging << "modulePath: " << pathText << std::endl;
 #endif
 
     LoadLanguage();
@@ -43,6 +45,15 @@ extern "C" __declspec(dllexport) bool Initialize(HMODULE hMyModule, HMODULE hPar
 }
 
 extern "C" __declspec(dllexport) void AtExit() {}
+
+extern "C" __declspec(dllexport) unsigned int GetTextCodePage() {
+    if (!langConfig.locale) return 932;
+    return ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
+}
+
+extern "C" __declspec(dllexport) void* GetLocale() {
+    return (void*) langConfig.locale;
+}
 
 BOOL WINAPI DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved) {
     return true;
