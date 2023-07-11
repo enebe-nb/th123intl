@@ -43,7 +43,6 @@ add_resourcepack(generate-pack jp)
 add_resourcepack(generate-pack en)
 add_resourcepack(generate-pack zh)
 add_resourcepack(generate-pack pt-BR)
-add_resourcepack(generate-pack tr)
 add_dependencies(th123intl generate-pack)
 
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/locale)
