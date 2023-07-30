@@ -328,61 +328,33 @@ static void __fastcall repl_textShadow(int height, int width, int line, unsigned
 }
 */
 
-template <std::size_t S>
-inline int ACP2Locale(char (&dst)[S], const char* src, unsigned int len) {
-    wchar_t wstr[S];
-    int wlen = MultiByteToWideChar(GetACP(), 0, src, len, wstr, S);
-    if (wlen) {
-        int llen = _wcstombs_l(dst, wstr, wlen, langConfig.locale);
-        dst[llen] = '\0';
-#ifdef _DEBUG
-        logging << "str convert: \"" << src << "\" -> \"" << dst << "\"" <<std::endl;
-#endif
-        return llen;
-    }
-    return 0;
-}
+static int __fastcall repl_CProfileListAppendLine(SokuLib::CProfileList& self, void* unused, SokuLib::String& out, void* unknown, SokuLib::Deque<SokuLib::String>& list, int index) {
+    SokuLib::String src = list[index];
+    if (self.extLength && src.size >= self.extLength) { src.size -= self.extLength; src[src.size] = '\0'; }
+    if (self.maxLength && src.size >= self.maxLength) { src.size = self.maxLength; src[src.size] = '\0'; }
+    if (!src.size) return 0;
 
-static void __fastcall repl_copyInFilelist(void* ecx, void* edx, SokuLib::String& str) {
     const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
-    if (GetACP() == targetCP || !str.size) return orig_copyInFilelist(ecx, edx, str);
-    const char* cstr = str;
+    if (GetACP() == targetCP) { out.append(src, src.size); return src.size; }
 
-#ifdef _DEBUG
-    logging << "[1]: ";
-#endif
-    char buffer[512];
-    int len = ACP2Locale(buffer, cstr, str.size);
-    if (len) str.assign(buffer, len);
-
-    return orig_copyInFilelist(ecx, edx, str);
+    std::string buffer; th123intl::ConvertCodePage(GetACP(), std::string_view(src, src.size), targetCP, buffer);
+    out.append(buffer.c_str(), buffer.size()); return buffer.size();
 }
 
 static void __fastcall repl_copyInProfile(SokuLib::String& dst, void* edx, SokuLib::String& src, unsigned int offset, int len) {
     const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
     if (GetACP() == targetCP) return orig_copyInProfile(dst, edx, src, offset, len);
-    const char* cstr = src;
-    cstr += offset;
+    const char* cstr = src; cstr += offset;
     if (len == -1) len = src.size - offset;
-
-#ifdef _DEBUG
-    logging << "[2]: ";
-#endif
-    char buffer[512];
-    len = ACP2Locale(buffer, cstr, len);
-    if (len) dst.assign(buffer, len);
-    else orig_copyInProfile(dst, edx, src, offset, len);
+    std::string buffer; th123intl::ConvertCodePage(GetACP(), std::string_view(cstr, src.size), targetCP, buffer);
+    dst.assign(buffer.c_str(), buffer.size());
 }
 
 static int __fastcall repl_createTextTexture(void* ecx, void* edx, void* dxHandle, const char* text, void* fontHandle, int texWidth, int texHeight, int* outWidth, int* outHeight) {
     const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
     if (GetACP() == targetCP) return orig_createTextTexture(ecx, edx, dxHandle, text, fontHandle, texWidth, texHeight, outWidth, outHeight);
-    char buffer[512];
-    int len = strlen(text);
-
-    len = ACP2Locale(buffer, text, len);
-    if (len) text = buffer;
-    return orig_createTextTexture(ecx, edx, dxHandle, text, fontHandle, texWidth, texHeight, outWidth, outHeight);
+    std::string buffer; th123intl::ConvertCodePage(GetACP(), std::string_view(text), targetCP, buffer);
+    return orig_createTextTexture(ecx, edx, dxHandle, buffer.c_str(), fontHandle, texWidth, texHeight, outWidth, outHeight);
 }
 
 template <int ADDR> static void __fastcall setFont(SokuLib::SWRFont* font, int unused, SokuLib::FontDescription* desc) {
@@ -557,6 +529,8 @@ void LoadHooks() {
     // Replace link to GetGlyphOutlineA with GetGlyphOutlineW
     *(uint32_t*)0x857014 = (uint32_t) GetProcAddress(GetModuleHandle(TEXT("gdi32.dll")), "GetGlyphOutlineW");
 #endif
+    // Convert ACP to langConfig.locale in profile names
+    SokuLib::TamperDword(0x8587a4, repl_CProfileListAppendLine);
     // Replace link to MessageBoxA with custom function TODO convert to WCHAR?
     //*(uint32_t*)0x857250 = (uint32_t) repl_MessageBoxUtf8;
     // Increase max width for card name in deck edit
