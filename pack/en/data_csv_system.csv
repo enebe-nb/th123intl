@@ -65,6 +65,7 @@
 "profile.failDelete","Failed to delete profile."
 "profile.failName","Name change failed."
 "profile.nameChanged","Name changed."
+"profile.intlWarning","Please, change the profile name to an english name for better compatibility."
 
 "pattern.0","0 1 2 3 4 5 6 7 8 9<br>^<br>     .      .      .      : "
 "pattern.1","%s - %s  %03d/%03d  Time %02d.%02d"

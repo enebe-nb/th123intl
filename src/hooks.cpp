@@ -31,6 +31,9 @@ namespace {
     typedef int (__fastcall *loadImage_t)(int*, char*, void**, int*);
     loadImage_t orig_loadImage = (loadImage_t) 0x00408cf0;
 
+    std::string profileErrorTitle = "Profile copy failed.";
+    std::string profileErrorMessage = "Please, change the profile name to an english name for better compatibility.";
+
     const std::unordered_multimap<std::string_view, const char**> strMapSimple = {
         { "dinput.failCreate0", (const char**)0x40d66d },
         { "dinput.failCreate1", (const char**)0x40d6a5 },
@@ -159,6 +162,9 @@ static inline void LoadCustomPacks() {
     for(int i = 0; i < systemStrings->data.size(); ++i) {
         auto& pair = systemStrings->data.at(i);
         if (pair.size() < 2) continue;
+
+        if (strcmp(pair[0], "profile.failCopy") == 0) profileErrorTitle = (char*)pair[1];
+        if (strcmp(pair[0], "profile.intlWarning") == 0) profileErrorMessage = (char*)pair[1];
 
         { auto iter = strMapSimple.equal_range(std::string_view(pair[0], pair[0].size));
         if (iter.first != strMapSimple.end()) for(auto addr = iter.first; addr != iter.second; ++addr) {
@@ -328,17 +334,70 @@ static void __fastcall repl_textShadow(int height, int width, int line, unsigned
 }
 */
 
+static void trimLengthA(SokuLib::String& src, size_t max) {
+    size_t i, len = _mblen_l((char*)src, src.size, langConfig.locale);
+    if (len <= 0) len = 1;
+    for (i = 0; i+len <= max && i < src.size; i+=len) {
+        len = _mblen_l(&src[i], src.size - i, langConfig.locale);
+        if (len <= 0) len = 1;
+    }
+    src[i] = '\0'; src.size = i;
+}
+
+static void trimLengthB(std::string& src, size_t max) {
+    size_t i, len = _mblen_l(src.data(), src.size(), langConfig.locale);
+    if (len <= 0) len = 1;
+    for (i = 0; i+len <= max && i < src.size(); i+=len) {
+        len = _mblen_l(&src[i], src.size() - i, langConfig.locale);
+        if (len <= 0) len = 1;
+    }
+    src.resize(i);
+}
+
 static int __fastcall repl_CProfileListAppendLine(SokuLib::CProfileList& self, void* unused, SokuLib::String& out, void* unknown, SokuLib::Deque<SokuLib::String>& list, int index) {
     SokuLib::String src = list[index];
     if (self.extLength && src.size >= self.extLength) { src.size -= self.extLength; src[src.size] = '\0'; }
-    if (self.maxLength && src.size >= self.maxLength) { src.size = self.maxLength; src[src.size] = '\0'; }
     if (!src.size) return 0;
 
     const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
-    if (GetACP() == targetCP) { out.append(src, src.size); return src.size; }
+    if (GetACP() == targetCP) {
+        if (self.maxLength && src.size >= self.maxLength) trimLengthA(src, self.maxLength);
+        out.append(src, src.size);
+        return src.size;
+    }
 
     std::string buffer; th123intl::ConvertCodePage(GetACP(), std::string_view(src, src.size), targetCP, buffer);
+    if (self.maxLength && buffer.size() >= self.maxLength) trimLengthB(buffer, self.maxLength);
     out.append(buffer.c_str(), buffer.size()); return buffer.size();
+}
+
+static void validateProfileName(SokuLib::String& name) {
+    const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
+    if (GetACP() == 932 && targetCP == 932) return;
+    for (int i = 0; i < name.size; ++i) if (name[i] < 0) {
+        std::wstring errorMessage, errorTitle;
+        th123intl::ConvertCodePage(targetCP, profileErrorMessage, errorMessage);
+        th123intl::ConvertCodePage(targetCP, profileErrorTitle, errorTitle);
+        MessageBoxW(0, errorMessage.c_str(), errorTitle.c_str(), MB_ICONWARNING|MB_OK);
+        break;
+    }
+}
+
+static void __declspec(naked) repl_trimInProfile() {
+    __asm {
+        push 23;
+        push ebp;
+        call trimLengthA; // trimLengthA(str, 23)
+        call validateProfileName; // validateProfileName(str)
+        add esp, 8;
+        xor eax, eax;     // skip default trim
+        ret;
+    }
+}
+
+static void __fastcall repl_trimInReplay(SokuLib::CFileList& self, void* edx, SokuLib::String& str) {
+    if (self.extLength && str.size >= self.extLength) { str.size -= self.extLength; str[str.size] = '\0'; }
+    if (self.maxLength && str.size >= self.maxLength) trimLengthA(str, self.maxLength);
 }
 
 static void __fastcall repl_copyInProfile(SokuLib::String& dst, void* edx, SokuLib::String& src, unsigned int offset, int len) {
@@ -463,15 +522,18 @@ void LoadHooks() {
     }); // rewrite character loop to use langConfig.locale [0x4129b3]:[0x412a1b]
     SokuLib::TamperNearJmpOpr(0x004129c2, printNextChar);
 
-    // Convert ACP to langConfig.locale in profile names
+    // Convert ACP to langConfig.locale in replay and profile names
     //orig_copyInFilelist = SokuLib::TamperNearJmpOpr(0x0043cd89, repl_copyInFilelist);
-    orig_createTextTexture = SokuLib::TamperNearJmpOpr(0x0044b143, repl_createTextTexture);
-    SokuLib::TamperNearJmpOpr(0x0042c7a1, repl_copyInProfile);
+    orig_createTextTexture = SokuLib::TamperNearJmpOpr(0x0044b143, repl_createTextTexture); // replay (big line)
+    SokuLib::TamperNearJmpOpr(0x0042c7a1, repl_copyInProfile); // replay (copy string)
+    SokuLib::TamperNearJmpOpr(0x0042c8c5, repl_trimInReplay); // replay (trim string)
     orig_copyInProfile = SokuLib::TamperNearJmpOpr(0x00434ea9, repl_copyInProfile);
     TamperCode(0x434eae, {
         0x8B, 0x45, 0x14,       // MOV eax, [ebp+0x14]
         0x90, 0x90, 0x90,       // NOP NOP NOP
     }); // use length of target instead of source
+    TamperCode(0x434ec3, { 0x90 });
+    SokuLib::TamperNearCall(0x434ec4, repl_trimInProfile);
 
     // Convert string inside Csv Files without changing numbers
     // 0x433029: story?

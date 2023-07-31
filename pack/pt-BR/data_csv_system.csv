@@ -65,6 +65,7 @@
 "profile.failDelete","Falha ao excluir Perfil."
 "profile.failName","Falha ao alterar nome."
 "profile.nameChanged","Nome alterado com sucesso."
+"profile.intlWarning","Por favor, por questões de compatibilidade, troque o nome do perfil por um válido em inglês."
 
 "pattern.0","0 1 2 3 4 5 6 7 8 9<br>^<br>     .      .      .      : "
 "pattern.1","%s - %s  %03d/%03d  Time %02d.%02d"
