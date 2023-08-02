@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 string(TIMESTAMP THI_VER_DAY "%m%d" UTC)
 string(TIMESTAMP THI_VER_YEAR "%Y" UTC)
 project(th123intl
-    VERSION 0.2.${THI_VER_YEAR}.${THI_VER_DAY}
+    VERSION 0.3.${THI_VER_YEAR}.${THI_VER_DAY}
     DESCRIPTION "Internationalization tool for a specific fighting game.")
 set(THI_VERSION ${PROJECT_VERSION})
 string(REPLACE . , THI_VERSION_COMMA ${THI_VERSION})
@@ -27,14 +27,24 @@ macro(add_resourcepack target source)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/pack/${source}.dat DESTINATION ${BASE_INSTALL_PATH}/pack)
 endmacro()
 
-include_directories(${PROJECT_SOURCE_DIR}/thirdparty/json/include)
-add_subdirectory(${PROJECT_SOURCE_DIR}/thirdparty/SokuLib)
-add_library(th123intl MODULE
+set(SRC_THI
     src/main.cpp
     src/hooks.cpp
     src/language.cpp
     src/parser.cpp
 )
+
+if(WIN32)
+	set(THI_TARGET_NAME "th123intl")
+	set(THI_NAME "TH123 Intl")
+	set(THI_DESCRIPTION "Internationalization tool for a specific fighting game.")
+	configure_file(src/resource.rc.in resource.rc @ONLY)
+	list(APPEND SRC_THI ${CMAKE_CURRENT_BINARY_DIR}/resource.rc)
+endif()
+
+include_directories(${PROJECT_SOURCE_DIR}/thirdparty/json/include)
+add_subdirectory(${PROJECT_SOURCE_DIR}/thirdparty/SokuLib)
+add_library(th123intl MODULE ${SRC_THI})
 target_link_libraries(th123intl SokuLib)
 set_target_properties(th123intl PROPERTIES PREFIX "")
 add_custom_target(generate-pack)
