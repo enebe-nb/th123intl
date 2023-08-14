@@ -34,6 +34,7 @@ namespace {
 
     std::unordered_map<std::string_view, unsigned int> tilesMap = {
         {"deck", 0x450c0f},
+        {"ipport", 0x4488b3},
     };
 
     LangConfig::FontOverride setString(nlohmann::json& value) {
@@ -76,6 +77,7 @@ namespace {
         {"offsetY", 1},
         {"width", 2},
         {"height", 3},
+        {"spacing", 4},
     };
 }
 

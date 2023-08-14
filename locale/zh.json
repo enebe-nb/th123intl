@@ -20,6 +20,10 @@
         "story":{
             "name": "simhei",
             "spacingX": 0
+        },
+        "popup":{
+            "name": "simhei",
+            "paddingY": 0
         }
     },
     "tiles": {

@@ -25,11 +25,20 @@
             "name": "MonoSpatialModSWR",
             "paddingY": 1,
             "spacingY": 1
+        },
+        "popup":{
+            "name": "MonoSpatialModSWR",
+            "paddingY": 0
         }
     },
     "tiles": {
         "deck": {
             "width": 18
+        },
+        "ipport": {
+            "offsetX": 0,
+            "width": 9,
+            "spacing": 5
         }
     }
 }

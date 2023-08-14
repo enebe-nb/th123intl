@@ -450,13 +450,40 @@ template <int ADDR> static void __fastcall setTiles1(SokuLib::CTile* tile, int u
     return tile->createSlices(texture, texOffsetX, texOffsetY, width, height);
 }
 
+template <int ADDR> static void __fastcall setTiles2(SokuLib::CNumber* tile, int unused, int texture, int texOffsetX, int texOffsetY, int width, int height, int count, float textSpacing, int fontSpacing, int size, int floatSize) {
+    auto iter = langConfig.tileOverrides.find(ADDR);
+    if (iter != langConfig.tileOverrides.end()) {
+        for(auto& override : iter->second) {
+            switch (override.param) {
+                case 0: texOffsetX = override.data; break;
+                case 1: texOffsetY = override.data; break;
+                case 2: width = override.data; break;
+                case 3: height = override.data; break;
+                case 4: textSpacing = override.data; break;
+                default: break;
+            }
+        }
+    }
+#ifdef _DEBUG
+    logging << "Slicing tile "<<tilesNames[ADDR]<<" in "<<(void*)texture<<" ("<<texOffsetX<<", "<<texOffsetY<<", "<<width<<", "<<height<<
+        ", "<<count<<", "<<textSpacing<<", "<<fontSpacing<<", "<<size<<", "<<floatSize<<")" << std::endl;
+#endif
+    return (tile->*SokuLib::union_cast<void(SokuLib::CNumber::*)(int, int, int, int, int, int, float, int, int, int)>(0x414870))
+        (texture, texOffsetX, texOffsetY, width, height, count, textSpacing, fontSpacing, size, floatSize);
+}
+
 template <int ADDR> static inline void addFont(const char* name) {
     SokuLib::TamperNearJmpOpr(ADDR, setFont<ADDR>);
     fontNames[ADDR] = name;
 }
 
-template <int ADDR> static inline void addTiles(const char* name) {
+template <int ADDR> static inline void addTiles1(const char* name) {
     SokuLib::TamperNearJmpOpr(ADDR, setTiles1<ADDR>);
+    tilesNames[ADDR] = name;
+}
+
+template <int ADDR> static inline void addTiles2(const char* name) {
+    SokuLib::TamperNearJmpOpr(ADDR, setTiles2<ADDR>);
     tilesNames[ADDR] = name;
 }
 
@@ -487,7 +514,8 @@ void LoadHooks() {
     addFont<0x46202a>("unknown08");
     addFont<0x462990>("story");
 
-    addTiles<0x450c0f>("deck");
+    addTiles1<0x450c0f>("deck");
+    addTiles2<0x4488b3>("ipport");
 
     // Patch font charset
     *(uint32_t*)0x411c64 = langConfig.charset;
