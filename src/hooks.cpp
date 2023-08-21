@@ -153,8 +153,9 @@ static inline void LoadCustomPacks() {
         std::string systemPath; th123intl::ConvertCodePage(std::filesystem::relative(pack).wstring(), CP_ACP, systemPath);
         orig_appendDataPackage(systemPath.c_str());
     }
-    *(bool*)0x8a0048 = true; // hack
+}
 
+static inline void LoadSystemStrings() {
     if (systemStrings == 0) systemStrings = new SokuLib::CSVParser("data/csv/system.cv1");
     DWORD old;
     VirtualProtect((LPVOID)0x00401000, 0x00456000, PAGE_WRITECOPY, &old);
@@ -181,9 +182,20 @@ static inline void LoadCustomPacks() {
     VirtualProtect((LPVOID)0x00401000, 0x00456000, old, &old);
 }
 
+static inline void PreparePacks() {
+    LoadCustomPacks();
+    *(bool*)0x8a0048 = true; // hack
+    LoadSystemStrings();
+}
+
 static void repl_appendDataPackage(const char* filename) {
     orig_appendDataPackage(filename);
-    if (filename == (const char*)0x861b18) LoadCustomPacks();
+    if (filename == (const char*)0x861b18) PreparePacks();
+}
+
+static short repl_postProcessSoku2Packs(const char* filename) {
+    LoadCustomPacks();
+    return *reinterpret_cast<short*>(0x858da0);
 }
 
 static int findLineById(SokuLib::CSVParser& parser, int id) {
@@ -493,7 +505,9 @@ void LoadHooks() {
 
     // if running nextsoku
     if (*(short*)0x7fb84b == (short)0xd0ff) {
-        SokuLib::TamperNearCall(0x007FB84D, LoadCustomPacks);
+        SokuLib::TamperNearCall(0x007FB84D, PreparePacks);
+        SokuLib::TamperNearCall(0x004417e3, repl_postProcessSoku2Packs);
+        *((char*)0x004417e8) = 0x90; // NOP
     } else {
         orig_appendDataPackage = SokuLib::TamperNearJmpOpr(0x007FB85F, repl_appendDataPackage);
     }
