@@ -241,3 +241,5 @@ Label:common2
 Face:win,晛
 红魔馆最近可真热闹呀。\
 End:
+
+?
