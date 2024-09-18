@@ -582,6 +582,7 @@ void LoadHooks() {
     // 0x4374f9: ingame spellcard/storyspell
     // 0x437de5: info spellcard/storyspell
     orig_csvParserInDeckInfo = SokuLib::TamperNearJmpOpr(0x437de5, repl_csvParserInDeckInfo);
+    orig_csvParserInDeckInfo = SokuLib::TamperNearJmpOpr(0x4374f9, repl_csvParserInDeckInfo);
 
 /*
     // Make the Text Renderer to do alpha blending
@@ -637,8 +638,6 @@ void LoadHooks() {
     SokuLib::TamperDword(0x8587a4, repl_CProfileListAppendLine);
     // Replace link to MessageBoxA with custom function TODO convert to WCHAR?
     //*(uint32_t*)0x857250 = (uint32_t) repl_MessageBoxUtf8;
-    // Increase max width for card name in deck edit
-    *(double*)0x859908 = 230.0;
     VirtualProtect((LPVOID)0x857000, 0x02b000, old, &old);
 
     FlushInstructionCache(GetCurrentProcess(), NULL, 0);

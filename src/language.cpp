@@ -79,6 +79,21 @@ namespace {
         {"height", 3},
         {"spacing", 4},
     };
+
+    template <typename T, size_t address>
+    void applyAny(nlohmann::json& value) {
+        if (!value.is_number()) return;
+        DWORD old;
+        VirtualProtect((LPVOID)address, sizeof(T), PAGE_WRITECOPY, &old);
+        value.get_to<T>(*(T*)(address));
+        VirtualProtect((LPVOID)address, sizeof(T), old, &old);
+    }
+
+    using apply_t = void (*)(nlohmann::json&);
+    std::unordered_map<std::string_view, apply_t> optionAttr = {
+        {"deckListWidth", applyAny<DOUBLE, 0x859908>},
+        {"deckTitleWidth", applyAny<DOUBLE, 0x8598f8>},
+    };
 }
 
 static inline void SetOverrides(std::vector<LangConfig::FontOverride>& out, nlohmann::json& node) {
@@ -127,6 +142,12 @@ static void LoadConfig(const std::filesystem::path& filename) {
                 langConfig.tileOverrides[tile->second]
                     .push_back({attr.value().get<unsigned int>(), tilesAttr.at(attr.key())});
             }
+        }
+
+        array = json["options"];
+        if (array.is_object()) for (auto attr = array.begin(); attr != array.end(); ++attr) {
+            if (!optionAttr.count(attr.key())) continue;
+            optionAttr.at(attr.key())(attr.value());
         }
     } catch (const std::exception& e) {
 #ifdef _DEBUG

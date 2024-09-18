@@ -40,5 +40,8 @@
             "width": 9,
             "spacing": 5
         }
+    },
+    "options": {
+        "deckListWidth": 230
     }
 }
