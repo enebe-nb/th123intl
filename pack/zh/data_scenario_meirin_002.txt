@@ -46,7 +46,7 @@ Action:marisa,101# 杺棟嵐偑擖偭偰偔傞
 Action:marisa,102
 
 Balloon:marisa,1,0,-200
-那么、今天也去图书馆看下吧。
+那么，今天也去图书馆看下吧。
 当次文学少女—\
 
 # 旤楅
@@ -79,11 +79,11 @@ Balloon:marisa,1,0,-200
 
 # 旤楅丂捠忢
 Balloon:meirin,1,0,-200
-这种差劲的伪装、谁都能看穿！\
+这种差劲的伪装，谁都能看穿！\
 
 Action:marisa,403# 杺棟嵐丂寛傔億乕僘
 Balloon:marisa,1,0,-200
-但是、就算你能看穿我的真面目
+但是，就算你能看穿我的真面目
 也是无法打败我的！\
 #愴摤奐巒張棟
 
@@ -137,7 +137,7 @@ Balloon:meirin,1,0,-200
 
 # 杺棟嵐丂搢傟偨忬懺
 Balloon:marisa,1,0,-200
-……\
+…… \
 
 # 旤楅丂嬃偒
 Balloon:meirin,1,0,-200

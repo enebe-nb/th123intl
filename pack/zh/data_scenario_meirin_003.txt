@@ -82,7 +82,7 @@ Balloon:reimu,1,0,-200
 
 Action:meirin,306# 旤楅丂寛傔億乕僘
 Balloon:meirin,1,0,-200
-我、可是深爱着幻想乡的妖怪！
+我，可是深爱着幻想乡的妖怪！
 和你这种破坏者是不一样的！\
 
 Action:reimu,409# 楈柌丂徫偆
@@ -91,7 +91,7 @@ Balloon:reimu,1,0,-200
 美玲你真不愧是妖怪的榜样\
 
 Action:reimu,203# 楈柌丂捠忢
-不过、光说大话的话
+不过，光说大话的话
 可是没法当和平使者的哟？\
 
 Action:reimu,405# 楈柌丂寛傔億乕僘
@@ -158,7 +158,7 @@ Balloon:reimu,1,0,-200
 很了不起嘛 美玲\
 
 # 楈柌偼婲偒忋偑偭偰層嵗偱嵗傞乮偟傖偑傒偱乯
-可是呢、接连的战斗
+可是呢，接连的战斗
 令你的战斗力下降了不少吧！\
 
 Action:meirin,203# 旤楅丂捠忢
@@ -167,7 +167,7 @@ Balloon:meirin,1,0,-200
 
 Action:reimu,411# 楈柌丂婲偒忋偑偭偰
 Balloon:reimu,1,0,-200
-那么、现在就让你看看我真正的姿态吧！\
+那么，现在就让你看看我真正的姿态吧！\
 
 # 旤楅丂捠忢
 Balloon:meirin,1,0,-200

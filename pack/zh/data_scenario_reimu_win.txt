@@ -1,20 +1,29 @@
 ## =======================================================================
-#彑棙戜帉
-## =======================================================================
-#VS楈柌
+#胜利台词
 # Time-stamp: <2009/08/12 16:11:48 zun>
-#
-## 戜帉A==================
-#Label:僉儍儔柤+悢帤偺宍偱搊榐丂楢斣偱懕偄偰偄傞尷傝偺嵟屻傑偱偑搊榐偝傟丄儔儞僟儉偱慖戰偝傟傑偡
-#夛榖彂幃偼僔僫儕僆偱尵偆僉儍儔柤偺応強偵win(彑棙僉儍儔)lose(攕杒僉儍儔)偺敪尵偵側傝傑偡
-# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
-# Hi-lock: (("^[ \t]*Label.*$"              (0 '((t (:foreground "royal blue"))) t))) 
-# Hi-lock: (("^[ \t]*Face.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
-# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "royal blue"))) t))) 
-# reimuR0  rare
-# reimuU0  usual
-# reimu0   昿斏
+## =======================================================================
+# 标签格式如下，有各自的对话触发概率
+# reimuU0  Usual  通常
+# reimuR0  Rare  稀有
+# reimu0  频繁
+# common0  全体都有概率出现
 
+# 【日文汉字转中文乱码 = 实际日文汉字；立绘类型】
+# 1. 晧 = 負；战败
+# 2. 娋 = 汗；流汗，无语
+# 3. 搟 = 怒；生气
+# 4. 嬃 = 驚；惊讶
+# 5. 梋 = 余；自信，优越
+# 6. 榝 = 惑；怀疑，不解
+# 7. 晛 = 普；普通立绘
+# 8. 寛 = 決；一般和释放符卡的立绘差不多，战斗姿态
+# 9. 婐 = 嬉；笑颜
+# 10. Face:youmu,  #注释：什么都不填就不显示立绘
+# 11. Balloon:chirno,1,0,-200  #注释：第一第二个值是气泡花纹；第三个值，-200，是高度，-300就越高
+# 12. Balloon:null,0,0,-200  #注释：角色为null就是消除对话框
+
+## =======================================================================
+#VS 灵梦
 Label:reimuU0
 Face:lose,晧
 Face:win,娋
@@ -22,8 +31,7 @@ Face:win,娋
 End:
 
 ## =======================================================================
-#VS杺棟嵐
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 魔理沙
 Label:marisaU0
 Face:lose,晧
 Face:win,晛
@@ -53,8 +61,7 @@ Face:win,梋
 End:
 
 ## =======================================================================
-#VS嶇栭
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 咲夜
 Label:sakuyaU0
 Face:lose,晧
 Face:win,梋
@@ -70,8 +77,7 @@ Face:win,婐
 End:
 
 ## =======================================================================
-#VS梔柌
-#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+#VS 妖梦
 Label:youmuU0
 Face:lose,晧
 Face:win,榝
@@ -94,8 +100,7 @@ End:
 
 
 ## =======================================================================
-#VS傾儕僗
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 爱丽丝
 Label:aliceU0
 Face:lose,晧
 Face:win,晛
@@ -114,8 +119,7 @@ Face:win,榝
 End:
 
 ## =======================================================================
-#VS僷僠儏儕乕
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 帕秋莉
 Label:patchouliU0
 Face:lose,晧
 Face:win,晛
@@ -123,8 +127,7 @@ Face:win,晛
 End:
 
 ## =======================================================================
-#VS儗儈儕傾
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 蕾米莉亚
 Label:remiliaU0
 Face:lose,晧
 Face:win,嬃
@@ -133,8 +136,7 @@ End:
 
 
 ## =======================================================================
-#VS桯乆巕
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 幽幽子
 Label:yuyukoU0
 Face:lose,晧
 Face:win,晛
@@ -143,8 +145,7 @@ Face:win,晛
 End:
 
 ## =======================================================================
-#VS巼
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 紫
 Label:yukariU0
 Face:lose,晧
 Face:win,晛
@@ -163,8 +164,7 @@ End:
 
 
 ## =======================================================================
-#VS渎崄
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 萃香
 Label:suikaU0
 Face:lose,晧
 Face:win,娋
@@ -175,8 +175,7 @@ End:
 
 
 ## =======================================================================
-#VS暥
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 文
 Label:ayaU0
 Face:lose,晧
 Face:win,娋
@@ -200,8 +199,7 @@ Face:win,娋
 End:
 
 ## =======================================================================
-#VS楅愬
-#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+#VS 铃仙
 Label:udongeU0
 Face:lose,晧
 Face:win,晛
@@ -218,8 +216,7 @@ End:
 
 
 ## =======================================================================
-#VS彫挰
-#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+#VS 小町
 Label:komachiU0
 Face:lose,晧
 Face:win,梋
@@ -229,8 +226,7 @@ End:
 
 
 ## =======================================================================
-#VS堖嬭
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 衣玖
 Label:ikuU0
 Face:lose,晧
 Face:win,晛
@@ -240,8 +236,7 @@ End:
 
 
 ## =======================================================================
-#VS揤巕
-#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
+#VS 天子
 Label:tenshiU0
 Face:lose,晧
 Face:win,娋
@@ -269,8 +264,7 @@ End:
 
 
 ## =======================================================================
-#VS憗昪
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 早苗
 Label:sanaeU0
 Face:lose,晧
 Face:win,婐
@@ -295,8 +289,7 @@ End:
 
 
 ## =======================================================================
-#VS僠儖僲
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 琪露诺
 Label:chirnoU0
 Face:lose,晧
 Face:win,晛
@@ -306,8 +299,7 @@ End:
 
 
 ## =======================================================================
-#VS旤楅
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 美铃
 Label:meirinU0
 Face:lose,晧
 Face:win,娋
@@ -317,8 +309,7 @@ End:
 
 
 ## =======================================================================
-#VS嬻
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 空
 Label:utsuhoU0
 Face:lose,晧
 Face:win,娋
@@ -334,8 +325,7 @@ End:
 
 
 ## =======================================================================
-#VS恴朘巕
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 诹访子
 Label:suwakoU0
 Face:lose,晧
 Face:win,晛
@@ -347,19 +337,14 @@ End:
 
 
 ## =======================================================================
-#VS嫟捠
-#侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋\
-## 戜帉A==================
-#0侾俀俁係俆俇俈俉俋侽侾俀俁係俆俇俈俉俋侽侾俀俁
+#VS 全体
 Label:common0
-
 Face:win,晛
 今年的夏天真和平
 无聊也不是什么坏事，大概\
 End:
 
 Label:common1
-
 Face:win,榝
 以前一到夏天就出状况呢。\
 End:

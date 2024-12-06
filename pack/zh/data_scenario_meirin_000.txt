@@ -56,7 +56,7 @@ Action:meirin,406
 # 旤楅丂寛傔億乕僘
 Balloon:meirin,1,0,-200
 不得了啊！
-刚才、不能被看到的东西出现了啊！\
+刚才，不能被看到的东西出现了啊！\
 
 Action:patchouli,400
 # 僷僠儏儕乕丂媈栤
@@ -76,12 +76,12 @@ Balloon:patchouli,1,0,-200
 Action:meirin,405
 # 旤楅丂寛傔億乕僘
 Balloon:meirin,1,0,-200
-就是说、也许会发生地震什么的这类事情！\
+就是说，也许会发生地震什么的这类事情！\
 
 # 僷僠儏儕乕丂捠忢
 Balloon:patchouli,1,0,-200
 ……
-地震啊、你过时了。\
+地震啊，你过时了。\
 
 Action:meirin,300
 # 旤楅丂媈栤
@@ -91,7 +91,7 @@ Balloon:meirin,1,0,-200
 Action:patchouli,401
 # 僷僠儏儕乕丂寛傔億乕僘
 Balloon:patchouli,1,0,-200
-好了好了、不要再来打扰我的研究了
+好了好了，不要再来打扰我的研究了
 快点回你的工作岗位去！\
 
 #愴摤奐巒張棟
@@ -150,7 +150,7 @@ Balloon:meirin,1,0,-200
 # 僷僠儏儕乕丂
 Balloon:patchouli,1,0,-200
 是真的也没什么的。
-反正、也不过是地震而已\
+反正，也不过是地震而已\
 
 Action:meirin,300
 # 旤楅丂媈栤

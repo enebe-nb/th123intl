@@ -50,8 +50,8 @@ Action:meirin,303#嵍傊堏摦
 Action:meirin,304
 
 Balloon:meirin,1,0,-200
-太岁星君一定会派出妖怪
-来祸害人间的！\
+太岁星君一定会
+派出妖怪来祸害人间的！\
 
 Balloon:null,1,0,-200
 Action:alice,101# 傾儕僗偑擖偭偰偔傞
@@ -68,7 +68,7 @@ Balloon:meirin,1,0,-200
 Action:alice,400# 傾儕僗丂媈栤
 Balloon:alice,1,0,-200
 什么啊？
-我只是要去图书馆而已\
+我只是要去图书馆而已。\
 
 Action:meirin,203# 旤楅丂捠忢
 Balloon:meirin,1,0,-200
@@ -84,7 +84,8 @@ Balloon:alice,1,0,-200
 真不愧是红魔馆的看门人啊！\
 
 Action:alice,402# 傾儕僗丂寛傔億乕僘
-这糟糕的伪装、我一眼就看穿了！\
+一眼就看穿了这糟糕的伪装！\
+
 
 
 #愴摤奐巒張棟
