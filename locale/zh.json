@@ -26,10 +26,13 @@
             "paddingY": 0
         },
         "replayPath":{
-            "name": "simhei"
+            "name": "simhei",
+            "spacingX": -1,
+            "height": 11
         },
         "netProfile":{
-            "name": "simhei"
+            "name": "simhei",
+            "height": 14
         }
     },
     "tiles": {
