@@ -1,0 +1,168 @@
+## =======================================================================
+#Stage:2
+#Title:「혼자서 기우」
+#Place:시계탑
+
+Character:chirno,160,0,0,8888FF
+Character:meirin,160,0,1,FF8888
+
+Stage:12,0
+
+Action:chirno,1
+
+Action:meirin,400
+Action:meirin,402
+
+Action:chirno,2　
+
+
+Label:Start
+Sleep:60;
+
+Action:chirno,161
+
+PlayBgm:data/bgm/ta04.ogg
+Sleep:60;
+
+Object:data/scenario/chirno/effect/StageTitle002.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage2.bmp,1,256,352
+Sleep:270;
+
+
+Balloon:meirin,1,0,-200
+#0１２３４５６７８９０１２３４５６７８９０１２３
+Action:meirin,408
+Action:meirin,409
+아까 그게 태세성군이라면，
+이렇게 가만히 있을 순 없어.\
+
+Balloon:null,1,0,-200
+Action:meirin,410
+Action:meirin,411
+
+Balloon:meirin,1,0,-200
+이제 곧 재앙이 닥쳐올 거야!\
+Balloon:null,1,0,-200
+
+Action:chirno,50
+Action:chirno,51
+
+Balloon:chirno,1,0,-200
+뭘 혼자서 중얼거리고 있는 거야?\
+
+Action:meirin,403
+Action:meirin,404
+
+Balloon:meirin,1,0,-200
+뭐，뭡니까!?
+……뭐야，요정이잖아.\
+
+Balloon:chirno,1,0,-200
+요정이지.
+그냥 지나가던 요정이라구.\
+
+Balloon:meirin,1,0,-200
+그래，나는 지금부터 대업을 완수해야만 해.\
+
+그러니까 얼른 지나가라고.\
+
+Action:chirno,305
+Balloon:chirno,1,0,-200
+아까 뭔가 당황했잖아?
+그런 건 언제나 신경쓰인단 말이지.\
+
+Action:meirin,403
+Balloon:meirin,1,0,-200
+!? 요정이 나설 자리는 없어!\
+
+Action:chirno,303
+Balloon:chirno,1,0,-200
+다이다라봇치보다
+이게 더 재밌을 것 같아!\
+
+Action:meirin,405
+Balloon:meirin,1,0,-200
+어쩔 수 없군，
+방해자는 빨리 쫓아보내야겠어.\
+
+Sleep:30
+
+
+PlayBgm:data/bgm/st32.ogg
+Action:chirno,203
+Action:meirin,203
+Action:chirno,167
+Action:chirno,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:meirin,200
+Action:chirno,202
+
+Action:chirno,164
+Sleep:15
+
+Action:chirno,204
+Action:meirin,205
+
+Action:chirno,2　
+
+Sleep:30
+Action:chirno,165
+
+Sleep:30
+
+Balloon:chirno,1,0,-200
+아~ 그러니까~，뭐하려고 했더라?\
+
+Balloon:meirin,1,0,-200
+엥?\
+
+Balloon:chirno,1,0,-200
+음~，으으응~.
+거기 언니，혹시 내가 뭐하려고 했는지 알아?\
+
+Balloon:meirin,1,0,-200
+아? 아~，그래그래!
+다이다라봇치인가 뭔가 말했었는데.\
+
+Action:chirno,404
+Balloon:chirno,1,0,-200
+그래! 다이다라봇치를 찾아다녔었구나!
+얼른 가봐야지!\
+
+Action:chirno,304
+
+Balloon:meirin,1,0,-200
+……\
+
+Balloon:null,1,0,-200
+Sleep:90
+
+Result:
+FadeBgm:2000,0
+Action:chirno,306
+Action:chirno,307
+Action:chirno,308
+
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

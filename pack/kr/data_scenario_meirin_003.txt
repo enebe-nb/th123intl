@@ -1,0 +1,165 @@
+## =======================================================================
+#Stage:4
+#Title:「마물 퇴치도 두려치 않는 레이무」
+#Place:꿈 속의 홍마관 3
+
+Character:meirin,160,0,0,8888FF
+Character:reimu,160,0,1,FF8888
+
+Stage:37,0
+
+Action:meirin,20
+Action:meirin,402
+
+Action:reimu,100
+
+Action:meirin,2
+
+
+Label:Start
+
+Action:meirin,161
+PlayBgm:data/bgm/ta00.ogg
+
+Sleep:60
+
+Object:data/scenario/meirin/effect/StageTitle004.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage4.bmp,1,256,352
+Sleep:300;
+
+
+#0１２３４５６７８９０１２３４５６７８９０１２３
+
+
+Action:reimu,101
+Action:reimu,102
+Balloon:reimu,1,0,-200
+자-，오늘도 요괴퇴치야~.
+홍마관의 악마들 전부 소독할 시간이다~\
+
+Action:meirin,203
+Balloon:meirin,1,0,-200
+흥. 왔구나!
+재화의 괴물이여!\
+
+Action:reimu,404
+Balloon:reimu,1,0,-200
+괴물이라고?\
+
+Action:meirin,405
+Balloon:meirin,1,0,-200
+아무리 열심히 인간으로 둔갑해봤자 헛수고다!
+내 눈은 못 속이지.\
+
+Action:reimu,203
+Balloon:reimu,1,0,-200
+오호라.
+무녀의 모습을 한 날 괴물이라고 말하는 건가?\
+
+Action:reimu,409
+재미있는 말을 하잖나.
+네녀석이 괴물인 주제에.\
+
+Balloon:meirin,1,0,-200
+훗. 확실히 나는 요괴다.
+하지만 말이야.\
+
+Action:reimu,203
+Balloon:reimu,1,0,-200
+하지만?\
+
+Action:meirin,306
+Balloon:meirin,1,0,-200
+나는，환상향을 사랑하는 요괴다!
+네놈들 같은 파괴자가 아니야!\
+
+Action:reimu,409
+Balloon:reimu,1,0,-200
+훌륭해! 훌륭하군!
+너야말로 요괴의 모범이라고 할 만해.\
+
+Action:reimu,203
+하지만，말만으로 평화가 지켜질거라고는
+생각치 말라고?\
+
+Action:reimu,405
+우리들이，
+환상향에 재앙을 가져다주마.\
+
+대지를 뒤흔들 재앙을 말이야!\
+
+
+PlayBgm:data/bgm/st40.ogg
+Action:meirin,203
+Action:reimu,203
+Action:meirin,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:reimu,200
+Action:meirin,202
+
+Action:meirin,164
+Sleep:15
+
+Action:meirin,204
+Action:reimu,205
+
+Action:meirin,2　
+
+Sleep:30
+Action:meirin,165
+
+Sleep:30
+#---------
+
+Action:meirin,406
+Balloon:meirin,1,0,-200
+꽤 하는 것 같다만，내 힘에는 미치지 못해!\
+
+Action:reimu,410
+Balloon:reimu,1,0,-200
+으으음…….
+제법이구나，네녀석.\
+
+그러나，네녀석은 과도한 연전으로
+힘이 빠진 듯 보인다만?\
+
+Action:meirin,203
+Balloon:meirin,1,0,-200
+큭!\
+
+Action:reimu,411
+Balloon:reimu,1,0,-200
+자아，지금이야말로 
+진정한 모습을 보여줄 때가 온 것 같군!\
+
+Balloon:meirin,1,0,-200
+드디어 모습을 드러내는 것인가……!\
+
+Balloon:null,1,0,-200
+
+Result:
+FadeBgm:2000,0
+Action:meirin,160
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

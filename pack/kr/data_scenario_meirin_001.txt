@@ -1,0 +1,148 @@
+## =======================================================================
+#Stage:2
+#Title:「맞서 싸워라, 흉성의 그림자」
+#Place:꿈 속의 시계탑 1
+
+Character:meirin,160,0,0,8888FF
+Character:alice,160,0,1,FF8888
+
+Stage:12,0
+
+Action:meirin,20
+Action:meirin,402
+
+Action:alice,100
+
+Action:meirin,2　
+
+
+Label:Start
+Sleep:60;
+
+Action:meirin,161
+
+PlayBgm:data/bgm/ta01.ogg
+Sleep:60;
+
+Object:data/scenario/meirin/effect/StageTitle002.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage2.bmp,1,256,352
+Sleep:300;
+
+
+#0１２３４５６７８９０１２３４５６７８９０１２３
+Action:meirin,301
+Action:meirin,302
+Balloon:meirin,1,0,-200
+이렇게 되면 내가 맞서 싸울 수 밖에 없어.\
+
+Balloon:null,1,0,-200
+Action:meirin,303
+Action:meirin,304
+
+Balloon:meirin,1,0,-200
+태세성군은 분명 재앙을 초래하는 요괴를
+보내올 거야!\
+
+Balloon:null,1,0,-200
+Action:alice,101
+Action:alice,102
+
+Balloon:alice,1,0,-200
+도서관에 가고 싶은데 안내해주지 않을래?\
+
+Action:meirin,305
+Balloon:meirin,1,0,-200
+음!
+빨리도 나타나셨군!\
+
+Action:alice,400
+Balloon:alice,1,0,-200
+뭐야.
+난 도서관으로 가고 싶을 뿐이라구.\
+
+Action:meirin,203
+Balloon:meirin,1,0,-200
+후후후. 내 눈엔 전부 다 보인다구.
+네놈은――\
+
+Action:meirin,405
+네놈은 태세성군이 보낸 요괴다!\
+
+Action:alice,403
+Balloon:alice,1,0,-200
+아하핫!
+역시 홍마관의 문지기로군!\
+
+Action:alice,402
+이 변장을 단번에 간파할 줄이야!\
+
+
+
+PlayBgm:data/bgm/st42.ogg
+Action:meirin,203
+Action:alice,203
+Action:meirin,167
+Action:meirin,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:alice,200
+Action:meirin,202
+
+Action:meirin,164
+Sleep:15
+
+Action:meirin,204
+Action:alice,205
+
+Action:meirin,2　
+
+Sleep:30
+Action:meirin,165
+
+Sleep:30
+
+
+Balloon:meirin,1,0,-200
+위험했어.
+이런 식으로 공격해오다니，정말이지 두려운걸.\
+
+Balloon:alice,1,0,-200
+……\
+
+Balloon:meirin,1,0,-200
+역시 말이 없는 건가…….
+이제 더 이상 움직이지도 않는구나.\
+
+Action:meirin,306
+이 정도로 끝이라고는 생각되지 않아.
+아직，계속 맞서 싸워주마!\
+
+Balloon:null,1,0,-200
+Sleep:90
+
+Result:
+FadeBgm:2000,0
+#Action:meirin,159
+Action:meirin,160
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

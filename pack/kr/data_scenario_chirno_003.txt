@@ -1,0 +1,195 @@
+## =======================================================================
+#Stage:4
+#Title:「업화현란」
+#Place:간헐천 지하센터 통로
+
+Character:chirno,160,0,0,8888FF
+Character:utsuho,160,0,1,FF8888
+
+Stage:34,0
+
+Action:chirno,20
+
+Action:utsuho,100
+
+Action:utsuho,130
+
+
+Label:Start
+PlayBgm:data/bgm/room.ogg
+Sleep:60
+
+Action:chirno,161
+Action:utsuho,131
+
+Sleep:60
+Object:data/scenario/chirno/effect/StageTitle004.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage4.bmp,1,256,352
+Sleep:30;
+
+#PlayBgm:data/bgm/ta03.ogg
+Sleep:300;
+
+
+
+
+
+#0１２３４５６７８９０１２３４５６７８９０１２３
+
+Action:chirno,310
+Action:chirno,311
+Balloon:chirno,1,0,-200
+더워! 더워서 못 견디겠어!\
+
+Balloon:null,1,0,-200
+
+Action:utsuho,400
+Action:chirno,403
+Sleep:10
+Action:chirno,312
+Action:chirno,313
+
+Action:utsuho,401
+
+Sleep:30
+
+#Action:utsuho,409
+Balloon:utsuho,1,0,-200
+Sleep:10
+이물질 발견!@
+융합로 온도저하 요주의. 즉시 이물질을 배제하라!\
+Balloon:null,1,0,-200
+Sleep:10
+
+Action:chirno,403
+Balloon:chirno,1,0,-200
+으와와와왓!\
+
+Balloon:null,1,0,-200
+
+Action:utsuho,202
+
+
+
+PlayBgm:data/bgm/st33.ogg
+Action:chirno,203
+Action:utsuho,203
+Action:chirno,3
+
+End:
+
+# --------------------------------
+Label:Intermission10
+
+Action:utsuho,154
+
+Action:utsuho,200
+Action:chirno,202
+
+Action:chirno,403
+
+Balloon:chirno,1,0,-200
+너무 더워!
+얼른 도망치지 않으면 못 견디겠어!\
+
+Action:utsuho,402
+Balloon:utsuho,1,0,-200
+여기서 배제당하기 전에 도망치게 놔둘까보냐!\
+
+Action:chirno,407
+Balloon:chirno,1,0,-200
+배제되기 전에 도망쳐주마!\
+
+Balloon:null,1,0,-200
+Action:utsuho,405
+Action:utsuho,406
+
+Balloon:utsuho,1,0,-200
+너가 내게서 도망칠 수 있을지，
+아니면 내가 널 먼저 쫓아내는지.\
+
+승부야!\
+
+Balloon:null,1,0,-200
+
+
+
+Action:chirno,203
+Action:utsuho,203
+
+Action:utsuho,210
+
+End:
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:utsuho,200
+Action:chirno,202
+
+Action:chirno,164
+Sleep:15
+
+Action:chirno,204
+Action:utsuho,205
+
+Action:chirno,2　
+
+Sleep:30
+Action:chirno,165
+
+Sleep:30
+#---------
+
+Balloon:chirno,1,0,-200
+Action:chirno,303
+지금이 기회야!
+지금 당장 도망치자!\
+
+Balloon:null,1,0,-200
+
+Action:chirno,304
+
+Action:utsuho,402
+Action:utsuho,202
+Balloon:utsuho,1,0,-200
+자，다음 공격은 피할 수 없을 거다!\
+
+Action:utsuho,404
+어，어라~?
+혹시……\
+
+Action:utsuho,403
+화력이 너무 세서 흔적도 없이 증발해버린건가?\
+
+Action:utsuho,206
+
+너무 힘을 썼긴 했지만，뭐 괜찮아.
+그럼 이제 일하러 돌아가야지.\
+
+Balloon:null,1,0,-200
+Action:utsuho,411
+
+Balloon:null,1,0,-200
+Sleep:60
+
+Result:
+FadeBgm:2000,0
+Action:chirno,160
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

@@ -1,0 +1,159 @@
+## =======================================================================
+#Stage:1
+#Title:「브로켄의 요괴」
+#Place:안개 호수 언저리
+
+Character:sanae,160,0,0,8888FF
+Character:chirno,160,0,1,FF8888
+
+Stage:30,0
+
+Action:sanae,1
+
+Action:chirno,400
+
+Action:sanae,2　
+
+
+Label:Start
+
+
+PlayBgm:data/bgm/ta01.ogg
+Sleep:60;
+
+Object:data/scenario/sanae/effect/StageTitle001.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage1.bmp,1,256,352
+Sleep:216;
+
+Action:chirno,401
+Sleep:60;
+
+
+
+Balloon:chirno,1,0,-200
+#0１２３４５６７８９０１２３４５６７８９０１２３
+방금 전의 그건……\
+
+Action:chirno,402
+전설의 대요괴，
+다이다라봇치가 틀림없어!\
+
+Action:chirno,404
+저녀석만 꼬시면 무서울 건 하나도 없지!\
+
+Balloon:null,0,0,-200
+Sleep:30
+
+#
+Action:sanae,50
+Action:sanae,51
+
+Sleep:30
+
+Balloon:sanae,1,0,-200
+분명 이쯤에서 사라진 것 같은데……\
+
+Action:chirno,405
+
+Balloon:chirno,1,0,-200
+오? 큰 게 사라졌다고 생각했더니
+이번엔 작은 게 나타났네.\
+
+Balloon:sanae,1,0,-200
+거기 요정 씨. 이 주변의 거대로ㅂ……，
+크고 움직이는 사람의 그림자 같은 거 못 봤나요?\
+
+Action:chirno,406
+
+Balloon:chirno,1,0,-200
+다이다라봇치 같은 건 못 봤다구.\
+
+Action:sanae,300
+
+Balloon:sanae,1,0,-200
+다이다라봇치?
+그런 말 한마디도 안 했는데에.\
+
+Action:chirno,407
+
+Balloon:chirno,1,0,-200
+아，아니，아무것도 아냐.
+이몸은 정말 아무것도 못 봤어!\
+
+Balloon:chirno,0,0,-200
+Action:sanae,301
+
+Balloon:sanae,1,0,-200
+설마，당신 뭔가 꾸미고 있는 겁니까?
+짙은 안개 속 브로켄의 요괴인 척 하면서.\
+
+
+PlayBgm:data/bgm/st31.ogg
+
+Action:sanae,203
+Action:chirno,203
+Action:sanae,167
+Action:sanae,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:chirno,200
+Action:sanae,202
+
+Action:sanae,164
+Sleep:15
+
+Action:sanae,204
+Action:chirno,205
+
+Action:sanae,2　
+
+Sleep:30
+Action:sanae,165
+
+Sleep:30
+
+Balloon:chirno,1,0,-200
+브로켄의 요괴?
+뭐야 그거.\
+
+Balloon:sanae,1,0,-200
+손발이 늘어나는 거대한 요괴지만 환영이에요.
+여하튼，그런 거대한 그림자를 봤다는 거군요?\
+
+Balloon:chirno,1,0,-200
+봤어 봤어.
+저쪽으로 가는 걸 봤다구.\
+
+Balloon:null,0,0,-200
+Action:sanae,303
+Sleep:60
+
+Action:sanae,304
+Sleep:90
+
+Result:
+FadeBgm:2000,0
+Action:sanae,160
+
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

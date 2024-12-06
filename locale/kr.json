@@ -1,0 +1,43 @@
+{
+    "locale": "ko-KR",
+    "charset": 129,
+    "packs": ["pack/kr.dat"],
+    "font": {
+        "files": ["font/KoreanCMR.ttf","font/NanumSquareR.ttf"],
+        "popup": {
+            "name": "NanumSquare"
+        },
+        "profile":{
+            "name": "KoreanCMR",
+            "height": 14
+        },
+        "deck":{
+            "name": "KoreanCMR"
+        },
+        "gui":{
+            "name": "NanumSquare"
+        },
+        "number":{
+            "name": "NanumSquare"
+        },
+        "story":{
+            "name": "KoreanCMR"
+        },
+        "replayPath":{
+            "name": "KoreanCMR"
+        },
+        "netProfile":{
+            "name": "KoreanCMR",
+            "height": 14
+        }
+    },
+    "tiles": {
+        "deck": {
+            "width": 20
+        },
+    "ipport": {
+            "width": 12,
+            "spacing": 3
+        }
+    }
+}

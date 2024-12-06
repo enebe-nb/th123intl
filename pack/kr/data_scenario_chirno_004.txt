@@ -1,0 +1,209 @@
+## =======================================================================
+#Stage:5
+#Title:「진짜 다이다라봇치」
+#Place:간헐천 지하센터 입구
+
+Character:chirno,160,0,0,8888FF
+Character:alice,160,0,1,FF8888
+Character:marisa,160,0,3,FF8888
+
+Stage:32,0
+
+Action:chirno,1
+
+Action:marisa,30
+Action:alice,100
+
+Action:chirno,2　
+
+
+Label:Start
+
+Action:chirno,161
+PlayBgm:data/bgm/ta05.ogg
+Sleep:120
+
+
+Action:chirno,50
+Action:chirno,51
+
+Action:marisa,203
+Balloon:marisa,1,0,-200
+이런? 빨리도 나왔네.\
+
+Action:chirno,407
+Balloon:chirno,1,0,-200
+터무늬없잖아!
+저 안쪽은 대체 뭐야!\
+
+Balloon:marisa,1,0,-200
+거야 그렇겠지.
+여긴 온천 보일러니까.\
+
+Action:chirno,314
+Balloon:chirno,1,0,-200
+다이다라봇치가 저런 데 살고 있어서야
+포기할 수 밖에 없잖아……\
+
+Action:marisa,400
+Balloon:marisa,1,0,-200
+뭐，기다리라구.
+그렇게 실망하지 마셔.\
+
+Action:chirno,315
+Balloon:chirno,1,0,-200
+?\
+
+Balloon:marisa,1,0,-200
+아까 숲 쪽에서 뭔가 큰 요괴를 봤걸랑.
+어느새 거기로 이동한 거 같더라.\
+
+Action:chirno,303
+Balloon:chirno,1,0,-200
+정말로!?\
+
+Action:marisa,203
+Balloon:marisa,1,0,-200
+그래，지금 건 거짓말 아냐.
+저쪽이다. 봐봐，여기서 보이잖아?\
+
+Action:chirno,302
+Balloon:chirno,1,0,-200
+정말이네.
+뭔가 커다란 게 있어!\
+
+Balloon:null,1,0,-200
+Sleep:30
+
+Action:chirno,304
+Sleep:90
+Balloon:marisa,1,0,-200
+저건……뭐랄까.
+왠지 모르게 상상은 되지만 말이야.\
+Balloon:null,1,0,-200
+
+FadeBgm:1000,0
+Action:chirno,160
+
+
+# ---------------------------------------
+Sleep:120
+
+Stage:13,0
+Action:chirno,1
+Action:alice,30
+Action:marisa,100
+
+Sleep:60
+PlayBgm:data/bgm/ta22.ogg
+Action:chirno,161
+Sleep:30
+
+Object:data/scenario/chirno/effect/StageTitle005.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/StageFinal.bmp,1,256,384
+Sleep:300;
+
+Balloon:alice,1,0,-200
+아직도 연구가 필요한걸.\
+
+Action:chirno,50
+Action:chirno,51
+Balloon:chirno,1,0,-200
+이쯤이었는데…….\
+
+Action:chirno,302
+Balloon:chirno,1,0,-200
+뜨앗!\
+
+Action:alice,203
+Balloon:alice,1,0,-200
+응? 보기 드문 얼굴이네.
+……미아?\
+
+Action:chirno,203
+Balloon:chirno,1,0,-200
+아，아니，길 잃은 거 아냐.
+그것보다 말야，이 주변에서.\
+
+Action:alice,400
+Balloon:alice,1,0,-200
+이 주변에서?\
+
+Balloon:chirno,1,0,-200
+다이다라봇치 못 봤어?\
+
+Balloon:alice,1,0,-200
+다이다라봇치?\
+
+Action:chirno,309
+Balloon:chirno,1,0,-200
+어엄~청 큰 요괴야!
+아까까지 이 주변에 있었어!\
+
+Action:alice,401
+Balloon:alice,1,0,-200
+엄청 큰 요괴…….
+아항~\
+
+Action:chirno,403
+Balloon:chirno,1,0,-200
+봤어?
+어딨는지 알아?\
+
+Action:alice,203
+Balloon:alice,1,0,-200
+알고 있어. 아마도.
+당신도 한 번 봐볼래?\
+
+Action:chirno,404
+Balloon:chirno,1,0,-200
+볼래 볼래!
+오늘 하루종일 그것만 찾아다녔어!\
+
+Balloon:alice,1,0,-200
+아직 실험단계긴 하지만，
+시험해보기엔 딱 좋네.\
+
+Action:chirno,303
+Balloon:chirno,1,0,-200
+빨리! 빨리!
+다이다라봇치!\
+
+Action:alice,402
+Balloon:alice,1,0,-200
+마법 재충전까지는 조금 힘이 필요하거든.
+그러니 당신의 그 기운，조금 받아갈게!\
+
+PlayBgm:data/bgm/st35.ogg
+Action:chirno,203
+Action:alice,203
+Action:chirno,167
+Action:chirno,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:chirno,168
+Action:alice,200
+Action:chirno,202
+
+Sleep:30
+Result:
+
+
+End:
+
+## =======================================================================

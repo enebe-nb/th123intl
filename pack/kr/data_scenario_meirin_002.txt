@@ -1,0 +1,139 @@
+## =======================================================================
+#Stage:3
+#Title:「사람의 눈을 한 마물」
+#Place:꿈 속의 시계탑 2
+
+Character:meirin,160,0,0,8888FF
+Character:marisa,160,0,1,FF8888
+
+Stage:36,0
+
+Action:meirin,20
+Action:meirin,402
+
+Action:marisa,100
+
+Action:meirin,2
+
+
+Label:Start
+
+Action:meirin,161
+
+PlayBgm:data/bgm/ta05.ogg
+Sleep:60;
+
+
+Object:data/scenario/meirin/effect/StageTitle003.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage3.bmp,1,256,352
+Sleep:300;
+
+
+#0１２３４５６７８９０１２３４５６７８９０１２３
+
+
+Action:marisa,101
+Action:marisa,102
+
+Balloon:marisa,1,0,-200
+자，그럼 오늘도 도서관으로 가보실까~.
+나는야 문학소녀라네~\
+
+Balloon:meirin,1,0,-200
+……\
+
+Action:marisa,401
+Balloon:marisa,1,0,-200
+오!? 막지 않는거냐?
+가버린다? 가버린다구?\
+
+Action:meirin,405
+Balloon:meirin,1,0,-200
+네놈도 가짜구나!
+내 눈엔 전부 다 보여!\
+
+Action:marisa,203
+Balloon:marisa,1,0,-200
+가짜라고?\
+
+Balloon:meirin,1,0,-200
+언제나 당당히 정문으로 들어가는 네가，
+위쪽으로 들어온다는 것 자체가 웃기는 소리지.\
+
+Balloon:marisa,1,0,-200
+후후. 역시나.
+역시 홍마관의 방파제，메이링이야.\
+
+Balloon:meirin,1,0,-200
+그런 변장 따위，누구든 알아챌 수 있어!\
+
+Action:marisa,403
+Balloon:marisa,1,0,-200
+하지만，정체를 알았다고 해서
+내게 이길 수 있을까!\
+
+PlayBgm:data/bgm/st41.ogg
+Action:meirin,203
+Action:marisa,203
+Action:meirin,167
+Action:meirin,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:marisa,200
+Action:meirin,202
+
+Action:meirin,164
+Sleep:15
+
+Action:meirin,204
+Action:marisa,205
+
+Action:meirin,2　
+
+Sleep:30
+Action:meirin,165
+
+Sleep:30
+
+Balloon:meirin,1,0,-200
+흠.
+강함은 원래 인간에 비해서 큰 차이가 나는군.\
+
+Balloon:marisa,1,0,-200
+……\
+
+Balloon:meirin,1,0,-200
+태세성군，이 얼마나 흉악한 요괴인가.\
+
+Balloon:meirin,1,0,-200
+내가 여기 없었다면，
+지금쯤 홍마관을 집어삼키고도 남았을 거야……\
+
+
+Balloon:null,1,0,-200
+
+Result:
+FadeBgm:2000,0
+Action:meirin,160
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

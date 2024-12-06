@@ -1,0 +1,138 @@
+# ----------------------------------------------------
+# Ending
+# Stage:Ending
+#
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Character.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Action.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*Stage.*$"              (0 '((t (:foreground "sky blue"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Object.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Sleep.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"            (0 '((t (:foreground "medium spring green"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+
+Font:a자막체,16,3,6
+WindowColor:0,0,0,0
+Color:FFFFFF
+Background:data/scenario/effect/EdBack000.bmp,999,0,0
+CG:data/scenario/chirno/effect/ED000.bmp,96,16,50
+WindowPos:8,372
+Label:Start
+
+
+Bgm:data/bgm/ta06.ogg
+
+#0１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３
+　――환상향 동쪽의 경계，하쿠레이 신사.\
+　언제나 매미가 울어대는 신사에，매미보다 시끄러운 무언가가 있다.@
+　그건 뭔가 이야기에 열중인 듯 하다.\
+
+
+
+
+CG:data/scenario/chirno/effect/ED001.bmp,96,16,50
+
+#0１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３
+레이무「그래서? 다이다라봇치가 어쨌다고?」\
+치르노「다이다라봇치는 어엄~청 큰 요괴였어!」\
+레이무「뭐，그렇겠지」\
+치르노「그리고 그리고. 그 요괴는 아무래도 인형인 것 같아서……」\
+마리사「헤~엥」\
+치르노「아무튼 엄청 크고 마음대로 움직였어!@
+　　　 저런 게 폭주하면 환상향도 위기라구!」\
+레이무「그 큰 인형이란 게…….@
+　　　 혹시，이거 말하는 거 아냐?」\
+
+
+
+#0１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３
+CG:data/scenario/chirno/effect/ED002.bmp,96,16,50
+
+레이무「비상천칙――거대요괴형 자동조작인형」\
+치르노「비상천칙?」\
+레이무「캇파가 만든 거대한 인형이야」\
+치르노「캇파?」\
+레이무「이거라면 모두들 지금쯤 한 번씩은 봤을 거야.@
+　　　 지금 산기슭에 가면 볼 수 있다구」\
+치르노「뭐야~ 모두 보고 왔다는 거잖아~.
+　　　 시시해」\
+
+
+치르노「비상천칙…….@
+　　　 응?」\
+레이무「움직임도 굉장히 역동적이야.@
+　　　 뭐든지 증기로 움직이는 장치라는 것 같던데」\
+치르노「뭐야……이거?」\
+레이무「너가 다이다라봇치로 착각한 거잖아?」\
+치르노「응~? 이런 거였나……?」\
+레이무「아무튼，그냥 고철덩어리니까 걱정할 필요는 없어」\
+치르노「으응~?@
+　　　 아냐，이런 모양이 아니었어!@
+　　　 엄청 달라!」\
+레이무「엥?」\
+치르노「좀 더 리얼한 인형이고，@
+　　　 좀 더 공격적인 느낌이 풍기고~.@
+　　　 아무튼 엄청 달라. 다르다구!」\
+레이무「헤에~.@
+　　　 그 이야기，좀 더 자세히 가르쳐 줄래?」\
+
+Background:BLACK,0,0
+CG:BLACK,0,0,50
+WindowPos:0,640
+
+Sleep:60
+
+CG:data/scenario/chirno/effect/ec01_0.bmp,64,352,15
+
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_1.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_2.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_3.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_4.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_5.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_6.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_7.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_8.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/chirno/effect/ec01_9.bmp,64,352,15
+　\
+FadeBgm:20000,0
+CG:BLACK,0,0,15
+StaffRoll:
+
+End:

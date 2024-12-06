@@ -1,0 +1,178 @@
+## =======================================================================
+#Stage:3
+#Title:「목욕 후에 한잔」
+#Place:간헐천 지하센터 입구
+
+Character:chirno,160,0,0,8888FF
+Character:marisa,160,0,1,FF8888
+
+Stage:32,0
+
+Action:chirno,1
+
+Action:marisa,30
+
+
+
+Label:Start
+PlayBgm:data/bgm/ta05.ogg
+Sleep:60;
+
+Action:chirno,161
+Sleep:30
+
+Face:null,普
+WindowColor:0,255,255,255
+WindowPos:8,192
+
+
+
+Object:data/scenario/chirno/effect/StageTitle003.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage3.bmp,1,256,352
+Sleep:300;
+
+
+#0１２３４５６７８９０１２３４５６７８９０１２３
+
+Balloon:marisa,1,0,-200
+여기 온천은 물이 좋단 말이지-.\
+
+Action:marisa,400
+Balloon:marisa,1,0,-200
+여기에 차가운 술만 있다면
+금상첨화일텐데 말야.\
+
+Balloon:null,1,0,-200
+Action:marisa,206
+
+Action:chirno,50
+Action:chirno,51
+
+Balloon:chirno,1,0,-200
+이쯤이었던가?\
+
+Action:marisa,401
+Balloon:marisa,1,0,-200
+옷，이거 차가운 요정 아냐.
+이런 델 다 있다니 별일이구만.\
+
+Balloon:chirno,1,0,-200
+이 주변에 다이다라봇치 못 봤어?\
+
+Action:marisa,402
+Balloon:marisa,1,0,-200
+다이다라봇치라고?\
+
+Action:chirno,309
+Balloon:chirno,1,0,-200
+엄~청 짱 큰 요괴야!
+아까 봤었어! 이 주변에서.\
+
+Action:marisa,203
+Balloon:marisa,1,0,-200
+그래그래，엄~청 큰 요괴라~.
+헤헹~. 모를 것도 없지.\
+
+Action:chirno,404
+Balloon:chirno,1,0,-200
+어? 정말?
+어디어디?\
+
+Action:marisa,403
+Balloon:marisa,1,0,-200
+비밀이다.
+요정한테 가르쳐줄 이유는 없다구.\
+
+Action:chirno,303
+Balloon:chirno,1,0,-200
+아무래도 아픈 꼴을 봐야지만
+전부 사실대로 불 것 같네!\
+
+
+
+PlayBgm:data/bgm/st41.ogg
+Action:chirno,203#
+Action:marisa,203#
+Action:chirno,167#
+Action:chirno,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:marisa,200
+Action:chirno,202
+
+Action:chirno,164
+Sleep:15
+
+Action:chirno,204
+Action:marisa,205
+
+Action:chirno,2　
+
+Sleep:30
+Action:chirno,165
+
+Sleep:30
+
+Action:chirno,404
+Balloon:chirno,1,0,-200
+자! 어딨는지 당장 말해!\
+
+Balloon:marisa,1,0,-200
+아이고야…….
+말할테니까 기다려봐 쫌.\
+
+그녀석은…….
+이 간헐천 지하센터에 들어갔다구.\
+
+
+Action:chirno,403
+Balloon:chirno,1,0,-200
+진짜!?
+그럼 금방 찾겠네!\
+
+Action:chirno,404
+내가 1등이야!\
+
+Balloon:null,1,0,-200
+Action:chirno,304
+
+Sleep:120
+
+Action:marisa,404
+Balloon:marisa,1,0,-200
+아까 건 전부 거짓말이었는데.\
+
+이 안쪽은 저녀석한텐 좀 덥겠구만.
+거 쌤통이다.\
+
+Action:marisa,402
+근데 다이다라봇치란 건 대체 뭐지…….
+오오，뭐야? 숲 쪽에서……\
+
+Balloon:null,1,0,-200
+
+Result:
+FadeBgm:2000,0
+Action:chirno,160
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

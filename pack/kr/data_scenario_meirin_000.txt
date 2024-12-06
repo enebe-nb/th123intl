@@ -1,0 +1,142 @@
+## =======================================================================
+#Stage:1
+#Title:「태세성군의 재화」
+#Place:도서관
+
+Character:meirin,160,0,0,8888FF
+Character:patchouli,160,0,1,FF8888
+
+Stage:14,0
+
+Action:meirin,1
+
+Action:patchouli,30
+
+Action:meirin,2　
+
+
+Label:Start
+
+
+PlayBgm:data/bgm/ta20.ogg
+Sleep:60;
+
+Object:data/scenario/meirin/effect/StageTitle001.bmp,0,256,-32
+Sleep:30
+Object:data/scenario/effect/Stage1.bmp,1,256,352
+Sleep:126
+
+Sleep:120;
+
+
+
+#0１２３４５６７８９０１２３４５６７８９０１２３
+Action:meirin,50
+Action:meirin,51
+Balloon:meirin,1,0,-200
+파츄리 님!\
+
+Action:patchouli,203
+Balloon:patchouli,1,0,-200
+뭐야，시끄럽게.\
+
+Action:meirin,406
+Balloon:meirin,1,0,-200
+큰일입니다!
+아까 보여선 안 될 것이 보이고 말았습니다!\
+
+Action:patchouli,400
+Balloon:patchouli,1,0,-200
+보여선 안 될 것?\
+
+Action:meirin,203
+Balloon:meirin,1,0,-200
+태세성군입니다.
+이쯤되면 최악의 사태를 상정하지 않으면 안됩니다!\
+
+Balloon:patchouli,1,0,-200
+……그래서?\
+
+Action:meirin,405
+Balloon:meirin,1,0,-200
+그러니까 지진이나 다른 뭔가가 일어난다는 거예요!\
+
+Balloon:patchouli,1,0,-200
+…….
+지진이라니，시대에 뒤떨어졌네.\
+
+Action:meirin,300
+Balloon:meirin,1,0,-200
+네?\
+
+Action:patchouli,401
+Balloon:patchouli,1,0,-200
+아무튼，내 연구를 방해하지 말아줬으면 하는데.
+당장 일자리로 돌아가!\
+
+
+PlayBgm:data/bgm/st43.ogg
+
+Action:meirin,203
+Action:patchouli,203
+Action:meirin,167
+Action:meirin,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:patchouli,200
+Action:meirin,202
+
+Action:meirin,164
+Sleep:15
+
+Action:meirin,204
+Action:patchouli,205
+
+Action:meirin,2　
+
+Sleep:30
+Action:meirin,165
+
+Sleep:30
+
+Balloon:meirin,1,0,-200
+진짜라니까요…….\
+
+Balloon:patchouli,1,0,-200
+진짜라도 상관없잖아.
+어차피 그래봤자 지진인걸.\
+
+Action:meirin,300
+Balloon:meirin,1,0,-200
+어차피，라니.
+지진을 우습게 봐선 안된다구요.\
+
+Balloon:null,0,0,-200
+
+Sleep:30
+
+Result:
+FadeBgm:2000,0
+Action:meirin,160
+
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

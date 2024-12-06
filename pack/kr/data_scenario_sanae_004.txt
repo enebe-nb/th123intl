@@ -1,0 +1,380 @@
+## =======================================================================
+#Stage:5
+#Title:「아아，이것일지도 모르는 로봇」
+#Place:핵융합로 중심부
+
+Character:sanae,160,0,0,8888FF
+Character:suwako,160,0,1,FF8888
+
+Stage:34,0
+
+Action:sanae,1
+
+Action:suwako,101
+
+Action:sanae,2　
+
+
+Label:Start
+
+Action:sanae,161
+PlayBgm:data/bgm/ta20.ogg
+Sleep:60;
+
+Object:data/scenario/sanae/effect/StageTitle005.bmp,0,256,-32
+Sleep:30;
+#Object:data/scenario/effect/StageFinal.bmp,1,256,352
+Object:data/scenario/effect/StageFinal.bmp,1,256,382
+Sleep:240;
+
+Action:sanae,319
+Action:sanae,320
+
+Balloon:sanae,1,0,-200
+#0１２３４５６７８９０１２３４５６７８９０１２３
+여기에도 딱히 숨을 만한 곳은 없어.\
+
+Balloon:null,1,0,-200
+Action:sanae,321
+Action:sanae,322
+
+Balloon:sanae,1,0,-200
+핵융합로의 구조는 생각보다 단순하네.
+그저 좀 뜨거울 뿐……\
+
+Action:sanae,323
+
+멀긴 하지만，이런 지하에서도 하늘이 보이는구나.\
+
+하늘이 이렇게나 작게 느껴지다니……\
+
+Action:sanae,203
+
+흡혈귀는 여기서 사는 게 더 낫지 않으려나.\
+
+그건 그렇다치고，노심은 정말 뜨겁네.
+여기 바로 위에서 증기가 솟아오르고 있고……\
+
+#Action:sanae,323
+Action:sanae,305
+
+핫! 혹시 아까 봤던 거대한 그림자는!\
+
+여기에서 피어오른 증기 한가운데 있던
+누군가의 그림자가 비쳤을 뿐이었다던가……\
+
+Action:sanae,300
+
+설마~ 그럴 리가 없겠지.
+좀 더 입체감도 있었는걸.\
+
+FadeBgm:500,0
+Balloon:null,1,0,-200
+Action:sanae,324
+Sleep:60
+Balloon:sanae,1,0,-200
+뭐지?\
+
+Balloon:null,1,0,-200
+Sleep:60
+
+Action:sanae,324
+Sleep:90
+Balloon:sanae,1,0,-200
+뭔가 걷고 있는 듯한 소리와，땅울림……\
+
+환상향에는，바깥 세계에서 환상이 된 것들이
+흘러들어온다고 그랬지.\
+
+Balloon:null,1,0,-200
+Action:sanae,325
+Sleep:90
+
+PlayBgm:data/bgm/ta21.ogg
+Balloon:sanae,1,0,-200
+이건 역시 그거야!\
+Action:sanae,326
+실용성에서부터 실현될 수 없을 법한 그거!\
+Action:sanae,327
+동경하던 이족보행 거대로봇이 환상향에!\
+
+Balloon:null,1,0,-200
+
+Action:sanae,328
+Action:sanae,329
+
+Balloon:suwako,3,0,0
+거기 아래! 위험해~!\
+Balloon:null,1,0,-200
+
+Action:sanae,305
+Action:sanae,330
+Action:sanae,332
+
+Action:sanae,333
+Sleep:120
+
+Action:sanae,331
+Action:sanae,163
+
+Sleep:120
+Action:suwako,400
+Balloon:suwako,1,0,-200
+Action:suwako,202
+
+Sleep:30
+
+이런，뭔가 밟은 것 같은데.\
+Balloon:null,1,0,-200
+
+Action:suwako,401
+Action:suwako,202
+Balloon:suwako,1,0,-200
+어라~? 사나에 아냐.
+어쨌길래 이런 델 다 있어?\
+
+
+Action:sanae,334
+Balloon:sanae,1,0,-200
+아야야야.
+대체 뭐가……\
+
+Action:sanae,305
+엑? 스와코 님?
+어째서 이런 곳에 있나요!?\
+
+Balloon:suwako,1,0,-200
+나는 여기에 조금 볼일이 있어서 말야.\
+그것보다 사나에가 여깄다는 게 더 이상한데.\
+
+Action:sanae,203
+Balloon:sanae,1,0,-200
+맞아맞아，엄청난 걸 찾아냈다구요!\
+
+Balloon:suwako,1,0,-200
+헤에~，뭐야뭐야?\
+
+Balloon:null,1,0,-200
+Action:sanae,301
+Action:sanae,302
+Balloon:sanae,1,0,-200
+저는 어떤 거대한 그림자를 쫓아 여기까지 왔었는데.\
+
+세상에，거대로봇이 있었다구요.
+이 환상향에!\
+
+Action:suwako,402
+Balloon:suwako,1,0,-200
+거대로봇?\
+
+Action:sanae,203
+Balloon:sanae,1,0,-200
+네. 아직 확신은 할 수 없습니다만，
+존재한다 해도 이상할 게 없으니까요.\
+
+Balloon:suwako,1,0,-200
+그거 놀라워라!
+그래서，그거 어디서 봤는데?\
+
+Balloon:sanae,1,0,-200
+여기 바로 위에서요.
+제가 왔을 때는 스윽 사라져버렸지만.\
+
+Action:suwako,402
+Balloon:suwako,1,0,-200
+여기 바로 위?
+스윽 사라졌어?\
+
+Action:sanae,203
+Balloon:sanae,1,0,-200
+그래서，스와코 님은
+무슨 일 때문에 오신 건가요?\
+
+Balloon:suwako,1,0,-200
+비상천칙의 상태가 안 좋아서 말이지.
+재기동시키려고 지저에 왔어.\
+
+Balloon:sanae,1,0,-200
+비상천칙???
+그건 뭔가요?\
+
+Balloon:suwako,1,0,-200
+비상천칙이란 건……잠깐만?
+사나에가 봤다던 거대로봇이란 게 혹시……\
+
+Balloon:sanae,1,0,-200
+네?
+거대로봇이랑 뭔가 관계가 있나요?\
+
+Action:suwako,404
+Balloon:suwako,1,0,-200
+아하하，혹시 사나에가 본 거대로봇이……
+그랬구나 그랬어~\
+
+Action:sanae,305
+Balloon:sanae,1,0,-200
+뭔가 알고 계시는군요!\
+
+Action:suwako,203
+Balloon:suwako,1,0,-200
+아마도~.
+거대로봇이란 건 비상천칙을 말하는 거일껄?\
+
+웃겨 죽겠다~
+거대로봇이라는 거 참 그리운 단어인데.\
+
+Action:sanae,203
+Balloon:sanae,1,0,-200
+괘，괜찮잖아요.
+거대로봇이 비상천칙이다，그 말씀이죠?\
+
+Balloon:suwako,1,0,-200
+천칙(天則)，즉 하늘의 법칙을 생각하지 않기 때문에
+붙여진 이름이야. 그러니까 바보라는 말이지.\
+
+Balloon:sanae,1,0,-200
+헤?\
+
+Balloon:suwako,1,0,-200
+그걸 쫓아온 사나에도 참 바보구나~\
+
+Action:sanae,335
+Balloon:sanae,1,0,-200
+뭐라구요?\
+
+Balloon:suwako,1,0,-200
+뭐，거대로봇이라고 말하기도 좀 그렇지.
+비상천칙은 그저……\
+
+Balloon:null,1,0,-200
+
+Action:suwako,405
+Action:suwako,202
+
+Balloon:suwako,1,0,-200
+고철덩어리일 뿐이니까.\
+
+Balloon:sanae,1,0,-200
+그 비상천칙인가 뭔가 하는 건，
+카나코 님도 알고 있나요?\
+
+Action:suwako,410
+Action:suwako,202
+Balloon:suwako,1,0,-200
+아마도 모를껄~\
+
+Action:sanae,336
+Action:sanae,337
+Balloon:sanae,1,0,-200
+정말이지，요즘 자꾸 그런 짓만 하시고!
+아무한테도 안 말하고 멋대로 이상한 짓을……\
+
+Action:suwako,410
+Action:suwako,202
+Balloon:suwako,1,0,-200
+별루 상관없잖아.\
+
+Action:sanae,336
+Action:sanae,337
+Balloon:sanae,1,0,-200
+안됩니다! 이 핵융합로도
+비밀로 하고 만들었다가 혼났잖아요!\
+
+Action:suwako,410
+Action:suwako,202
+Balloon:suwako,1,0,-200
+그러니까，비상천칙이란 건 말야……\
+
+Action:sanae,336
+Action:sanae,337
+Action:sanae,327
+Balloon:sanae,1,0,-200
+오늘은 그냥 넘어가지 않는다구요!
+인간인 제 입장도 생각해주셔야죠!\
+
+Balloon:suwako,1,0,-200
+사나에는 말야~
+인간이 아니라 현인신인데~\
+
+Action:sanae,338
+Action:sanae,202
+Balloon:sanae,1,0,-200
+그렇다면 더더욱 그래요.
+저도 대등한 입장에서 말씀드리겠습니다.\
+
+Action:sanae,301
+Action:sanae,302
+스와코 님은 너무 제멋대로 행동하십니다!
+아무래도 여기서 혼이 좀 나셔야 할 것 같군요!\
+
+Balloon:suwako,1,0,-200
+Action:suwako,406
+우햐~!
+좋아좋아，싸워주겠다는 거지? 기대되네~\
+
+Balloon:sanae,1,0,-200
+봐주지 않는다구요?\
+
+Action:suwako,203
+
+Bgm:data/bgm/st35.ogg
+
+Balloon:suwako,1,0,-200
+내게 지리적으로 유리한 지하에서 싸우다니.
+사나에도 이제 다 컸잖아~\
+
+Balloon:null,1,0,-200
+Action:suwako,407
+Action:suwako,202
+Balloon:suwako,1,0,-200
+
+여기서 날 이기면，이제 우리들이 도와주지 않아도
+이변해결 여행을 보내도 걱정없겠는걸.\
+
+Action:sanae,203
+Balloon:sanae,1,0,-200
+어머，오늘은 혼자 돌아다니고 있었답니다.\
+
+Balloon:suwako,1,0,-200
+카나코는 걱정하던 것 같더라.
+돌아오는 길을 모르면 어쩌나 하고 말야~\
+
+Action:suwako,408
+Balloon:suwako,1,0,-200
+자! 대지를 만든 나를 놀라게 할 정도의，
+신의 이름에 걸맞는 기적을 보여주렴!\
+
+Action:suwako,409
+
+Action:sanae,203
+Action:suwako,203
+Action:sanae,167
+Action:sanae,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+Action:suwako,499
+
+End:
+
+# --------------------------------
+Label:Win
+
+#Action:suwako,200
+Action:reimu,202
+
+Sleep:30
+Result:
+
+
+End:
+
+## =======================================================================

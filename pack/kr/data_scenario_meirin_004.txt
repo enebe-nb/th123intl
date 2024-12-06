@@ -1,0 +1,148 @@
+## =======================================================================
+#Stage:5
+#Title:「무슨 소리입니까?」
+#Place:꿈 속
+
+Character:meirin,160,0,0,8888FF
+Character:namazu,160,0,1,FF8888
+
+Stage:38,0
+
+Action:meirin,20
+Action:meirin,401
+
+Action:namazu,100
+
+Action:meirin,2　
+
+
+Label:Start
+
+Action:meirin,161
+PlayBgm:data/bgm/ta21.ogg
+Sleep:60
+
+Object:data/scenario/meirin/effect/StageTitle005.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/StageFinal.bmp,1,256,384
+Sleep:300;
+
+Balloon:meirin,1,0,-200
+#0１２３４５６７８９０１２３４５６７８９０１２３
+어디냐!
+어디 있는 거냐!\
+
+환상향을 유린하는 태세성군이여，
+그 모습을 드러내라!\
+
+Balloon:null,1,0,-200
+Sleep:90;
+
+Action:namazu,400
+Action:namazu,401
+Balloon:namazu,1,0,-200
+Sleep:30
+
+하하핫.
+기어코 나를 부활시킬 줄이야.\
+
+네녀석에게 보낸 자객들과의 싸움은 즐거웠느냐?\
+
+Action:meirin,300
+Balloon:meirin,1,0,-200
+?\
+
+Balloon:namazu,1,0,-200
+그놈들은，네녀석의 힘을 빼앗기 위해
+일부러 보낸 것이다.\
+
+Action:meirin,307
+Balloon:meirin,1,0,-200
+!?\
+
+Balloon:namazu,1,0,-200
+그래，나를 부활시키기 위한 힘을.
+대지를 뒤흔들 정도의 힘을!\
+
+Balloon:meirin,1,0,-200
+뭣이라!?\
+
+Balloon:namazu,1,0,-200
+네녀석이 모르는 사이에，
+이 나를 위해 일해주었다는 것이지.\
+
+어떠냐?
+분노로 아무것도 머릿속에 떠오르지 않는 건가?\
+
+그게 아니면，
+슬픔에 할 말을 잃은 건가?\
+
+Action:meirin,203
+Balloon:meirin,1,0,-200
+후후후.\
+
+Balloon:namazu,1,0,-200
+뭐가 우습지?\
+
+Balloon:meirin,1,0,-200
+나를 위해 그렇게까지 준비해줬을 줄이야.\
+
+Balloon:namazu,1,0,-200
+뭣이라?\
+
+Balloon:meirin,1,0,-200
+나의 전설을 만들기 위해.\
+
+Balloon:namazu,1,0,-200
+호오?\
+
+Action:meirin,305
+Balloon:meirin,1,0,-200
+이 세계에 절대로 와선 안 될 존재를，
+환상향 제일의 문지기가 막아내는 이야기를 위해서!\
+
+Bgm:data/bgm/st35.ogg
+
+Balloon:namazu,1,0,-200
+이 나를 우습게 봐서는 곤란한데.\
+
+나는 그 최흉최악의 요괴，
+태세성군의 그림자들 중 하나다.\
+
+나야말로 전설의 오오나마즈님.
+내가 움직이면 대지가 흔들리고，지면이 붕괴하리니.\
+
+애초에，네놈 따위가 건드리는 일조차
+제대로 할 수 없는 거다!\
+
+
+Action:meirin,203
+Action:namazu,203
+Action:meirin,167
+Action:meirin,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:namazu,200
+Action:meirin,202
+
+Sleep:30
+Result:
+
+
+End:
+
+## =======================================================================

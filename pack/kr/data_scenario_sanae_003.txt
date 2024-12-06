@@ -1,0 +1,245 @@
+## =======================================================================
+#Stage:4
+#Title:「거대기뇰의 불」
+#Place:핵융합로 중심부
+
+Character:sanae,160,0,0,8888FF
+Character:utsuho,160,0,1,FF8888
+
+Stage:34,0
+
+Action:sanae,20
+
+Action:utsuho,100
+
+Action:utsuho,130
+
+
+Label:Start
+PlayBgm:data/bgm/room.ogg
+Sleep:60
+
+Action:sanae,161
+Action:utsuho,131
+
+Sleep:60
+Object:data/scenario/sanae/effect/StageTitle004.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage4.bmp,1,256,352
+Sleep:30;
+
+#PlayBgm:data/bgm/ta03.ogg
+Sleep:300;
+
+
+
+
+Balloon:sanae,1,0,-200
+#0１２３４５６７８９０１２３４５６７８９０１２３
+더워라…\
+
+이런 데서 오래 있으면 위험하겠는걸.\
+Balloon:null,1,0,-200
+
+Action:utsuho,400
+Action:sanae,305
+Sleep:10
+Action:sanae,313
+Action:sanae,314
+
+Action:utsuho,401
+
+Sleep:30
+
+Balloon:utsuho,1,0,-200
+이물질 발견!\
+
+핵융합로 이물질 혼입 시엔，반응을 멈추고
+즉시 이물질을 배제하라!\
+
+Balloon:sanae,1,0,-200
+!\
+
+Balloon:null,1,0,-200
+
+
+PlayBgm:data/bgm/st33.ogg
+Action:sanae,203
+Action:utsuho,203
+Action:sanae,3
+
+End:
+
+# --------------------------------
+Label:Intermission10
+
+Action:utsuho,154
+
+Action:utsuho,200
+Action:sanae,202
+
+Action:sanae,305
+
+Balloon:sanae,1,0,-200
+잠깐 기다려!\
+
+Action:utsuho,402
+
+나는 카나코 님의 무녀라고.\
+
+Action:utsuho,403
+
+Balloon:utsuho,1,0,-200
+으으응?
+카나코 님이 누구였지?\
+
+Action:sanae,203
+
+Balloon:sanae,1,0,-200
+결국，까마귀는 새대가리구나.
+간단히 말해서，난 당신보다 높은 사람의 부하야.\
+
+Balloon:utsuho,1,0,-200
+높은 사람의 부하?\
+
+부하라는 건 높지 않다는 거지?
+그런 높지 않은 인간이……잠깐만\
+
+Action:utsuho,404
+
+아，그러고보니 핵융합로에 이물질이 섞였다고
+신호가 왔었지.\
+
+Balloon:sanae,1,0,-200
+아니，그러니까…\
+
+Balloon:null,1,0,-200
+Action:utsuho,405
+Action:utsuho,406
+
+Balloon:utsuho,1,0,-200
+그리고 이물질 발견!
+높은 사람의 높지 않은 이물질은 배제한다!\
+
+
+Balloon:null,1,0,-200
+Action:sanae,301
+Action:sanae,302
+
+Balloon:sanae,1,0,-200
+그 기운을 전부 빼지 않고서야
+이야기가 안 통할 것 같네.\
+
+
+Action:sanae,203
+Action:utsuho,203
+
+Action:utsuho,210
+
+End:
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:utsuho,200
+Action:sanae,202
+
+Action:sanae,164
+Sleep:15
+
+Action:sanae,204
+Action:utsuho,205
+
+Action:sanae,2　
+
+Sleep:30
+Action:sanae,165
+
+Sleep:30
+#---------
+
+Action:sanae,301
+Action:sanae,302
+Balloon:sanae,1,0,-200
+자，거기까지야!\
+
+Action:utsuho,402
+Action:utsuho,202
+Action:utsuho,403
+
+Balloon:utsuho,1,0,-200
+음? 내가 뭘 하려고 했더라?\
+
+Action:sanae,317
+Balloon:sanae,1,0,-200
+에휴~ 당신은 제 명령을 듣고
+융합로 조사에 협력하려고 했어요.\
+
+Action:utsuho,203
+Balloon:utsuho,1,0,-200
+아，그랬던가?\
+
+Action:sanae,318
+Balloon:sanae,1,0,-200
+그랬습니다.
+그런 걸로 해주세요.\
+
+Balloon:utsuho,1,0,-200
+그러면 뭘 하면 돼?\
+
+Action:sanae,203
+Balloon:sanae,1,0,-200
+뭔가 거대한 물체가 숨겨져있는지
+조사하면 됩니다.\
+
+Balloon:utsuho,1,0,-200
+거대한 물체란 건 뭐야?
+얼만큼 커?\
+
+Action:sanae,300
+Balloon:sanae,1,0,-200
+인형에다가……
+한 100m 쯤 될 법한……\
+
+Balloon:utsuho,1,0,-200
+100미터?\
+
+Balloon:sanae,1,0,-200
+으~음. 이 융합로 가장자리에서 가장자리까지 정도?\
+
+Balloon:utsuho,1,0,-200
+Action:utsuho,404
+그렇게 거대한 인간!?
+있을 리가 없잖아.\
+
+설령 있다고 해도 내가 모를 리가 없는걸.\
+
+Action:sanae,203
+Balloon:sanae,1,0,-200
+그렇겠죠…….\
+
+Action:sanae,300
+Balloon:sanae,1,0,-200
+그치만 분명 여기 위쪽 땅에서 사라졌다구요.\
+
+Balloon:null,1,0,-200
+
+Result:
+FadeBgm:2000,0
+Action:sanae,160
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

@@ -1,0 +1,158 @@
+## =======================================================================
+#Stage:1
+#Title:「다이다라봇치」
+#Place:안개 호수 언저리
+
+Character:chirno,160,0,0,8888FF
+Character:sanae,160,0,1,FF8888
+
+Stage:30,0
+
+Action:sanae,100
+
+Action:chirno,300
+
+Action:chirno,2　
+
+
+Label:Start
+
+
+PlayBgm:data/bgm/ta01.ogg
+Sleep:60;
+
+Object:data/scenario/chirno/effect/StageTitle001.bmp,0,256,-32
+Sleep:30;
+Object:data/scenario/effect/Stage1.bmp,1,256,352
+Sleep:216;
+
+Action:chirno,301
+Sleep:60;
+
+
+
+Balloon:chirno,1,0,-200
+#0１２３４５６７８９０１２３４５６７８９０１２３
+방금 전의 그건……\
+
+Action:chirno,402
+전설의 대요괴，
+다이다라봇치가 틀림없어!\
+
+Action:chirno,404
+저녀석만 꼬시면 무서울 건 하나도 없지!\
+
+Balloon:null,0,0,-200
+Sleep:30
+
+#
+Action:sanae,101
+Action:sanae,102
+
+Sleep:30
+
+Balloon:sanae,1,0,-200
+분명 이쯤에서 사라진 것 같은데……\
+
+Action:chirno,302
+
+Balloon:chirno,1,0,-200
+오? 큰 게 사라졌다고 생각했더니
+이번엔 작은 게 나타났네.\
+
+Balloon:sanae,1,0,-200
+거기 요정 씨. 이 주변의 거대로ㅂ……，
+크고 움직이는 사람의 그림자 같은 거 못 봤나요?\
+
+Action:chirno,406
+
+Balloon:chirno,1,0,-200
+다이다라봇치 같은 건 못 봤다구.\
+
+Action:sanae,300
+
+Balloon:sanae,1,0,-200
+다이다라봇치?
+그런 말 한마디도 안 했는데에.\
+
+Action:chirno,407
+
+Balloon:chirno,1,0,-200
+아，아니，아무것도 아냐.
+이몸은 정말 아무것도 못 봤어!\
+
+Action:sanae,301
+
+Balloon:sanae,1,0,-200
+설마，당신 뭔가 꾸미고 있는 겁니까?
+짙은 안개 속 브로켄의 요괴인 척 하면서.\
+
+
+PlayBgm:data/bgm/st30.ogg
+
+Action:chirno,203
+Action:sanae,203
+Action:chirno,167
+Action:chirno,3
+
+End:
+
+# --------------------------------
+Label:Lose
+
+End:
+
+# --------------------------------
+Label:Continue
+
+End:
+
+# --------------------------------
+Label:Win
+
+Action:sanae,200
+Action:chirno,202
+
+Action:chirno,164
+Sleep:15
+
+Action:chirno,204
+Action:sanae,205
+
+Action:chirno,2　
+
+Sleep:30
+Action:chirno,165
+
+Sleep:30
+
+Balloon:chirno,1,0,-200
+Action:chirno,303
+응.
+오늘 컨디션은 괜찮아!\
+
+Action:chirno,404
+자아，
+다이다라봇치를 찾아서 가보실까!\
+
+Balloon:null,0,0,-200
+
+Action:chirno,304
+Sleep:90
+
+Balloon:sanae,1,0,-200
+아야야야야.
+요정이라고 해서 얕보면 안되겠구나…….\
+Balloon:null,0,0,-200
+
+Result:
+FadeBgm:2000,0
+Action:chirno,160
+
+
+
+Sleep:120;
+
+End:
+
+## =======================================================================

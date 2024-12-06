@@ -24,6 +24,12 @@
         "popup":{
             "name": "simhei",
             "paddingY": 0
+        },
+        "replayPath":{
+            "name": "simhei"
+        },
+        "netProfile":{
+            "name": "simhei"
         }
     },
     "tiles": {

@@ -1,0 +1,124 @@
+# ----------------------------------------------------
+# Ending
+# Stage:Ending
+#
+# Hi-lock: (("\\#.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+# Hi-lock: (("^[ \t]*Character.*$"              (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Action.*$"              (0 '((t (:foreground "cornflower blue"))) t))) 
+# Hi-lock: (("^[ \t]*Stage.*$"              (0 '((t (:foreground "sky blue"))) t))) 
+# Hi-lock: (("^[ \t]*Label.*$"            (0 '((t (:foreground "royal blue"))) t))) 
+# Hi-lock: (("^[ \t]*Object.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Sleep.*$"            (0 '((t (:foreground "dim gray"))) t))) 
+# Hi-lock: (("^[ \t]*Face.*$"            (0 '((t (:foreground "medium spring green"))) t))) 
+# Hi-lock: (("^[ \t]*End.*$"            (0 '((t (:foreground "dark slate gray"))) t))) 
+
+Font:a자막체,16,3,6
+WindowColor:0,0,0,0
+Color:FFFFFF
+Background:data/scenario/effect/EdBack000.bmp,999,0,0
+CG:data/scenario/meirin/effect/ED000.bmp,96,16,50
+WindowPos:8,372
+Label:Start
+
+
+Bgm:data/bgm/ta06.ogg
+
+CG:data/scenario/meirin/effect/ED000.bmp,96,16,50
+#0１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３
+　――홍마관 지하에 있는 도서관.@
+　지하는 여름엔 시원하고，겨울엔 따뜻하고 쾌적했다.@
+　또한 햇빛이 닿지 않기 때문에 책을 보존하기에 딱 좋은 곳이다.\
+
+CG:data/scenario/meirin/effect/ED001.bmp,96,16,50
+# ------------------------------------------------
+메이링「……지진은 이제 일어나지 않아.@
+　　　 이걸로 환상향은 지켜졌다!」\
+파췌　「그래서?@
+　　　 언제까지 자는 거야? 이 바보는」\
+사쿠야「제가 알아챘을 때는 이미 밖에서 선잠을 자고 있었으니，@
+　　　 어쩌면 뭔가 적의 공격이라도 받은 거 아닐까요?」\
+파췌　「흐응.@
+　　　 바깥에 너무 내비둬서 열사병이라도 걸린 건가?」\
+사쿠야「그럼 찬물에 적신 수건이라도 가지고 올까요?」\
+파췌　「필요없어，그런 건. 이녀석 요괴잖아」\
+
+
+CG:data/scenario/meirin/effect/ED002.bmp,96,16,50
+#0１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３
+# 
+메이링「……뭣이라?@
+　　　 네놈이 진정한 라스트보스라고? 태세성군이라 이거냐!」\
+
+사쿠야「태세성군이라는 건 대체 뭘까요?」\
+
+파췌　「태세성군……?@
+　　　 으~응. 아까도 누구한테 그런 말을 들은 것 같은데」\
+
+메이링「좋다. 상대해주지!@
+　　　 이제 나 이외에 싸울 수 있는 사람이 없으니까!」\
+
+파췌　「아~ 그러고보니 이녀석한테 들었었지.@
+　　　 홍마관 밖에서 태세성군을 봤대나 뭐래나」\
+
+사쿠야「어쩌면，그녀석의 공격을 받고
+　　　 일어나지 못하는 건 아닐지……」\
+
+#0１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３
+
+CG:data/scenario/meirin/effect/ED003.bmp,96,16,50
+# 
+# 
+　파췌　「글쎄. 어떨라나.@
+　　　　 쓸데없이 객기부리다 지쳐서 자는 건 아니고?@
+　　　　 거기다，일자리에 이런 게 떨어져 있었거든」\
+　사쿠야「아~，텐구의 활극 만화입니까?」\
+　파췌　「사악한 요괴가 환상향에 친밀한 인간으로 모습을 바꿔서@
+　　　　 차례차례로 습격해온다는 시시한 줄거리야」\
+　메이링「젠장!@
+　　　　 너무 강하다~」\
+　파췌　「어차피 이걸 보고 적이랑 싸우는 꿈이라도 꾸는 거겠지」\
+　사쿠야「헤에. 좋겠네요，꿈이 있어서.@
+　　　　 그런데 텐구라고 하면……@
+　　　　 신문에서 캇파 바자회가 열린다는 소리를 들으셨나요?」\
+　파췌　「봤어 봤어.@
+　　　　 비상천칙이라는 거대인형이 화제라는데」\
+　사쿠야「그걸 아가씨와 보러 다녀올까 생각중입니다만.@
+　　　　 파츄리 님은 어떠신지요?」\
+　파췌　「물론 가봐야지.@
+　　　　 귀중한 물품이 다른 사람들 손에 넘어가면 안되니까」\
+　사쿠야「그러면 집보는 걸 어떻게든 해둬야 하는데……」\
+
+Background:BLACK,0,0
+CG:BLACK,0,0,50
+WindowPos:0,640
+
+Sleep:60
+
+CG:data/scenario/meirin/effect/ec02_0.bmp,64,352,15
+
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/meirin/effect/ec02_1.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/meirin/effect/ec02_2.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/meirin/effect/ec02_3.bmp,64,352,15
+　\
+CG:BLACK,0,0,15
+Sleep:15
+
+CG:data/scenario/meirin/effect/ec02_4.bmp,64,352,15
+　\
+FadeBgm:20000,0
+CG:BLACK,0,0,15
+StaffRoll:
+
+End:
