@@ -3,6 +3,7 @@
 #include "th123intl.hpp"
 
 #include <nlohmann/json.hpp>
+#include <SokuLib.hpp>
 
 // global variable initialization
 std::filesystem::path modulePath;
@@ -55,8 +56,49 @@ extern "C" __declspec(dllexport) void* GetLocale() {
     return (void*) langConfig.locale;
 }
 
+extern "C" __declspec(dllexport) const char* GetLocaleName() {
+    return langConfig.localeName.c_str();
+}
+
 extern "C" __declspec(dllexport) int getPriority() {
     return -200;
+}
+
+namespace {
+    struct tlpack_t {
+        SokuLib::CSVParser parser;
+        std::unordered_map<const char*, const char*> map;
+        inline tlpack_t(const char* name) : parser(name) {}
+    };
+}
+
+extern "C" __declspec(dllexport) void FreeTranslationPack(void* pack) {
+    delete (tlpack_t*) pack;
+}
+
+extern "C" __declspec(dllexport) const char* GetTranslation(void* pack, const char* key, const char* defaultText) {
+    if (!pack) return defaultText;
+    auto& tltable = ((tlpack_t*)pack)->map;
+    auto iter = tltable.find(key);
+    if (iter == tltable.end()) return defaultText;
+    return iter->second ? iter->second : defaultText;
+}
+
+extern "C" __declspec(dllexport) void* LoadTranslationPack(const char* name) {
+    if (!name) return 0;
+    char bName[50] = "data/intl_";
+    strncat(bName, name, 32); strcat(bName, ".cv1");
+    auto pack = new tlpack_t(bName);
+
+    for(int i = 0; i < pack->parser.data.size(); ++i) {
+        auto& pair = pack->parser.data.at(i);
+        if (pair.size() < 2) continue;
+        auto first = (const char*)pair[0]; auto second = (const char*)pair[1];
+        if (!first || !second) continue;
+        pack->map.insert_or_assign(first, second);
+    }
+
+    return (void*) pack;
 }
 
 BOOL WINAPI DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved) {

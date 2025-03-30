@@ -5,6 +5,8 @@
 #define TH123INTL_HPP
 
 namespace th123intl {
+    typedef void* tlpack_t;
+
     inline unsigned int GetFileSystemCodePage() { return GetACP(); }
     inline unsigned int GetTextCodePage() {
         auto handle = GetModuleHandleA("th123intl.dll");
@@ -15,7 +17,7 @@ namespace th123intl {
     }
 
     template <_locale_t& curLocale>
-    _locale_t GetLocale() {
+    inline _locale_t GetLocale() {
         if (curLocale) return curLocale;
         auto handle = GetModuleHandleA("th123intl.dll");
         FARPROC proc = 0;
@@ -25,6 +27,36 @@ namespace th123intl {
             return curLocale;
         }
         return curLocale = (_locale_t)proc();
+    }
+
+    inline const char* GetLocaleName() {
+        auto handle = GetModuleHandleA("th123intl.dll");
+        FARPROC proc = 0;
+        if (handle) proc = GetProcAddress(handle, "GetLocaleName");
+        if (!handle || !proc) return "ja_JP";
+        return (const char*) proc();
+    }
+
+    inline tlpack_t LoadTranslationPack(const char* name) {
+        auto handle = GetModuleHandleA("th123intl.dll");
+        FARPROC proc = 0;
+        if (handle) proc = GetProcAddress(handle, "LoadTranslationPack");
+        if (handle && proc) reinterpret_cast<tlpack_t (__stdcall *)(const char*)>(proc)(name);
+    }
+
+    inline void FreeTranslationPack(tlpack_t pack) {
+        auto handle = GetModuleHandleA("th123intl.dll");
+        FARPROC proc = 0;
+        if (handle) proc = GetProcAddress(handle, "FreeTranslationPack");
+        if (handle && proc) reinterpret_cast<void (__stdcall *)(tlpack_t)>(proc)(pack);
+    }
+
+    inline const char* GetTranslation(tlpack_t pack, const char* key, const char* defaultText) {
+        auto handle = GetModuleHandleA("th123intl.dll");
+        FARPROC proc = 0;
+        if (handle) proc = GetProcAddress(handle, "GetTranslation");
+        if (!handle || !proc) return defaultText;
+        return reinterpret_cast<const char* (__stdcall *)(tlpack_t, const char*, const char*)>(proc)(pack, key, defaultText);
     }
 
     template<int flags = WC_COMPOSITECHECK|WC_DEFAULTCHAR>

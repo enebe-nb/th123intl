@@ -109,7 +109,8 @@ static void LoadConfig(const std::filesystem::path& filename) {
         nlohmann::json json = nlohmann::json::parse(data);
         std::cout << json << std::endl;
 
-        langConfig.locale = _create_locale(LC_ALL, json.at("locale").get<std::string>().c_str());
+        langConfig.localeName = json.at("locale").get<std::string>();
+        langConfig.locale = _create_locale(LC_ALL, langConfig.localeName.c_str());
         if (!langConfig.locale) throw std::exception("invalid locale");
 
         json.at("charset").get_to(langConfig.charset);

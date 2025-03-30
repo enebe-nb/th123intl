@@ -27,6 +27,7 @@ struct LangConfig {
 	};
 
 	_locale_t locale = 0;
+	std::string localeName = "";
 	unsigned int charset = 128;
 	std::vector<std::filesystem::path> packFiles;
 	std::unordered_map<unsigned int, std::vector<FontOverride>> fontOverrides;
