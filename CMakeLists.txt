@@ -32,6 +32,7 @@ set(SRC_THI
     src/hooks.cpp
     src/language.cpp
     src/parser.cpp
+    src/profile.cpp
 )
 
 if(WIN32)

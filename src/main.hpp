@@ -13,6 +13,7 @@ extern std::filesystem::path languagePack;
 void LoadHooks();
 void LoadLanguage();
 void LoadParser();
+void LoadProfile();
 
 struct LangConfig {
 	struct FontOverride {
@@ -27,7 +28,7 @@ struct LangConfig {
 	};
 
 	_locale_t locale = 0;
-	std::string localeName = "";
+	std::string localeName = "ja_JP";
 	unsigned int charset = 128;
 	std::vector<std::filesystem::path> packFiles;
 	std::unordered_map<unsigned int, std::vector<FontOverride>> fontOverrides;

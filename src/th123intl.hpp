@@ -88,6 +88,11 @@ namespace th123intl {
         if (!ConvertCodePage<inFlags>(fromCP, from, buffer)) { to.resize(0); return false; }
         return ConvertCodePage<outFlags>(buffer, toCP, to);
     }
+
+    inline bool validInCodePage(int CP, const std::string_view& str) {
+        if (str.empty()) return true;
+        return MultiByteToWideChar(CP, MB_ERR_INVALID_CHARS, str.data(), str.size(), NULL, NULL);
+    }
 }
 
 #endif

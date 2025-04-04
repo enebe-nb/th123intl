@@ -21,18 +21,6 @@ namespace {
 
     typedef bool (__fastcall *csvParserInDeckInfo_t)(SokuLib::CSVParser&, void*, const char*);
     csvParserInDeckInfo_t orig_csvParserInDeckInfo = (csvParserInDeckInfo_t) 0x0040f370;
-    typedef void (__fastcall *copyInFilelist_t)(void*, void*, SokuLib::String&);
-    copyInFilelist_t orig_copyInFilelist = (copyInFilelist_t) 0x0043caa0;
-    typedef void (__fastcall *copyInProfile_t)(SokuLib::String&, void*, SokuLib::String&, unsigned int, int);
-    copyInProfile_t orig_copyInProfile = (copyInProfile_t) 0x004020d0;
-    typedef int (__fastcall *createTextTexture_t)(void*, void*, void*, const char*, void*, int, int, int*, int*);
-    createTextTexture_t orig_createTextTexture = (createTextTexture_t) 0x004050a0;
-
-    typedef int (__fastcall *loadImage_t)(int*, char*, void**, int*);
-    loadImage_t orig_loadImage = (loadImage_t) 0x00408cf0;
-
-    std::string profileErrorTitle = "Profile copy failed.";
-    std::string profileErrorMessage = "Please, change the profile name to an english name for better compatibility.";
 
     const std::unordered_multimap<std::string_view, const char**> strMapSimple = {
         { "dinput.failCreate0", (const char**)0x40d66d },
@@ -164,9 +152,6 @@ static inline void LoadSystemStrings() {
         auto& pair = systemStrings->data.at(i);
         if (pair.size() < 2) continue;
 
-        if (strcmp(pair[0], "profile.failCopy") == 0) profileErrorTitle = (char*)pair[1];
-        if (strcmp(pair[0], "profile.intlWarning") == 0) profileErrorMessage = (char*)pair[1];
-
         { auto iter = strMapSimple.equal_range(std::string_view(pair[0], pair[0].size));
         if (iter.first != strMapSimple.end()) for(auto addr = iter.first; addr != iter.second; ++addr) {
             *addr->second = (const char*)pair[1];
@@ -288,144 +273,6 @@ static int printNextChar(SokuLib::SWRFont* font, const char* buffer, int index, 
         call orig_parseIChar;
     }; // fuck eax
     return len;
-}
-
-/*
-inline unsigned int _div255(unsigned int v) { return (v+1+(v>>8))>>8; }
-static void __fastcall repl_alphaBlend(unsigned int color, unsigned int alpha, unsigned int* out) {
-    unsigned short a0 = ((alpha*0xffu) >> 4) & 0xff;
-    unsigned short a1 = *out >> 24;
-    unsigned short a2 = a0 + _div255(a1*(255-a0));
-
-    unsigned int result = (unsigned int)a2 << 24;
-    if (a2 != 0) for (int i = 0; i < 3; ++i) {
-        unsigned short c0 = (color >> i*8) & 0xff;
-        unsigned short c1 = (*out >> i*8) & 0xff;
-        unsigned short c2 = (c0*a0 + _div255(c1*a1)*(255-a0)) / a2;
-        result |= ((unsigned int)c2 & 0xff) << i*8;
-    }
-
-    *out = result;
-}
-
-static void __fastcall repl_textShadow(int height, int width, int line, unsigned int* input, unsigned int* output) {
-    width -= 1;
-    height -= 1;
-
-    for (int j = 1; j < height; ++j) {
-        for (int i = 1; i < width; ++i) {
-            unsigned int c0 = input[j*line+i];
-            if (c0>>24) {
-                unsigned alpha = c0>>27;
-                if (alpha > 16) alpha = 16;
-                unsigned int c1 = 0xff000000;
-                repl_alphaBlend(c0, alpha, &c1);
-                repl_alphaBlend(c1, 16, &output[j*line+i]);
-            } else {
-                unsigned char current = input[(j-1)*line+i] >> 24;
-                unsigned char next = input[(j+1)*line+i] >> 24;
-                if (current < next) current = next;
-                next = input[j*line+(i-1)] >> 24;
-                if (current < next) current = next;
-                next = input[j*line+(i+1)] >> 24;
-                if (current < next) current = next;
-                repl_alphaBlend(0, current >> 4, &output[j*line+i]);
-            }
-        }
-    }
-} __declspec(naked) static void _repl_textShadow() {
-    __asm {
-        mov ecx, [eax+0x148];
-        mov edx, [eax+0x14c];
-        mov eax, [eax+0x150];
-        pop ebx;
-        push eax;
-        push ebx;
-        jmp repl_textShadow;
-    }
-}
-*/
-
-static void trimLengthA(SokuLib::String& src, size_t max) {
-    size_t i, len = _mblen_l((char*)src, src.size, langConfig.locale);
-    if (len <= 0) len = 1;
-    for (i = 0; i+len <= max && i < src.size; i+=len) {
-        len = _mblen_l(&src[i], src.size - i, langConfig.locale);
-        if (len <= 0) len = 1;
-    }
-    src[i] = '\0'; src.size = i;
-}
-
-static void trimLengthB(std::string& src, size_t max) {
-    size_t i, len = _mblen_l(src.data(), src.size(), langConfig.locale);
-    if (len <= 0) len = 1;
-    for (i = 0; i+len <= max && i < src.size(); i+=len) {
-        len = _mblen_l(&src[i], src.size() - i, langConfig.locale);
-        if (len <= 0) len = 1;
-    }
-    src.resize(i);
-}
-
-static int __fastcall repl_CProfileListAppendLine(SokuLib::CProfileList& self, void* unused, SokuLib::String& out, void* unknown, SokuLib::Deque<SokuLib::String>& list, int index) {
-    SokuLib::String src = list[index];
-    if (self.extLength && src.size >= self.extLength) { src.size -= self.extLength; src[src.size] = '\0'; }
-    if (!src.size) return 0;
-
-    const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
-    if (GetACP() == targetCP) {
-        if (self.maxLength && src.size >= self.maxLength) trimLengthA(src, self.maxLength);
-        out.append(src, src.size);
-        return src.size;
-    }
-
-    std::string buffer; th123intl::ConvertCodePage(GetACP(), std::string_view(src, src.size), targetCP, buffer);
-    if (self.maxLength && buffer.size() >= self.maxLength) trimLengthB(buffer, self.maxLength);
-    out.append(buffer.c_str(), buffer.size()); return buffer.size();
-}
-
-static void validateProfileName(SokuLib::String& name) {
-    const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
-    if (GetACP() == 932 && targetCP == 932) return;
-    for (int i = 0; i < name.size; ++i) if (name[i] < 0) {
-        std::wstring errorMessage, errorTitle;
-        th123intl::ConvertCodePage(targetCP, profileErrorMessage, errorMessage);
-        th123intl::ConvertCodePage(targetCP, profileErrorTitle, errorTitle);
-        MessageBoxW(0, errorMessage.c_str(), errorTitle.c_str(), MB_ICONWARNING|MB_OK);
-        break;
-    }
-}
-
-static void __declspec(naked) repl_trimInProfile() {
-    __asm {
-        push 23;
-        push ebp;
-        call trimLengthA; // trimLengthA(str, 23)
-        call validateProfileName; // validateProfileName(str)
-        add esp, 8;
-        xor eax, eax;     // skip default trim
-        ret;
-    }
-}
-
-static void __fastcall repl_trimInReplay(SokuLib::CFileList& self, void* edx, SokuLib::String& str) {
-    if (self.extLength && str.size >= self.extLength) { str.size -= self.extLength; str[str.size] = '\0'; }
-    if (self.maxLength && str.size >= self.maxLength) trimLengthA(str, self.maxLength);
-}
-
-static void __fastcall repl_copyInProfile(SokuLib::String& dst, void* edx, SokuLib::String& src, unsigned int offset, int len) {
-    const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
-    if (GetACP() == targetCP) return orig_copyInProfile(dst, edx, src, offset, len);
-    const char* cstr = src; cstr += offset;
-    if (len == -1) len = src.size - offset;
-    std::string buffer; th123intl::ConvertCodePage(GetACP(), std::string_view(cstr, src.size), targetCP, buffer);
-    dst.assign(buffer.c_str(), buffer.size());
-}
-
-static int __fastcall repl_createTextTexture(void* ecx, void* edx, void* dxHandle, const char* text, void* fontHandle, int texWidth, int texHeight, int* outWidth, int* outHeight) {
-    const unsigned int targetCP = ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage;
-    if (GetACP() == targetCP) return orig_createTextTexture(ecx, edx, dxHandle, text, fontHandle, texWidth, texHeight, outWidth, outHeight);
-    std::string buffer; th123intl::ConvertCodePage(GetACP(), std::string_view(text), targetCP, buffer);
-    return orig_createTextTexture(ecx, edx, dxHandle, buffer.c_str(), fontHandle, texWidth, texHeight, outWidth, outHeight);
 }
 
 template <int ADDR> static void __fastcall setFont(SokuLib::SWRFont* font, int unused, SokuLib::FontDescription* desc) {
@@ -566,16 +413,6 @@ void LoadHooks() {
 
     // Convert ACP to langConfig.locale in replay and profile names
     //orig_copyInFilelist = SokuLib::TamperNearJmpOpr(0x0043cd89, repl_copyInFilelist);
-    orig_createTextTexture = SokuLib::TamperNearJmpOpr(0x0044b143, repl_createTextTexture); // replay (big line)
-    SokuLib::TamperNearJmpOpr(0x0042c7a1, repl_copyInProfile); // replay (copy string)
-    SokuLib::TamperNearJmpOpr(0x0042c8c5, repl_trimInReplay); // replay (trim string)
-    orig_copyInProfile = SokuLib::TamperNearJmpOpr(0x00434ea9, repl_copyInProfile);
-    TamperCode(0x434eae, {
-        0x8B, 0x45, 0x14,       // MOV eax, [ebp+0x14]
-        0x90, 0x90, 0x90,       // NOP NOP NOP
-    }); // use length of target instead of source
-    TamperCode(0x434ec3, { 0x90 });
-    SokuLib::TamperNearCall(0x434ec4, repl_trimInProfile);
 
     // Convert string inside Csv Files without changing numbers
     // 0x433029: story?
@@ -585,41 +422,6 @@ void LoadHooks() {
     orig_csvParserInDeckInfo = SokuLib::TamperNearJmpOpr(0x4374f9, repl_csvParserInDeckInfo);
 
 /*
-    // Make the Text Renderer to do alpha blending
-    TamperCode(0x411f80, {
-        0x50,                           // PUSH eax
-        0x51,                           // PUSH ecx
-        0x52,                           // PUSH edx             -- save state
-        0x0f, 0xb6, 0x17,               // MOVZX edx, byte[edi] -- alpha
-        0x8b, 0x09,                     // MOV ecx, [ecx]       -- color
-        0x50,                           // PUSH eax             -- output
-        0xe8, 0, 0, 0, 0,               // CALL xxxx
-        0x5a,                           // POP edx
-        0x59,                           // POP ecx
-        0x58,                           // POP eax              -- restore state
-        0x83, 0xc7, 0x01,               // ADD edi, 1           -- advance loop
-        0x90, 0x90,                     // NOP                  -- align
-    });
-    TamperCode(0x411fd0, {
-        0x50,                           // PUSH eax
-        0x51,                           // PUSH ecx
-        0x52,                           // PUSH edx             -- save state
-        0x0f, 0xb6, 0x17,               // MOVZX edx, byte[edi] -- alpha
-        0x8b, 0x8e, 0x68, 0x01, 0, 0,   // MOV ecx, [esi+0x168] -- color
-        0x50,                           // PUSH eax             -- output
-        0xe8, 0, 0, 0, 0,               // CALL xxxx
-        0x5a,                           // POP edx
-        0x59,                           // POP ecx
-        0x58,                           // POP eax              -- restore state
-        0x83, 0xc7, 0x01,               // ADD edi, 1           -- advance loop
-        0x90, 0x90,                     // NOP                  -- align
-    });
-    TamperNearJmpOpr(0x411f89, reinterpret_cast<DWORD>(repl_alphaBlend));
-    TamperNearJmpOpr(0x411fdd, reinterpret_cast<DWORD>(repl_alphaBlend));
-
-    // Make the Text Shadow to do alpha blending
-    TamperNearJmpOpr(0x412a3f, reinterpret_cast<DWORD>(_repl_textShadow));
-
     *(uint32_t*)0x450b3e = 0x00;    // deck numbers spacing
     *(uint8_t*)0x450bfd  = 0x0e;    // deck numbers slice size
     *(uint8_t*)0x450bff  = 0x12;    // deck numbers slice size
@@ -635,7 +437,6 @@ void LoadHooks() {
     *(uint32_t*)0x857014 = (uint32_t) GetProcAddress(GetModuleHandle(TEXT("gdi32.dll")), "GetGlyphOutlineW");
 #endif
     // Convert ACP to langConfig.locale in profile names
-    SokuLib::TamperDword(0x8587a4, repl_CProfileListAppendLine);
     // Replace link to MessageBoxA with custom function TODO convert to WCHAR?
     //*(uint32_t*)0x857250 = (uint32_t) repl_MessageBoxUtf8;
     VirtualProtect((LPVOID)0x857000, 0x02b000, old, &old);

@@ -41,6 +41,7 @@ extern "C" __declspec(dllexport) bool Initialize(HMODULE hMyModule, HMODULE hPar
     if (langConfig.locale) {
         LoadHooks();
         LoadParser();
+        LoadProfile();
     }
     return true;
 }
