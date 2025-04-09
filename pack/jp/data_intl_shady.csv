@@ -1,0 +1,16 @@
+#id,translation
+menu-local-package,"<color 404040>こちらはローカルパックです。</color>"
+menu-version,"バージョン: <color 606060>{}</color>"
+menu-creator,"制作者: <color 606060>{}</color>"
+menu-description,"記述: <color 606060>{}</color>"
+menu-tags-begin,"タグ: <color 606060>"
+menu-tags-element,"#{}"
+menu-tags-separator,"  "
+menu-tags-end,"</color>"
+
+menu-downloading,"ダウンロード中 ..."
+menu-option-disable,"無効化"
+menu-option-enable,"有効化"
+menu-option-show,"ファイルを表示する"
+menu-option-update,"更新"
+menu-option-download,"ダウンロードする"

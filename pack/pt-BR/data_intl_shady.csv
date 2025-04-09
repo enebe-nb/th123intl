@@ -1,0 +1,16 @@
+#id,translation
+menu-local-package,"<color 404040>Este pacote é local.</color>"
+menu-version,"Versão: <color 606060>{}</color>"
+menu-creator,"Criador: <color 606060>{}</color>"
+menu-description,"Descrição: <color 606060>{}</color>"
+menu-tags-begin,"Tags: <color 606060>"
+menu-tags-element,"#{}"
+menu-tags-separator,", "
+menu-tags-end,"</color>"
+
+menu-downloading,"Baixando pacote ..."
+menu-option-disable,"Desativar"
+menu-option-enable,"Ativar"
+menu-option-show,"Mostrar Arquivos"
+menu-option-update,"Atualizar"
+menu-option-download,"Baixar"

@@ -3,11 +3,14 @@
 #include <unordered_map>
 #include <vector>
 
+#define SOKU_USE_UTF16
+#define SOKU_USE_NETUTF8
 #ifdef _DEBUG
 #include <fstream>
 extern std::ofstream logging;
 #endif
 
+extern _locale_t u8locale;
 extern std::filesystem::path modulePath;
 extern std::filesystem::path languagePack;
 void LoadHooks();
@@ -33,6 +36,7 @@ struct LangConfig {
 	std::vector<std::filesystem::path> packFiles;
 	std::unordered_map<unsigned int, std::vector<FontOverride>> fontOverrides;
 	std::unordered_map<unsigned int, std::vector<TileOverride>> tileOverrides;
+	std::unordered_map<std::string, std::vector<FontOverride>> customFonts;
 
 	~LangConfig();
 }; extern struct LangConfig langConfig;

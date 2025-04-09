@@ -41,14 +41,14 @@ namespace th123intl {
         auto handle = GetModuleHandleA("th123intl.dll");
         FARPROC proc = 0;
         if (handle) proc = GetProcAddress(handle, "LoadTranslationPack");
-        if (handle && proc) reinterpret_cast<tlpack_t (__stdcall *)(const char*)>(proc)(name);
+        if (handle && proc) reinterpret_cast<tlpack_t (*)(const char*)>(proc)(name);
     }
 
     inline void FreeTranslationPack(tlpack_t pack) {
         auto handle = GetModuleHandleA("th123intl.dll");
         FARPROC proc = 0;
         if (handle) proc = GetProcAddress(handle, "FreeTranslationPack");
-        if (handle && proc) reinterpret_cast<void (__stdcall *)(tlpack_t)>(proc)(pack);
+        if (handle && proc) reinterpret_cast<void (*)(tlpack_t)>(proc)(pack);
     }
 
     inline const char* GetTranslation(tlpack_t pack, const char* key, const char* defaultText) {
@@ -56,7 +56,15 @@ namespace th123intl {
         FARPROC proc = 0;
         if (handle) proc = GetProcAddress(handle, "GetTranslation");
         if (!handle || !proc) return defaultText;
-        return reinterpret_cast<const char* (__stdcall *)(tlpack_t, const char*, const char*)>(proc)(pack, key, defaultText);
+        return reinterpret_cast<const char* (*)(tlpack_t, const char*, const char*)>(proc)(pack, key, defaultText);
+    }
+
+    inline bool LocalizeFont(const char* name, void* fontDescription) {
+        auto handle = GetModuleHandleA("th123intl.dll");
+        FARPROC proc = 0;
+        if (handle) proc = GetProcAddress(handle, "LocalizeFont");
+        if (!handle || !proc) return false;
+        return reinterpret_cast<bool (*)(const char*, void* )>(proc)(name, fontDescription);
     }
 
     template<int flags = WC_COMPOSITECHECK|WC_DEFAULTCHAR>

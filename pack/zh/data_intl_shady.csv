@@ -1,0 +1,16 @@
+#id,translation
+menu-local-package,"<color 404040>这是一只野生Shady包～</color>"
+menu-version,"<color a0a0ff>版本: </color>{}"
+menu-creator,"<color a0a0ff>作者: </color>{}"
+menu-description,"<color a0a0ff>简介: </color>{}"
+menu-tags-begin,"<color a0a0ff>标签: </color>"
+menu-tags-element,"#{}"
+menu-tags-separator,"  "
+menu-tags-end,""
+
+menu-downloading,"下载中..."
+menu-option-disable,"● <color a0a0ff>关闭</color>"
+menu-option-enable,"● <color a0a0ff>启用</color>"
+menu-option-show,"● <color a0a0ff>打开文件位置</color>"
+menu-option-update,"● <color ff8040>更新</color>"
+menu-option-download,"● <color 7040b0>下载</color>"

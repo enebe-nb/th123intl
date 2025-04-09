@@ -2,6 +2,7 @@
 
 #include <SokuLib.hpp>
 #include <nlohmann/json.hpp>
+#include <iostream>
 #include "main.hpp"
 
 struct LangConfig langConfig;
@@ -102,18 +103,20 @@ static inline void SetOverrides(std::vector<LangConfig::FontOverride>& out, nloh
         out.push_back(fontAttr.at(iter.key())(iter.value()));
     }
 }
-#include <iostream>
+
 static void LoadConfig(const std::filesystem::path& filename) {
     std::ifstream data(filename);
     try {
         nlohmann::json json = nlohmann::json::parse(data);
         std::cout << json << std::endl;
 
-        langConfig.localeName = json.at("locale").get<std::string>();
+        json.at("locale").get_to(langConfig.localeName);
         langConfig.locale = _create_locale(LC_ALL, langConfig.localeName.c_str());
         if (!langConfig.locale) throw std::exception("invalid locale");
-
         json.at("charset").get_to(langConfig.charset);
+#ifdef _DEBUG
+        logging << "Loaded " << " locale: CS" << langConfig.charset << " CP" << ((__crt_locale_data_public*)(langConfig.locale)->locinfo)->_locale_lc_codepage << std::endl;
+#endif
 
         auto array = json["packs"];
         if (array.is_array()) for (auto iter = array.begin(); iter != array.end(); ++ iter) {
@@ -129,8 +132,10 @@ static void LoadConfig(const std::filesystem::path& filename) {
         if (array.is_object()) for (auto iter = array.begin(); iter != array.end(); ++ iter) {
             if (!iter->is_object()) continue;
             auto font = fontMap.find(iter.key());
-            if (font == fontMap.end()) continue;
-            SetOverrides(langConfig.fontOverrides[font->second], *iter);
+            if (font == fontMap.end()) {
+                if (iter.key() == "files") continue;
+                SetOverrides(langConfig.customFonts[iter.key()], *iter);
+            } else SetOverrides(langConfig.fontOverrides[font->second], *iter);
         }
 
         array = json["tiles"];

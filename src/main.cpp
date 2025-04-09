@@ -102,6 +102,15 @@ extern "C" __declspec(dllexport) void* LoadTranslationPack(const char* name) {
     return (void*) pack;
 }
 
+extern "C" __declspec(dllexport) bool LocalizeFont(const char* name, SokuLib::FontDescription* desc) {
+    auto iter = langConfig.customFonts.find(name);
+    if (iter == langConfig.customFonts.end()) return false;
+
+    for(auto& override : iter->second) {
+        memcpy((char*)desc + override.offset, override.data, override.size);
+    }
+}
+
 BOOL WINAPI DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved) {
     return true;
 }
