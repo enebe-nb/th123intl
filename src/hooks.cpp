@@ -4,7 +4,6 @@
 
 #include "main.hpp"
 #include "th123intl.hpp"
-#define SOKU_USE_UTF16
 
 namespace {
     SokuLib::CSVParser* systemStrings = 0;
@@ -18,6 +17,9 @@ namespace {
     parseHtmlTag_t orig_parseHtmlTag = (parseHtmlTag_t) 0x412240;
     typedef void (__stdcall *parseIChar_t)(unsigned int, int*, int*);
     parseIChar_t orig_parseIChar = (parseIChar_t) 0x00411e20;
+    constexpr int orig_createGDIFont = 0x00411c40;
+    constexpr int orig_destroyGDIFont = 0x00411d70;
+    constexpr int orig_applyTextShadow = 0x00412a60;
 
     typedef bool (__fastcall *csvParserInDeckInfo_t)(SokuLib::CSVParser&, void*, const char*);
     csvParserInDeckInfo_t orig_csvParserInDeckInfo = (csvParserInDeckInfo_t) 0x0040f370;
@@ -253,7 +255,7 @@ static int printNextChar(SokuLib::SWRFont* font, const char* buffer, int index, 
     const int len = _mbtowc_l(&lc, buffer+index, bufferSize-index, langConfig.locale);
 #else 
     const int len = _mblen_l(buffer+index, bufferSize-index, langConfig.locale);
-    unsigned int lc = _mbsnextc_l((const uint8_t*)buffer+index, langConfig.locale);
+    unsigned int lc = len > 0 ? _mbsnextc_l((const uint8_t*)buffer+index, langConfig.locale) : 0;
 #endif
 #ifdef _DEBUG
     if (len == -1) logging << "invalid character in index: " << index << std::endl;
@@ -273,6 +275,99 @@ static int printNextChar(SokuLib::SWRFont* font, const char* buffer, int index, 
         call orig_parseIChar;
     }; // fuck eax
     return len;
+}
+
+static size_t* __fastcall repl_net_createTexture(SokuLib::TextureManager* manager, void* edx, size_t* texId, const char* text, SokuLib::SWRFont* font, int texWidth, int texHeight, int* outWidth, int* outHeight) {
+    auto texture = manager->Allocate(*texId);
+    *texture = 0;
+
+    const auto& dxCaps = *reinterpret_cast<D3DCAPS9*>(0x8a0e38);
+    if (dxCaps.TextureCaps & D3DPTEXTURECAPS_SQUAREONLY) {
+        if (texWidth < texHeight) texWidth = texHeight;
+        else texHeight = texWidth;
+    }
+
+    auto const renderLock = reinterpret_cast<SokuLib::CriticalSection*>(0x8a0e10);
+    renderLock->lock();
+    auto ret = reinterpret_cast<HRESULT (__stdcall*)(IDirect3DDevice9*, size_t, size_t, size_t, DWORD, D3DFORMAT, D3DPOOL, LPDIRECT3DTEXTURE9*)>
+        (0x81f6ac)(*(IDirect3DDevice9**)0x8a0e30, texWidth, texHeight, 1, 0, D3DFMT_A8R8G8B8, D3DPOOL_MANAGED, texture);
+    renderLock->unlock();
+
+    if (ret == D3D_OK) {
+        D3DLOCKED_RECT rect;
+        renderLock->lock();
+        (*texture)->LockRect(0, &rect, 0, 0);
+
+        const size_t texLength = texHeight * rect.Pitch;
+        memset(rect.pBits, 0, texLength);
+        font->output1 = rect.pBits;
+        font->output2 = rect.pBits;
+        font->lineWidth = rect.Pitch / 4;
+        font->maxWidth = texWidth;
+        font->maxHeight = texHeight;
+
+        size_t bLen = strlen(text);
+        char* shadowBuffer = 0;
+        if (font->description.shadow) {
+            memset(font->output1 = shadowBuffer = new char[texLength], 0, texLength);
+        }
+        if (outWidth) *outWidth = 0;
+        if (outHeight) *outHeight = 0;
+        strcpy(font->description.faceName, "Tahoma");
+        __asm {
+            push esi;
+            mov esi, font;
+            call orig_createGDIFont;
+            pop esi;
+        } // Setup Font Object
+
+        for (int i = 0; i < bLen;) {
+            #ifdef SOKU_USE_UTF16
+                wchar_t lc;
+                int len = _mbtowc_l(&lc, text+i, bLen-i, u8locale);
+            #else 
+                int len = _mblen_l(text+i, bLen-i, u8locale);
+                unsigned int lc = len ? _mbsnextc_l((const uint8_t*)text+i, u8locale) : 0;
+            #endif
+            if (len <= 0) break;
+
+            __asm {
+                push outHeight;
+                push outWidth;
+                movzx eax, lc;
+                push eax;
+                mov eax, font;
+                call orig_parseIChar;
+            }; // fuck eax
+
+            i += len;
+        }
+
+        __asm {
+            push esi;
+            mov esi, font;
+            call orig_destroyGDIFont;
+            pop esi;
+        } // Destroy Font Object
+
+        if (shadowBuffer) {
+            const auto arg2 = font->output2;
+            __asm {
+                push arg2;
+                push shadowBuffer;
+                mov eax, font;
+                call orig_applyTextShadow;
+            }; // fuck eax
+            delete[] shadowBuffer;
+        }
+        (*texture)->UnlockRect(0);
+        renderLock->unlock();
+    } else {
+        manager->Deallocate(*texId);
+        *texId = 0;
+    }
+
+    return texId;
 }
 
 template <int ADDR> static void __fastcall setFont(SokuLib::SWRFont* font, int unused, SokuLib::FontDescription* desc) {
@@ -410,6 +505,10 @@ void LoadHooks() {
         0x90,                   // NOP              -- align
     }); // rewrite character loop to use langConfig.locale [0x4129b3]:[0x412a1b]
     SokuLib::TamperNearJmpOpr(0x004129c2, printNextChar);
+#ifdef SOKU_USE_NETUTF8
+    SokuLib::TamperNearJmpOpr(0x453d01, repl_net_createTexture);
+    SokuLib::TamperNearJmpOpr(0x453df1, repl_net_createTexture);
+#endif
 
     // Convert ACP to langConfig.locale in replay and profile names
     //orig_copyInFilelist = SokuLib::TamperNearJmpOpr(0x0043cd89, repl_copyInFilelist);
