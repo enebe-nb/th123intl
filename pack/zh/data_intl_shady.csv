@@ -4,7 +4,7 @@ menu-version,"<color a0a0ff>版本: </color>{}"
 menu-creator,"<color a0a0ff>作者: </color>{}"
 menu-description,"<color a0a0ff>简介: </color>{}"
 menu-tags-begin,"<color a0a0ff>标签: </color>"
-menu-tags-element,"#{}"
+menu-tags-element,"\#{}"
 menu-tags-separator,"  "
 menu-tags-end,""
 

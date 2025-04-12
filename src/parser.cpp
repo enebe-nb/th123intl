@@ -53,7 +53,7 @@ static int __fastcall csvFixDefault(StringIterator& iter, SokuLib::String& out, 
 
     if (c == '\\') {
         unsigned int next = _mbsnextc_l(_mbsinc_l(in, langConfig.locale), langConfig.locale);
-        if (next == '\'' || next == '\"' || next == '\\' || next == ',') {
+        if (next == '\'' || next == '\"' || next == '\\' || next == ',' || next == '#') {
             csvAppendChar(iter, out, next);
             return 2;
         }

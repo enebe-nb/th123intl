@@ -1,0 +1,16 @@
+#id,translation
+menu-local-package,"<color 404040>이것은 로컬 패키지입니다.</color>"
+menu-version,"버전: <color 606060>{}</color>"
+menu-creator,"제작자: <color 606060>{}</color>"
+menu-description,"설명: <color 606060>{}</color>"
+menu-tags-begin,"태그: <color 606060>"
+menu-tags-element,"\#{}"
+menu-tags-separator,"  "
+menu-tags-end,"</color>"
+
+menu-downloading,"다운로드 중..."
+menu-option-disable,"비활성화"
+menu-option-enable,"활성화"
+menu-option-show,"파일 보기"
+menu-option-update,"업데이트"
+menu-option-download,"다운로드"

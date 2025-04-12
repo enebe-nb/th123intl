@@ -68,7 +68,7 @@ extern "C" __declspec(dllexport) int getPriority() {
 namespace {
     struct tlpack_t {
         SokuLib::CSVParser parser;
-        std::unordered_map<const char*, const char*> map;
+        std::unordered_map<std::string, const char*> map;
         inline tlpack_t(const char* name) : parser(name) {}
     };
 }
