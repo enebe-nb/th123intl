@@ -11,8 +11,6 @@ namespace {
     std::unordered_map<int, const char*> fontNames;
     std::unordered_map<int, const char*> tilesNames;
 
-    typedef void (*appendDataPackage_t)(const char*);
-    appendDataPackage_t orig_appendDataPackage = (appendDataPackage_t)0x40d1d0;
     typedef int (__fastcall *parseHtmlTag_t)(void*, void*, const char*, int*);
     parseHtmlTag_t orig_parseHtmlTag = (parseHtmlTag_t) 0x412240;
     typedef void (__stdcall *parseIChar_t)(unsigned int, int*, int*);
@@ -141,7 +139,7 @@ static inline void LoadCustomPacks() {
     for (auto& pack : langConfig.packFiles) {
         // making it relative is the best solution, the game won't support path with nonASCII glyphs
         std::string systemPath; th123intl::ConvertCodePage(std::filesystem::relative(pack).wstring(), CP_ACP, systemPath);
-        orig_appendDataPackage(systemPath.c_str());
+        SokuLib::appendDatFile(systemPath.c_str());
     }
 }
 
@@ -169,15 +167,14 @@ static inline void LoadSystemStrings() {
     VirtualProtect((LPVOID)0x00401000, 0x00456000, old, &old);
 }
 
-static inline void PreparePacks() {
+static void __declspec(naked) __onSokuSetup() {
     LoadCustomPacks();
-    *(bool*)0x8a0048 = true; // hack
     LoadSystemStrings();
-}
-
-static void repl_appendDataPackage(const char* filename) {
-    orig_appendDataPackage(filename);
-    if (filename == (const char*)0x861b18) PreparePacks();
+    __asm {
+        lea eax, [ebx+8];
+        mov edi, eax;
+        ret
+    }
 }
 
 static short repl_postProcessSoku2Packs(const char* filename) {
@@ -447,12 +444,10 @@ void LoadHooks() {
 
     // if running nextsoku
     if (*(short*)0x7fb84b == (short)0xd0ff) {
-        SokuLib::TamperNearCall(0x007FB84D, PreparePacks);
         SokuLib::TamperNearCall(0x004417e3, repl_postProcessSoku2Packs);
         *((char*)0x004417e8) = 0x90; // NOP
-    } else {
-        orig_appendDataPackage = SokuLib::TamperNearJmpOpr(0x007FB85F, repl_appendDataPackage);
     }
+    SokuLib::TamperNearCall(0x0040797f, __onSokuSetup);
 
     // hook FontSetIndirect
     addFont<0x4126ad>("unknown01");
