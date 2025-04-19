@@ -25,7 +25,7 @@ namespace {
         {"replayPath", 0x44ba52},
         {"number", 0x450b52},
         {"netProfile", 0x453cd1},
-        {"unknown04", 0x453dbd},
+        {"unknown04", 0x453dbd}, // netProfile player2
         {"unknown05", 0x45c5ac},
         {"unknown06", 0x45c6f6},
         {"unknown07", 0x45f110},

@@ -169,6 +169,7 @@ static inline void LoadSystemStrings() {
 
 static void __declspec(naked) __onSokuSetup() {
     LoadCustomPacks();
+    *(bool*)0x8a0048 = true; // hack
     LoadSystemStrings();
     __asm {
         lea eax, [ebx+8];
@@ -455,9 +456,9 @@ void LoadHooks() {
     addFont<0x438611>("deck");
     addFont<0x43d883>("gui");
     addFont<0x444142>("popup");
-    addFont<0x44ba52>("unknown02");
+    addFont<0x44ba52>("replayPath");
     addFont<0x450b52>("number");
-    addFont<0x453cd1>("unknown03");
+    addFont<0x453cd1>("netProfile");
     addFont<0x453dbd>("unknown04");
     addFont<0x45c5ac>("unknown05");
     addFont<0x45c6f6>("unknown06");
