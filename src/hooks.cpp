@@ -311,7 +311,7 @@ static size_t* __fastcall repl_net_createTexture(SokuLib::TextureManager* manage
         }
         if (outWidth) *outWidth = 0;
         if (outHeight) *outHeight = 0;
-        strcpy(font->description.faceName, "Tahoma");
+        strcpy(font->description.faceName, "Verdana");
         __asm {
             push esi;
             mov esi, font;
@@ -459,7 +459,7 @@ void LoadHooks() {
     addFont<0x44ba52>("replayPath");
     addFont<0x450b52>("number");
     addFont<0x453cd1>("netProfile");
-    addFont<0x453dbd>("unknown04");
+    addFont<0x453dbd>("netProfile2");
     addFont<0x45c5ac>("unknown05");
     addFont<0x45c6f6>("unknown06");
     addFont<0x45f110>("unknown07");

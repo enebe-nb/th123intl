@@ -29,6 +29,13 @@
         "popup":{
             "name": "MonoSpatialModSWR",
             "paddingY": 0
+        },
+        "netProfile":{
+            "name": "Verdana",
+            "height": 16
+        },
+        "netProfile2":{
+            "height": 16
         }
     },
     "tiles": {

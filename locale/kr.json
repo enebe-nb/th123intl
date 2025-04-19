@@ -27,8 +27,11 @@
             "name": "KoreanCMR"
         },
         "netProfile":{
-            "name": "KoreanCMR",
-            "height": 14
+            "name": "Verdana",
+            "height": 16
+        },
+        "netProfile2":{
+            "height": 16
         }
     },
     "tiles": {

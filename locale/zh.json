@@ -31,8 +31,13 @@
             "height": 11
         },
         "netProfile":{
-            "name": "simhei",
-            "height": 14
+            "name": "Verdana",
+            "height": 16,
+            "weight": 600
+        },
+        "netProfile2":{
+            "height": 16,
+            "weight": 600
         }
     },
     "tiles": {
