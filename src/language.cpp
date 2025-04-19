@@ -25,7 +25,10 @@ namespace {
         {"replayPath", 0x44ba52},
         {"number", 0x450b52},
         {"netProfile", 0x453cd1},
-        {"unknown04", 0x453dbd}, // netProfile player2
+
+        {"unknown04", 0x453dbd},
+        {"netProfile2", 0x453dbd},
+
         {"unknown05", 0x45c5ac},
         {"unknown06", 0x45c6f6},
         {"unknown07", 0x45f110},
@@ -208,8 +211,10 @@ static const wchar_t* FindLanguage() {
 }
 
 void LoadLanguage() {
-    if (!std::filesystem::exists(modulePath / L"th123intl.ini"))
+    if (!std::filesystem::exists(modulePath / L"th123intl.ini")) {
         WritePrivateProfileStringW(L"Locale", L"Lang", L"auto", (modulePath / L"th123intl.ini").c_str());
+        WritePrivateProfileStringW(L"Locale", L"DetectOrder", L"932,936", (modulePath / L"th123intl.ini").c_str());
+    }
     const wchar_t* language = FindLanguage();
 
     std::filesystem::path languageData = modulePath / L"locale" / language;

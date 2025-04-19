@@ -21,6 +21,8 @@ namespace {
     createTextTexture_t orig_replay_createTexture = (createTextTexture_t) 0x004050a0;
     typedef SokuLib::String& (__fastcall *replay_appendDir_t)(SokuLib::String&, int, SokuLib::String&, int, int);
     replay_appendDir_t orig_replay_appendDir = (replay_appendDir_t) 0x004087b0;
+
+    std::vector<int> detectOrder;
 }
 
 static inline unsigned int GetTCP() {
@@ -48,9 +50,7 @@ static bool __validAndConvert(int CP, char* buffer, size_t bSize, size_t& len) {
 
 static size_t __guessAndConvert(char* buffer, size_t bSize, size_t len) {
     if (validInCodePage(CP_UTF8, std::string_view(buffer, len))) return len;
-    if (__validAndConvert(932, buffer, 32, len)) return len;
-    if (__validAndConvert(936, buffer, 32, len)) return len;
-    if (__validAndConvert(GetTCP(), buffer, 32, len)) return len;
+    for (auto cp : detectOrder) if (__validAndConvert(cp, buffer, 32, len)) return len;
     for (int i = 0; i < len; ++i) if (buffer[i] < 0) buffer[i] = '?';
     return len;
 }
@@ -186,6 +186,15 @@ static int __fastcall repl_replay_createTexture(void* ecx, void* edx, void* dxHa
 void LoadProfile() {
     DWORD old;
     u8locale = _create_locale(LC_ALL, ".UTF8");
+
+    { wchar_t orderStr[256]; orderStr[0] = L'\0';
+        GetPrivateProfileStringW(L"Locale", L"DetectOrder", L"932,936", orderStr, 256, (modulePath / L"th123intl.ini").c_str());
+        for (wchar_t *ctx, *token = wcstok(orderStr, L",", &ctx); token; token = wcstok(nullptr, L",", &ctx)) {
+            auto val = wcstoul(token, nullptr, 10);
+            if (!val) break;
+            detectOrder.push_back(val);
+        }
+    }
 
     VirtualProtect((LPVOID)0x00401000, 0x00456000, PAGE_WRITECOPY, &old);
     *(int*)0x446a5b = 0x98;
