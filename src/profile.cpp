@@ -135,7 +135,7 @@ static void __fastcall repl_profile_updateName(SokuLib::Profile& profile) {
     profile.name.assign(buffer.c_str(), len);
 }
 
-static void __fastcall repl_replay_formatName(SokuLib::CFileList& filelist, int unused, SokuLib::String& name) {
+static void __fastcall repl_clist_formatName(SokuLib::CFileList& filelist, int unused, SokuLib::String& name) {
     std::string buffer; size_t len = name.size;
     if (filelist.extLength && len >= filelist.extLength) len -= filelist.extLength;
     if (GetACP() == GetTCP()
@@ -211,8 +211,9 @@ void LoadProfile() {
     orig_replay_getReplayPath = SokuLib::TamperNearJmpOpr(0x454365, repl_replay_getReplayPath); // network get path on replay save
     orig_replay_appendDir = SokuLib::TamperNearJmpOpr(0x42c804, repl_replay_appendDir); // on replay append dirname
     orig_replay_createTexture = SokuLib::TamperNearJmpOpr(0x0044b143, repl_replay_createTexture); // replay (big line)
-    SokuLib::TamperNearJmpOpr(0x42c8c5, repl_replay_formatName);
-    SokuLib::TamperNearJmpOpr(0x42c899, repl_replay_formatName); // on replay format regular file
+    SokuLib::TamperNearJmpOpr(0x42c8c5, repl_clist_formatName);
+    SokuLib::TamperNearJmpOpr(0x42c899, repl_clist_formatName); // on replay format regular file
+    SokuLib::TamperNearJmpOpr(0x444a81, repl_clist_formatName); // on profile select format
     VirtualProtect((LPVOID)0x00401000, 0x00456000, old, &old);
 
     VirtualProtect((LPVOID)0x857000, 0x02b000, PAGE_WRITECOPY, &old);
