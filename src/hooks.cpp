@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <SokuLib.hpp>
 #include <mbstring.h>
+#include <usp10.h>
 
 #include "main.hpp"
 #include "th123intl.hpp"
@@ -15,8 +16,6 @@ namespace {
     parseHtmlTag_t orig_parseHtmlTag = (parseHtmlTag_t) 0x412240;
     typedef void (__stdcall *parseIChar_t)(unsigned int, int*, int*);
     parseIChar_t orig_parseIChar = (parseIChar_t) 0x00411e20;
-    constexpr int orig_createGDIFont = 0x00411c40;
-    constexpr int orig_destroyGDIFont = 0x00411d70;
     constexpr int orig_applyTextShadow = 0x00412a60;
 
     typedef bool (__fastcall *csvParserInDeckInfo_t)(SokuLib::CSVParser&, void*, const char*);
@@ -276,8 +275,8 @@ static int printNextChar(SokuLib::SWRFont* font, const char* buffer, int index, 
 }
 
 static size_t* __fastcall repl_net_createTexture(SokuLib::TextureManager* manager, void* edx, size_t* texId, const char* text, SokuLib::SWRFont* font, int texWidth, int texHeight, int* outWidth, int* outHeight) {
-    auto texture = manager->Allocate(*texId);
-    *texture = 0;
+    LPDIRECT3DTEXTURE9& texture = *manager->Allocate(*texId);
+    texture = 0;
 
     const auto& dxCaps = *reinterpret_cast<D3DCAPS9*>(0x8a0e38);
     if (dxCaps.TextureCaps & D3DPTEXTURECAPS_SQUAREONLY) {
@@ -288,65 +287,65 @@ static size_t* __fastcall repl_net_createTexture(SokuLib::TextureManager* manage
     auto const renderLock = reinterpret_cast<SokuLib::CriticalSection*>(0x8a0e10);
     renderLock->lock();
     auto ret = reinterpret_cast<HRESULT (__stdcall*)(IDirect3DDevice9*, size_t, size_t, size_t, DWORD, D3DFORMAT, D3DPOOL, LPDIRECT3DTEXTURE9*)>
-        (0x81f6ac)(*(IDirect3DDevice9**)0x8a0e30, texWidth, texHeight, 1, 0, D3DFMT_A8R8G8B8, D3DPOOL_MANAGED, texture);
+        (0x81f6ac)(*(IDirect3DDevice9**)0x8a0e30, texWidth, texHeight, 1, 0, D3DFMT_A8R8G8B8, D3DPOOL_MANAGED, &texture);
     renderLock->unlock();
 
     if (ret == D3D_OK) {
-        D3DLOCKED_RECT rect;
         renderLock->lock();
-        (*texture)->LockRect(0, &rect, 0, 0);
+        LPDIRECT3DSURFACE9 surface = 0;
+        texture->GetSurfaceLevel(0, &surface);
+        surface->GetDC(&font->hdc);
+        font->font = CreateFontA(font->description.height, 0, 0, 0,
+            font->description.weight, font->description.italic, false, false, langConfig.charset,
+            OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH|FF_SWISS, font->description.faceName);
+        font->gdiobj = SelectObject(font->hdc, font->font);
 
-        const size_t texLength = texHeight * rect.Pitch;
-        memset(rect.pBits, 0, texLength);
-        font->output1 = rect.pBits;
-        font->output2 = rect.pBits;
-        font->lineWidth = rect.Pitch / 4;
+        font->cursor.x = font->description.offsetX + font->description.shadow;
+        font->cursor.y = font->description.offsetY + font->description.shadow;
         font->maxWidth = texWidth;
         font->maxHeight = texHeight;
-
-        size_t bLen = strlen(text);
-        char* shadowBuffer = 0;
-        if (font->description.shadow) {
-            memset(font->output1 = shadowBuffer = new char[texLength], 0, texLength);
-        }
+        font->gradient2;
         if (outWidth) *outWidth = 0;
         if (outHeight) *outHeight = 0;
-        strcpy(font->description.faceName, "Verdana");
-        __asm {
-            push esi;
-            mov esi, font;
-            call orig_createGDIFont;
-            pop esi;
-        } // Setup Font Object
 
-        for (int i = 0; i < bLen;) {
-            #ifdef SOKU_USE_UTF16
-                wchar_t lc;
-                int len = _mbtowc_l(&lc, text+i, bLen-i, u8locale);
-            #else 
-                int len = _mblen_l(text+i, bLen-i, u8locale);
-                unsigned int lc = len ? _mbsnextc_l((const uint8_t*)text+i, u8locale) : 0;
-            #endif
-            if (len <= 0) break;
+        { std::wstring textBuffer; th123intl::ConvertCodePage(CP_UTF8, text, textBuffer);
+        SCRIPT_STRING_ANALYSIS parsedString;
+        const DWORD flags = SSA_FALLBACK|SSA_LINK|SSA_GCP|SSA_GLYPHS;
+        RECT textRect = {font->cursor.x, font->cursor.y, font->maxWidth, font->maxHeight};
+        FillRect(font->hdc, &textRect, (HBRUSH)GetStockObject(BLACK_BRUSH));
+        SetTextColor(font->hdc, 0x00ffffff);
+        SetBkMode(font->hdc, TRANSPARENT);
+        auto ret = ScriptStringAnalyse(font->hdc, textBuffer.data(), textBuffer.size(), 1.5f*textBuffer.size() + 16, -1, flags, font->maxWidth, 0, 0, 0, 0, 0, &parsedString);
+        ret = ScriptStringOut(parsedString, font->cursor.x, font->cursor.y, ETO_CLIPPED, &textRect, 0, 0, false);
+        ScriptStringFree(&parsedString); }
 
-            __asm {
-                push outHeight;
-                push outWidth;
-                movzx eax, lc;
-                push eax;
-                mov eax, font;
-                call orig_parseIChar;
-            }; // fuck eax
+        DeleteObject(SelectObject(font->hdc, font->gdiobj));
+        surface->ReleaseDC(font->hdc);
+        surface->Release();
+        font->gdiobj = nullptr;
+        font->font = nullptr;
+        font->hdc = nullptr;
 
-            i += len;
+        { D3DLOCKED_RECT texRect;
+        texture->LockRect(0, &texRect, 0, 0);
+        font->output1 = texRect.pBits;
+        font->output2 = texRect.pBits;
+        const size_t texSize = texRect.Pitch * font->maxHeight;
+        font->lineWidth = texRect.Pitch / 4;
+        char* shadowBuffer = 0;
+        if (font->description.shadow) {
+            memset(font->output1 = shadowBuffer = new char[texSize], 0, texSize);
         }
 
-        __asm {
-            push esi;
-            mov esi, font;
-            call orig_destroyGDIFont;
-            pop esi;
-        } // Destroy Font Object
+        for (int i = 0; i < font->maxWidth * font->maxHeight; ++i) {
+            union Color { struct {BYTE b, g, r, a;}; UINT value; };
+            Color mul; mul.value = font->gradient2 ? ((UINT*)font->gradient2)[((i/font->maxWidth-font->cursor.y)%font->description.height)] : font->singleColor;
+            Color base; base.value = ((0xff&((int*)font->output2)[i]) << 24)|((int*)font->output2)[i];
+            base.r = ((UINT)mul.r)*((UINT)base.r)/255;
+            base.g = ((UINT)mul.g)*((UINT)base.g)/255;
+            base.b = ((UINT)mul.b)*((UINT)base.b)/255;
+            ((int*)font->output1)[i] = base.value;
+        }
 
         if (shadowBuffer) {
             const auto arg2 = font->output2;
@@ -358,7 +357,7 @@ static size_t* __fastcall repl_net_createTexture(SokuLib::TextureManager* manage
             }; // fuck eax
             delete[] shadowBuffer;
         }
-        (*texture)->UnlockRect(0);
+        texture->UnlockRect(0); }
         renderLock->unlock();
     } else {
         manager->Deallocate(*texId);

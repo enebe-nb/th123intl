@@ -3,6 +3,15 @@
     "charset": 128,
     "packs": ["pack/jp.dat"],
     "font": {
-        "files": []
+        "files": [],
+        "netProfile":{
+            "name": "Verdana",
+            "height": 14,
+            "weight": 600
+        },
+        "netProfile2":{
+            "height": 14,
+            "weight": 600
+        }
     }
 }
