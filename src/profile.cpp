@@ -89,11 +89,25 @@ static void __fastcall repl_client_incomingConn(int self, int unused, unsigned i
     return orig_client_incomingConn(self, unused, specInfo, data, dataSize);
 }
 
+static size_t __validateACP(std::string& str) {
+    int clen = 0; for (int i = 0; str.size(); i += clen) {
+        char* c = &str.data()[i];
+        clen = mblen(c, str.size()-i);
+        if (clen <= 0) { str.resize(i); break; }
+        if (clen == 1 && strchr("\\/:*?\"<>|", *c)) *c = '_';
+    }
+    return str.size();
+}
+
 static int __fastcall repl_replay_getReplayPath(void* handle, int unused, const char* format, const char* player2, const char* player1) {
     std::string p2buf, p1buf;
-    bool hasp1 = ConvertCodePage(CP_UTF8, player1, GetACP(), p1buf);
-    bool hasp2 = ConvertCodePage(CP_UTF8, player2, GetACP(), p2buf);
-    return orig_replay_getReplayPath(handle, unused, format, hasp2 ? p2buf.c_str() : player2, hasp1 ? p1buf.c_str() : player1);
+    if (ConvertCodePage(CP_UTF8, player1, GetACP(), p1buf));
+    else p1buf = player1;
+    if (ConvertCodePage(CP_UTF8, player2, GetACP(), p2buf));
+    else p2buf = player2;
+    if (!__validateACP(p1buf)) p1buf = "UnknownPlayer";
+    if (!__validateACP(p2buf)) p2buf = "UnknownPlayer";
+    return orig_replay_getReplayPath(handle, unused, format, p2buf.c_str(), p1buf.c_str());
 }
 
 static errno_t repl_strcpy2utf8(char* dest, size_t dSize, const char* src) {
